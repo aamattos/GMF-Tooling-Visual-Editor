@@ -1,0 +1,52 @@
+<%genModel.addImport("com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider");%>
+<%genModel.addImport("org.eclipse.emf.edit.provider.ComposedAdapterFactory");%>
+<%genModel.addImport("org.eclipse.emf.common.util.ResourceLocator");%>
+<%genModel.addImport("org.eclipse.emf.ecore.EStructuralFeature");%>
+<%genModel.addImport("org.eclipse.emf.edit.provider.ItemPropertyDescriptor");%>
+    /**
+	 * @generated
+     */
+	protected ItemPropertyDescriptor createItemPropertyDescriptor(AdapterFactory adapterFactory,
+															       ResourceLocator resourceLocator,
+															       String displayName,
+															       String description,
+															       EStructuralFeature feature, 
+															       boolean isSettable,
+															       boolean multiLine,
+															       boolean sortChoices,
+															       Object staticImage,
+															       String category,
+															       String [] filterFlags) {
+		
+		ComposedAdapterFactory composedAdapterFactory = new ComposedAdapterFactory(
+				ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+		
+		IItemPropertyDescriptorProvider descriptorProvider = (IItemPropertyDescriptorProvider)composedAdapterFactory.adapt(getTarget(), IItemPropertyDescriptorProvider.class);
+		
+		if(descriptorProvider!=null)
+			return descriptorProvider.createItemPropertyDescriptor(
+					adapterFactory, 
+					resourceLocator, 
+					displayName, 
+					description, 
+					feature, 
+					isSettable, 
+					multiLine, 
+					sortChoices, 
+					staticImage, 
+					category, 
+					filterFlags);
+
+		return super.createItemPropertyDescriptor(
+				adapterFactory, 
+				resourceLocator, 
+				displayName, 
+				description, 
+				feature, 
+				isSettable, 
+				multiLine, 
+				sortChoices, 
+				staticImage, 
+				category, 
+				filterFlags);
+	}

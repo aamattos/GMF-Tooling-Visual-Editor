@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.isb.simple.gmfmap.model/src-gen"
+    editDirectory="/com.isb.simple.gmfmap.model.edit/src-gen" editorDirectory="/com.isb.simple.gmfmap.model.editor/src-gen"
+    modelPluginID="com.isb.simple.gmfmap.model" templateDirectory="/com.isb.simple.gmfmap.model/templates"
+    dynamicTemplates="true" modelName="Simplemap" reflectiveDelegation="true" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef">
+  <foreignModel>simplemap.ecore</foreignModel>
+  <genPackages prefix="Simplemappings" basePackage="com.isb.simple.gmfmap" disposableProviderFactory="true"
+      ecorePackage="simplemap.ecore#/">
+    <genClasses ecoreClass="simplemap.ecore#//SimpleMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMapping/canvas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMapping/palette"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMapping/mapping"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMapping/domainModel"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleTopNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleTopNode/links"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleCompartment">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleCompartment/compartmentMapping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleCompartment/name"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleCompartment/compartment"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleLabelNode"/>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleLinkMapping">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleLinkMapping/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/linkMapping"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/diagramLink"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/diagramLabel"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/tool"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/outputs"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/inputs"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleNode">
+      <genFeatures property="None" children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/nodeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/containmentFeature"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleNode/name"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/parentMetaElement"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/tool"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/labelAttributes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/diagramNode"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/diagramLabel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="simplemap.ecore#//SimpleParentNode">
+      <genFeatures property="None" createChild="false" propertyCategory="" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleParentNode/children"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleChildNode">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentMapping"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parent"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentRoot"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleSubNodeReference">
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleSubNodeReference/subNode"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleDomainMapElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleDomainMapElement/domainMetaElement"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleSubNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleSubNode/parentSubNodeReference"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleSubNode/name"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleSubNode/parentRootNode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleSubNode/children"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleRootNode">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleRootNode/subNodes"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleRootNode/outputs"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleRootNode/inputs"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
