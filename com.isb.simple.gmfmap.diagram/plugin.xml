@@ -44,14 +44,18 @@
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/SimplemappingsDiagramFile.gif"
-  	     category="org.eclipse.ui.Examples"
+  	     category="com.isb.simple.gmfmap.diagram"
   	     class="com.isb.simple.gmfmap.simplemappings.diagram.part.SimpleMapEditorCreationWizard"
   	     id="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
+     <category
+           id="com.isb.simple.gmfmap.diagram"
+           name="%category.name">
+     </category>
    </extension>
 
-   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+   <extension point="org.eclipse.ui.popupMenus" id="%extension.id">
       <?gmfgen generated="true"?>
       <objectContribution
             id="com.isb.simple.gmfmap.diagram.InitDiagram"
@@ -601,7 +605,7 @@
       <?gmfgen generated="true"?>
       <category id="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
       <command id="com.isb.simple.gmfmap.diagram.LoadResourceAction"
-         name="Load Resource"
+         name="%command.name"
          categoryId="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"
          defaultHandler="com.isb.simple.gmfmap.simplemappings.diagram.part.LoadResourceAction"/>
    </extension>
