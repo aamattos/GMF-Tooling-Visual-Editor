@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="GMF Simple Mapping Editor">
+      Simple Mapping Editor
+   </description>
+   <feature url="features/com.isb.simple.gmf.mapping_0.1.0.201201131135.jar" id="com.isb.simple.gmf.mapping" version="0.1.0.201201131135"/>
+</site>
