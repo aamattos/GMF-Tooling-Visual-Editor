@@ -6,6 +6,7 @@
  */
 package com.isb.simple.gmfmap.simplemappings.util;
 
+import com.isb.simple.gmfmap.simplemappings.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -128,6 +129,26 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSimpleRootNode(SimpleRootNode object) {
 				return createSimpleRootNodeAdapter();
+			}
+			@Override
+			public Adapter caseSimplemappings_SimpleParentNode(SimpleParentNode object) {
+				return createSimplemappings_SimpleParentNodeAdapter();
+			}
+			@Override
+			public Adapter caseSimplemappings_SimpleChildNode(SimpleChildNode object) {
+				return createSimplemappings_SimpleChildNodeAdapter();
+			}
+			@Override
+			public Adapter caseSimplemappings_SimpleDomainMapElement(SimpleDomainMapElement object) {
+				return createSimplemappings_SimpleDomainMapElementAdapter();
+			}
+			@Override
+			public Adapter caseSimplemappings_SimpleNode(SimpleNode object) {
+				return createSimplemappings_SimpleNodeAdapter();
+			}
+			@Override
+			public Adapter caseSimplemappings_SimpleRootNode(SimpleRootNode object) {
+				return createSimplemappings_SimpleRootNodeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -286,6 +307,76 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSimpleRootNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleParentNode <em>Simple Parent Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleParentNode
+	 * @generated
+	 */
+	public Adapter createSimplemappings_SimpleParentNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleChildNode
+	 * @generated
+	 */
+	public Adapter createSimplemappings_SimpleChildNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleDomainMapElement <em>Simple Domain Map Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleDomainMapElement
+	 * @generated
+	 */
+	public Adapter createSimplemappings_SimpleDomainMapElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleNode <em>Simple Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleNode
+	 * @generated
+	 */
+	public Adapter createSimplemappings_SimpleNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleRootNode
+	 * @generated
+	 */
+	public Adapter createSimplemappings_SimpleRootNodeAdapter() {
 		return null;
 	}
 

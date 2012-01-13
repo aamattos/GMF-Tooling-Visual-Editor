@@ -118,6 +118,7 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	 */
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
 		factories.add(new SimplemappingsItemProviderAdapterFactory());
+		factories.add(new SimplemappingsItemProviderAdapterFactory());
 		factories.add(new GMFGraphItemProviderAdapterFactory());
 		factories.add(new GMFMapItemProviderAdapterFactory());
 		factories.add(new GMFToolItemProviderAdapterFactory());

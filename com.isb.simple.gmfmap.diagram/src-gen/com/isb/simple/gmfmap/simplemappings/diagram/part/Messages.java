@@ -38,16 +38,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String SimplemapCreationWizard_DomainModelFilePageTitle;
-
-	/**
-	 * @generated
-	 */
-	public static String SimplemapCreationWizard_DomainModelFilePageDescription;
-
-	/**
-	 * @generated
-	 */
 	public static String SimplemapCreationWizardOpenEditorError;
 
 	/**
@@ -308,16 +298,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String LinkRelation7CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String LinkRelation7CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
@@ -348,42 +328,7 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_SimpleTopNode_2003_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleLinkMapping_2007_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleLinkMapping_2007_incominglinks;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_SimpleSubNode_2006_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleRootNodeOutputs_4005_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleRootNodeOutputs_4005_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleLinkMappingOutputs_4004_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleLinkMappingOutputs_4004_source;
 
 	/**
 	 * @generated

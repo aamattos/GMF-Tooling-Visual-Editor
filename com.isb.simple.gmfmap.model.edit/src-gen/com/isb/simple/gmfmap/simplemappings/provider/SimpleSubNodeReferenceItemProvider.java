@@ -148,6 +148,17 @@ public class SimpleSubNodeReferenceItemProvider
 	}
 
 	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return SimplemapEditPlugin.INSTANCE;
+	}
+
+	/**
 	 * @generated
      */
 	protected ItemPropertyDescriptor createItemPropertyDescriptor(AdapterFactory adapterFactory,

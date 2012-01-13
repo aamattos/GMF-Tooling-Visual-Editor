@@ -62,15 +62,6 @@
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Link Relation"
-          description="Create new Link Mapping Relation">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="/icons/full/obj16/ParentNode.gif"
-            bundle="com.isb.simple.gmfmap.model.edit"/>
-      </tools>
     </tools>
   </palette>
 </gmftool:ToolRegistry>

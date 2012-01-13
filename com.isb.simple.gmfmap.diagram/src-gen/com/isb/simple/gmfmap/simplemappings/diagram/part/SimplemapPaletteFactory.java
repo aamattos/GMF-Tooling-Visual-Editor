@@ -41,7 +41,6 @@ public class SimplemapPaletteFactory {
 		paletteContainer.add(createSubNode4CreationTool());
 		paletteContainer.add(createParentNode5CreationTool());
 		paletteContainer.add(createLinkMapping6CreationTool());
-		//paletteContainer.add(createLinkRelation7CreationTool());
 		return paletteContainer;
 	}
 
@@ -145,23 +144,6 @@ public class SimplemapPaletteFactory {
 		entry.setId("createLinkMapping6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimplemapElementTypes
 				.getImageDescriptor(SimplemapElementTypes.SimpleLinkMapping_2007));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createLinkRelation7CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(SimplemapElementTypes.SimpleLinkMappingOutputs_4004);
-		types.add(SimplemapElementTypes.SimpleRootNodeOutputs_4005);
-		LinkToolEntry entry = new LinkToolEntry(
-				Messages.LinkRelation7CreationTool_title,
-				Messages.LinkRelation7CreationTool_desc, types);
-		entry.setId("createLinkRelation7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(SimplemapDiagramEditorPlugin
-				.findImageDescriptor("/com.isb.simple.gmfmap.model.edit/icons/full/obj16/ParentNode.gif")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

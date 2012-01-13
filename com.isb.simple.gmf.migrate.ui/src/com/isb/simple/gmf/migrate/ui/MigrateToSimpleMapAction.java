@@ -8,7 +8,7 @@ import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PlatformUI;
 
-import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil;
+import com.isb.simple.gmfmap.simplemappings.diagram.part.SimpleMapEditorDiagramEditorUtil;
 
 public class MigrateToSimpleMapAction implements IObjectActionDelegate {
 
@@ -50,7 +50,7 @@ public class MigrateToSimpleMapAction implements IObjectActionDelegate {
 		TransformToSimpleMappingWizard wizard = new TransformToSimpleMappingWizard();
 		wizard.init(PlatformUI.getWorkbench(), sselection);
 
-		SimplemapDiagramEditorUtil.runWizard(getShell(), wizard,
+		SimpleMapEditorDiagramEditorUtil.runWizard(getShell(), wizard,
 				"InitDiagramFile"); //$NON-NLS-1$
 
 	}

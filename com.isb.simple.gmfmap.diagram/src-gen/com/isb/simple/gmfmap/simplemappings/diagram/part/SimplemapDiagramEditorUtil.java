@@ -49,7 +49,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 
-import com.isb.simple.gmfmap.diagram.part.SimplemapDiagramInitializer;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsFactory;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
@@ -156,7 +155,7 @@ public class SimplemapDiagramEditorUtil {
 	 * This method should be called within a workspace modify operation since it creates resources.
 	 * @generated
 	 */
-	public static Resource createDiagram(URI diagramURI, URI modelURI,
+	public static Resource createDiagram(URI diagramURI,
 			IProgressMonitor progressMonitor) {
 		TransactionalEditingDomain editingDomain = GMFEditingDomainFactory.INSTANCE
 				.createEditingDomain();
@@ -165,8 +164,6 @@ public class SimplemapDiagramEditorUtil {
 				3);
 		final Resource diagramResource = editingDomain.getResourceSet()
 				.createResource(diagramURI);
-		final Resource modelResource = editingDomain.getResourceSet()
-				.createResource(modelURI);
 		final String diagramName = diagramURI.lastSegment();
 		AbstractTransactionalCommand command = new AbstractTransactionalCommand(
 				editingDomain,
@@ -176,7 +173,7 @@ public class SimplemapDiagramEditorUtil {
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
 				SimpleMapping model = createInitialModel();
-				attachModelToResource(model, modelResource);
+				attachModelToResource(model, diagramResource);
 
 				Diagram diagram = ViewService.createDiagram(model,
 						SimpleMappingEditPart.MODEL_ID,
@@ -188,9 +185,7 @@ public class SimplemapDiagramEditorUtil {
 				}
 
 				try {
-					modelResource
-							.save(com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil
-									.getSaveOptions());
+
 					diagramResource
 							.save(com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil
 									.getSaveOptions());
@@ -209,7 +204,7 @@ public class SimplemapDiagramEditorUtil {
 			SimplemapDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
+
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}
@@ -221,9 +216,7 @@ public class SimplemapDiagramEditorUtil {
 	 * @generated
 	 */
 	private static SimpleMapping createInitialModel() {
-		return SimplemapDiagramInitializer
-				.initializeMapping(SimplemappingsFactory.eINSTANCE
-						.createSimpleMapping());
+		return SimplemappingsFactory.eINSTANCE.createSimpleMapping();
 	}
 
 	/**

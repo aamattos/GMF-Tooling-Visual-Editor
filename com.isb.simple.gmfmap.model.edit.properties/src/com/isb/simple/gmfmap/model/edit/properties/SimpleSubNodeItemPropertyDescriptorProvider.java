@@ -25,7 +25,7 @@ public class SimpleSubNodeItemPropertyDescriptorProvider extends
 			boolean isSettable, boolean multiLine, boolean sortChoices,
 			Object staticImage, String category, String[] filterFlags) {
 
-		return new SimpleNodeItemPropertyDescriptor(adapterFactory, 
+		return new SimpleSubNodeItemPropertyDescriptor(adapterFactory, 
 				  resourceLocator, 
 				  displayName, 
 				  description, 
@@ -39,9 +39,9 @@ public class SimpleSubNodeItemPropertyDescriptorProvider extends
 	}
 
 	
-	class SimpleNodeItemPropertyDescriptor extends ItemPropertyDescriptor {
+	class SimpleSubNodeItemPropertyDescriptor extends ItemPropertyDescriptor {
   
-		public SimpleNodeItemPropertyDescriptor
+		public SimpleSubNodeItemPropertyDescriptor
 		     (AdapterFactory adapterFactory,
 		      ResourceLocator resourceLocator,
 		      String displayName,

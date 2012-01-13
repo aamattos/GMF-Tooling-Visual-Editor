@@ -14,7 +14,6 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleCompartment;
-import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleRootNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
@@ -27,9 +26,7 @@ import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3E
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingOutputsEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleRootNodeOutputsEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeParentRootNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
@@ -330,10 +327,7 @@ public class SimplemapDiagramUpdater {
 	 */
 	public static List<SimplemapLinkDescriptor> getSimpleTopNode_2003ContainedLinks(
 			View view) {
-		SimpleTopNode modelElement = (SimpleTopNode) view.getElement();
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(modelElement));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -344,7 +338,6 @@ public class SimplemapDiagramUpdater {
 		SimpleSubNode modelElement = (SimpleSubNode) view.getElement();
 		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleSubNode_ParentRootNode_4003(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(modelElement));
 		return result;
 	}
 
@@ -353,10 +346,7 @@ public class SimplemapDiagramUpdater {
 	 */
 	public static List<SimplemapLinkDescriptor> getSimpleLinkMapping_2007ContainedLinks(
 			View view) {
-		SimpleLinkMapping modelElement = (SimpleLinkMapping) view.getElement();
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleLinkMapping_Outputs_4004(modelElement));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -450,8 +440,6 @@ public class SimplemapDiagramUpdater {
 		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
 		result.addAll(getIncomingFeatureModelFacetLinks_SimpleSubNode_ParentRootNode_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_SimpleLinkMapping_Outputs_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -466,8 +454,6 @@ public class SimplemapDiagramUpdater {
 		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
 		result.addAll(getIncomingFeatureModelFacetLinks_SimpleSubNode_ParentRootNode_4003(
 				modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_SimpleLinkMapping_Outputs_4004(
-				modelElement, crossReferences));
 		return result;
 	}
 
@@ -476,13 +462,7 @@ public class SimplemapDiagramUpdater {
 	 */
 	public static List<SimplemapLinkDescriptor> getSimpleLinkMapping_2007IncomingLinks(
 			View view) {
-		SimpleLinkMapping modelElement = (SimpleLinkMapping) view.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(
-				modelElement, crossReferences));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -570,10 +550,7 @@ public class SimplemapDiagramUpdater {
 	 */
 	public static List<SimplemapLinkDescriptor> getSimpleTopNode_2003OutgoingLinks(
 			View view) {
-		SimpleTopNode modelElement = (SimpleTopNode) view.getElement();
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(modelElement));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -584,7 +561,6 @@ public class SimplemapDiagramUpdater {
 		SimpleSubNode modelElement = (SimpleSubNode) view.getElement();
 		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
 		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleSubNode_ParentRootNode_4003(modelElement));
-		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(modelElement));
 		return result;
 	}
 
@@ -593,10 +569,7 @@ public class SimplemapDiagramUpdater {
 	 */
 	public static List<SimplemapLinkDescriptor> getSimpleLinkMapping_2007OutgoingLinks(
 			View view) {
-		SimpleLinkMapping modelElement = (SimpleLinkMapping) view.getElement();
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_SimpleLinkMapping_Outputs_4004(modelElement));
-		return result;
+		return Collections.emptyList();
 	}
 
 	/**
@@ -703,48 +676,6 @@ public class SimplemapDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<SimplemapLinkDescriptor> getIncomingFeatureModelFacetLinks_SimpleLinkMapping_Outputs_4004(
-			SimpleRootNode target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() == SimplemappingsPackage.eINSTANCE
-					.getSimpleLinkMapping_Outputs()) {
-				result.add(new SimplemapLinkDescriptor(setting.getEObject(),
-						target,
-						SimplemapElementTypes.SimpleLinkMappingOutputs_4004,
-						SimpleLinkMappingOutputsEditPart.VISUAL_ID));
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<SimplemapLinkDescriptor> getIncomingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(
-			SimpleLinkMapping target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() == SimplemappingsPackage.eINSTANCE
-					.getSimpleRootNode_Outputs()) {
-				result.add(new SimplemapLinkDescriptor(setting.getEObject(),
-						target,
-						SimplemapElementTypes.SimpleRootNodeOutputs_4005,
-						SimpleRootNodeOutputsEditPart.VISUAL_ID));
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
 	private static Collection<SimplemapLinkDescriptor> getOutgoingFeatureModelFacetLinks_SimpleSubNode_ParentRootNode_4003(
 			SimpleSubNode source) {
 		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
@@ -755,39 +686,6 @@ public class SimplemapDiagramUpdater {
 		result.add(new SimplemapLinkDescriptor(source, destination,
 				SimplemapElementTypes.SimpleSubNodeParentRootNode_4003,
 				SimpleSubNodeParentRootNodeEditPart.VISUAL_ID));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<SimplemapLinkDescriptor> getOutgoingFeatureModelFacetLinks_SimpleLinkMapping_Outputs_4004(
-			SimpleLinkMapping source) {
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		for (Iterator<?> destinations = source.getOutputs().iterator(); destinations
-				.hasNext();) {
-			SimpleRootNode destination = (SimpleRootNode) destinations.next();
-			result.add(new SimplemapLinkDescriptor(source, destination,
-					SimplemapElementTypes.SimpleLinkMappingOutputs_4004,
-					SimpleLinkMappingOutputsEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<SimplemapLinkDescriptor> getOutgoingFeatureModelFacetLinks_SimpleRootNode_Outputs_4005(
-			SimpleRootNode source) {
-		LinkedList<SimplemapLinkDescriptor> result = new LinkedList<SimplemapLinkDescriptor>();
-		for (Iterator<?> destinations = source.getOutputs().iterator(); destinations
-				.hasNext();) {
-			SimpleLinkMapping destination = (SimpleLinkMapping) destinations
-					.next();
-			result.add(new SimplemapLinkDescriptor(source, destination,
-					SimplemapElementTypes.SimpleRootNodeOutputs_4005,
-					SimpleRootNodeOutputsEditPart.VISUAL_ID));
-		}
 		return result;
 	}
 

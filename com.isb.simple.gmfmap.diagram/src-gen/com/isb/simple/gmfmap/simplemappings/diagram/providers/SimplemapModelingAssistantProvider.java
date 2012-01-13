@@ -23,7 +23,6 @@ import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment2EditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
@@ -84,16 +83,8 @@ public class SimplemapModelingAssistantProvider extends
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof SimpleTopNodeEditPart) {
-			return ((SimpleTopNodeEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
 		if (sourceEditPart instanceof SimpleSubNodeEditPart) {
 			return ((SimpleSubNodeEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof SimpleLinkMappingEditPart) {
-			return ((SimpleLinkMappingEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
@@ -113,10 +104,6 @@ public class SimplemapModelingAssistantProvider extends
 			return ((SimpleSubNodeEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof SimpleLinkMappingEditPart) {
-			return ((SimpleLinkMappingEditPart) targetEditPart)
-					.getMARelTypesOnTarget();
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -129,16 +116,8 @@ public class SimplemapModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof SimpleTopNodeEditPart) {
-			return ((SimpleTopNodeEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
 		if (sourceEditPart instanceof SimpleSubNodeEditPart) {
 			return ((SimpleSubNodeEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof SimpleLinkMappingEditPart) {
-			return ((SimpleLinkMappingEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -159,10 +138,6 @@ public class SimplemapModelingAssistantProvider extends
 			return ((SimpleSubNodeEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof SimpleLinkMappingEditPart) {
-			return ((SimpleLinkMappingEditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
 		return Collections.EMPTY_LIST;
 	}
 
@@ -173,16 +148,8 @@ public class SimplemapModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof SimpleTopNodeEditPart) {
-			return ((SimpleTopNodeEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
 		if (sourceEditPart instanceof SimpleSubNodeEditPart) {
 			return ((SimpleSubNodeEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof SimpleLinkMappingEditPart) {
-			return ((SimpleLinkMappingEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

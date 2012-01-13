@@ -184,6 +184,41 @@ public class SimpleSubNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleTopNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleCompartment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleLabelNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleLinkMapping()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleSubNodeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
+				 SimplemappingsFactory.eINSTANCE.createSimpleSubNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
 				 SimplemappingsFactory.eINSTANCE.createSimpleNode()));
 
 		newChildDescriptors.add

@@ -1,9 +1,5 @@
 package com.isb.simple.gmfmap.simplemappings.diagram.edit.parts;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
@@ -22,7 +18,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
-import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -33,7 +28,6 @@ import org.eclipse.swt.widgets.Display;
 
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleLinkMappingItemSemanticEditPolicy;
 import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
-import com.isb.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
 /**
  * @generated
@@ -256,63 +250,6 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(SimplemapVisualIDRegistry
 				.getType(SimpleLinkMappingNameEditPart.VISUAL_ID));
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(SimplemapElementTypes.SimpleLinkMappingOutputs_4004);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnSourceAndTarget(
-			IGraphicalEditPart targetEditPart) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof SimpleTopNodeEditPart) {
-			types.add(SimplemapElementTypes.SimpleLinkMappingOutputs_4004);
-		}
-		if (targetEditPart instanceof SimpleSubNodeEditPart) {
-			types.add(SimplemapElementTypes.SimpleLinkMappingOutputs_4004);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == SimplemapElementTypes.SimpleLinkMappingOutputs_4004) {
-			types.add(SimplemapElementTypes.SimpleTopNode_2003);
-			types.add(SimplemapElementTypes.SimpleSubNode_2006);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(SimplemapElementTypes.SimpleRootNodeOutputs_4005);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == SimplemapElementTypes.SimpleRootNodeOutputs_4005) {
-			types.add(SimplemapElementTypes.SimpleTopNode_2003);
-			types.add(SimplemapElementTypes.SimpleSubNode_2006);
-		}
-		return types;
 	}
 
 	/**

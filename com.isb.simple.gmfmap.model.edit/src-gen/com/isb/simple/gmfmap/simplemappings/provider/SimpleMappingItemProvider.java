@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.gmf.gmfgraph.GMFGraphFactory;
 import org.eclipse.gmf.mappings.GMFMapFactory;
@@ -39,7 +40,7 @@ import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
  * @generated
  */
 public class SimpleMappingItemProvider
-	extends SimpleDomainMapElementItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -68,6 +69,7 @@ public class SimpleMappingItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDomainModelPropertyDescriptor(object);
+			addDomainMetaElementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +88,28 @@ public class SimpleMappingItemProvider
 				 getString("_UI_SimpleMapping_domainModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMapping_domainModel_feature", "_UI_SimpleMapping_type"),
 				 SimplemappingsPackage.Literals.SIMPLE_MAPPING__DOMAIN_MODEL,
+				 false,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Domain Meta Element feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDomainMetaElementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleMapping_domainMetaElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMapping_domainMetaElement_feature", "_UI_SimpleMapping_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_MAPPING__DOMAIN_META_ELEMENT,
 				 false,
 				 false,
 				 true,
@@ -197,6 +221,17 @@ public class SimpleMappingItemProvider
 			(createChildParameter
 				(SimplemappingsPackage.Literals.SIMPLE_MAPPING__MAPPING,
 				 GMFMapFactory.eINSTANCE.createMapping()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return SimplemapEditPlugin.INSTANCE;
 	}
 
 	/**

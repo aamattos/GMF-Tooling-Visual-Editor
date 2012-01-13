@@ -262,42 +262,9 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(SimplemapElementTypes.SimpleRootNodeOutputs_4005);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnSourceAndTarget(
-			IGraphicalEditPart targetEditPart) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof SimpleLinkMappingEditPart) {
-			types.add(SimplemapElementTypes.SimpleRootNodeOutputs_4005);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == SimplemapElementTypes.SimpleRootNodeOutputs_4005) {
-			types.add(SimplemapElementTypes.SimpleLinkMapping_2007);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 		types.add(SimplemapElementTypes.SimpleSubNodeParentRootNode_4003);
-		types.add(SimplemapElementTypes.SimpleLinkMappingOutputs_4004);
 		return types;
 	}
 
@@ -308,8 +275,6 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == SimplemapElementTypes.SimpleSubNodeParentRootNode_4003) {
 			types.add(SimplemapElementTypes.SimpleSubNode_2006);
-		} else if (relationshipType == SimplemapElementTypes.SimpleLinkMappingOutputs_4004) {
-			types.add(SimplemapElementTypes.SimpleLinkMapping_2007);
 		}
 		return types;
 	}

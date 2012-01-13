@@ -2,13 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Triggers
 Bundle-SymbolicName: com.isb.simple.gmfmap.model.triggers;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0.qualifier
 Bundle-Activator: com.isb.simple.gmfmap.model.triggers.Activator
 Bundle-Vendor: ISB
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.transaction;bundle-version="1.4.0",
- com.isb.simple.gmfmap.model;bundle-version="1.0.0"
+ com.isb.simple.gmfmap.model;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: com.isb.simple.gmfmap.model.triggers,

@@ -9,6 +9,7 @@ package com.isb.simple.gmfmap.simplemappings.impl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.gmf.gmfgraph.Canvas;
 import org.eclipse.gmf.mappings.Mapping;
 import org.eclipse.gmf.tooldef.Palette;
@@ -30,12 +31,13 @@ import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link com.isb.simple.gmfmap.simplemappings.impl.SimpleMappingImpl#getPalette <em>Palette</em>}</li>
  *   <li>{@link com.isb.simple.gmfmap.simplemappings.impl.SimpleMappingImpl#getMapping <em>Mapping</em>}</li>
  *   <li>{@link com.isb.simple.gmfmap.simplemappings.impl.SimpleMappingImpl#getDomainModel <em>Domain Model</em>}</li>
+ *   <li>{@link com.isb.simple.gmfmap.simplemappings.impl.SimpleMappingImpl#getDomainMetaElement <em>Domain Meta Element</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SimpleMappingImpl extends SimpleDomainMapElementImpl implements SimpleMapping {
+public class SimpleMappingImpl extends EObjectImpl implements SimpleMapping {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -53,6 +55,16 @@ public class SimpleMappingImpl extends SimpleDomainMapElementImpl implements Sim
 	@Override
 	protected EClass eStaticClass() {
 		return SimplemappingsPackage.Literals.SIMPLE_MAPPING;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -142,15 +154,8 @@ public class SimpleMappingImpl extends SimpleDomainMapElementImpl implements Sim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == SimpleParentNode.class) {
-			switch (derivedFeatureID) {
-				case SimplemappingsPackage.SIMPLE_MAPPING__CHILDREN: return SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	public EClass getDomainMetaElement() {
+		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_MAPPING__DOMAIN_META_ELEMENT, true);
 	}
 
 	/**
@@ -158,15 +163,8 @@ public class SimpleMappingImpl extends SimpleDomainMapElementImpl implements Sim
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == SimpleParentNode.class) {
-			switch (baseFeatureID) {
-				case SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN: return SimplemappingsPackage.SIMPLE_MAPPING__CHILDREN;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	public void setDomainMetaElement(EClass newDomainMetaElement) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_MAPPING__DOMAIN_META_ELEMENT, newDomainMetaElement);
 	}
 
 } //SimpleMappingImpl

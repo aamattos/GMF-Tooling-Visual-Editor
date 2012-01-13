@@ -6,14 +6,14 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="settingDelegates" value="com.isb.simple.gmfmap.simplemapping.setting"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleMapping" eSuperTypes="#//SimpleDomainMapElement #//SimpleParentNode">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="canvas" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Canvas"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="palette" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.ecore#//Palette"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mapping" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.map/models/gmfmap.ecore#//Mapping"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleMapping" eSuperTypes="#//SimpleParentNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="canvas" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Canvas"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="palette" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.ecore#//Palette"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapping" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.map/models/gmfmap.ecore#//Mapping"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainModel" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage">
+      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainMetaElement" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass">
       <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>

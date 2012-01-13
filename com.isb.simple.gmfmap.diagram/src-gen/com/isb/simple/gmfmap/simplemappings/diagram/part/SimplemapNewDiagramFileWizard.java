@@ -81,9 +81,8 @@ public class SimplemapNewDiagramFileWizard extends Wizard {
 					"Unsupported URI: " + domainModelURI); //$NON-NLS-1$
 		}
 		myFileCreationPage.setContainerFullPath(filePath);
-		myFileCreationPage
-				.setFileName(SimplemapDiagramEditorUtil.getUniqueFileName(
-						filePath, fileName, "simplemappings_diagram")); //$NON-NLS-1$
+		myFileCreationPage.setFileName(SimplemapDiagramEditorUtil
+				.getUniqueFileName(filePath, fileName, "simplemappings")); //$NON-NLS-1$
 
 		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(
 				Messages.SimplemapNewDiagramFileWizard_RootSelectionPageName);
@@ -137,6 +136,7 @@ public class SimplemapNewDiagramFileWizard extends Wizard {
 						SimpleMappingEditPart.MODEL_ID,
 						SimplemapDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 				diagramResource.getContents().add(diagram);
+				diagramResource.getContents().add(diagram.getElement());
 				return CommandResult.newOKCommandResult();
 			}
 		};

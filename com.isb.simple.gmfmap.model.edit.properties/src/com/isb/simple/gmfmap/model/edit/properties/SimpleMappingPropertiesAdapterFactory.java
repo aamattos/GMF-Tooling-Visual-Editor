@@ -13,7 +13,22 @@ public class SimpleMappingPropertiesAdapterFactory extends
 
 	
 	@Override
+	public Adapter createSimpleTopNodeAdapter() {
+		return simpleNodeProvider;
+	}
+	
+	@Override
 	public Adapter createSimpleNodeAdapter() {
+		return simpleNodeProvider;
+	}
+	
+	@Override
+	public Adapter createSimpleLabelNodeAdapter() {
+		return simpleNodeProvider;
+	}
+	
+	@Override
+	public Adapter createSimpleSubNodeReferenceAdapter() {
 		return simpleNodeProvider;
 	}
 	

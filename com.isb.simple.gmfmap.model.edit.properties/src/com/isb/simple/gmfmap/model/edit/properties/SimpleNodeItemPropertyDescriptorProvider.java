@@ -148,7 +148,7 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 			{
 				case SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE:
 					return !(object instanceof SimpleSubNode);
-				case SimplemappingsPackage.SIMPLE_NODE__DOMAIN_META_ELEMENT:
+				case SimplemappingsPackage.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT:
 					return !(object instanceof SimpleSubNode);					
 			}
 			

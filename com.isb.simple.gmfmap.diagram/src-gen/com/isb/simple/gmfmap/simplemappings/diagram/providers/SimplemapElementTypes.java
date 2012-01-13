@@ -24,9 +24,7 @@ import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3E
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingOutputsEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleRootNodeOutputsEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeParentRootNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
@@ -136,16 +134,6 @@ public class SimplemapElementTypes {
 	 * @generated
 	 */
 	public static final IElementType SimpleSubNodeParentRootNode_4003 = getElementType("com.isb.simple.gmfmap.diagram.SimpleSubNodeParentRootNode_4003"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleLinkMappingOutputs_4004 = getElementType("com.isb.simple.gmfmap.diagram.SimpleLinkMappingOutputs_4004"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleRootNodeOutputs_4005 = getElementType("com.isb.simple.gmfmap.diagram.SimpleRootNodeOutputs_4005"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -303,13 +291,6 @@ public class SimplemapElementTypes {
 			elements.put(SimpleSubNodeParentRootNode_4003,
 					SimplemappingsPackage.eINSTANCE
 							.getSimpleSubNode_ParentRootNode());
-
-			elements.put(SimpleLinkMappingOutputs_4004,
-					SimplemappingsPackage.eINSTANCE
-							.getSimpleLinkMapping_Outputs());
-
-			elements.put(SimpleRootNodeOutputs_4005,
-					SimplemappingsPackage.eINSTANCE.getSimpleRootNode_Outputs());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -342,8 +323,6 @@ public class SimplemapElementTypes {
 			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_3016);
 			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_3020);
 			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeParentRootNode_4003);
-			KNOWN_ELEMENT_TYPES.add(SimpleLinkMappingOutputs_4004);
-			KNOWN_ELEMENT_TYPES.add(SimpleRootNodeOutputs_4005);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -383,10 +362,6 @@ public class SimplemapElementTypes {
 			return SimpleSubNodeReference_3020;
 		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID:
 			return SimpleSubNodeParentRootNode_4003;
-		case SimpleLinkMappingOutputsEditPart.VISUAL_ID:
-			return SimpleLinkMappingOutputs_4004;
-		case SimpleRootNodeOutputsEditPart.VISUAL_ID:
-			return SimpleRootNodeOutputs_4005;
 		}
 		return null;
 	}

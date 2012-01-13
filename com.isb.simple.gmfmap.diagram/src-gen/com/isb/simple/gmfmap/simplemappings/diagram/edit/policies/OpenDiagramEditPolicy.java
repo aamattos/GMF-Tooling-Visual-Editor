@@ -37,7 +37,7 @@ import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEdit
 import com.isb.simple.gmfmap.simplemappings.diagram.part.Messages;
 import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditor;
 import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
-import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil;
+import com.isb.simple.gmfmap.simplemappings.diagram.part.SimpleMapEditorDiagramEditorUtil;
 
 /**
  * @generated
@@ -148,7 +148,7 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 										&& !getEditingDomain().isReadOnly(
 												nextResource)) {
 									nextResource
-											.save(SimplemapDiagramEditorUtil
+											.save(SimpleMapEditorDiagramEditorUtil
 													.getSaveOptions());
 								}
 							}

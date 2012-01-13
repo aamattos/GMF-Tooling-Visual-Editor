@@ -33,7 +33,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleRootNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNodeReference;
@@ -375,58 +374,8 @@ public class SimplemapBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateSimpleLinkMappingOutputs_4004(
-				SimpleLinkMapping source, SimpleRootNode target) {
-			if (source != null) {
-				if (source.getOutputs().contains(target)) {
-					return false;
-				}
-			}
-			if (target != null && (target.getInputs().contains(target))) {
-				return false;
-			}
-
-			return canExistSimpleLinkMappingOutputs_4004(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateSimpleRootNodeOutputs_4005(
-				SimpleRootNode source, SimpleLinkMapping target) {
-			if (source != null) {
-				if (source.getOutputs().contains(target)) {
-					return false;
-				}
-			}
-			if (target != null && (target.getInputs().contains(target))) {
-				return false;
-			}
-
-			return canExistSimpleRootNodeOutputs_4005(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
 		public boolean canExistSimpleSubNodeParentRootNode_4003(
 				SimpleSubNode source, SimpleRootNode target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistSimpleLinkMappingOutputs_4004(
-				SimpleLinkMapping source, SimpleRootNode target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistSimpleRootNodeOutputs_4005(
-				SimpleRootNode source, SimpleLinkMapping target) {
 			return true;
 		}
 	}

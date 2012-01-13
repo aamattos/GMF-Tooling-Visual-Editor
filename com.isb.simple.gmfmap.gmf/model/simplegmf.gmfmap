@@ -294,26 +294,6 @@
         xsi:type="ecore:EReference"
         href="../../com.isb.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNode/parentRootNode"/>
   </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="simplegmf.gmftool#//@palette/@tools.0/@tools.6"/>
-    <diagramLink
-        href="simplegmf.gmfgraph#ParentSubNode"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="../../com.isb.simple.gmfmap.model/model/simplemap.ecore#//SimpleLinkMapping/outputs"/>
-  </links>
-  <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="simplegmf.gmftool#//@palette/@tools.0/@tools.6"/>
-    <diagramLink
-        href="simplegmf.gmfgraph#ParentSubNode"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="../../com.isb.simple.gmfmap.model/model/simplemap.ecore#//SimpleRootNode/outputs"/>
-  </links>
   <diagram>
     <diagramCanvas
         href="simplegmf.gmfgraph#simplemappings"/>

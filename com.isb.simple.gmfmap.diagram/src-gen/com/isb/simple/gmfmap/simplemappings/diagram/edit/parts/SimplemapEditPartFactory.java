@@ -92,12 +92,6 @@ public class SimplemapEditPartFactory implements EditPartFactory {
 			case ParentSubNodeLabelEditPart.VISUAL_ID:
 				return new ParentSubNodeLabelEditPart(view);
 
-			case SimpleLinkMappingOutputsEditPart.VISUAL_ID:
-				return new SimpleLinkMappingOutputsEditPart(view);
-
-			case SimpleRootNodeOutputsEditPart.VISUAL_ID:
-				return new SimpleRootNodeOutputsEditPart(view);
-
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

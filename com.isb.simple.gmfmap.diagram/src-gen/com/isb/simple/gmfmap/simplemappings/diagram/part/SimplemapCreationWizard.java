@@ -37,11 +37,6 @@ public class SimplemapCreationWizard extends Wizard implements INewWizard {
 	/**
 	 * @generated
 	 */
-	protected SimplemapCreationWizardPage domainModelFilePage;
-
-	/**
-	 * @generated
-	 */
 	protected Resource diagram;
 
 	/**
@@ -102,32 +97,12 @@ public class SimplemapCreationWizard extends Wizard implements INewWizard {
 	 */
 	public void addPages() {
 		diagramModelFilePage = new SimplemapCreationWizardPage(
-				"DiagramModelFile", getSelection(), "simplemappings_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+				"DiagramModelFile", getSelection(), "simplemappings"); //$NON-NLS-1$ //$NON-NLS-2$
 		diagramModelFilePage
 				.setTitle(Messages.SimplemapCreationWizard_DiagramModelFilePageTitle);
 		diagramModelFilePage
 				.setDescription(Messages.SimplemapCreationWizard_DiagramModelFilePageDescription);
 		addPage(diagramModelFilePage);
-
-		domainModelFilePage = new SimplemapCreationWizardPage(
-				"DomainModelFile", getSelection(), "simplemappings") { //$NON-NLS-1$ //$NON-NLS-2$
-
-			public void setVisible(boolean visible) {
-				if (visible) {
-					String fileName = diagramModelFilePage.getFileName();
-					fileName = fileName.substring(0, fileName.length()
-							- ".simplemappings_diagram".length()); //$NON-NLS-1$
-					setFileName(SimplemapDiagramEditorUtil.getUniqueFileName(
-							getContainerFullPath(), fileName, "simplemappings")); //$NON-NLS-1$
-				}
-				super.setVisible(visible);
-			}
-		};
-		domainModelFilePage
-				.setTitle(Messages.SimplemapCreationWizard_DomainModelFilePageTitle);
-		domainModelFilePage
-				.setDescription(Messages.SimplemapCreationWizard_DomainModelFilePageDescription);
-		addPage(domainModelFilePage);
 	}
 
 	/**
@@ -139,8 +114,7 @@ public class SimplemapCreationWizard extends Wizard implements INewWizard {
 			protected void execute(IProgressMonitor monitor)
 					throws CoreException, InterruptedException {
 				diagram = SimplemapDiagramEditorUtil.createDiagram(
-						diagramModelFilePage.getURI(),
-						domainModelFilePage.getURI(), monitor);
+						diagramModelFilePage.getURI(), monitor);
 				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
 					try {
 						SimplemapDiagramEditorUtil.openDiagram(diagram);

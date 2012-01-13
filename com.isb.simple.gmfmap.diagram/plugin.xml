@@ -4,13 +4,13 @@
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
-      <fileTypes type="text" extension="simplemappings_diagram"/>
+      <fileTypes type="text" extension="simplemappings"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
       <?gmfgen generated="true"?>
       <parser
-         type="simplemappings_diagram"
+         type="simplemappings"
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
@@ -21,7 +21,7 @@
          id="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/SimplemappingsDiagramFile.gif"
-         extensions="simplemappings_diagram"
+         extensions="simplemappings"
          default="true"
          class="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditor"
          matchingStrategy="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapMatchingStrategy"
@@ -40,12 +40,12 @@
    </extension>
 
    <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
-      <?gmfgen generated="true"?>
+      <?gmfgen generated="false"?>
   	  <wizard
   	     name="%newWizardName"
   	     icon="icons/obj16/SimplemappingsDiagramFile.gif"
   	     category="org.eclipse.ui.Examples"
-  	     class="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapCreationWizard"
+  	     class="com.isb.simple.gmfmap.simplemappings.diagram.part.SimpleMapEditorCreationWizard"
   	     id="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
@@ -218,7 +218,7 @@
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Simplemap"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2003,2006,2007,3004,3005,3007,3011,3012,3018,3019,3013,3016,3020"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4003,4004,4005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4003"/>
       </viewProvider>
    </extension>
 
@@ -233,7 +233,7 @@
             <method name="getType()" value="2003,2006,2007,3004,3005,3007,3011,3012,3018,3019,3013,3016,3020"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4003,4004,4005"/>
+            <method name="getType()" value="4003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5004,5009,5010,5003,5007"/>
@@ -415,24 +415,6 @@
             <param name="semanticHint" value="4003"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="http://com.isb.simple.gmfmap/simplemappings">
-         <specializationType
-               id="com.isb.simple.gmfmap.diagram.SimpleLinkMappingOutputs_4004"
-               name="%metatype.name.SimpleLinkMappingOutputs_4004"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4004"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://com.isb.simple.gmfmap/simplemappings">
-         <specializationType
-               id="com.isb.simple.gmfmap.diagram.SimpleRootNodeOutputs_4005"
-               name="%metatype.name.SimpleRootNodeOutputs_4005"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4005"/>
-         </specializationType>
-      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -460,8 +442,6 @@
          <elementType ref="com.isb.simple.gmfmap.diagram.SimpleSubNodeReference_3016"/>
          <elementType ref="com.isb.simple.gmfmap.diagram.SimpleSubNodeReference_3020"/>
          <elementType ref="com.isb.simple.gmfmap.diagram.SimpleSubNodeParentRootNode_4003"/>
-         <elementType ref="com.isb.simple.gmfmap.diagram.SimpleLinkMappingOutputs_4004"/>
-         <elementType ref="com.isb.simple.gmfmap.diagram.SimpleRootNodeOutputs_4005"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -506,7 +486,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="simplemappings_diagram"/>
+        	      <test property="org.eclipse.core.resources.extension" value="simplemappings"/>
                </and>
                <instanceof value="com.isb.simple.gmfmap.simplemappings.diagram.navigator.SimplemapAbstractNavigatorItem"/>
             </or>
@@ -523,7 +503,7 @@
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
-        	         <test property="org.eclipse.core.resources.extension" value="simplemappings_diagram"/>
+        	         <test property="org.eclipse.core.resources.extension" value="simplemappings"/>
                   </and>
                   <instanceof value="com.isb.simple.gmfmap.simplemappings.diagram.navigator.SimplemapAbstractNavigatorItem"/>
                </or>

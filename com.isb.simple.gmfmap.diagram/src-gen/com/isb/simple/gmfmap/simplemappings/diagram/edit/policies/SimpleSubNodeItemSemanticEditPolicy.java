@@ -20,17 +20,11 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleCompartment2CreateCommand;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNode4CreateCommand;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLinkMappingOutputsCreateCommand;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLinkMappingOutputsReorientCommand;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleRootNodeOutputsCreateCommand;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleRootNodeOutputsReorientCommand;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeParentRootNodeCreateCommand;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeParentRootNodeReorientCommand;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeReference4CreateCommand;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment2EditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingOutputsEditPart;
-import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleRootNodeOutputsEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeParentRootNodeEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -85,26 +79,10 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (SimplemapVisualIDRegistry.getVisualID(incomingLink) == SimpleLinkMappingOutputsEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
 		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (SimplemapVisualIDRegistry.getVisualID(outgoingLink) == SimpleSubNodeParentRootNodeEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						outgoingLink.getSource().getElement(), null,
-						outgoingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (SimplemapVisualIDRegistry.getVisualID(outgoingLink) == SimpleRootNodeOutputsEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
@@ -176,15 +154,6 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 			return getGEFWrapper(new SimpleSubNodeParentRootNodeCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
-		if (SimplemapElementTypes.SimpleLinkMappingOutputs_4004 == req
-				.getElementType()) {
-			return null;
-		}
-		if (SimplemapElementTypes.SimpleRootNodeOutputs_4005 == req
-				.getElementType()) {
-			return getGEFWrapper(new SimpleRootNodeOutputsCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
 		return null;
 	}
 
@@ -197,15 +166,6 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 				.getElementType()) {
 			return getGEFWrapper(new SimpleSubNodeParentRootNodeCreateCommand(
 					req, req.getSource(), req.getTarget()));
-		}
-		if (SimplemapElementTypes.SimpleLinkMappingOutputs_4004 == req
-				.getElementType()) {
-			return getGEFWrapper(new SimpleLinkMappingOutputsCreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
-		if (SimplemapElementTypes.SimpleRootNodeOutputs_4005 == req
-				.getElementType()) {
-			return null;
 		}
 		return null;
 	}
@@ -222,11 +182,6 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID:
 			return getGEFWrapper(new SimpleSubNodeParentRootNodeReorientCommand(
 					req));
-		case SimpleLinkMappingOutputsEditPart.VISUAL_ID:
-			return getGEFWrapper(new SimpleLinkMappingOutputsReorientCommand(
-					req));
-		case SimpleRootNodeOutputsEditPart.VISUAL_ID:
-			return getGEFWrapper(new SimpleRootNodeOutputsReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

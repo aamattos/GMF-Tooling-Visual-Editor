@@ -17,7 +17,7 @@ public class SimplemapUriEditorInputTester extends PropertyTester {
 			return false;
 		}
 		URIEditorInput editorInput = (URIEditorInput) receiver;
-		return "simplemappings_diagram".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
+		return "simplemappings".equals(editorInput.getURI().fileExtension()); //$NON-NLS-1$
 	}
 
 }

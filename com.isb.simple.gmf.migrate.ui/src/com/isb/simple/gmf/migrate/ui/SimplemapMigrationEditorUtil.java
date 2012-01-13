@@ -49,6 +49,7 @@ import com.isb.simple.gmfmap.simplemappings.SimpleTopNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsFactory;
 import com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
 import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
+import com.isb.simple.gmfmap.simplemappings.diagram.part.SimpleMapEditorDiagramEditorUtil;
 import com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil;
 
 /**
@@ -63,7 +64,7 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 	 * This method should be called within a workspace modify operation since it creates resources.
 	 * @generated
 	 */
-	public Resource createDiagram(URI diagramURI, URI modelURI,
+	public Resource createDiagram(URI diagramURI,
 			IProgressMonitor progressMonitor, final Mapping myMapping, final Canvas myCanvas, final Palette myPalette) {
 		TransactionalEditingDomain editingDomain = GMFEditingDomainFactory.INSTANCE
 				.createEditingDomain();
@@ -72,8 +73,7 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 				3);
 		final Resource diagramResource = editingDomain.getResourceSet()
 				.createResource(diagramURI);
-		final Resource modelResource = editingDomain.getResourceSet()
-				.createResource(modelURI);
+
 		final String diagramName = diagramURI.lastSegment();
 		AbstractTransactionalCommand command = new AbstractTransactionalCommand(
 				editingDomain,
@@ -83,7 +83,7 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 					IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
 				SimpleMapping model = createInitialModel(myMapping, myCanvas, myPalette);
-				attachModelToResource(model, modelResource);
+				attachModelToResource(model, diagramResource);
 
 				Diagram diagram = ViewService.createDiagram(model,
 						SimpleMappingEditPart.MODEL_ID,
@@ -95,11 +95,8 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 				}
 
 				try {
-					modelResource
-							.save(com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil
-									.getSaveOptions());
 					diagramResource
-							.save(com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorUtil
+							.save(com.isb.simple.gmfmap.simplemappings.diagram.part.SimpleMapEditorDiagramEditorUtil
 									.getSaveOptions());
 				} catch (IOException e) {
 
@@ -116,7 +113,6 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 			SimplemapDiagramEditorPlugin.getInstance().logError(
 					"Unable to create model and diagram", e); //$NON-NLS-1$
 		}
-		setCharset(WorkspaceSynchronizer.getFile(modelResource));
 		setCharset(WorkspaceSynchronizer.getFile(diagramResource));
 		return diagramResource;
 	}
@@ -135,8 +131,6 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 		simpleMapping.setMapping(myMapping);
 		simpleMapping.setCanvas(myCanvas);
 		simpleMapping.setPalette(myPalette);
-		
-		simpleMapping.setDomainMetaElement(myMapping.getDiagram().getDomainMetaElement());
 		
 		simpleMapping.getChildren().addAll(createNodes(myMapping));
 		
