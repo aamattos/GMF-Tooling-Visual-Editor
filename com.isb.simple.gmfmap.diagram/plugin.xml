@@ -257,7 +257,11 @@
          <object class="com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart" id="SimpleTopNode_2003"/>
          <object class="com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart" id="SimpleSubNode_2006"/>
          <object class="com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart" id="SimpleLinkMapping_2007"/>
-         <context elements="SimpleMapping_1000,SimpleTopNode_2003,SimpleSubNode_2006,SimpleLinkMapping_2007"/>
+         <object
+               class="com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart"
+               id="SimpleCompartment_3005">
+         </object>
+         <context elements="SimpleMapping_1000,SimpleTopNode_2003,SimpleSubNode_2006,SimpleLinkMapping_2007, SimpleCompartment_3005"/>
       </modelingAssistantProvider>
    </extension>
 
