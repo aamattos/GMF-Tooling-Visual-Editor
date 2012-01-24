@@ -7,9 +7,12 @@
 package com.isb.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.gmf.gmfgraph.Connection;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
+
 import org.eclipse.gmf.mappings.LinkMapping;
+
 import org.eclipse.gmf.tooldef.AbstractTool;
 
 /**
@@ -35,7 +38,6 @@ import org.eclipse.gmf.tooldef.AbstractTool;
  * @generated
  */
 public interface SimpleLinkMapping extends SimpleChildNode, SimpleParentNode {
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -201,4 +203,5 @@ public interface SimpleLinkMapping extends SimpleChildNode, SimpleParentNode {
 	 * @generated
 	 */
 	EList<SimpleRootNode> getInputs();
+
 } // SimpleLinkMapping

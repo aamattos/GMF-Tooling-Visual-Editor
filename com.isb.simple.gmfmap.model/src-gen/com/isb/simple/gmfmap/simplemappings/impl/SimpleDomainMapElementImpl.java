@@ -6,11 +6,12 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleDomainMapElement;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -6,10 +6,10 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.ecore.EClass;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleLabelNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

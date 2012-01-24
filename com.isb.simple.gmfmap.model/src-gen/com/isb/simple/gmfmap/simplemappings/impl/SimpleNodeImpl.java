@@ -6,21 +6,26 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.gmf.gmfgraph.DiagramLabel;
-import org.eclipse.gmf.gmfgraph.Node;
-import org.eclipse.gmf.mappings.NodeReference;
-import org.eclipse.gmf.tooldef.AbstractTool;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleDomainMapElement;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.gmf.gmfgraph.DiagramLabel;
+import org.eclipse.gmf.gmfgraph.Node;
+
+import org.eclipse.gmf.mappings.NodeReference;
+
+import org.eclipse.gmf.tooldef.AbstractTool;
 
 /**
  * <!-- begin-user-doc -->
@@ -100,6 +105,24 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SimpleMapping getParentMapping() {
+		return (SimpleMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentMapping(SimpleMapping newParentMapping) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, newParentMapping);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SimpleNode getParent() {
 		return (SimpleNode)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT, true);
 	}
@@ -136,8 +159,8 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleMapping getParentMapping() {
-		return (SimpleMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, true);
+	public EClass getDomainMetaElement() {
+		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT, true);
 	}
 
 	/**
@@ -145,8 +168,8 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentMapping(SimpleMapping newParentMapping) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, newParentMapping);
+	public void setDomainMetaElement(EClass newDomainMetaElement) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT, newDomainMetaElement);
 	}
 
 	/**
@@ -183,24 +206,6 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 */
 	public void setContainmentFeature(EReference newContainmentFeature) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE, newContainmentFeature);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDomainMetaElement() {
-		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDomainMetaElement(EClass newDomainMetaElement) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT, newDomainMetaElement);
 	}
 
 	/**

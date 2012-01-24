@@ -7,13 +7,21 @@
 package com.isb.simple.gmfmap.simplemappings.provider;
 
 
+import com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
+
+import com.isb.simple.gmfmap.simplemappings.SimpleNode;
+import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -25,10 +33,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-import com.isb.simple.gmfmap.simplemappings.SimpleNode;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
  * This is the item provider adapter for a {@link com.isb.simple.gmfmap.simplemappings.SimpleNode} object.
@@ -76,28 +80,6 @@ public class SimpleNodeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Containment Feature feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addContainmentFeaturePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SimpleNode_containmentFeature_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleNode_containmentFeature_feature", "_UI_SimpleNode_type"),
-				 SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Domain Meta Element feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +94,28 @@ public class SimpleNodeItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDomainMapElement_domainMetaElement_feature", "_UI_SimpleDomainMapElement_type"),
 				 SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT,
 				 false,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Containment Feature feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainmentFeaturePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleNode_containmentFeature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleNode_containmentFeature_feature", "_UI_SimpleNode_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE,
+				 true,
 				 false,
 				 true,
 				 null,

@@ -7,13 +7,22 @@
 package com.isb.simple.gmfmap.simplemappings.provider;
 
 
+import com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
+
+import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
+import com.isb.simple.gmfmap.simplemappings.SimplemappingsFactory;
+import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -25,11 +34,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsFactory;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
  * This is the item provider adapter for a {@link com.isb.simple.gmfmap.simplemappings.SimpleSubNode} object.
@@ -252,7 +256,7 @@ public class SimpleSubNodeItemProvider
 				 SimplemappingsFactory.eINSTANCE.createSimpleSubNode()));
 	}
 
-    /**
+	/**
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,7 +267,7 @@ public class SimpleSubNodeItemProvider
 		return SimplemapEditPlugin.INSTANCE;
 	}
 
-				/**
+    /**
 	 * @generated
      */
 	protected ItemPropertyDescriptor createItemPropertyDescriptor(AdapterFactory adapterFactory,

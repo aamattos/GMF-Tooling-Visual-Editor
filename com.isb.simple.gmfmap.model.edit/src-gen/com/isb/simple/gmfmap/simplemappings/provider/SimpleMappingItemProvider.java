@@ -7,13 +7,21 @@
 package com.isb.simple.gmfmap.simplemappings.provider;
 
 
+import com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
+
+import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
+import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -25,13 +33,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.gmf.gmfgraph.GMFGraphFactory;
-import org.eclipse.gmf.mappings.GMFMapFactory;
-import org.eclipse.gmf.tooldef.GMFToolFactory;
 
-import com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+import org.eclipse.gmf.gmfgraph.GMFGraphFactory;
+
+import org.eclipse.gmf.mappings.GMFMapFactory;
+
+import org.eclipse.gmf.tooldef.GMFToolFactory;
 
 /**
  * This is the item provider adapter for a {@link com.isb.simple.gmfmap.simplemappings.SimpleMapping} object.
@@ -234,7 +241,7 @@ public class SimpleMappingItemProvider
 		return SimplemapEditPlugin.INSTANCE;
 	}
 
-	/**
+    /**
 	 * @generated
      */
 	protected ItemPropertyDescriptor createItemPropertyDescriptor(AdapterFactory adapterFactory,

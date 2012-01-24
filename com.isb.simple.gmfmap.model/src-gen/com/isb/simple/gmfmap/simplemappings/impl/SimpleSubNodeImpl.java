@@ -6,10 +6,6 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
@@ -19,6 +15,12 @@ import com.isb.simple.gmfmap.simplemappings.SimpleRootNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,8 +81,28 @@ public class SimpleSubNodeImpl extends EObjectImpl implements SimpleSubNode {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<SimpleChildNode> getChildren() {
-		return (EList<SimpleChildNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN, true);
+	public EList<SimpleSubNode> getSubNodes() {
+		return (EList<SimpleSubNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__SUB_NODES, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleLinkMapping> getOutputs() {
+		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__OUTPUTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleLinkMapping> getInputs() {
+		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__INPUTS, true);
 	}
 
 	/**
@@ -99,6 +121,24 @@ public class SimpleSubNodeImpl extends EObjectImpl implements SimpleSubNode {
 	 */
 	public void setParentNode(SimpleParentNode newParentNode) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_NODE, newParentNode);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleMapping getParentMapping() {
+		return (SimpleMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentMapping(SimpleMapping newParentMapping) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, newParentMapping);
 	}
 
 	/**
@@ -135,54 +175,6 @@ public class SimpleSubNodeImpl extends EObjectImpl implements SimpleSubNode {
 	 */
 	public boolean isSetParentRoot() {
 		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_ROOT);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleSubNode> getSubNodes() {
-		return (EList<SimpleSubNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__SUB_NODES, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleLinkMapping> getOutputs() {
-		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__OUTPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleLinkMapping> getInputs() {
-		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__INPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleMapping getParentMapping() {
-		return (SimpleMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParentMapping(SimpleMapping newParentMapping) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, newParentMapping);
 	}
 
 	/**
@@ -237,6 +229,16 @@ public class SimpleSubNodeImpl extends EObjectImpl implements SimpleSubNode {
 	 */
 	public void setParentRootNode(SimpleRootNode newParentRootNode) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__PARENT_ROOT_NODE, newParentRootNode);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleChildNode> getChildren() {
+		return (EList<SimpleChildNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN, true);
 	}
 
 	/**

@@ -8,8 +8,11 @@ package com.isb.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.gmf.gmfgraph.Canvas;
+
 import org.eclipse.gmf.mappings.Mapping;
+
 import org.eclipse.gmf.tooldef.Palette;
 
 /**
@@ -37,7 +40,7 @@ public interface SimpleMapping extends SimpleParentNode {
 	 * Returns the value of the '<em><b>Canvas</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Canvas</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Canvas</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -63,7 +66,7 @@ public interface SimpleMapping extends SimpleParentNode {
 	 * Returns the value of the '<em><b>Palette</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Palette</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Palette</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -89,7 +92,7 @@ public interface SimpleMapping extends SimpleParentNode {
 	 * Returns the value of the '<em><b>Mapping</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Mapping</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Mapping</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

@@ -8,7 +8,6 @@ package com.isb.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.ecore.EObject;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Simple Child Node</b></em>'.
@@ -29,7 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface SimpleChildNode extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Parent Node</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link com.isb.simple.gmfmap.simplemappings.SimpleParentNode#getChildren <em>Children</em>}'.
@@ -57,6 +55,32 @@ public interface SimpleChildNode extends EObject {
 	 * @generated
 	 */
 	void setParentNode(SimpleParentNode value);
+
+	/**
+	 * Returns the value of the '<em><b>Parent Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent Mapping</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Mapping</em>' reference.
+	 * @see #setParentMapping(SimpleMapping)
+	 * @see com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleChildNode_ParentMapping()
+	 * @model transient="true"
+	 * @generated
+	 */
+	SimpleMapping getParentMapping();
+
+	/**
+	 * Sets the value of the '{@link com.isb.simple.gmfmap.simplemappings.SimpleChildNode#getParentMapping <em>Parent Mapping</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent Mapping</em>' reference.
+	 * @see #getParentMapping()
+	 * @generated
+	 */
+	void setParentMapping(SimpleMapping value);
 
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' reference.
@@ -110,29 +134,4 @@ public interface SimpleChildNode extends EObject {
 	 */
 	boolean isSetParentRoot();
 
-	/**
-	 * Returns the value of the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parent Mapping</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent Mapping</em>' reference.
-	 * @see #setParentMapping(SimpleMapping)
-	 * @see com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleChildNode_ParentMapping()
-	 * @model transient="true"
-	 * @generated
-	 */
-	SimpleMapping getParentMapping();
-
-	/**
-	 * Sets the value of the '{@link com.isb.simple.gmfmap.simplemappings.SimpleChildNode#getParentMapping <em>Parent Mapping</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent Mapping</em>' reference.
-	 * @see #getParentMapping()
-	 * @generated
-	 */
-	void setParentMapping(SimpleMapping value);
 } // SimpleChildNode

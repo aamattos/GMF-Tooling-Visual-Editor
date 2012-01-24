@@ -55,7 +55,7 @@
      </category>
    </extension>
 
-   <extension point="org.eclipse.ui.popupMenus" id="%extension.id">
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
       <?gmfgen generated="true"?>
       <objectContribution
             id="com.isb.simple.gmfmap.diagram.InitDiagram"
@@ -250,7 +250,7 @@
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
-      <?gmfgen generated="true"?>
+      <?gmfgen generated="false"?>
       <modelingAssistantProvider class="com.isb.simple.gmfmap.simplemappings.diagram.providers.SimplemapModelingAssistantProvider">
          <Priority name="Lowest"/>
          <object class="com.isb.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart" id="SimpleMapping_1000"/>
@@ -609,7 +609,7 @@
       <?gmfgen generated="true"?>
       <category id="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
       <command id="com.isb.simple.gmfmap.diagram.LoadResourceAction"
-         name="%command.name"
+         name="Load Resource"
          categoryId="com.isb.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"
          defaultHandler="com.isb.simple.gmfmap.simplemappings.diagram.part.LoadResourceAction"/>
    </extension>

@@ -6,14 +6,6 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.gmf.gmfgraph.Connection;
-import org.eclipse.gmf.gmfgraph.DiagramLabel;
-import org.eclipse.gmf.mappings.LinkMapping;
-import org.eclipse.gmf.tooldef.AbstractTool;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
@@ -21,6 +13,19 @@ import com.isb.simple.gmfmap.simplemappings.SimpleNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleRootNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.gmf.gmfgraph.Connection;
+import org.eclipse.gmf.gmfgraph.DiagramLabel;
+
+import org.eclipse.gmf.mappings.LinkMapping;
+
+import org.eclipse.gmf.tooldef.AbstractTool;
 
 /**
  * <!-- begin-user-doc -->
@@ -163,58 +168,6 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleRootNode> getOutputs() {
-		return (EList<SimpleRootNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__OUTPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleRootNode> getInputs() {
-		return (EList<SimpleRootNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__INPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == SimpleParentNode.class) {
-			switch (derivedFeatureID) {
-				case SimplemappingsPackage.SIMPLE_LINK_MAPPING__CHILDREN: return SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == SimpleParentNode.class) {
-			switch (baseFeatureID) {
-				case SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN: return SimplemappingsPackage.SIMPLE_LINK_MAPPING__CHILDREN;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return (String)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__NAME, true);
 	}
@@ -298,6 +251,58 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	 */
 	public boolean isSetTool() {
 		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__TOOL);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleRootNode> getOutputs() {
+		return (EList<SimpleRootNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__OUTPUTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleRootNode> getInputs() {
+		return (EList<SimpleRootNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__INPUTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == SimpleParentNode.class) {
+			switch (derivedFeatureID) {
+				case SimplemappingsPackage.SIMPLE_LINK_MAPPING__CHILDREN: return SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == SimpleParentNode.class) {
+			switch (baseFeatureID) {
+				case SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN: return SimplemappingsPackage.SIMPLE_LINK_MAPPING__CHILDREN;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //SimpleLinkMappingImpl

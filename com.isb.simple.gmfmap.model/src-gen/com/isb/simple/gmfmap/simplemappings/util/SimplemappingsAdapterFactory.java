@@ -7,24 +7,13 @@
 package com.isb.simple.gmfmap.simplemappings.util;
 
 import com.isb.simple.gmfmap.simplemappings.*;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.ecore.EObject;
 
-import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleCompartment;
-import com.isb.simple.gmfmap.simplemappings.SimpleDomainMapElement;
-import com.isb.simple.gmfmap.simplemappings.SimpleLabelNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
-import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
-import com.isb.simple.gmfmap.simplemappings.SimpleNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleRootNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleSubNodeReference;
-import com.isb.simple.gmfmap.simplemappings.SimpleTopNode;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -241,6 +230,34 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleNode <em>Simple Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleNode
+	 * @generated
+	 */
+	public Adapter createSimpleNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleParentNode <em>Simple Parent Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.isb.simple.gmfmap.simplemappings.SimpleParentNode
+	 * @generated
+	 */
+	public Adapter createSimpleParentNodeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -377,34 +394,6 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSimplemappings_SimpleRootNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleNode <em>Simple Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.isb.simple.gmfmap.simplemappings.SimpleNode
-	 * @generated
-	 */
-	public Adapter createSimpleNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.isb.simple.gmfmap.simplemappings.SimpleParentNode <em>Simple Parent Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.isb.simple.gmfmap.simplemappings.SimpleParentNode
-	 * @generated
-	 */
-	public Adapter createSimpleParentNodeAdapter() {
 		return null;
 	}
 

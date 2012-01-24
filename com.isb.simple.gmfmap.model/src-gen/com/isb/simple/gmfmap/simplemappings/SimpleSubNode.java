@@ -8,7 +8,6 @@ package com.isb.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Simple Sub Node</b></em>'.
@@ -29,7 +28,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface SimpleSubNode extends SimpleRootNode, SimpleChildNode {
-
 	/**
 	 * Returns the value of the '<em><b>Parent Sub Node Reference</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link com.isb.simple.gmfmap.simplemappings.SimpleSubNodeReference#getSubNode <em>Sub Node</em>}'.
@@ -127,4 +125,5 @@ public interface SimpleSubNode extends SimpleRootNode, SimpleChildNode {
 	 * @generated
 	 */
 	EList<SimpleChildNode> getChildren();
+
 } // SimpleSubNode

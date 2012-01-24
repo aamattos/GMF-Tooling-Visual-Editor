@@ -7,6 +7,7 @@
 package com.isb.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,7 +33,7 @@ public interface SimpleParentNode extends EObject {
 	 * It is bidirectional and its opposite is '{@link com.isb.simple.gmfmap.simplemappings.SimpleChildNode#getParentNode <em>Parent Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Children</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Children</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

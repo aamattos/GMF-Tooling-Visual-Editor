@@ -6,14 +6,15 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

@@ -6,18 +6,22 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.gmf.gmfgraph.Canvas;
-import org.eclipse.gmf.mappings.Mapping;
-import org.eclipse.gmf.tooldef.Palette;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
-import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.gmf.gmfgraph.Canvas;
+
+import org.eclipse.gmf.mappings.Mapping;
+
+import org.eclipse.gmf.tooldef.Palette;
 
 /**
  * <!-- begin-user-doc -->

@@ -6,9 +6,6 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
@@ -16,6 +13,10 @@ import com.isb.simple.gmfmap.simplemappings.SimpleRootNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleTopNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,26 +61,6 @@ public class SimpleTopNodeImpl extends SimpleNodeImpl implements SimpleTopNode {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<SimpleChildNode> getChildren() {
-		return (EList<SimpleChildNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_PARENT_NODE__CHILDREN, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleLinkMapping> getLinks() {
-		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_TOP_NODE__LINKS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
 	public EList<SimpleSubNode> getSubNodes() {
 		return (EList<SimpleSubNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__SUB_NODES, true);
 	}
@@ -102,6 +83,26 @@ public class SimpleTopNodeImpl extends SimpleNodeImpl implements SimpleTopNode {
 	@SuppressWarnings("unchecked")
 	public EList<SimpleLinkMapping> getInputs() {
 		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__INPUTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleChildNode> getChildren() {
+		return (EList<SimpleChildNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_PARENT_NODE__CHILDREN, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<SimpleLinkMapping> getLinks() {
+		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_TOP_NODE__LINKS, true);
 	}
 
 	/**

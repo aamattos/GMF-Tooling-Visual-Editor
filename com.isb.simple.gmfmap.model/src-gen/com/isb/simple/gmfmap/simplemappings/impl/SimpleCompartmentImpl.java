@@ -6,19 +6,23 @@
  */
 package com.isb.simple.gmfmap.simplemappings.impl;
 
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-import org.eclipse.gmf.gmfgraph.Compartment;
-import org.eclipse.gmf.gmfgraph.Label;
-import org.eclipse.gmf.mappings.CompartmentMapping;
-
 import com.isb.simple.gmfmap.simplemappings.SimpleChildNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleCompartment;
 import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
 import com.isb.simple.gmfmap.simplemappings.SimpleNode;
 import com.isb.simple.gmfmap.simplemappings.SimpleParentNode;
 import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.gmf.gmfgraph.Compartment;
+import org.eclipse.gmf.gmfgraph.Label;
+
+import org.eclipse.gmf.mappings.CompartmentMapping;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,6 +108,24 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SimpleMapping getParentMapping() {
+		return (SimpleMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentMapping(SimpleMapping newParentMapping) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, newParentMapping);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SimpleNode getParent() {
 		return (SimpleNode)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT, true);
 	}
@@ -140,24 +162,6 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleMapping getParentMapping() {
-		return (SimpleMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParentMapping(SimpleMapping newParentMapping) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_MAPPING, newParentMapping);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CompartmentMapping getCompartmentMapping() {
 		return (CompartmentMapping)eGet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__COMPARTMENT_MAPPING, true);
 	}
@@ -169,6 +173,24 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 	 */
 	public void setCompartmentMapping(CompartmentMapping newCompartmentMapping) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__COMPARTMENT_MAPPING, newCompartmentMapping);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return (String)eGet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NAME, newName);
 	}
 
 	/**
@@ -205,24 +227,6 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 	 */
 	public boolean isSetCompartmentLabel() {
 		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__COMPARTMENT_LABEL);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return (String)eGet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NAME, newName);
 	}
 
 	/**

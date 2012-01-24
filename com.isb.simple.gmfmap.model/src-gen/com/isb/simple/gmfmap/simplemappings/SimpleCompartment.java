@@ -8,6 +8,7 @@ package com.isb.simple.gmfmap.simplemappings;
 
 import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Label;
+
 import org.eclipse.gmf.mappings.CompartmentMapping;
 
 /**
@@ -30,7 +31,6 @@ import org.eclipse.gmf.mappings.CompartmentMapping;
  * @generated
  */
 public interface SimpleCompartment extends SimpleParentNode, SimpleChildNode {
-
 	/**
 	 * Returns the value of the '<em><b>Compartment Mapping</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -56,6 +56,32 @@ public interface SimpleCompartment extends SimpleParentNode, SimpleChildNode {
 	 * @generated
 	 */
 	void setCompartmentMapping(CompartmentMapping value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleCompartment_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link com.isb.simple.gmfmap.simplemappings.SimpleCompartment#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Compartment</b></em>' reference.
@@ -109,29 +135,4 @@ public interface SimpleCompartment extends SimpleParentNode, SimpleChildNode {
 	 */
 	boolean isSetCompartmentLabel();
 
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleCompartment_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link com.isb.simple.gmfmap.simplemappings.SimpleCompartment#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 } // SimpleCompartment

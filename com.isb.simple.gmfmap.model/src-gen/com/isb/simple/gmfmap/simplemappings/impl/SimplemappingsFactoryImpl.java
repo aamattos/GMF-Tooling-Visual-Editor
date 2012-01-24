@@ -7,23 +7,14 @@
 package com.isb.simple.gmfmap.simplemappings.impl;
 
 import com.isb.simple.gmfmap.simplemappings.*;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EFactoryImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import com.isb.simple.gmfmap.simplemappings.SimpleCompartment;
-import com.isb.simple.gmfmap.simplemappings.SimpleDomainMapElement;
-import com.isb.simple.gmfmap.simplemappings.SimpleLabelNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleLinkMapping;
-import com.isb.simple.gmfmap.simplemappings.SimpleMapping;
-import com.isb.simple.gmfmap.simplemappings.SimpleNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleSubNode;
-import com.isb.simple.gmfmap.simplemappings.SimpleSubNodeReference;
-import com.isb.simple.gmfmap.simplemappings.SimpleTopNode;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsFactory;
-import com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage;
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
  * <!-- begin-user-doc -->
