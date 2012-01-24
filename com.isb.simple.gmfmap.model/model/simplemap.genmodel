@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.isb.simple.gmfmap.model/src-gen"
-    editDirectory="/com.isb.simple.gmfmap.model.edit/src-gen" editorDirectory="/com.isb.simple.gmfmap.model.editor/src-gen"
-    modelPluginID="com.isb.simple.gmfmap.model" templateDirectory="/com.isb.simple.gmfmap.model/templates"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.msl.simple.gmfmap.model/src-gen"
+    editDirectory="/org.msl.simple.gmfmap.model.edit/src-gen" editorDirectory="/org.msl.simple.gmfmap.model.editor/src-gen"
+    modelPluginID="org.msl.simple.gmfmap.model" templateDirectory="/org.msl.simple.gmfmap.model/templates"
     dynamicTemplates="true" modelName="Simplemap" reflectiveDelegation="true" importerID="org.eclipse.emf.importer.ecore"
-    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.6"
-    usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef">
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" editPluginID="org.msl.simple.gmfmap.model.edit"
+    editorPluginID="org.msl.simple.gmfmap.model.editor" runtimeVersion="2.6" usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef">
   <foreignModel>simplemap.ecore</foreignModel>
-  <genPackages prefix="Simplemappings" basePackage="com.isb.simple.gmfmap" disposableProviderFactory="true"
+  <genPackages prefix="Simplemappings" basePackage="org.msl.simple.gmfmap" disposableProviderFactory="true"
       ecorePackage="simplemap.ecore#/">
     <genClasses ecoreClass="simplemap.ecore#//SimpleMapping">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMapping/canvas"/>
@@ -90,7 +90,7 @@
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleRootNode/inputs"/>
     </genClasses>
-    <nestedGenPackages prefix="Simplemappings" basePackage="com.isb.simple.gmfmap"
+    <nestedGenPackages prefix="Simplemappings" basePackage="org.msl.simple.gmfmap"
         disposableProviderFactory="true" ecorePackage="simplemap.ecore#/">
       <genClasses ecoreClass="simplemap.ecore#//SimpleMapping">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMapping/canvas"/>

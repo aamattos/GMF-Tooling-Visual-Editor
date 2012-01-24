@@ -51,7 +51,7 @@
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="/icons/full/obj16/ParentNode.gif"
-            bundle="com.isb.simple.gmfmap.model.edit"/>
+            bundle="org.msl.simple.gmfmap.model.edit"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"

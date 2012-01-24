@@ -1,4 +1,4 @@
-<%genModel.addImport("com.isb.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider");%>
+<%genModel.addImport("org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider");%>
 <%genModel.addImport("org.eclipse.emf.edit.provider.ComposedAdapterFactory");%>
 <%genModel.addImport("org.eclipse.emf.common.util.ResourceLocator");%>
 <%genModel.addImport("org.eclipse.emf.ecore.EStructuralFeature");%>

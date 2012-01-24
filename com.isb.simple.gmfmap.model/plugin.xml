@@ -12,8 +12,8 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://com.isb.simple.gmfmap/simplemappings"
-            class="com.isb.simple.gmfmap.simplemappings.SimplemappingsPackage"
+            uri="http://org.msl.simple.gmfmap/simplemappings"
+            class="org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage"
             genModel="model/simplemap.genmodel"/>
    </extension>
 

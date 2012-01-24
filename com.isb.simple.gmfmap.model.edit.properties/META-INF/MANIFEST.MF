@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Properties
-Bundle-SymbolicName: com.isb.simple.gmfmap.model.edit.properties;singleton:=true
+Bundle-SymbolicName: org.msl.simple.gmfmap.model.edit.properties;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Bundle-Activator: com.isb.simple.gmfmap.model.edit.properties.Activator
+Bundle-Activator: org.msl.simple.gmfmap.model.edit.properties.Activator
 Bundle-Vendor: ISB
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.isb.simple.gmfmap.model;bundle-version="0.1.0",
- com.isb.simple.gmfmap.model.edit;bundle-version="0.1.0"
+ org.msl.simple.gmfmap.model;bundle-version="0.1.0",
+ org.msl.simple.gmfmap.model.edit;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

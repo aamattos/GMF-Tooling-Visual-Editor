@@ -37,7 +37,7 @@ específico para cada editPart. De esta forma podemos provocar refresh visuales 
 				«EXPAND MetaModel::MetaFeature FOREACH modelFacet.editableMetaFeatures SEPARATOR ', '»
 			};
 		«ENDIF-»
-		«getQualifiedClassName()» parser = com.isb.simple.gmfmap.diagram.parsers.SimpleMapMessageFormatParserProvider.getParser(«element.visualID», features«IF modelFacet.editableMetaFeatures->size() > 0», editableFeatures«ENDIF»);
+		«getQualifiedClassName()» parser = org.msl.simple.gmfmap.diagram.parsers.SimpleMapMessageFormatParserProvider.getParser(«element.visualID», features«IF modelFacet.editableMetaFeatures->size() > 0», editableFeatures«ENDIF»);
 		«EXPAND _setPatterns(viewMethod, editMethod, 'parser') FOR modelFacet-»
 			«parserFieldName(element)» = parser;
 		}

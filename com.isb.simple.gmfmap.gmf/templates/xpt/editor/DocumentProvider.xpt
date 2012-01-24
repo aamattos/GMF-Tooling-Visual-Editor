@@ -20,7 +20,7 @@
 	«EXPAND xpt::Common::generatedMemberComment('', 'DocumentProvider.xpt')»
 private org.eclipse.emf.transaction.TransactionalEditingDomain createEditingDomain() {
 
-	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = com.isb.simple.gmfmap.diagram.core.SimpleMapDiagramEditingDomainFactory.getInstance().createEditingDomain();
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = org.msl.simple.gmfmap.diagram.core.SimpleMapDiagramEditingDomainFactory.getInstance().createEditingDomain();
 	editingDomain.setID("«editingDomainID»");«EXPAND xpt::Common::nonNLS»
 	
 	final org.eclipse.emf.transaction.NotificationFilter diagramResourceModifiedFilter = org.eclipse.emf.transaction.NotificationFilter.createNotifierFilter(editingDomain.getResourceSet()).and(org.eclipse.emf.transaction.NotificationFilter.createEventTypeFilter(org.eclipse.emf.common.notify.Notification.ADD)).and(org.eclipse.emf.transaction.NotificationFilter.createFeatureFilter(org.eclipse.emf.ecore.resource.ResourceSet.class, org.eclipse.emf.ecore.resource.ResourceSet.RESOURCE_SET__RESOURCES));

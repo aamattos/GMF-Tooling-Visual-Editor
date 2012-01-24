@@ -9,7 +9,7 @@
             nameFilter="*.simplemappings"
             objectClass="org.eclipse.core.resources.IFile">
          <action
-               class="com.isb.simple.gmf.bridge.transform.TransformToGenModelAction"
+               class="org.msl.simple.gmf.bridge.transform.TransformToGenModelAction"
                enablesFor="1"
                id="simple.gmf.bridge.ui.transformToGenModelFileAction"
                label="%action.label"

@@ -5,8 +5,8 @@
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" sameFileForDiagramAndModel="true"
     diagramFileExtension="simplemappings"
     dynamicTemplates="true"
-    templateDirectory="/com.isb.simple.gmfmap.gmf/templates"
-    pluginDirectory="/com.isb.simple.gmfmap.diagram/src-gen">
+    templateDirectory="/org.msl.simple.gmfmap.gmf/templates"
+    pluginDirectory="/org.msl.simple.gmfmap.diagram/src-gen">
   <diagram
       visualID="1000"
       editPartClassName="SimpleMappingEditPart"
@@ -23,7 +23,7 @@
         xsi:type="gmfgen:FigureViewmap"
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
-        href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleMapping"/>
+        href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleMapping"/>
     <childNodes
         xsi:type="gmfgen:GenChildLabelNode"
         visualID="3004"
@@ -51,18 +51,18 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0"
           editPattern="">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -91,11 +91,11 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labels
           visualID="5003"
@@ -117,7 +117,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment/name"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -148,18 +148,18 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0"
           viewPattern="">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -189,18 +189,18 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0"
           viewPattern="">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -229,17 +229,17 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -269,18 +269,18 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0"
           editPattern="">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -309,11 +309,11 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
       </modelFacet>
       <labels
           visualID="5007"
@@ -335,7 +335,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleCompartment/name"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -366,18 +366,18 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLabelNode"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0"
           viewPattern="">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -407,18 +407,18 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0"
           viewPattern="">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -447,17 +447,17 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/children"/>
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
           parser="//@labelParsers/@implementations.0">
         <metaFeatures
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
     </childNodes>
     <topLevelNodes
@@ -486,11 +486,11 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleTopNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleTopNode"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labels
           visualID="5004"
@@ -513,7 +513,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -543,11 +543,11 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labels
           visualID="5009"
@@ -570,7 +570,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -598,11 +598,11 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLinkMapping"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLinkMapping"/>
         <containmentMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
       </modelFacet>
       <labels
           visualID="5010"
@@ -624,7 +624,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLinkMapping/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleLinkMapping/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -650,7 +650,7 @@
       <modelFacet
           xsi:type="gmfgen:FeatureLinkModelFacet">
         <metaFeature
-            href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/parentRootNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode/parentRootNode"/>
       </modelFacet>
       <labels
           visualID="6003"
@@ -699,7 +699,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="ParentNode"
             description="Create new Parent Node Reference"
-            smallIconPath="/com.isb.simple.gmfmap.model.edit/icons/full/obj16/ParentNode.gif"
+            smallIconPath="/org.msl.simple.gmfmap.model.edit/icons/full/obj16/ParentNode.gif"
             genLinks="//@diagram/@links.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
@@ -710,26 +710,26 @@
     </palette>
     <preferencePages
         xsi:type="gmfgen:GenStandardPreferencePage"
-        iD="com.isb.simple.gmfmap.diagram.general"
+        iD="org.msl.simple.gmfmap.diagram.general"
         name="Simplemap Diagram">
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="com.isb.simple.gmfmap.diagram.appearance"
+          iD="org.msl.simple.gmfmap.diagram.appearance"
           name="Appearance"
           kind="Appearance"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="com.isb.simple.gmfmap.diagram.connections"
+          iD="org.msl.simple.gmfmap.diagram.connections"
           name="Connections"
           kind="Connections"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="com.isb.simple.gmfmap.diagram.printing"
+          iD="org.msl.simple.gmfmap.diagram.printing"
           name="Printing"
           kind="Printing"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="com.isb.simple.gmfmap.diagram.rulersAndGrid"
+          iD="org.msl.simple.gmfmap.diagram.rulersAndGrid"
           name="Rulers And Grid"
           kind="RulersAndGrid"/>
     </preferencePages>
@@ -844,7 +844,7 @@
     </tabs>
   </propertySheet>
   <domainGenModel
-      href="../../com.isb.simple.gmfmap.model/model/simplemap.genmodel#/"/>
+      href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#/"/>
   <labelParsers
       extensibleViaService="true">
     <implementations

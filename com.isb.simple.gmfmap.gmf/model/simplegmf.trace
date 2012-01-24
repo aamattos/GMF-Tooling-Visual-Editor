@@ -4,66 +4,66 @@
     xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
   <nodeTraces
       visualID="2003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleTopNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleTopNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
     <nodeLabelTraces
         visualID="5004"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2006"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
     <nodeLabelTraces
         visualID="5009"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2007"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLinkMapping') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLinkMapping') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
     <nodeLabelTraces
         visualID="5010"
         queryText="true"/>
   </nodeTraces>
   <childNodeTraces
       visualID="3004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3005"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleCompartment') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleCompartment') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')">
     <nodeLabelTraces
         visualID="5003"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3007"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3011"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3012"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3013"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3016"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3018"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3019"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleCompartment') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleCompartment') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')">
     <nodeLabelTraces
         visualID="5007"
         queryText="true"/>
   </childNodeTraces>
   <childNodeTraces
       visualID="3020"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')"/>
   <linkTraces
       visualID="4003"
-      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://com.isb.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _feature_.name = 'parentRootNode')">
+      queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _feature_.name = 'parentRootNode')">
     <linkLabelTraces
         visualID="6003"
         queryText="true"/>

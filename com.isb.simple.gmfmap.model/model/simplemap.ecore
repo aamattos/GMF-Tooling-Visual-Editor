@@ -2,19 +2,19 @@
 <ecore:EPackage xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simplemappings"
-    nsURI="http://com.isb.simple.gmfmap/simplemappings" nsPrefix="simplemap">
+    nsURI="http://org.msl.simple.gmfmap/simplemappings" nsPrefix="simplemap">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-    <details key="settingDelegates" value="com.isb.simple.gmfmap.simplemapping.setting"/>
+    <details key="settingDelegates" value="org.msl.simple.gmfmap.simplemapping.setting"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleMapping" eSuperTypes="#//SimpleParentNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="canvas" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Canvas"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="palette" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.ecore#//Palette"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mapping" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.map/models/gmfmap.ecore#//Mapping"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainModel" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainMetaElement" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleTopNode" eSuperTypes="#//SimpleNode #//SimpleRootNode #//SimpleParentNode">
@@ -27,11 +27,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="compartment" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Compartment"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="compartmentLabel" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Label"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleLabelNode" eSuperTypes="#//SimpleNode"/>
@@ -40,15 +40,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkMapping" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.map/models/gmfmap.ecore#//LinkMapping"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLink" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Connection">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLabel" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//DiagramLabel"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tool" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.ecore#//AbstractTool"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
         eType="#//SimpleRootNode" eOpposite="#//SimpleRootNode/inputs"/>
@@ -60,27 +60,27 @@
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containmentFeature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentMetaElement" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"
         transient="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tool" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.ecore#//AbstractTool"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="labelAttributes" upperBound="-1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute" transient="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagramNode" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Node"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagramLabel" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//DiagramLabel"
         changeable="false" unsettable="true" derived="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleParentNode" abstract="true" interface="true">
@@ -92,14 +92,14 @@
         unsettable="true" eOpposite="#//SimpleParentNode/children"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentMapping" eType="#//SimpleMapping"
         transient="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//SimpleNode">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentRoot" eType="#//SimpleParentNode"
         changeable="false" unsettable="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleSubNodeReference" eSuperTypes="#//SimpleNode #//SimpleParentNode">
@@ -113,13 +113,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentSubNodeReference"
         eType="#//SimpleSubNodeReference" eOpposite="#//SimpleSubNodeReference/subNode"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentRootNode" eType="#//SimpleRootNode"
         eOpposite="#//SimpleRootNode/subNodes"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//SimpleChildNode" containment="true">
-      <eAnnotations source="com.isb.simple.gmfmap.simplemapping.setting"/>
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleRootNode" abstract="true" interface="true">

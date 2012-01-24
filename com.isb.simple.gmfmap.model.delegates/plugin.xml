@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.emf.ecore.setting_delegate">
       <factory
-            class="com.isb.simple.gmfmap.simplemapping.setting.SimpleMappingSettingDelegateFactory"
-            uri="com.isb.simple.gmfmap.simplemapping.setting">
+            class="org.msl.simple.gmfmap.simplemapping.setting.SimpleMappingSettingDelegateFactory"
+            uri="org.msl.simple.gmfmap.simplemapping.setting">
       </factory>
    </extension>
 
