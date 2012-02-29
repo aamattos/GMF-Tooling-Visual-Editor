@@ -1,6 +1,8 @@
 package org.msl.simple.gmfmap.model.triggers.node;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.gmf.gmfgraph.ChildAccess;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
@@ -8,6 +10,8 @@ import org.eclipse.gmf.gmfgraph.FigureDescriptor;
 import org.eclipse.gmf.gmfgraph.Label;
 import org.eclipse.gmf.gmfgraph.Node;
 import org.eclipse.gmf.gmfgraph.RealFigure;
+import org.eclipse.gmf.mappings.FeatureLabelMapping;
+import org.eclipse.gmf.mappings.LabelMapping;
 import org.eclipse.gmf.tooldef.AbstractTool;
 
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
@@ -35,9 +39,51 @@ class SetDomainMetaElementTrigger extends AbstractSimpleNodeTrigger {
 	private void updateMapping()
 	{
 		if(simpleNode.getNodeReference()!=null)
+		{
 			simpleNode.getNodeReference().getChild().setDomainMetaElement(newElement);
+			
+			EAttribute defaultLabelAttribute = getDefaultLabelAttribute();
+			FeatureLabelMapping defaultFeatureLabelMapping = getDefaultFeatureLabelMapping();
+			
+			if(defaultFeatureLabelMapping!=null && 
+					defaultLabelAttribute!=null)
+				defaultFeatureLabelMapping.getFeatures().add(defaultLabelAttribute);
+				
+		}
+			
 	}
 	
+	/**
+	 * We search for a candidate to be the Label Attribute
+	 * We choose the first String attribute
+	 * TODO we can use a string pattern algorithm (i.e Search for "name" attributes) 
+	 * @return
+	 */
+	private EAttribute getDefaultLabelAttribute()
+	{
+		if(newElement!=null)
+			for(EAttribute attribute:newElement.getEAllAttributes())
+			{
+				Class<?> attributeInstanceClass = attribute.getEType().getInstanceClass(); 
+				Class<?> stringInstanceClass = EcorePackage.eINSTANCE.getEString().getInstanceClass();
+				if(attributeInstanceClass!=null && stringInstanceClass.isAssignableFrom(attributeInstanceClass))
+					return attribute;							
+			}
+		
+		return null;
+	}
+	
+	private FeatureLabelMapping getDefaultFeatureLabelMapping()
+	{
+		if(simpleNode.getNodeReference()==null)
+			return null;
+		
+		for(LabelMapping labelMapping:simpleNode.getNodeReference().getChild().getLabelMappings())
+			if(labelMapping instanceof FeatureLabelMapping)
+				return (FeatureLabelMapping)labelMapping;
+		
+		return null;
+	}
 	
 	private void updateCanvas(String newElementName)
 	{
