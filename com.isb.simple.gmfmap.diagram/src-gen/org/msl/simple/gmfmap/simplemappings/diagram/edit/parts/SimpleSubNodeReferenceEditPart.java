@@ -48,6 +48,7 @@ import org.eclipse.swt.widgets.Display;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeReferenceItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapParserProvider;
@@ -194,14 +195,15 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected Image getLabelIcon() {
 		EObject parserElement = getParserElement();
 		if (parserElement == null) {
 			return null;
 		}
-		return SimplemapElementTypes.getImage(parserElement.eClass());
+		return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+				"icons/obj16/SimpleSubNodeReferenceC.gif").createImage();
 	}
 
 	/**

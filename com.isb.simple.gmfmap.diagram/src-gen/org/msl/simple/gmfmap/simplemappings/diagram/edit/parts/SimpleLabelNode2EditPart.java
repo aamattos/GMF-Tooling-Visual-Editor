@@ -202,8 +202,8 @@ public class SimpleLabelNode2EditPart extends CompartmentEditPart implements
 		if (parserElement == null) {
 			return null;
 		}
-		return SimplemapDiagramEditorPlugin
-				.getBundledImageDescriptor("icons/obj16/SimpleLabelNodeC.gif").createImage();
+		return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+				"icons/obj16/SimpleLabelNodeC.gif").createImage();
 	}
 
 	/**

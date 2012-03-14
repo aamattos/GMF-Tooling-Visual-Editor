@@ -252,7 +252,7 @@ public class SimpleSubNodeReference4EditPart extends CompartmentEditPart
 	 * @generated
 	 */
 	protected boolean isEditable() {
-		return getParser() != null;
+		return false;
 	}
 
 	/**
@@ -470,10 +470,10 @@ public class SimpleSubNodeReference4EditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(color);
+		getFigure().setForegroundColor(new Color(null, 255, 255, 255));
 	}
 
 	/**

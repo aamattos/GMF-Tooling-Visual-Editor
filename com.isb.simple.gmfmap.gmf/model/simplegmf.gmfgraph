@@ -131,8 +131,7 @@
         <font
             xsi:type="gmfgraph:BasicFont"
             faceName="Verdana"
-            height="10"
-            style="BOLD"/>
+            height="10"/>
       </actualFigure>
     </descriptors>
     <descriptors

@@ -167,10 +167,10 @@
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
       <?gmfgen generated="true"?>   
       <propertyTabs contributorId="org.msl.simple.gmfmap.diagram">
-<!--         <propertyTab
+         <propertyTab
              category="visual"
              id="property.tab.AppearancePropertySection"
-             label="%tab.appearance"/>-->
+             label="%tab.appearance"/>
           <propertyTab
              category="visual"
              id="property.tab.DiagramPropertySection"

@@ -213,6 +213,7 @@
         graphicalNodeEditPolicyClassName="SimpleSubNodeReference2GraphicalNodeEditPolicy"
         createCommandClassName="SimpleSubNodeReference2CreateCommand"
         containers="//@diagram/@topLevelNodes.0"
+        labelReadOnly="true"
         labelElementIcon="true">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -237,7 +238,8 @@
       </modelFacet>
       <labelModelFacet
           xsi:type="gmfgen:FeatureLabelModelFacet"
-          parser="//@labelParsers/@implementations.0">
+          parser="//@labelParsers/@implementations.0"
+          viewPattern="">
         <metaFeatures
             href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
       </labelModelFacet>
@@ -431,6 +433,7 @@
         graphicalNodeEditPolicyClassName="SimpleSubNodeReference4GraphicalNodeEditPolicy"
         createCommandClassName="SimpleSubNodeReference4CreateCommand"
         containers="//@diagram/@topLevelNodes.1"
+        labelReadOnly="true"
         labelElementIcon="true">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>

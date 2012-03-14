@@ -96,7 +96,7 @@ public class SimplemapPaletteFactory {
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	private ToolEntry createSubNode4CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(5);
@@ -109,8 +109,8 @@ public class SimplemapPaletteFactory {
 				Messages.SubNode4CreationTool_title,
 				Messages.SubNode4CreationTool_desc, types);
 		entry.setId("createSubNode4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(SimplemapElementTypes
-				.getImageDescriptor(SimplemapElementTypes.SimpleSubNodeReference_3011));
+		entry.setSmallIcon(SimplemapDiagramEditorPlugin
+				.getBundledImageDescriptor("icons/obj16/SimpleSubNodeReferenceC.gif"));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
