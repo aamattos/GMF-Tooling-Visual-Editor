@@ -3,7 +3,6 @@ package org.msl.simple.gmfmap.diagram.core;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.workspace.WorkspaceEditingDomainFactory;
 import org.eclipse.gmf.runtime.diagram.core.DiagramEditingDomainFactory;
-
 import org.msl.simple.gmfmap.model.triggers.SimpleMappingTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.compartment.SimpleCompartmentTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.link.SimpleLinkMappingTriggerListener;

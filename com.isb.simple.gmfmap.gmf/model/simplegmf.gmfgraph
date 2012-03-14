@@ -39,14 +39,14 @@
             forceSingleLine="true"/>
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="216"
-            green="227"
-            blue="250"/>
+            red="74"
+            green="100"
+            blue="145"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="251"
-            green="252"
-            blue="255"/>
+            red="100"
+            green="112"
+            blue="158"/>
         <minimumSize
             dx="160"
             dy="50"/>
@@ -59,9 +59,17 @@
             xsi:type="gmfgraph:Label"
             name="TopNodeNameFigure"
             text="&lt;..>">
+          <foregroundColor
+              xsi:type="gmfgraph:RGBColor"
+              green="255"
+              blue="255"/>
+          <backgroundColor
+              xsi:type="gmfgraph:RGBColor"
+              green="255"/>
           <font
               xsi:type="gmfgraph:BasicFont"
-              faceName="Tahoma"
+              faceName="Verdana"
+              height="12"
               style="BOLD"/>
         </children>
       </actualFigure>
@@ -83,9 +91,9 @@
             minorSpacing="0"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="251"
-            green="252"
-            blue="255"/>
+            red="246"
+            green="249"
+            blue="251"/>
         <insets
             top="1"
             left="1"
@@ -97,8 +105,7 @@
             text="&lt;..>">
           <font
               xsi:type="gmfgraph:BasicFont"
-              faceName="Tahoma"
-              height="7"
+              faceName="Arial Rounded MT Bold"
               style="ITALIC"/>
         </children>
       </actualFigure>
@@ -112,9 +119,8 @@
           name="SimpleLabelNodeLabel">
         <font
             xsi:type="gmfgraph:BasicFont"
-            faceName="Tahoma"
-            height="7"
-            style="ITALIC"/>
+            faceName="Verdana"
+            height="10"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -124,8 +130,9 @@
           name="SimpleTopNodeReference">
         <font
             xsi:type="gmfgraph:BasicFont"
-            faceName="Tahoma"
-            height="8"/>
+            faceName="Verdana"
+            height="10"
+            style="BOLD"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -144,14 +151,14 @@
             forceSingleLine="true"/>
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="216"
-            green="227"
-            blue="250"/>
+            red="74"
+            green="100"
+            blue="145"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="251"
-            green="252"
-            blue="255"/>
+            red="74"
+            green="100"
+            blue="145"/>
         <minimumSize
             dx="160"
             dy="50"/>
@@ -166,7 +173,8 @@
             text="&lt;..>">
           <font
               xsi:type="gmfgraph:BasicFont"
-              faceName="Tahoma"
+              faceName="Verdana"
+              height="11"
               style="BOLD"/>
         </children>
       </actualFigure>
@@ -196,24 +204,24 @@
     <descriptors
         name="SimpleLinkMappingFigure">
       <actualFigure
-          xsi:type="gmfgraph:Ellipse"
+          xsi:type="gmfgraph:RoundedRectangle"
           name="SimpleLinkMappingFigure">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="216"
-            green="227"
-            blue="250"/>
+            red="74"
+            green="100"
+            blue="145"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="251"
-            green="252"
-            blue="255"/>
+            red="100"
+            green="112"
+            blue="158"/>
         <maximumSize
-            dx="60"
-            dy="60"/>
+            dx="50"
+            dy="30"/>
         <minimumSize
-            dx="60"
-            dy="60"/>
+            dx="50"
+            dy="30"/>
         <insets
             top="5"
             left="3"
@@ -225,8 +233,8 @@
             text="&lt;..>">
           <font
               xsi:type="gmfgraph:BasicFont"
-              faceName="Tahoma"
-              height="7"
+              faceName="Verdana"
+              height="10"
               style="BOLD"/>
         </children>
       </actualFigure>

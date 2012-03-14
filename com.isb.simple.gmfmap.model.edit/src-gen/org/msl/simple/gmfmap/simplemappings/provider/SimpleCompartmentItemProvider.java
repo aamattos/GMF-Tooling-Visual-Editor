@@ -12,11 +12,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -28,9 +25,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -72,6 +67,7 @@ public class SimpleCompartmentItemProvider
 			addNamePropertyDescriptor(object);
 			addCompartmentPropertyDescriptor(object);
 			addCompartmentLabelPropertyDescriptor(object);
+			addNeedsTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -143,6 +139,28 @@ public class SimpleCompartmentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Needs Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNeedsTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleCompartment_needsTitle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleCompartment_needsTitle_feature", "_UI_SimpleCompartment_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NEEDS_TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns SimpleCompartment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,6 +199,7 @@ public class SimpleCompartmentItemProvider
 		switch (notification.getFeatureID(SimpleCompartment.class)) {
 			case SimplemappingsPackage.SIMPLE_COMPARTMENT__CHILDREN:
 			case SimplemappingsPackage.SIMPLE_COMPARTMENT__NAME:
+			case SimplemappingsPackage.SIMPLE_COMPARTMENT__NEEDS_TITLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

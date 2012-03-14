@@ -7,12 +7,9 @@
 package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.gmf.gmfgraph.Connection;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
-
 import org.eclipse.gmf.mappings.LinkMapping;
-
 import org.eclipse.gmf.tooldef.AbstractTool;
 
 /**

@@ -7,13 +7,9 @@
 package org.msl.simple.gmfmap.simplemappings.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.gmf.gmfgraph.provider.GMFGraphEditPlugin;
-
 import org.eclipse.gmf.mappings.provider.GMFMapEditPlugin;
-
 import org.eclipse.gmf.tooldef.provider.GMFToolEditPlugin;
 
 /**

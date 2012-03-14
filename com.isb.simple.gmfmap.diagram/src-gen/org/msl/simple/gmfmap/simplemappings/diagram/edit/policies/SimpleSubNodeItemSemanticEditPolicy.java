@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleCompartment2CreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNode4CreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeParentRootNodeCreateCommand;
@@ -109,8 +108,10 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 	 */
 	private void addDestroyChildNodesCommand(ICompositeCommand cmd) {
 		View view = (View) getHost().getModel();
-		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
-			Node node = (Node) nit.next();
+
+		for (int i = view.getChildren().size() - 1; i >= 0; i--) {
+			Node node = (Node) view.getChildren().get(i);
+
 			switch (SimplemapVisualIDRegistry.getVisualID(node)) {
 			case SimpleLabelNode4EditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(

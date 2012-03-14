@@ -1,13 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.msl.simple.gmfmap.diagram;singleton:=true
+Bundle-SymbolicName: org.msl.simple.gmfmap.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.msl.simple.gmfmap.simplemappings.diagram.edit.parts,
+Export-Package: org.msl.simple.gmfmap.diagram.core,
+ org.msl.simple.gmfmap.simplemappings.diagram.edit.parts,
  org.msl.simple.gmfmap.simplemappings.diagram.part,
  org.msl.simple.gmfmap.simplemappings.diagram.providers,
  org.msl.simple.gmfmap.simplemappings.diagram.sheet

@@ -32,7 +32,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -381,17 +380,17 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 216, 227, 250);
+	static final Color THIS_FORE = new Color(null, 74, 100, 145);
 
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 251, 252, 255);
+	static final Color THIS_BACK = new Color(null, 74, 100, 145);
 
 	/**
 	 * @generated
 	 */
 	static final Font FFIGURESUBNODENAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Tahoma", 9, SWT.BOLD);
+			Display.getCurrent(), "Verdana", 11, SWT.BOLD);
 
 }

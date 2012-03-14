@@ -21,11 +21,10 @@ import org.eclipse.gmf.tooldef.provider.GMFToolItemProviderAdapterFactory;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.osgi.framework.BundleContext;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapBaseItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.ElementInitializers;
 import org.msl.simple.gmfmap.simplemappings.provider.SimplemappingsItemProviderAdapterFactory;
+import org.osgi.framework.BundleContext;
 
 /**
  * @generated
@@ -110,7 +109,13 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	protected ComposedAdapterFactory createAdapterFactory() {
 		ArrayList<AdapterFactory> factories = new ArrayList<AdapterFactory>();
 		fillItemProviderFactories(factories);
-		return new ComposedAdapterFactory(factories);
+		ComposedAdapterFactory composedAdapterFactory = new ComposedAdapterFactory(
+				ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+
+		for (AdapterFactory factory : factories)
+			composedAdapterFactory.addAdapterFactory(factory);
+
+		return composedAdapterFactory;
 	}
 
 	/**
@@ -136,11 +141,36 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
+	public String getItemLabel(Object item) {
+		IItemLabelProvider labelProvider = (IItemLabelProvider) adapterFactory
+				.adapt(item, IItemLabelProvider.class);
+		if (labelProvider != null) {
+			return labelProvider.getText(item);
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
 	public ImageDescriptor getItemImageDescriptor(Object item) {
 		IItemLabelProvider labelProvider = (IItemLabelProvider) adapterFactory
 				.adapt(item, IItemLabelProvider.class);
 		if (labelProvider != null) {
 			return ExtendedImageRegistry.getInstance().getImageDescriptor(
+					labelProvider.getImage(item));
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Image getImage(Object item) {
+		IItemLabelProvider labelProvider = (IItemLabelProvider) adapterFactory
+				.adapt(item, IItemLabelProvider.class);
+		if (labelProvider != null) {
+			return ExtendedImageRegistry.getInstance().getImage(
 					labelProvider.getImage(item));
 		}
 		return null;

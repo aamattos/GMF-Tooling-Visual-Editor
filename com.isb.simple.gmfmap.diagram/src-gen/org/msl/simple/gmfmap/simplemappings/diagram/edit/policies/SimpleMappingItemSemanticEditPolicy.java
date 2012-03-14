@@ -6,7 +6,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLinkMappingCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleTopNodeCreateCommand;

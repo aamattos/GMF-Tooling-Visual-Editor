@@ -5,6 +5,7 @@
          point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <propertyTabs
             contributorId="org.msl.simple.gmfmap.diagram">
+<!--
          <propertyTab
                category="extra"
                id="property.tab.domain.figure.background"
@@ -20,11 +21,13 @@
                id="property.tab.domain.figure.label"
                label="%propertyTab.label.2">
          </propertyTab>
+-->
          <propertyTab
                category="extra"
                id="property.tab.domain.figure.connection"
                label="%propertyTab.label.3">
          </propertyTab>
+<!--         
          <propertyTab
                category="extra"
                id="property.tab.domain.figure.size1"
@@ -39,6 +42,12 @@
                category="extra"
                id="property.tab.domain.figure.size3"
                label="%propertyTab.label.6">
+         </propertyTab>
+-->
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.properties"
+               label="%propertyTab.label.7">
          </propertyTab>
       </propertyTabs>
    </extension>
@@ -87,6 +96,12 @@
                filter="org.msl.simple.gmfmap.diagram.properties.figure.FigurePreferedSizePropertiesSection"
                id="property.section.size3"
                tab="property.tab.domain.figure.size3">
+         </propertySection>
+         <propertySection
+               class="org.msl.simple.gmfmap.diagram.properties.figure.FigurePropertiesSection"
+               filter="org.msl.simple.gmfmap.diagram.properties.figure.FigurePropertiesSection"
+               id="property.section.figure"
+               tab="property.tab.domain.figure.properties">
          </propertySection>
       </propertySections>
    </extension>

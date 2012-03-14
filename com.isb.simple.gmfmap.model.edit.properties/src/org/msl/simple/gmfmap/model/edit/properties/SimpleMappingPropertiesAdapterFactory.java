@@ -2,7 +2,6 @@ package org.msl.simple.gmfmap.model.edit.properties;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-
 import org.msl.simple.gmfmap.simplemappings.util.SimplemappingsAdapterFactory;
 
 public class SimpleMappingPropertiesAdapterFactory extends

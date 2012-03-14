@@ -7,18 +7,12 @@
 package org.msl.simple.gmfmap.simplemappings.impl;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmf.gmfgraph.Canvas;
-
 import org.eclipse.gmf.mappings.Mapping;
-
 import org.eclipse.gmf.tooldef.Palette;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;

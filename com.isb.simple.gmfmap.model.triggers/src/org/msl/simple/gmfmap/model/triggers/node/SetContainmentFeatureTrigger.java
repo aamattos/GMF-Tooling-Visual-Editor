@@ -2,7 +2,6 @@ package org.msl.simple.gmfmap.model.triggers.node;
 
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 
 public class SetContainmentFeatureTrigger extends AbstractSimpleNodeTrigger {

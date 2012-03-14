@@ -33,6 +33,8 @@
         changeable="false" unsettable="true" derived="true">
       <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="needsTitle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleLabelNode" eSuperTypes="#//SimpleNode"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleLinkMapping" eSuperTypes="#//SimpleChildNode #//SimpleParentNode">

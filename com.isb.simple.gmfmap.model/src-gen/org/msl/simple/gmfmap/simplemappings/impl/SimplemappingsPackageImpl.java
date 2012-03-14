@@ -10,15 +10,10 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.gmf.gmfgraph.GMFGraphPackage;
-
 import org.eclipse.gmf.mappings.GMFMapPackage;
-
 import org.eclipse.gmf.tooldef.GMFToolPackage;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
@@ -309,6 +304,15 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 	 */
 	public EReference getSimpleCompartment_CompartmentLabel() {
 		return (EReference)simpleCompartmentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSimpleCompartment_NeedsTitle() {
+		return (EAttribute)simpleCompartmentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -696,6 +700,7 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		createEAttribute(simpleCompartmentEClass, SIMPLE_COMPARTMENT__NAME);
 		createEReference(simpleCompartmentEClass, SIMPLE_COMPARTMENT__COMPARTMENT);
 		createEReference(simpleCompartmentEClass, SIMPLE_COMPARTMENT__COMPARTMENT_LABEL);
+		createEAttribute(simpleCompartmentEClass, SIMPLE_COMPARTMENT__NEEDS_TITLE);
 
 		simpleLabelNodeEClass = createEClass(SIMPLE_LABEL_NODE);
 
@@ -811,6 +816,7 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		initEAttribute(getSimpleCompartment_Name(), ecorePackage.getEString(), "name", null, 0, 1, SimpleCompartment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleCompartment_Compartment(), theGMFGraphPackage.getCompartment(), null, "compartment", null, 0, 1, SimpleCompartment.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleCompartment_CompartmentLabel(), theGMFGraphPackage.getLabel(), null, "compartmentLabel", null, 0, 1, SimpleCompartment.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleCompartment_NeedsTitle(), ecorePackage.getEBoolean(), "needsTitle", "true", 0, 1, SimpleCompartment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleLabelNodeEClass, SimpleLabelNode.class, "SimpleLabelNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

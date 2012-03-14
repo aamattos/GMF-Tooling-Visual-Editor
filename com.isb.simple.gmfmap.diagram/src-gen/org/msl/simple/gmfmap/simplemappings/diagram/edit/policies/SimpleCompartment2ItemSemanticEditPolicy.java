@@ -1,7 +1,5 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.edit.policies;
 
-import java.util.Iterator;
-
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.common.core.command.ICompositeCommand;
@@ -12,7 +10,6 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNode3CreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeReference3CreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3EditPart;
@@ -73,8 +70,10 @@ public class SimpleCompartment2ItemSemanticEditPolicy extends
 	 */
 	private void addDestroyChildNodesCommand(ICompositeCommand cmd) {
 		View view = (View) getHost().getModel();
-		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
-			Node node = (Node) nit.next();
+
+		for (int i = view.getChildren().size() - 1; i >= 0; i--) {
+			Node node = (Node) view.getChildren().get(i);
+
 			switch (SimplemapVisualIDRegistry.getVisualID(node)) {
 			case SimpleLabelNode3EditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(

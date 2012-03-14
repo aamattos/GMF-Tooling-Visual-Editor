@@ -1,7 +1,6 @@
 package org.msl.simple.gmfmap.diagram.properties;
 
 import org.eclipse.gmf.mappings.LinkMapping;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 
 public class FigureConnectionPropertiesSection extends AbstractSimplemapPropertySection {

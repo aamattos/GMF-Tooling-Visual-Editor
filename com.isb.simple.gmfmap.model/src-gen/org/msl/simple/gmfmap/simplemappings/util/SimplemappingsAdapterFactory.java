@@ -8,12 +8,21 @@ package org.msl.simple.gmfmap.simplemappings.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.msl.simple.gmfmap.simplemappings.*;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
+import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
+import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
  * <!-- begin-user-doc -->

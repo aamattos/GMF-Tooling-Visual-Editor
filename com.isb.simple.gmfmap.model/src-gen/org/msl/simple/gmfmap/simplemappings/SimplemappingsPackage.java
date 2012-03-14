@@ -81,6 +81,66 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_MAPPING = 0;
 
 	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleChildNode()
+	 * @generated
+	 */
+	int SIMPLE_CHILD_NODE = 7;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl <em>Simple Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleNode()
+	 * @generated
+	 */
+	int SIMPLE_NODE = 5;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl <em>Simple Top Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleTopNode()
+	 * @generated
+	 */
+	int SIMPLE_TOP_NODE = 1;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl <em>Simple Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleCompartment()
+	 * @generated
+	 */
+	int SIMPLE_COMPARTMENT = 2;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl <em>Simple Label Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLabelNode()
+	 * @generated
+	 */
+	int SIMPLE_LABEL_NODE = 3;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl <em>Simple Link Mapping</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLinkMapping()
+	 * @generated
+	 */
+	int SIMPLE_LINK_MAPPING = 4;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,36 +202,6 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_MAPPING_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleChildNode()
-	 * @generated
-	 */
-	int SIMPLE_CHILD_NODE = 7;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl <em>Simple Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleNode()
-	 * @generated
-	 */
-	int SIMPLE_NODE = 5;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl <em>Simple Top Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleTopNode()
-	 * @generated
-	 */
-	int SIMPLE_TOP_NODE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -345,16 +375,6 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_TOP_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl <em>Simple Compartment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleCompartment()
-	 * @generated
-	 */
-	int SIMPLE_COMPARTMENT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -436,23 +456,22 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_COMPARTMENT__COMPARTMENT_LABEL = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Needs Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__NEEDS_TITLE = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Simple Compartment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_COMPARTMENT_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 8;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl <em>Simple Label Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLabelNode()
-	 * @generated
-	 */
-	int SIMPLE_LABEL_NODE = 3;
+	int SIMPLE_COMPARTMENT_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -579,16 +598,6 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_LABEL_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl <em>Simple Link Mapping</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLinkMapping()
-	 * @generated
-	 */
-	int SIMPLE_LINK_MAPPING = 4;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -1384,6 +1393,17 @@ public interface SimplemappingsPackage extends EPackage {
 	EReference getSimpleCompartment_CompartmentLabel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.msl.simple.gmfmap.simplemappings.SimpleCompartment#isNeedsTitle <em>Needs Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Needs Title</em>'.
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleCompartment#isNeedsTitle()
+	 * @see #getSimpleCompartment()
+	 * @generated
+	 */
+	EAttribute getSimpleCompartment_NeedsTitle();
+
+	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleLabelNode <em>Simple Label Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1923,6 +1943,14 @@ public interface SimplemappingsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_COMPARTMENT__COMPARTMENT_LABEL = eINSTANCE.getSimpleCompartment_CompartmentLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Needs Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE_COMPARTMENT__NEEDS_TITLE = eINSTANCE.getSimpleCompartment_NeedsTitle();
 
 		/**
 		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl <em>Simple Label Node</em>}' class.

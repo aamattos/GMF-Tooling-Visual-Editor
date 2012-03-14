@@ -1,8 +1,8 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.edit.parts;
 
-import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
@@ -25,7 +25,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleLinkMappingItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 
@@ -255,7 +254,7 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class SimpleLinkMappingFigure extends Ellipse {
+	public class SimpleLinkMappingFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
@@ -266,12 +265,14 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public SimpleLinkMappingFigure() {
+			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
+					getMapMode().DPtoLP(8)));
 			this.setForegroundColor(THIS_FORE);
 			this.setBackgroundColor(THIS_BACK);
-			this.setMaximumSize(new Dimension(getMapMode().DPtoLP(60),
-					getMapMode().DPtoLP(60)));
-			this.setMinimumSize(new Dimension(getMapMode().DPtoLP(60),
-					getMapMode().DPtoLP(60)));
+			this.setMaximumSize(new Dimension(getMapMode().DPtoLP(50),
+					getMapMode().DPtoLP(30)));
+			this.setMinimumSize(new Dimension(getMapMode().DPtoLP(50),
+					getMapMode().DPtoLP(30)));
 
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(3), getMapMode().DPtoLP(3),
@@ -306,17 +307,17 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 216, 227, 250);
+	static final Color THIS_FORE = new Color(null, 74, 100, 145);
 
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 251, 252, 255);
+	static final Color THIS_BACK = new Color(null, 100, 112, 158);
 
 	/**
 	 * @generated
 	 */
 	static final Font FFIGURELINKMAPPINGNAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Tahoma", 7, SWT.BOLD);
+			Display.getCurrent(), "Verdana", 10, SWT.BOLD);
 
 }

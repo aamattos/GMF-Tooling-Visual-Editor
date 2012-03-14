@@ -11,7 +11,6 @@ import org.eclipse.gmf.mappings.GMFMapFactory;
 import org.eclipse.gmf.mappings.NodeMapping;
 import org.eclipse.gmf.mappings.TopNodeReference;
 import org.eclipse.gmf.tooldef.CreationTool;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;

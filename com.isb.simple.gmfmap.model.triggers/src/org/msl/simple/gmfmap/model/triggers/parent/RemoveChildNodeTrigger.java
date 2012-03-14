@@ -20,7 +20,6 @@ import org.eclipse.gmf.mappings.LinkMapping;
 import org.eclipse.gmf.mappings.NodeMapping;
 import org.eclipse.gmf.mappings.NodeReference;
 import org.eclipse.gmf.tooldef.AbstractTool;
-
 import org.msl.simple.gmfmap.model.triggers.AbstractTrigger;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
@@ -73,7 +72,17 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 		
 		NodeReference nodeReferenceToRemove = removedNode.getNodeReference();
 		
-		AbstractTool toolToRemove = removedNode.getTool();
+		if(nodeReferenceToRemove!=null && nodeReferenceToRemove.eIsProxy())
+			nodeReferenceToRemove = (NodeReference)EcoreUtil.resolve(nodeReferenceToRemove, getDomain().getResourceSet());
+		
+		AbstractTool toolToRemove = null;
+		
+		if(nodeReferenceToRemove!=null && nodeReferenceToRemove.getChild()!=null)
+		{
+			NodeMapping nodeMapping = nodeReferenceToRemove.getChild();
+			
+			toolToRemove = nodeMapping.getTool();
+		}
 		
 		List<DiagramElement> diagramElementsToRemove = collectDiagramElementsToRemove(removedNode);
 		
@@ -102,6 +111,9 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 		List<DiagramElement> diagramElementsToRemove = new ArrayList<DiagramElement>();
 		
 		NodeReference nodeReferenceToRemove = removedNode.getNodeReference();
+		
+		if(nodeReferenceToRemove.eIsProxy())
+			nodeReferenceToRemove = (NodeReference)EcoreUtil.resolve(nodeReferenceToRemove, getDomain().getResourceSet());
 		
 		NodeMapping nodeMapping = nodeReferenceToRemove.getChild();
 		
@@ -150,7 +162,11 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 			removeChildNode(childNode);
 		
 		CompartmentMapping compartmentMappingToRemove = removedCompartment.getCompartmentMapping();
-		Compartment compartmentToRemove = removedCompartment.getCompartment();
+		
+		if(compartmentMappingToRemove.eIsProxy())
+			compartmentMappingToRemove = (CompartmentMapping)EcoreUtil.resolve(compartmentMappingToRemove, getDomain().getResourceSet());
+		
+		Compartment compartmentToRemove = compartmentMappingToRemove!=null?compartmentMappingToRemove.getCompartment():null;
 		
 		if(compartmentToRemove!=null && canRemove(compartmentToRemove))
 		{

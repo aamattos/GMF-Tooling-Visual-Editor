@@ -8,7 +8,6 @@ import org.eclipse.gmf.gmfgraph.Label;
 import org.eclipse.gmf.gmfgraph.PolylineConnection;
 import org.eclipse.gmf.gmfgraph.RealFigure;
 import org.eclipse.gmf.tooldef.AbstractTool;
-
 import org.msl.simple.gmfmap.model.triggers.AbstractTrigger;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 

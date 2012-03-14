@@ -7,16 +7,11 @@
 package org.msl.simple.gmfmap.simplemappings.impl;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Label;
-
 import org.eclipse.gmf.mappings.CompartmentMapping;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
@@ -40,6 +35,7 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getCompartment <em>Compartment</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getCompartmentLabel <em>Compartment Label</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#isNeedsTitle <em>Needs Title</em>}</li>
  * </ul>
  * </p>
  *
@@ -227,6 +223,24 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 	 */
 	public boolean isSetCompartmentLabel() {
 		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__COMPARTMENT_LABEL);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNeedsTitle() {
+		return (Boolean)eGet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NEEDS_TITLE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNeedsTitle(boolean newNeedsTitle) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT__NEEDS_TITLE, newNeedsTitle);
 	}
 
 	/**

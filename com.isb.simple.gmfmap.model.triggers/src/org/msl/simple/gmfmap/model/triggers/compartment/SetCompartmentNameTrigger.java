@@ -6,7 +6,6 @@ import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.Label;
 import org.eclipse.gmf.gmfgraph.RealFigure;
-
 import org.msl.simple.gmfmap.model.triggers.AbstractTrigger;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 

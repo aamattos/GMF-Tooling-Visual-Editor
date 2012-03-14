@@ -45,10 +45,10 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleLabelNode2ItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapParserProvider;
@@ -195,14 +195,15 @@ public class SimpleLabelNode2EditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected Image getLabelIcon() {
 		EObject parserElement = getParserElement();
 		if (parserElement == null) {
 			return null;
 		}
-		return SimplemapElementTypes.getImage(parserElement.eClass());
+		return SimplemapDiagramEditorPlugin
+				.getBundledImageDescriptor("icons/obj16/SimpleLabelNodeC.gif").createImage();
 	}
 
 	/**
@@ -624,7 +625,7 @@ public class SimpleLabelNode2EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	static final Font THIS_FONT = new Font(Display.getCurrent(), "Tahoma", 7,
-			SWT.ITALIC);
+	static final Font THIS_FONT = new Font(Display.getCurrent(), "Verdana", 10,
+			SWT.NORMAL);
 
 }

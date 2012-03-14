@@ -40,7 +40,6 @@ import org.eclipse.ui.navigator.resources.ProjectExplorer;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.IShowInTargetList;
 import org.eclipse.ui.part.ShowInContext;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.navigator.SimplemapNavigatorItem;
 
 /**

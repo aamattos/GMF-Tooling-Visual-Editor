@@ -6,6 +6,7 @@ import org.eclipse.gmf.runtime.common.core.service.IOperation;
 import org.eclipse.gmf.runtime.common.ui.services.icon.GetIconOperation;
 import org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider;
 import org.eclipse.swt.graphics.Image;
+import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 
 /**
  * @generated
@@ -14,9 +15,22 @@ public class SimplemapIconProvider extends AbstractProvider implements
 		IIconProvider {
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
-	public Image getIcon(IAdaptable hint, int flags) {
+	public Image getIcon(IAdaptable hint, int flags) 
+	{
+		if(SimplemapElementTypes.getElement(hint).getName().equals("SimpleTopNode"))
+			return SimplemapDiagramEditorPlugin
+			.getBundledImageDescriptor("icons/obj16/SimpleTopNodePalette.gif").createImage();
+		
+		if(SimplemapElementTypes.getElement(hint).getName().equals("SimpleLabelNode"))
+			return SimplemapDiagramEditorPlugin
+			.getBundledImageDescriptor("icons/obj16/SimpleLabelNodeC.gif").createImage();
+		
+		if(SimplemapElementTypes.getElement(hint).getName().equals("SimpleSubNode"))
+			return SimplemapDiagramEditorPlugin
+			.getBundledImageDescriptor("icons/obj16/SimpleSubNodeReferencePalette.gif").createImage();
+		
 		return SimplemapElementTypes.getImage(hint);
 	}
 

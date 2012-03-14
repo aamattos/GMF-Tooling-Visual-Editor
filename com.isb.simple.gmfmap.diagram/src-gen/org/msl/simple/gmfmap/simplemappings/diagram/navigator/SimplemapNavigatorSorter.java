@@ -1,7 +1,6 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.navigator;
 
 import org.eclipse.jface.viewers.ViewerSorter;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 
 /**

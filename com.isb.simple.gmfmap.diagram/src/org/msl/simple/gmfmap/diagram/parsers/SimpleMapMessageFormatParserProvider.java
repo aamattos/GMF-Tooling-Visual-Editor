@@ -1,7 +1,6 @@
 package org.msl.simple.gmfmap.diagram.parsers;
 
 import org.eclipse.emf.ecore.EAttribute;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode2EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;

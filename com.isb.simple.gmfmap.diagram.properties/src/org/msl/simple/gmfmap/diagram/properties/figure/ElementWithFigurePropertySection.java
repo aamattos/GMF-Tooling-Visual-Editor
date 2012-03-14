@@ -3,7 +3,6 @@ package org.msl.simple.gmfmap.diagram.properties.figure;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
 import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.FigureDescriptor;
-
 import org.msl.simple.gmfmap.diagram.properties.AbstractSimplemapPropertySection;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;

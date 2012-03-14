@@ -27,7 +27,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleCompartmentCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleCompartmentItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -321,12 +320,12 @@ public class SimpleCompartmentEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 251, 252, 255);
+	static final Color THIS_BACK = new Color(null, 246, 249, 251);
 
 	/**
 	 * @generated
 	 */
 	static final Font FFIGURESIMPLECOMPARTMENTNAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Tahoma", 7, SWT.ITALIC);
+			Display.getCurrent(), "Arial Rounded MT Bold", 9, SWT.ITALIC);
 
 }

@@ -28,11 +28,16 @@ public class CanvasFactory {
 	
 	private Canvas canvas;
 	
-	private static String DEFAULT_LABEL_FACE = "Tahoma";
+	private static String DEFAULT_LABEL_FACE = "Verdana";
 	private static String DEFAULT_LABEL_TEXT = "<..>";
-	private static int DEFAULT_LABEL_HEIGHT = 8;
-	private static int[] DEFAULT_RECTANGLE_FOREGROUND = {216, 227, 250}; //RED, GREEN, BLUE
-	private static int[] DEFAULT_RECTANGLE_BACKGROUND = {251, 252, 255}; //RED, GREEN, BLUE
+	private static int DEFAULT_LABEL_HEIGHT = 9;
+	
+	private static int[] DEFAULT_RECTANGLE_FOREGROUND = {111, 142, 194}; //RED, GREEN, BLUE
+	private static int[] DEFAULT_RECTANGLE_BACKGROUND = {242, 245, 252}; //RED, GREEN, BLUE
+	
+	private static int[] DEFAULT_COMPARTMENT_RECTANGLE_FOREGROUND = {133, 156, 194}; //RED, GREEN, BLUE
+	private static int[] DEFAULT_COMPARTMENT_RECTANGLE_BACKGROUND = {251, 252, 255}; //RED, GREEN, BLUE
+	
 	private static int[] DEFAULT_POLYGON_DECORATION_FOREGROUND = {32, 104, 160}; //RED, GREEN, BLUE
 	private static int[] DEFAULT_POLYLINE_CONNECTION_FOREGROUND = {32, 104, 160}; //RED, GREEN, BLUE
 	
@@ -146,7 +151,7 @@ public class CanvasFactory {
 	{
 		//Creamos y agregamos el rectangulo a la figura del padre:
 		
-		Rectangle newCompartmentRectangle = createDefaultRectangle();
+		Rectangle newCompartmentRectangle = createDefaultCompartmentRectangle();
 		
 		if(compartmentLabel!=null)
 			newCompartmentRectangle.getChildren().add(compartmentLabel);
@@ -292,6 +297,23 @@ public class CanvasFactory {
 		
 		//Background Color
 		RGBColor backgroundColor = createRGBColor(DEFAULT_RECTANGLE_BACKGROUND);
+		
+		newRectangle.setForegroundColor(foregroundColor);
+		newRectangle.setBackgroundColor(backgroundColor);
+		
+		return newRectangle;
+		
+	}
+	
+	private Rectangle createDefaultCompartmentRectangle()
+	{
+		Rectangle newRectangle = GMFGraphFactory.eINSTANCE.createRectangle();
+		
+		//Foreground Color
+		RGBColor foregroundColor = createRGBColor(DEFAULT_COMPARTMENT_RECTANGLE_FOREGROUND);
+		
+		//Background Color
+		RGBColor backgroundColor = createRGBColor(DEFAULT_COMPARTMENT_RECTANGLE_BACKGROUND);
 		
 		newRectangle.setForegroundColor(foregroundColor);
 		newRectangle.setBackgroundColor(backgroundColor);

@@ -2,7 +2,6 @@ package org.msl.simple.gmfmap.model.triggers;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 
 public class SetDomainMetaElementTrigger extends AbstractTrigger {

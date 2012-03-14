@@ -8,7 +8,6 @@ package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Label;
-
 import org.eclipse.gmf.mappings.CompartmentMapping;
 
 /**
@@ -23,6 +22,7 @@ import org.eclipse.gmf.mappings.CompartmentMapping;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleCompartment#getName <em>Name</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleCompartment#getCompartment <em>Compartment</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleCompartment#getCompartmentLabel <em>Compartment Label</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleCompartment#isNeedsTitle <em>Needs Title</em>}</li>
  * </ul>
  * </p>
  *
@@ -134,5 +134,32 @@ public interface SimpleCompartment extends SimpleParentNode, SimpleChildNode {
 	 * @generated
 	 */
 	boolean isSetCompartmentLabel();
+
+	/**
+	 * Returns the value of the '<em><b>Needs Title</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Needs Title</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Needs Title</em>' attribute.
+	 * @see #setNeedsTitle(boolean)
+	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleCompartment_NeedsTitle()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isNeedsTitle();
+
+	/**
+	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleCompartment#isNeedsTitle <em>Needs Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Needs Title</em>' attribute.
+	 * @see #isNeedsTitle()
+	 * @generated
+	 */
+	void setNeedsTitle(boolean value);
 
 } // SimpleCompartment

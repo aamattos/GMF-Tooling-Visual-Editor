@@ -6,7 +6,6 @@ import org.eclipse.gmf.gmfgraph.FigureDescriptor;
 import org.eclipse.gmf.gmfgraph.GMFGraphFactory;
 import org.eclipse.gmf.mappings.CompartmentMapping;
 import org.eclipse.gmf.mappings.GMFMapFactory;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 
@@ -27,6 +26,8 @@ class NewCompartmentTrigger extends NewElementTrigger {
 	public void executeTrigger() {
 		
 		Compartment newCompartment = GMFGraphFactory.eINSTANCE.createCompartment();
+		
+		newCompartment.setNeedsTitle(newSimpleCompartment.isNeedsTitle());
 
 		updateCanvas(newCompartment);
 		updateMapping(newCompartment);
@@ -41,6 +42,7 @@ class NewCompartmentTrigger extends NewElementTrigger {
 
 		//Creamos el compartment:
 		canvasFactory.createDefaultCompartmentWithoutLabel(parentFigureDesc, newCompartment);
+		//canvasFactory.createDefaultCompartmentWithLabel(parentFigureDesc, newCompartment);
 	}
 
 	

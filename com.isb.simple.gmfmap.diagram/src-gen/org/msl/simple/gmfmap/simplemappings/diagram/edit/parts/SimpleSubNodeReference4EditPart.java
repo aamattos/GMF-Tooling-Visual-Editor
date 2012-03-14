@@ -45,7 +45,6 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeReference4ItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -624,7 +623,7 @@ public class SimpleSubNodeReference4EditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	static final Font THIS_FONT = new Font(Display.getCurrent(), "Tahoma", 8,
+	static final Font THIS_FONT = new Font(Display.getCurrent(), "Verdana", 10,
 			SWT.NORMAL);
 
 }

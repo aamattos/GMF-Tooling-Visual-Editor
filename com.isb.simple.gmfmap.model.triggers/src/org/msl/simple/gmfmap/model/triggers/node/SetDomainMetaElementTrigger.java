@@ -13,7 +13,6 @@ import org.eclipse.gmf.gmfgraph.RealFigure;
 import org.eclipse.gmf.mappings.FeatureLabelMapping;
 import org.eclipse.gmf.mappings.LabelMapping;
 import org.eclipse.gmf.tooldef.AbstractTool;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 
 class SetDomainMetaElementTrigger extends AbstractSimpleNodeTrigger {

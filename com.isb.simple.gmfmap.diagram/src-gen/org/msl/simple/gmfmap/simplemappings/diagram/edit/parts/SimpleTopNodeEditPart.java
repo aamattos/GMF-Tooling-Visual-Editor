@@ -31,7 +31,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleTopNodeCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleTopNodeItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -324,6 +323,10 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 
 			fFigureTopNodeNameFigure = new WrappingLabel();
 			fFigureTopNodeNameFigure.setText("<..>");
+			fFigureTopNodeNameFigure
+					.setForegroundColor(FFIGURETOPNODENAMEFIGURE_FORE);
+			fFigureTopNodeNameFigure
+					.setBackgroundColor(FFIGURETOPNODENAMEFIGURE_BACK);
 
 			fFigureTopNodeNameFigure.setFont(FFIGURETOPNODENAMEFIGURE_FONT);
 
@@ -343,17 +346,29 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 216, 227, 250);
+	static final Color THIS_FORE = new Color(null, 74, 100, 145);
 
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 251, 252, 255);
+	static final Color THIS_BACK = new Color(null, 100, 112, 158);
+
+	/**
+	 * @generated
+	 */
+	static final Color FFIGURETOPNODENAMEFIGURE_FORE = new Color(null, 0, 255,
+			255);
+
+	/**
+	 * @generated
+	 */
+	static final Color FFIGURETOPNODENAMEFIGURE_BACK = new Color(null, 0, 255,
+			0);
 
 	/**
 	 * @generated
 	 */
 	static final Font FFIGURETOPNODENAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Tahoma", 9, SWT.BOLD);
+			Display.getCurrent(), "Verdana", 12, SWT.BOLD);
 
 }

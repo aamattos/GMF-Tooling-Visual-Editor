@@ -53,7 +53,6 @@ import org.eclipse.gmf.mappings.Mapping;
 import org.eclipse.m2m.qvt.oml.runtime.util.QvtoTransformationHelper;
 import org.eclipse.m2m.qvt.oml.runtime.util.QvtoTransformationHelper.ModelExtent;
 import org.eclipse.m2m.qvt.oml.runtime.util.QvtoTransformationHelper.TransfExecutionResult;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 
 //[artem] XXX Why it's in the bridge.ui??? 

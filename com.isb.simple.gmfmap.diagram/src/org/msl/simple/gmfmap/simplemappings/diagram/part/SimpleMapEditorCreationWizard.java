@@ -19,9 +19,6 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
-import org.msl.simple.gmfmap.simplemappings.diagram.part.Messages;
-import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapCreationWizardPage;
-import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 
 
 /**

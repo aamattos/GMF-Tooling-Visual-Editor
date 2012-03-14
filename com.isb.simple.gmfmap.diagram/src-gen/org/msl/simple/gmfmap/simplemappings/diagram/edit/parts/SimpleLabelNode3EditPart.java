@@ -45,7 +45,6 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleLabelNode3ItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -471,10 +470,10 @@ public class SimpleLabelNode3EditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(color);
+		getFigure().setForegroundColor(new Color(null, 255, 255, 255));
 	}
 
 	/**
@@ -624,7 +623,7 @@ public class SimpleLabelNode3EditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	static final Font THIS_FONT = new Font(Display.getCurrent(), "Tahoma", 7,
-			SWT.ITALIC);
+	static final Font THIS_FONT = new Font(Display.getCurrent(), "Verdana", 10,
+			SWT.NORMAL);
 
 }

@@ -3,7 +3,6 @@ package org.msl.simple.gmfmap.simplemapping.setting;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EStructuralFeature.Internal.SettingDelegate;
 import org.eclipse.emf.ecore.EStructuralFeature.Internal.SettingDelegate.Factory;
-
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 public class SimpleMappingSettingDelegateFactory implements Factory {

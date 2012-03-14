@@ -12,7 +12,6 @@ import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
 /**
@@ -45,7 +44,7 @@ public class SimplemapPaletteFactory {
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	private ToolEntry createTopNode1CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
@@ -54,8 +53,8 @@ public class SimplemapPaletteFactory {
 				Collections
 						.singletonList(SimplemapElementTypes.SimpleTopNode_2003));
 		entry.setId("createTopNode1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(SimplemapElementTypes
-				.getImageDescriptor(SimplemapElementTypes.SimpleTopNode_2003));
+		entry.setSmallIcon(SimplemapDiagramEditorPlugin
+				.getBundledImageDescriptor("icons/obj16/SimpleTopNodePalette.gif"));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -78,7 +77,7 @@ public class SimplemapPaletteFactory {
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	private ToolEntry createLabelNode3CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
@@ -90,8 +89,8 @@ public class SimplemapPaletteFactory {
 				Messages.LabelNode3CreationTool_title,
 				Messages.LabelNode3CreationTool_desc, types);
 		entry.setId("createLabelNode3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(SimplemapElementTypes
-				.getImageDescriptor(SimplemapElementTypes.SimpleLabelNode_3004));
+		entry.setSmallIcon(SimplemapDiagramEditorPlugin
+				.getBundledImageDescriptor("icons/obj16/SimpleLabelNodeC.gif"));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

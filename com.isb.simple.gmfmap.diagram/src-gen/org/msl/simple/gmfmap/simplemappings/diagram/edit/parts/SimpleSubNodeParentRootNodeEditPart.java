@@ -10,7 +10,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
-
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeParentRootNodeItemSemanticEditPolicy;
 
 /**
