@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings" xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:simplemap="http://org.msl.simple.gmfmap/simplemappings">
+  <simplemap:SimpleMapping xmi:id="_YtSbAWkxEeGcS_a7ySt1bQ">
+    <children xmi:type="simplemap:SimpleSubNode" xmi:id="_YtSbAmkxEeGcS_a7ySt1bQ" parentSubNodeReference="_YtTCE2kxEeGcS_a7ySt1bQ" parentRootNode="_YtTCEWkxEeGcS_a7ySt1bQ"/>
+    <children xmi:type="simplemap:SimpleSubNode" xmi:id="_YtTCEGkxEeGcS_a7ySt1bQ" parentSubNodeReference="_YtTCGWkxEeGcS_a7ySt1bQ" parentRootNode="_YtTCF2kxEeGcS_a7ySt1bQ"/>
+    <children xmi:type="simplemap:SimpleTopNode" xmi:id="_YtTCEWkxEeGcS_a7ySt1bQ" subNodes="_YtSbAmkxEeGcS_a7ySt1bQ">
+      <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleTopNode"/>
+      <nodeReference xmi:type="gmfmap:TopNodeReference" href="simplegmf.gmfmap#//@nodes.0"/>
+      <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+      <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCEmkxEeGcS_a7ySt1bQ">
+        <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleLabelNode"/>
+        <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.0/@ownedChild/@children.0"/>
+        <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+      </children>
+      <children xmi:type="simplemap:SimpleSubNodeReference" xmi:id="_YtTCE2kxEeGcS_a7ySt1bQ" subNode="_YtSbAmkxEeGcS_a7ySt1bQ">
+        <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleCompartment"/>
+        <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.0/@ownedChild/@children.1"/>
+        <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+        <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCFGkxEeGcS_a7ySt1bQ">
+          <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleLabelNode"/>
+          <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.0/@ownedChild/@children.1/@ownedChild/@children.0"/>
+          <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+        </children>
+        <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCFWkxEeGcS_a7ySt1bQ">
+          <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNodeReference"/>
+          <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.0/@ownedChild/@children.1/@ownedChild/@children.1"/>
+          <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+        </children>
+      </children>
+      <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCFmkxEeGcS_a7ySt1bQ">
+        <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNodeReference"/>
+        <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.0/@ownedChild/@children.2"/>
+        <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+      </children>
+    </children>
+    <children xmi:type="simplemap:SimpleTopNode" xmi:id="_YtTCF2kxEeGcS_a7ySt1bQ" subNodes="_YtTCEGkxEeGcS_a7ySt1bQ">
+      <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNode"/>
+      <nodeReference xmi:type="gmfmap:TopNodeReference" href="simplegmf.gmfmap#//@nodes.1"/>
+      <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+      <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCGGkxEeGcS_a7ySt1bQ">
+        <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleLabelNode"/>
+        <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.1/@ownedChild/@children.0"/>
+        <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNode/children"/>
+      </children>
+      <children xmi:type="simplemap:SimpleSubNodeReference" xmi:id="_YtTCGWkxEeGcS_a7ySt1bQ" subNode="_YtTCEGkxEeGcS_a7ySt1bQ">
+        <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleCompartment"/>
+        <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.1/@ownedChild/@children.1"/>
+        <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNode/children"/>
+        <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCGmkxEeGcS_a7ySt1bQ">
+          <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleLabelNode"/>
+          <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.1/@ownedChild/@children.1/@ownedChild/@children.0"/>
+          <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+        </children>
+        <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCG2kxEeGcS_a7ySt1bQ">
+          <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNodeReference"/>
+          <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.1/@ownedChild/@children.1/@ownedChild/@children.1"/>
+          <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+        </children>
+      </children>
+      <children xmi:type="simplemap:SimpleLabelNode" xmi:id="_YtTCHGkxEeGcS_a7ySt1bQ">
+        <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNodeReference"/>
+        <nodeReference xmi:type="gmfmap:ChildReference" href="simplegmf.gmfmap#//@nodes.1/@ownedChild/@children.2"/>
+        <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNode/children"/>
+      </children>
+    </children>
+    <children xmi:type="simplemap:SimpleTopNode" xmi:id="_YtTCHWkxEeGcS_a7ySt1bQ">
+      <domainMetaElement xmi:type="ecore:EClass" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleLinkMapping"/>
+      <nodeReference xmi:type="gmfmap:TopNodeReference" href="simplegmf.gmfmap#//@nodes.2"/>
+      <containmentFeature xmi:type="ecore:EReference" href="platform:/resource/org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
+    </children>
+    <children xmi:type="simplemap:SimpleLinkMapping" xmi:id="_YtTCHmkxEeGcS_a7ySt1bQ" name="ParentSubNode">
+      <linkMapping xmi:type="gmfmap:LinkMapping" href="simplegmf.gmfmap#//@links.0"/>
+    </children>
+    <canvas xmi:type="gmfgraph:Canvas" href="simplegmf.gmfgraph#simplemappings"/>
+    <palette xmi:type="gmftool:Palette" href="simplegmf.gmftool#//@palette"/>
+    <mapping xmi:type="gmfmap:Mapping" href="simplegmf.gmfmap#/"/>
+  </simplemap:SimpleMapping>
+  <notation:Diagram xmi:id="_YuOPIGkxEeGcS_a7ySt1bQ" type="Simplemap" element="_YtSbAWkxEeGcS_a7ySt1bQ" name="default.simplemappings" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_OrWNEW30EeGKIuGIL--GjQ" type="2006" element="_YtSbAmkxEeGcS_a7ySt1bQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OrYpUG30EeGKIuGIL--GjQ" type="5009"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OrWNEm30EeGKIuGIL--GjQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OrWNE230EeGKIuGIL--GjQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OrWNFG30EeGKIuGIL--GjQ" y="187" width="296"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OrZQYG30EeGKIuGIL--GjQ" type="2006" element="_YtTCEGkxEeGcS_a7ySt1bQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OrZQZG30EeGKIuGIL--GjQ" type="5009"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OrZQYW30EeGKIuGIL--GjQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OrZQYm30EeGKIuGIL--GjQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OrZQY230EeGKIuGIL--GjQ" x="659" y="187"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OrZQZW30EeGKIuGIL--GjQ" type="2003" element="_YtTCEWkxEeGcS_a7ySt1bQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OrZQaW30EeGKIuGIL--GjQ" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OrZQZm30EeGKIuGIL--GjQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OrZQZ230EeGKIuGIL--GjQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OrZQaG30EeGKIuGIL--GjQ" x="7"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OrZQam30EeGKIuGIL--GjQ" type="2003" element="_YtTCF2kxEeGcS_a7ySt1bQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OrZ3cG30EeGKIuGIL--GjQ" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OrZQa230EeGKIuGIL--GjQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OrZQbG30EeGKIuGIL--GjQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OrZQbW30EeGKIuGIL--GjQ" x="666"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OrZ3cW30EeGKIuGIL--GjQ" type="2003" element="_YtTCHWkxEeGcS_a7ySt1bQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OrZ3dW30EeGKIuGIL--GjQ" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OrZ3cm30EeGKIuGIL--GjQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OrZ3c230EeGKIuGIL--GjQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OrZ3dG30EeGKIuGIL--GjQ" x="327"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OrZ3dm30EeGKIuGIL--GjQ" type="2007" element="_YtTCHmkxEeGcS_a7ySt1bQ">
+      <children xmi:type="notation:DecorationNode" xmi:id="_OrZ3em30EeGKIuGIL--GjQ" type="5010"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_OrZ3d230EeGKIuGIL--GjQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_OrZ3eG30EeGKIuGIL--GjQ" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OrZ3eW30EeGKIuGIL--GjQ" x="986"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_YuOPIWkxEeGcS_a7ySt1bQ"/>
+  </notation:Diagram>
+</xmi:XMI>
