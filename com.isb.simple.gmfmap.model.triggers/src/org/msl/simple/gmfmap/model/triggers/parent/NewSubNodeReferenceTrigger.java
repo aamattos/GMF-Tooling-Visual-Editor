@@ -37,15 +37,12 @@ public class NewSubNodeReferenceTrigger extends NewTopNodeTrigger {
 		
 		CreationTool newCreationTool =  createNewTool();
 		
-		if(parent instanceof SimpleTopNode)
-			updateMapping((SimpleNode)parent, newNode, newLabel, newCreationTool);
-		
 		if(parent instanceof SimpleCompartment)
 		{
 			SimpleNode parentNode = (SimpleNode)((SimpleCompartment)parent).getParent();
 			updateMapping(parentNode, newNode, newLabel, newCreationTool, ((SimpleCompartment)parent).getCompartmentMapping());
-		}
-		
+		}else
+			updateMapping((SimpleNode)parent, newNode, newLabel, newCreationTool);
 
 	}
 	

@@ -112,6 +112,9 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 		
 		NodeReference nodeReferenceToRemove = removedNode.getNodeReference();
 		
+		if(nodeReferenceToRemove==null)
+			return diagramElementsToRemove;
+		
 		if(nodeReferenceToRemove.eIsProxy())
 			nodeReferenceToRemove = (NodeReference)EcoreUtil.resolve(nodeReferenceToRemove, getDomain().getResourceSet());
 		

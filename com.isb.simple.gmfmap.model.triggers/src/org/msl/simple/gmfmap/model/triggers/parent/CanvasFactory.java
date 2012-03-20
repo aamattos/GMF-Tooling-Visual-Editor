@@ -10,6 +10,7 @@ import org.eclipse.gmf.gmfgraph.Connection;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
 import org.eclipse.gmf.gmfgraph.Dimension;
 import org.eclipse.gmf.gmfgraph.FigureDescriptor;
+import org.eclipse.gmf.gmfgraph.FigureGallery;
 import org.eclipse.gmf.gmfgraph.FlowLayout;
 import org.eclipse.gmf.gmfgraph.FontStyle;
 import org.eclipse.gmf.gmfgraph.GMFGraphFactory;
@@ -32,11 +33,11 @@ public class CanvasFactory {
 	private static String DEFAULT_LABEL_TEXT = "<..>";
 	private static int DEFAULT_LABEL_HEIGHT = 9;
 	
-	private static int[] DEFAULT_RECTANGLE_FOREGROUND = {111, 142, 194}; //RED, GREEN, BLUE
 	private static int[] DEFAULT_RECTANGLE_BACKGROUND = {242, 245, 252}; //RED, GREEN, BLUE
+	private static int[] DEFAULT_RECTANGLE_FOREGROUND = {111, 142, 194}; //RED, GREEN, BLUE
 	
-	private static int[] DEFAULT_COMPARTMENT_RECTANGLE_FOREGROUND = {133, 156, 194}; //RED, GREEN, BLUE
 	private static int[] DEFAULT_COMPARTMENT_RECTANGLE_BACKGROUND = {251, 252, 255}; //RED, GREEN, BLUE
+	private static int[] DEFAULT_COMPARTMENT_RECTANGLE_FOREGROUND = {133, 156, 194}; //RED, GREEN, BLUE
 	
 	private static int[] DEFAULT_POLYGON_DECORATION_FOREGROUND = {32, 104, 160}; //RED, GREEN, BLUE
 	private static int[] DEFAULT_POLYLINE_CONNECTION_FOREGROUND = {32, 104, 160}; //RED, GREEN, BLUE
@@ -127,6 +128,16 @@ public class CanvasFactory {
 		alignmentFacet.setAlignment(Alignment.CENTER_LITERAL);
 		
 		newLabel.getFacets().add(alignmentFacet);
+		
+		if(canvas.getFigures().isEmpty())
+		{
+			FigureGallery defaultFigureGallery = GMFGraphFactory.eINSTANCE
+					.createFigureGallery();
+			defaultFigureGallery.setName("Default");
+			
+			canvas.getFigures().add(defaultFigureGallery);
+
+		}
 		
 		canvas.getFigures().get(0).getDescriptors().add(newFigureDescriptor);
 		canvas.getNodes().add(newNode);

@@ -62,7 +62,11 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	protected Button foregroundColorButton;
 	
 	/** the default preference color */
-	protected static final RGB DEFAULT_PREF_COLOR = new RGB(0, 0, 0);
+	protected static final RGB DEFAULT_TOP_NODE_BACKGROUND = new RGB(242, 245, 252);
+	protected static final RGB DEFAULT_TOP_NODE_FOREGROUND = new RGB(111, 142, 194);
+	
+	protected static final RGB DEFAULT_COMPARTMENT_BACKGROUND = new RGB(251, 252, 255); //RED, GREEN, BLUE
+	protected static final RGB DEFAULT_COMPARTMENT_FOREGROUND  = new RGB(133, 156, 194); //RED, GREEN, BLUE
 	
 	// font family drop down
 	protected CCombo fontFamilyCombo;
@@ -79,6 +83,10 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	protected Group colorsGroup;
 	
 	private Figure nodeFigure;
+	
+	private RGB defaultBackgroundColor = DEFAULT_TOP_NODE_BACKGROUND;
+	
+	private RGB defaultForegroundColor = DEFAULT_TOP_NODE_FOREGROUND;
 	
 	private BasicFont labelFont;
 	
@@ -404,9 +412,9 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 
 		RGB rgbBackgroundColor = getBackgroungRGBColor();
 		
-		int previousBackgroundColor = rgbBackgroundColor != null?FigureUtilities.RGBToInteger(rgbBackgroundColor):FigureUtilities.RGBToInteger(DEFAULT_PREF_COLOR);
+		int previousBackgroundColor = rgbBackgroundColor != null?FigureUtilities.RGBToInteger(rgbBackgroundColor):FigureUtilities.RGBToInteger(defaultBackgroundColor);
 
-		final RGB pickedColor = pickColor(backgroundColorButton, previousBackgroundColor);
+		final RGB pickedColor = pickColor(backgroundColorButton, previousBackgroundColor, defaultBackgroundColor);
 		
 		if(pickedColor!=null)
 		{
@@ -443,17 +451,17 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 
 		RGB rgbForegroundColor = getForegroundRGBColor();
 		
-		int previousBackgroundColor = rgbForegroundColor != null?FigureUtilities.RGBToInteger(rgbForegroundColor):FigureUtilities.RGBToInteger(DEFAULT_PREF_COLOR);
+		int previousForegroundColor = rgbForegroundColor != null?FigureUtilities.RGBToInteger(rgbForegroundColor):FigureUtilities.RGBToInteger(defaultForegroundColor);
 
-		final RGB pickedColor = pickColor(backgroundColorButton, previousBackgroundColor);
+		final RGB pickedColor = pickColor(foregroundColorButton, previousForegroundColor, defaultForegroundColor);
 		
 		if(pickedColor!=null)
 		{
 			List<ICommand> commands = new ArrayList<ICommand>();
 			
-			backgroundColorButton.setBackground(new org.eclipse.swt.graphics.Color(null, pickedColor));
+			foregroundColorButton.setBackground(new org.eclipse.swt.graphics.Color(null, pickedColor));
 			
-			commands.add(createCommand("ChangeBackgroundColor", labelFont.eResource(), new Runnable() {
+			commands.add(createCommand("ChangeForegroundColor", labelFont.eResource(), new Runnable() {
 
 				public void run() {
 					figureForegroundRGBColor.setBlue(pickedColor.blue);
@@ -462,7 +470,7 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 				}
 			}));
 
-			executeAsCompositeCommand("ChangeBackgroundColor", commands);
+			executeAsCompositeCommand("ChangeForegroundColor", commands);
 		}
 			
 
@@ -484,20 +492,21 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
      *            set
      * @return - new RGB color, or null if none selected
      */
-    protected RGB pickColor(Button button, int previousColor) {
+    protected RGB pickColor(Button button, int previousColor, RGB defaultColor) {
 
         ColorPalettePopup popup = new ColorPalettePopup(button.getParent()
             .getShell(), IDialogConstants.BUTTON_BAR_HEIGHT);        
         popup.setPreviousColor(previousColor);
         Rectangle r = button.getBounds();
         Point location = button.getParent().toDisplay(r.x, r.y);
-        popup.open(new Point(location.x, location.y + r.height));        
-        if (popup.getSelectedColor() == null && !popup.useDefaultColor()) {
-            return null;
-        }        
-        // selectedColor should be null if we are to use the default color
+        popup.open(new Point(location.x - r.height/6 ,location.y - 6*r.height ));        
+
         final RGB selectedColor = popup.getSelectedColor();
         
+        if (selectedColor == null && popup.useDefaultColor()) {
+            return defaultColor;
+        }        
+
         return selectedColor;
 
     }
@@ -756,6 +765,12 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		Figure labelFigure = getLabelFigure(getEObject());
 		
 		labelFont = (labelFigure!=null && labelFigure.getFont() instanceof BasicFont)?(BasicFont)labelFigure.getFont():null; 
+		
+		if(getEObject() instanceof SimpleCompartment)
+		{
+			defaultBackgroundColor = DEFAULT_COMPARTMENT_BACKGROUND;
+			defaultForegroundColor = DEFAULT_COMPARTMENT_BACKGROUND;
+		}
 		
 		//updateColorCache();
 	}
