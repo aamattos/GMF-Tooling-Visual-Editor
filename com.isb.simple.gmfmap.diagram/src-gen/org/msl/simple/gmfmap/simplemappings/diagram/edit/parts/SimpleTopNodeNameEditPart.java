@@ -506,25 +506,17 @@ public class SimpleTopNodeNameEditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated not
+	 * @generated
 	 */
 	protected void addSemanticListeners() {
 		if (getParser() instanceof ISemanticParser) {
 			EObject element = resolveSemanticElement();
 			parserElements = ((ISemanticParser) getParser())
 					.getSemanticElementsBeingParsed(element);
-
 			for (int i = 0; i < parserElements.size(); i++) {
 				addListenerFilter(
 						"SemanticModel" + i, this, (EObject) parserElements.get(i)); //$NON-NLS-1$
 			}
-
-			addListenerFilter(
-					"SemanticModel" + parserElements.size(), this, getFigureBackgroundColor()); //$NON-NLS-1$
-
-			addListenerFilter(
-					"SemanticModel" + parserElements.size() + 1, this, getFigureForegroundColor()); //$NON-NLS-1$
-
 		} else {
 			super.addSemanticListeners();
 		}

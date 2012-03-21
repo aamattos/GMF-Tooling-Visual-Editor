@@ -30,6 +30,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleCompartment2CanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleCompartment2ItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -292,11 +293,11 @@ public class SimpleCompartment2EditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
+		 * @generated not
 		 */
 		private void createContents() {
 
-			fFigureSimpleCompartmentNameFigure = new WrappingLabel();
+			fFigureSimpleCompartmentNameFigure = new WrappingLabelWithColorIcon();
 			fFigureSimpleCompartmentNameFigure.setText("<..>");
 
 			fFigureSimpleCompartmentNameFigure

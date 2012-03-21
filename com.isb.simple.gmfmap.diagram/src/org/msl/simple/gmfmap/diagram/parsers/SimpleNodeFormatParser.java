@@ -5,7 +5,10 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.gmfgraph.Figure;
+import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ISemanticParser;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 
@@ -45,11 +48,14 @@ public class SimpleNodeFormatParser extends MessageFormatParser implements ISema
 		
 		//Deberia ser siempre EColumn pero alguna vez da un ClassCast y no sabemos por que
 		if(element instanceof SimpleNode)
-		{
 			parserElements.add((SimpleNode)element);
+		
+		if(element instanceof SimpleChildNode)
+		{
+			parserElements.add(getFigureBackgroundColor((SimpleChildNode)element));
+			parserElements.add(getFigureForegroundColor((SimpleChildNode)element));
 		}
-		
-		
+			
 		return parserElements;
 	}
 
@@ -59,4 +65,24 @@ public class SimpleNodeFormatParser extends MessageFormatParser implements ISema
 		return true;
 	}
 
+	private RGBColor getFigureBackgroundColor(SimpleChildNode childNode) {
+		
+		Figure nodeFigure = childNode.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getBackgroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getBackgroundColor();
+
+		return null;
+	}
+
+	private RGBColor getFigureForegroundColor(SimpleChildNode childNode) {
+		Figure nodeFigure = childNode.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getForegroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getForegroundColor();
+
+		return null;
+	}
 }

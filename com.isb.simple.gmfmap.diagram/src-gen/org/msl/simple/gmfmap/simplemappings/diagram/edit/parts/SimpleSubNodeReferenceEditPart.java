@@ -524,7 +524,7 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated not
+	 * @generated
 	 */
 	protected void addSemanticListeners() {
 		if (getParser() instanceof ISemanticParser) {
@@ -535,12 +535,6 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 				addListenerFilter(
 						"SemanticModel" + i, this, (EObject) parserElements.get(i)); //$NON-NLS-1$
 			}
-
-			addListenerFilter(
-					"SemanticModel" + parserElements.size(), this, getFigureBackgroundColor()); //$NON-NLS-1$
-
-			addListenerFilter(
-					"SemanticModel" + parserElements.size() + 1, this, getFigureForegroundColor()); //$NON-NLS-1$			
 		} else {
 			super.addSemanticListeners();
 		}
