@@ -6,6 +6,7 @@ import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.ToolbarLayout;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
@@ -13,7 +14,9 @@ import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.ConstrainedToolbarLayoutEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CreationEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
@@ -27,8 +30,10 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleCompartmentCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleCompartmentItemSemanticEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 
 /**
@@ -81,19 +86,15 @@ public class SimpleCompartmentEditPart extends ShapeNodeEditPart {
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
 
-		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+		ConstrainedToolbarLayoutEditPolicy lep = new ConstrainedToolbarLayoutEditPolicy() {
 
-			protected Command createAddCommand(EditPart child, EditPart after) {
-				return null;
-			}
-
-			protected Command createMoveChildCommand(EditPart child,
-					EditPart after) {
-				return null;
-			}
-
-			protected Command getCreateCommand(CreateRequest request) {
-				return null;
+			protected EditPolicy createChildEditPolicy(EditPart child) {
+				if (child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE) == null) {
+					if (child instanceof ITextAwareEditPart) {
+						return new SimplemapTextSelectionEditPolicy();
+					}
+				}
+				return super.createChildEditPolicy(child);
 			}
 		};
 		return lep;
@@ -272,14 +273,12 @@ public class SimpleCompartmentEditPart extends ShapeNodeEditPart {
 		 */
 		public SimpleCompartmentFigure() {
 
-			FlowLayout layoutThis = new FlowLayout();
+			ToolbarLayout layoutThis = new ToolbarLayout();
 			layoutThis.setStretchMinorAxis(true);
-			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+			layoutThis.setMinorAlignment(ToolbarLayout.ALIGN_TOPLEFT);
 
-			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutThis.setMajorSpacing(0);
-			layoutThis.setMinorSpacing(0);
-			layoutThis.setHorizontal(false);
+			layoutThis.setSpacing(0);
+			layoutThis.setVertical(true);
 
 			this.setLayoutManager(layoutThis);
 
@@ -294,11 +293,11 @@ public class SimpleCompartmentEditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
+		 * @generated not
 		 */
 		private void createContents() {
 
-			fFigureSimpleCompartmentNameFigure = new WrappingLabel();
+			fFigureSimpleCompartmentNameFigure = new WrappingLabelWithColorIcon();
 			fFigureSimpleCompartmentNameFigure.setText("<..>");
 
 			fFigureSimpleCompartmentNameFigure

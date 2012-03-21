@@ -8,5 +8,12 @@
             uri="org.msl.simple.gmfmap.simplemapping.setting">
       </factory>
    </extension>
+   <extension
+         point="org.eclipse.emf.ecore.invocation_delegate">
+      <factory
+            class="org.msl.simple.gmfmap.model.delegates.SimpleMappingInvocationDelegateFactory"
+            uri="org.msl.simple.gmfmap.simplemapping.invocation">
+      </factory>
+   </extension>
 
 </plugin>

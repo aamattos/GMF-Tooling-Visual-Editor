@@ -5,6 +5,7 @@
     nsURI="http://org.msl.simple.gmfmap/simplemappings" nsPrefix="simplemap">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="settingDelegates" value="org.msl.simple.gmfmap.simplemapping.setting"/>
+    <details key="invocationDelegates" value="org.msl.simple.gmfmap.simplemapping.invocation"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleMapping" eSuperTypes="#//SimpleParentNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="canvas" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Canvas"/>
@@ -90,6 +91,12 @@
         eType="#//SimpleChildNode" containment="true" eOpposite="#//SimpleChildNode/parentNode"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleChildNode" abstract="true" interface="true">
+    <eOperations name="getNodeFigure" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Figure">
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.invocation"/>
+    </eOperations>
+    <eOperations name="getLabelFigure" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Figure">
+      <eAnnotations source="org.msl.simple.gmfmap.simplemapping.invocation"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentNode" eType="#//SimpleParentNode"
         unsettable="true" eOpposite="#//SimpleParentNode/children"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentMapping" eType="#//SimpleMapping"

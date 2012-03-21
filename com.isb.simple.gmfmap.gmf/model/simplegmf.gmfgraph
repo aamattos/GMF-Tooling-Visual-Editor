@@ -87,6 +87,7 @@
             xsi:type="gmfgraph:FlowLayout"
             vertical="true"
             matchMinorSize="true"
+            forceSingleLine="true"
             majorSpacing="0"
             minorSpacing="0"/>
         <backgroundColor
@@ -284,7 +285,11 @@
   <labels
       name="CompartmentName"
       figure="SimpleCompartmentFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.1/@accessors.0">
+    <facets
+        xsi:type="gmfgraph:AlignmentFacet"
+        alignment="CENTER"/>
+  </labels>
   <labels
       name="TopNodeReferenceName"
       figure="SimpleTopNodeReferenceFigure"/>

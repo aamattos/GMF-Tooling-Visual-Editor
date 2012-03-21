@@ -14,6 +14,9 @@ import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.tools.DirectEditManager;
+import org.eclipse.gmf.gmfgraph.Figure;
+import org.eclipse.gmf.gmfgraph.FigureDescriptor;
+import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserEditStatus;
@@ -38,6 +41,12 @@ import org.eclipse.swt.accessibility.AccessibleEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
+import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
@@ -113,6 +122,22 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 			((WrappingLabel) figure).setText(text);
 		} else {
 			((Label) figure).setText(text);
+		}
+	}
+
+	protected void setForegroundColorIconHelper(IFigure figure,
+			RGBColor foreGroundColor) {
+		if (figure instanceof WrappingLabelWithColorIcon) {
+			((WrappingLabelWithColorIcon) figure)
+					.setForegroundColor(foreGroundColor);
+		}
+	}
+
+	protected void setBackgroundColorIconHelper(IFigure figure,
+			RGBColor backgroundColor) {
+		if (figure instanceof WrappingLabelWithColorIcon) {
+			((WrappingLabelWithColorIcon) figure)
+					.setBackgroundColor(backgroundColor);
 		}
 	}
 
@@ -394,11 +419,13 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void refreshLabel() {
 		setLabelTextHelper(getFigure(), getLabelText());
 		setLabelIconHelper(getFigure(), getLabelIcon());
+		setBackgroundColorIconHelper(getFigure(), getFigureBackgroundColor());
+		setForegroundColorIconHelper(getFigure(), getFigureForegroundColor());
 		Object pdEditPolicy = getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 		if (pdEditPolicy instanceof SimplemapTextSelectionEditPolicy) {
 			((SimplemapTextSelectionEditPolicy) pdEditPolicy).refreshFeedback();
@@ -455,7 +482,7 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void addSemanticListeners() {
 		if (getParser() instanceof ISemanticParser) {
@@ -466,9 +493,17 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 				addListenerFilter(
 						"SemanticModel" + i, this, (EObject) parserElements.get(i)); //$NON-NLS-1$
 			}
+
+			addListenerFilter(
+					"SemanticModel" + parserElements.size(), this, getFigureBackgroundColor()); //$NON-NLS-1$
+
+			addListenerFilter(
+					"SemanticModel" + parserElements.size() + 1, this, getFigureForegroundColor()); //$NON-NLS-1$
+
 		} else {
 			super.addSemanticListeners();
 		}
+
 	}
 
 	/**
@@ -570,6 +605,28 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 	 */
 	protected IFigure createFigure() {
 		// Parent should assign one using setLabel() method
+		return null;
+	}
+
+	private RGBColor getFigureBackgroundColor() {
+		Figure nodeFigure = ((SimpleCompartment) resolveSemanticElement())
+				.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getBackgroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getBackgroundColor();
+
+		return null;
+	}
+
+	private RGBColor getFigureForegroundColor() {
+		Figure nodeFigure = ((SimpleCompartment) resolveSemanticElement())
+				.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getForegroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getForegroundColor();
+
 		return null;
 	}
 

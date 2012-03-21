@@ -16,6 +16,8 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.requests.SelectionRequest;
 import org.eclipse.gef.tools.DirectEditManager;
+import org.eclipse.gmf.gmfgraph.Figure;
+import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserEditStatus;
@@ -45,6 +47,9 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeReferenceItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -136,6 +141,22 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 			((WrappingLabel) figure).setText(text);
 		} else {
 			((Label) figure).setText(text);
+		}
+	}
+
+	protected void setForegroundColorIconHelper(IFigure figure,
+			RGBColor foreGroundColor) {
+		if (figure instanceof WrappingLabelWithColorIcon) {
+			((WrappingLabelWithColorIcon) figure)
+					.setForegroundColor(foreGroundColor);
+		}
+	}
+
+	protected void setBackgroundColorIconHelper(IFigure figure,
+			RGBColor backgroundColor) {
+		if (figure instanceof WrappingLabelWithColorIcon) {
+			((WrappingLabelWithColorIcon) figure)
+					.setBackgroundColor(backgroundColor);
 		}
 	}
 
@@ -418,11 +439,13 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void refreshLabel() {
 		setLabelTextHelper(getFigure(), getLabelText());
 		setLabelIconHelper(getFigure(), getLabelIcon());
+		setBackgroundColorIconHelper(getFigure(), getFigureBackgroundColor());
+		setForegroundColorIconHelper(getFigure(), getFigureForegroundColor());
 		Object pdEditPolicy = getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 		if (pdEditPolicy instanceof SimplemapTextSelectionEditPolicy) {
 			((SimplemapTextSelectionEditPolicy) pdEditPolicy).refreshFeedback();
@@ -431,6 +454,28 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 		if (sfEditPolicy instanceof SimplemapTextSelectionEditPolicy) {
 			((SimplemapTextSelectionEditPolicy) sfEditPolicy).refreshFeedback();
 		}
+	}
+
+	private RGBColor getFigureBackgroundColor() {
+		Figure nodeFigure = ((SimpleSubNodeReference) resolveSemanticElement())
+				.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getBackgroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getBackgroundColor();
+
+		return null;
+	}
+
+	private RGBColor getFigureForegroundColor() {
+		Figure nodeFigure = ((SimpleSubNodeReference) resolveSemanticElement())
+				.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getForegroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getForegroundColor();
+
+		return null;
 	}
 
 	/**
@@ -479,7 +524,7 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void addSemanticListeners() {
 		if (getParser() instanceof ISemanticParser) {
@@ -490,6 +535,12 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 				addListenerFilter(
 						"SemanticModel" + i, this, (EObject) parserElements.get(i)); //$NON-NLS-1$
 			}
+
+			addListenerFilter(
+					"SemanticModel" + parserElements.size(), this, getFigureBackgroundColor()); //$NON-NLS-1$
+
+			addListenerFilter(
+					"SemanticModel" + parserElements.size() + 1, this, getFigureForegroundColor()); //$NON-NLS-1$			
 		} else {
 			super.addSemanticListeners();
 		}
@@ -606,9 +657,10 @@ public class SimpleSubNodeReferenceEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
-	public class SimpleTopNodeReferenceFigure extends WrappingLabel {
+	public class SimpleTopNodeReferenceFigure extends
+			WrappingLabelWithColorIcon {
 
 		/**
 		 * @generated

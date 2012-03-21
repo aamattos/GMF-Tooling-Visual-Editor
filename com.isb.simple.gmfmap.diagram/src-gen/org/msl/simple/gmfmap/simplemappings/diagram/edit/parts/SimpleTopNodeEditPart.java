@@ -31,6 +31,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleTopNodeCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleTopNodeItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
@@ -317,11 +318,11 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 		}
 
 		/**
-		 * @generated
+		 * @generated not
 		 */
 		private void createContents() {
 
-			fFigureTopNodeNameFigure = new WrappingLabel();
+			fFigureTopNodeNameFigure = new WrappingLabelWithColorIcon();
 			fFigureTopNodeNameFigure.setText("<..>");
 			fFigureTopNodeNameFigure
 					.setForegroundColor(FFIGURETOPNODENAMEFIGURE_FORE);

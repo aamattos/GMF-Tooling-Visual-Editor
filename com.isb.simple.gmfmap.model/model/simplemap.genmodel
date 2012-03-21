@@ -6,7 +6,8 @@
     modelPluginID="org.msl.simple.gmfmap.model" templateDirectory="/org.msl.simple.gmfmap.model/templates"
     dynamicTemplates="true" modelName="Simplemap" reflectiveDelegation="true" importerID="org.eclipse.emf.importer.ecore"
     featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" editPluginID="org.msl.simple.gmfmap.model.edit"
-    editorPluginID="org.msl.simple.gmfmap.model.editor" runtimeVersion="2.7" usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef">
+    editorPluginID="org.msl.simple.gmfmap.model.editor" runtimeVersion="2.7" usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef"
+    operationReflection="true">
   <foreignModel>simplemap.ecore</foreignModel>
   <genPackages prefix="Simplemappings" basePackage="org.msl.simple.gmfmap" disposableProviderFactory="true"
       ecorePackage="simplemap.ecore#/">
@@ -28,6 +29,7 @@
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleCompartment/compartment"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleCompartment/compartmentLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleCompartment/needsTitle"/>
     </genClasses>
     <genClasses ecoreClass="simplemap.ecore#//SimpleLabelNode"/>
     <genClasses ecoreClass="simplemap.ecore#//SimpleLinkMapping">
@@ -66,6 +68,8 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parent"/>
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentRoot"/>
+      <genOperations ecoreOperation="simplemap.ecore#//SimpleChildNode/getNodeFigure"/>
+      <genOperations ecoreOperation="simplemap.ecore#//SimpleChildNode/getLabelFigure"/>
     </genClasses>
     <genClasses ecoreClass="simplemap.ecore#//SimpleSubNodeReference">
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
@@ -111,6 +115,7 @@
         <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference simplemap.ecore#//SimpleCompartment/compartment"/>
         <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleCompartment/compartmentLabel"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleCompartment/needsTitle"/>
       </genClasses>
       <genClasses ecoreClass="simplemap.ecore#//SimpleLabelNode"/>
       <genClasses ecoreClass="simplemap.ecore#//SimpleLinkMapping">
@@ -153,6 +158,8 @@
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parent"/>
         <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentRoot"/>
+        <genOperations ecoreOperation="simplemap.ecore#//SimpleChildNode/getNodeFigure"/>
+        <genOperations ecoreOperation="simplemap.ecore#//SimpleChildNode/getLabelFigure"/>
       </genClasses>
       <genClasses ecoreClass="simplemap.ecore#//SimpleSubNodeReference">
         <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"

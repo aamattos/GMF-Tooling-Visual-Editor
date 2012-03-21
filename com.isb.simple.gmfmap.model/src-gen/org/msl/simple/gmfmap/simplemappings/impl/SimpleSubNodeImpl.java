@@ -6,9 +6,13 @@
  */
 package org.msl.simple.gmfmap.simplemappings.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.gmf.gmfgraph.Figure;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
@@ -239,6 +243,54 @@ public class SimpleSubNodeImpl extends EObjectImpl implements SimpleSubNode {
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #getNodeFigure() <em>Get Node Figure</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNodeFigure()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate GET_NODE_FIGURE__EINVOCATION_DELEGATE = ((EOperation.Internal)SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE___GET_NODE_FIGURE).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Figure getNodeFigure() {
+		try {
+			return (Figure)GET_NODE_FIGURE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #getLabelFigure() <em>Get Label Figure</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabelFigure()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate GET_LABEL_FIGURE__EINVOCATION_DELEGATE = ((EOperation.Internal)SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Figure getLabelFigure() {
+		try {
+			return (Figure)GET_LABEL_FIGURE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -274,6 +326,39 @@ public class SimpleSubNodeImpl extends EObjectImpl implements SimpleSubNode {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == SimpleChildNode.class) {
+			switch (baseOperationID) {
+				case SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_NODE_FIGURE: return SimplemappingsPackage.SIMPLE_SUB_NODE___GET_NODE_FIGURE;
+				case SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE: return SimplemappingsPackage.SIMPLE_SUB_NODE___GET_LABEL_FIGURE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case SimplemappingsPackage.SIMPLE_SUB_NODE___GET_NODE_FIGURE:
+				return getNodeFigure();
+			case SimplemappingsPackage.SIMPLE_SUB_NODE___GET_LABEL_FIGURE:
+				return getLabelFigure();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //SimpleSubNodeImpl

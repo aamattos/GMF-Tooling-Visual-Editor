@@ -7,9 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.gmfgraph.BasicFont;
 import org.eclipse.gmf.gmfgraph.Color;
-import org.eclipse.gmf.gmfgraph.DiagramLabel;
 import org.eclipse.gmf.gmfgraph.Figure;
-import org.eclipse.gmf.gmfgraph.FigureDescriptor;
 import org.eclipse.gmf.gmfgraph.FontStyle;
 import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.common.core.command.ICommand;
@@ -44,12 +42,8 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IWorkbenchPart;
 import org.msl.simple.gmfmap.diagram.properties.AbstractExtendedPropertiesSection;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
-import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 
 public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	
@@ -422,7 +416,7 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 			
 			backgroundColorButton.setBackground(new org.eclipse.swt.graphics.Color(null, pickedColor));
 			
-			commands.add(createCommand("ChangeBackgroundColor", labelFont.eResource(), new Runnable() {
+			commands.add(createCommand("ChangeBackgroundColor", nodeFigure.eResource(), new Runnable() {
 
 				public void run() {
 					figureBackgroundRGBColor.setBlue(pickedColor.blue);
@@ -461,7 +455,7 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 			
 			foregroundColorButton.setBackground(new org.eclipse.swt.graphics.Color(null, pickedColor));
 			
-			commands.add(createCommand("ChangeForegroundColor", labelFont.eResource(), new Runnable() {
+			commands.add(createCommand("ChangeForegroundColor", nodeFigure.eResource(), new Runnable() {
 
 				public void run() {
 					figureForegroundRGBColor.setBlue(pickedColor.blue);
@@ -760,16 +754,20 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	public void setInput(IWorkbenchPart part, ISelection selection) {
 		super.setInput(part, selection);
 		
-		nodeFigure = getFigure(getEObject());
+		nodeFigure = ((SimpleChildNode)getEObject()).getNodeFigure();
 		
-		Figure labelFigure = getLabelFigure(getEObject());
+		Figure labelFigure = ((SimpleChildNode)getEObject()).getLabelFigure();
 		
 		labelFont = (labelFigure!=null && labelFigure.getFont() instanceof BasicFont)?(BasicFont)labelFigure.getFont():null; 
 		
 		if(getEObject() instanceof SimpleCompartment)
 		{
 			defaultBackgroundColor = DEFAULT_COMPARTMENT_BACKGROUND;
-			defaultForegroundColor = DEFAULT_COMPARTMENT_BACKGROUND;
+			defaultForegroundColor = DEFAULT_COMPARTMENT_FOREGROUND;
+		}else
+		{
+			defaultBackgroundColor = DEFAULT_TOP_NODE_BACKGROUND;
+			defaultForegroundColor = DEFAULT_TOP_NODE_FOREGROUND;
 		}
 		
 		//updateColorCache();
@@ -824,37 +822,6 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
     }
     
 	
-	protected Figure getFigure(Object transformSelection)
-	{
-		
-		Figure figure = null;
-		
-		if(transformSelection instanceof SimpleNode)
-		{
-			figure = ((SimpleNode)transformSelection).getDiagramNode().getFigure().getActualFigure();
-		}
-		
-		if(transformSelection instanceof SimpleCompartment)
-		{
-			figure = ((SimpleCompartment)transformSelection).getCompartment().getAccessor().getFigure();
-		}
-		
-		if(transformSelection instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)transformSelection).getParentSubNodeReference();
-			figure = getFigure(referencingNode);
-		}
-		
-		if(transformSelection instanceof SimpleLinkMapping)
-		{
-			FigureDescriptor figDesc = ((SimpleLinkMapping)transformSelection).getDiagramLink().getFigure();
-			figure = figDesc!=null?figDesc.getActualFigure():null;
-
-		}
-		
-		return figure;
-	}
-	
 	private RGB getBackgroungRGBColor()
 	{
 		final RGBColor figureBackgroundRGBColor = nodeFigure.getBackgroundColor() instanceof RGBColor ? (RGBColor)nodeFigure.getBackgroundColor():null;
@@ -879,42 +846,5 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		return rgbForegroundColor;
 	}
 	
-	protected Figure getLabelFigure(Object transformSelection)
-	{
-		Figure figure = null;
-		
-		if(transformSelection instanceof SimpleNode)
-		{
-			DiagramLabel diagramLabel = ((SimpleNode)transformSelection).getDiagramLabel();
-			if(diagramLabel!=null && diagramLabel.getAccessor()!=null)
-				figure = diagramLabel.getAccessor().getFigure();
-		}
-			
-		if(transformSelection instanceof SimpleLabelNode)
-		{
-			figure = ((SimpleNode)transformSelection).getDiagramLabel().getFigure().getActualFigure();
-		}
-
-		
-		if(transformSelection instanceof SimpleCompartment)
-		{
-			figure = ((SimpleCompartment)transformSelection).getCompartment().getFigure().getActualFigure();
-		}
-		
-		if(transformSelection instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)transformSelection).getParentSubNodeReference();
-			figure = getLabelFigure(referencingNode);
-		}
-		
-		if(transformSelection instanceof SimpleLinkMapping)
-		{
-			figure = ((SimpleLinkMapping)transformSelection).getDiagramLabel().getFigure().getActualFigure();
-
-		}
-		
-		return figure;
-	}
-
 
 }

@@ -8,6 +8,7 @@ package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -24,7 +25,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore settingDelegates='org.msl.simple.gmfmap.simplemapping.setting'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore settingDelegates='org.msl.simple.gmfmap.simplemapping.setting' invocationDelegates='org.msl.simple.gmfmap.simplemapping.invocation'"
  * @generated
  */
 public interface SimplemappingsPackage extends EPackage {
@@ -204,6 +205,15 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_MAPPING_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 5;
 
 	/**
+	 * The number of operations of the '<em>Simple Mapping</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -375,6 +385,33 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_TOP_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Top Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,6 +509,33 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_COMPARTMENT_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -600,6 +664,33 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_LABEL_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Label Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -715,6 +806,33 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_LINK_MAPPING_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Link Mapping</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -843,6 +961,33 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 9;
 
 	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -859,6 +1004,15 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_PARENT_NODE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Parent Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_PARENT_NODE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -904,6 +1058,33 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_CHILD_NODE_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CHILD_NODE___GET_NODE_FIGURE = 0;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CHILD_NODE___GET_LABEL_FIGURE = 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Child Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CHILD_NODE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl <em>Simple Sub Node Reference</em>}' class.
@@ -1060,6 +1241,33 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_SUB_NODE_REFERENCE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE_REFERENCE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE_REFERENCE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Sub Node Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE_REFERENCE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleDomainMapElementImpl <em>Simple Domain Map Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1086,6 +1294,15 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_DOMAIN_MAP_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Domain Map Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_DOMAIN_MAP_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}' class.
@@ -1216,6 +1433,33 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_SUB_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 8;
 
 	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_ROOT_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_ROOT_NODE_OPERATION_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Sub Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_ROOT_NODE_OPERATION_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Sub Nodes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1250,6 +1494,15 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_ROOT_NODE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Simple Root Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_ROOT_NODE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -1672,6 +1925,26 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSimpleChildNode_ParentRoot();
+
+	/**
+	 * Returns the meta object for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getNodeFigure() <em>Get Node Figure</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Node Figure</em>' operation.
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getNodeFigure()
+	 * @generated
+	 */
+	EOperation getSimpleChildNode__GetNodeFigure();
+
+	/**
+	 * Returns the meta object for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getLabelFigure() <em>Get Label Figure</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Label Figure</em>' operation.
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getLabelFigure()
+	 * @generated
+	 */
+	EOperation getSimpleChildNode__GetLabelFigure();
 
 	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference <em>Simple Sub Node Reference</em>}'.
@@ -2161,6 +2434,22 @@ public interface SimplemappingsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_CHILD_NODE__PARENT_ROOT = eINSTANCE.getSimpleChildNode_ParentRoot();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Node Figure</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SIMPLE_CHILD_NODE___GET_NODE_FIGURE = eINSTANCE.getSimpleChildNode__GetNodeFigure();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Label Figure</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SIMPLE_CHILD_NODE___GET_LABEL_FIGURE = eINSTANCE.getSimpleChildNode__GetLabelFigure();
 
 		/**
 		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl <em>Simple Sub Node Reference</em>}' class.
