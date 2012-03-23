@@ -132,7 +132,7 @@ public class SimplemapPaletteFactory {
 	}
 
 	/**
-	 * @generated
+	 * @generated no
 	 */
 	private ToolEntry createLinkMapping6CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
@@ -141,8 +141,8 @@ public class SimplemapPaletteFactory {
 				Collections
 						.singletonList(SimplemapElementTypes.SimpleLinkMapping_2007));
 		entry.setId("createLinkMapping6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(SimplemapElementTypes
-				.getImageDescriptor(SimplemapElementTypes.SimpleLinkMapping_2007));
+		entry.setSmallIcon(SimplemapDiagramEditorPlugin
+				.getBundledImageDescriptor("icons/obj16/SimpleLinkPalette.gif"));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

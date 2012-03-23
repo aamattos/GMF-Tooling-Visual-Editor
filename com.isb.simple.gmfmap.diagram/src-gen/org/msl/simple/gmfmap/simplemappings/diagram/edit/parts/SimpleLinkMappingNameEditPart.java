@@ -451,7 +451,7 @@ public class SimpleLinkMappingNameEditPart extends CompartmentEditPart
 	 * @generated not
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(new Color(null, 255, 255, 255));
+		getFigure().setForegroundColor(new Color(null, 51, 51, 51));
 	}
 
 	/**

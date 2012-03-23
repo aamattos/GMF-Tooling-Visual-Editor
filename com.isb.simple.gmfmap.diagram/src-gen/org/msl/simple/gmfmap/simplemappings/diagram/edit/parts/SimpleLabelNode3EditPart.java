@@ -48,6 +48,7 @@ import org.eclipse.swt.widgets.Display;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleLabelNode3ItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapParserProvider;

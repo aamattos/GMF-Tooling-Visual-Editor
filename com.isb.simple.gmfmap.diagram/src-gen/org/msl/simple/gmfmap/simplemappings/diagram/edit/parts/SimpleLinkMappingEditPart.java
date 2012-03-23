@@ -267,6 +267,7 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 		public SimpleLinkMappingFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
+			this.setLineWidth(2);
 			this.setForegroundColor(THIS_FORE);
 			this.setBackgroundColor(THIS_BACK);
 			this.setMaximumSize(new Dimension(getMapMode().DPtoLP(50),
@@ -312,7 +313,7 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 100, 112, 158);
+	static final Color THIS_BACK = new Color(null, 246, 249, 251);
 
 	/**
 	 * @generated

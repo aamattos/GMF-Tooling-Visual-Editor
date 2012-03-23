@@ -205,7 +205,8 @@
         name="SimpleLinkMappingFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
-          name="SimpleLinkMappingFigure">
+          name="SimpleLinkMappingFigure"
+          lineWidth="2">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
             red="74"
@@ -213,9 +214,9 @@
             blue="145"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="100"
-            green="112"
-            blue="158"/>
+            red="246"
+            green="249"
+            blue="251"/>
         <maximumSize
             dx="50"
             dy="30"/>

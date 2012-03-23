@@ -262,6 +262,107 @@ public class SimplemapNavigatorContentProvider implements
 			return result.toArray();
 		}
 
+		case SimpleTopNodeEditPart.VISUAL_ID: {
+			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			SimplemapNavigatorGroup incominglinks = new SimplemapNavigatorGroup(
+					Messages.NavigatorGroupName_SimpleTopNode_2003_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleLabelNodeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleCompartmentEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleSubNodeReference2EditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleSubNodeParentRootNodeEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case SimpleMappingEditPart.VISUAL_ID: {
+			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
+			Diagram sv = (Diagram) view;
+			SimplemapNavigatorGroup links = new SimplemapNavigatorGroup(
+					Messages.NavigatorGroupName_SimpleMapping_1000_links,
+					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleTopNodeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleSubNodeEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleLinkMappingEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getDiagramLinksByType(
+					Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleSubNodeParentRootNodeEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			if (!links.isEmpty()) {
+				result.add(links);
+			}
+			return result.toArray();
+		}
+
+		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID: {
+			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			SimplemapNavigatorGroup target = new SimplemapNavigatorGroup(
+					Messages.NavigatorGroupName_SimpleSubNodeParentRootNode_4003_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SimplemapNavigatorGroup source = new SimplemapNavigatorGroup(
+					Messages.NavigatorGroupName_SimpleSubNodeParentRootNode_4003_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleTopNodeEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleSubNodeEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					SimplemapVisualIDRegistry
+							.getType(SimpleSubNodeEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
 		case SimpleSubNodeEditPart.VISUAL_ID: {
 			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
 			Node sv = (Node) view;
@@ -304,107 +405,6 @@ public class SimplemapNavigatorContentProvider implements
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID: {
-			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			SimplemapNavigatorGroup target = new SimplemapNavigatorGroup(
-					Messages.NavigatorGroupName_SimpleSubNodeParentRootNode_4003_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			SimplemapNavigatorGroup source = new SimplemapNavigatorGroup(
-					Messages.NavigatorGroupName_SimpleSubNodeParentRootNode_4003_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleTopNodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case SimpleMappingEditPart.VISUAL_ID: {
-			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
-			Diagram sv = (Diagram) view;
-			SimplemapNavigatorGroup links = new SimplemapNavigatorGroup(
-					Messages.NavigatorGroupName_SimpleMapping_1000_links,
-					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleTopNodeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleLinkMappingEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeParentRootNodeEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			if (!links.isEmpty()) {
-				result.add(links);
-			}
-			return result.toArray();
-		}
-
-		case SimpleTopNodeEditPart.VISUAL_ID: {
-			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			SimplemapNavigatorGroup incominglinks = new SimplemapNavigatorGroup(
-					Messages.NavigatorGroupName_SimpleTopNode_2003_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleLabelNodeEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleCompartmentEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeReference2EditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeParentRootNodeEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
 			}
 			return result.toArray();
 		}

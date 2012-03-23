@@ -36,6 +36,11 @@ public class SimplemapIconProvider extends AbstractProvider implements
 					"icons/obj16/SimpleSubNodeReferencePalette.gif")
 					.createImage();
 
+		if (SimplemapElementTypes.getElement(hint).getName()
+				.equals("SimpleLinkMapping"))
+			return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+					"icons/obj16/SimpleLinkPalette.gif").createImage();
+
 		return SimplemapElementTypes.getImage(hint);
 	}
 
