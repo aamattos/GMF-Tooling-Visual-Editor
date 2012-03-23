@@ -6,7 +6,7 @@
     modelPluginID="org.msl.simple.gmfmap.model" templateDirectory="/org.msl.simple.gmfmap.model/templates"
     dynamicTemplates="true" modelName="Simplemap" reflectiveDelegation="true" importerID="org.eclipse.emf.importer.ecore"
     featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" editPluginID="org.msl.simple.gmfmap.model.edit"
-    editorPluginID="org.msl.simple.gmfmap.model.editor" runtimeVersion="2.7" usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef"
+    editorPluginID="org.msl.simple.gmfmap.model.editor" runtimeVersion="2.6" usedGenPackages="platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.genmodel#//gmfgraph platform:/plugin/org.eclipse.gmf.map/models/gmfmap.genmodel#//mappings platform:/plugin/org.eclipse.gmf.tooldef/models/tooldef.genmodel#//tooldef"
     operationReflection="true">
   <foreignModel>simplemap.ecore</foreignModel>
   <genPackages prefix="Simplemappings" basePackage="org.msl.simple.gmfmap" disposableProviderFactory="true"
