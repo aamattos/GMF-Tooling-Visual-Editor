@@ -23,8 +23,30 @@ public class SetContainmentFeatureTrigger extends AbstractSimpleNodeTrigger {
 	
 	private void updateMapping()
 	{
-		if(simpleNode.getNodeReference()!=null)
+		if(simpleNode.getNodeReference()!=null){
+		
 			simpleNode.getNodeReference().setContainmentFeature(newElement);
+//			
+////			ComposedAdapterFactory composedAdapterFactory = new ComposedAdapterFactory(
+////					ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+////			
+////			ItemProviderAdapter itemProvider = (ItemProviderAdapter)composedAdapterFactory.adapt(simpleNode, ItemProviderAdapter.class);
+////
+////			itemProvider.getPropertyDescriptor(object, propertyId)
+////			
+////			List<EClass> choiceOfValues = new ArrayList<EClass>();
+////			
+////			if(newElement!=null)
+////				for(Object choice:ItemPropertyDescriptor.getReachableObjectsOfType(simpleNode, newElement.getEType()))
+////					if(choice instanceof EClass && ((EClass)newElement.getEType()).isSuperTypeOf((EClass)choice))
+////							choiceOfValues.add((EClass)choice);	
+//			
+//			
+//			
+//			if(choiceOfValues.size()==1)
+//				simpleNode.setDomainMetaElement(choiceOfValues.get(0));
+		}
+		
 	}
 	
 	
