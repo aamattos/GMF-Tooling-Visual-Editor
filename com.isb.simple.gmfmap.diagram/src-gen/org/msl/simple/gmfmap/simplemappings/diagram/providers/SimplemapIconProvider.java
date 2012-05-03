@@ -18,28 +18,34 @@ public class SimplemapIconProvider extends AbstractProvider implements
 	 * @generated not
 	 */
 	public Image getIcon(IAdaptable hint, int flags) {
-		if (SimplemapElementTypes.getElement(hint).getName()
-				.equals("SimpleTopNode"))
-			return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
-					"icons/obj16/SimpleTopNodePalette.gif").createImage();
+		
+		if(SimplemapElementTypes.getElement(hint)!=null)
+		{
+			if (SimplemapElementTypes.getElement(hint).getName()
+					.equals("SimpleTopNode"))
+				return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+						"icons/obj16/SimpleTopNodePalette.gif").createImage();
 
-		if (SimplemapElementTypes.getElement(hint).getName()
-				.equals("SimpleLabelNode"))
-			return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
-					"icons/obj16/SimpleLabelNodeC.gif").createImage();
+			if (SimplemapElementTypes.getElement(hint).getName()
+					.equals("SimpleLabelNode"))
+				return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+						"icons/obj16/SimpleLabelNodeC.gif").createImage();
 
-		if (SimplemapElementTypes.getElement(hint).getName()
-				.equals("SimpleSubNode")
-				|| SimplemapElementTypes.getElement(hint).getName()
-						.equals("SimpleSubNodeReference"))
-			return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
-					"icons/obj16/SimpleSubNodeReferencePalette.gif")
-					.createImage();
+			if (SimplemapElementTypes.getElement(hint).getName()
+					.equals("SimpleSubNode")
+					|| SimplemapElementTypes.getElement(hint).getName()
+							.equals("SimpleSubNodeReference"))
+				return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+						"icons/obj16/SimpleSubNodeReferencePalette.gif")
+						.createImage();
 
-		if (SimplemapElementTypes.getElement(hint).getName()
-				.equals("SimpleLinkMapping"))
-			return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
-					"icons/obj16/SimpleLinkPalette.gif").createImage();
+			if (SimplemapElementTypes.getElement(hint).getName()
+					.equals("SimpleLinkMapping"))
+				return SimplemapDiagramEditorPlugin.getBundledImageDescriptor(
+						"icons/obj16/SimpleLinkPalette.gif").createImage();
+		}
+		
+
 
 		return SimplemapElementTypes.getImage(hint);
 	}
