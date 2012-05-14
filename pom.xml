@@ -33,7 +33,7 @@
      <layout>p2</layout>
      <url>http://download.eclipse.org/releases/indigo</url>
    </repository>
-   <reposotory>
+   <repository>
      <id>gmf</id>
      <layout>p2</layout>
      <url>http://download.eclipse.org/modeling/gmp/updates/releases</url>
