@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.isb.simple.gmf.mapping</groupId>
+  <groupId>org.msl.simple.gmf.mapping</groupId>
   <artifactId>parent</artifactId>
   <version>0.1.0</version>
   <packaging>pom</packaging>
   <modules>
-    <module>com.isb.simple.gmf.bridge.ui</module>
-    <module>com.isb.simple.gmf.migrate.ui</module>
-    <module>com.isb.simple.gmfmap.diagram.properties</module>
-    <module>com.isb.simple.gmfmap.diagram</module>
-    <module>com.isb.simple.gmfmap.gmf</module>
-    <module>com.isb.simple.gmfmap.model</module>
-    <module>com.isb.simple.gmfmap.model.delegates</module>
-    <module>com.isb.simple.gmfmap.model.edit.properties</module>
-    <module>com.isb.simple.gmfmap.model.edit</module>
-    <module>com.isb.simple.gmfmap.model.triggers</module>
+    <module>org.msl.simple.gmf.bridge.ui</module>
+    <module>org.msl.simple.gmf.migrate.ui</module>
+    <module>org.msl.simple.gmfmap.diagram.properties</module>
+    <module>org.msl.simple.gmfmap.diagram</module>
+    <module>org.msl.simple.gmfmap.gmf</module>
+    <module>org.msl.simple.gmfmap.model</module>
+    <module>org.msl.simple.gmfmap.model.delegates</module>
+    <module>org.msl.simple.gmfmap.model.edit.properties</module>
+    <module>org.msl.simple.gmfmap.model.edit</module>
+    <module>org.msl.simple.gmfmap.model.triggers</module>
   </modules>
 
   <properties>
