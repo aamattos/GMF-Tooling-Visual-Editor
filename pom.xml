@@ -15,7 +15,7 @@
     <module>com.isb.simple.gmfmap.model.delegates</module>
     <module>com.isb.simple.gmfmap.model.edit.properties</module>
     <module>com.isb.simple.gmfmap.model.edit</module>
-    <module>com.isb.simple.gmfmap.model.model.triggers</module>
+    <module>com.isb.simple.gmfmap.model.triggers</module>
   </modules>
 
   <properties>
