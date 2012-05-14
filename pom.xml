@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.msl.simple.gmf.mapping</groupId>
+  <artifactId>simpleMapping</artifactId>
+  <name>simpleMapping</name>
+  <version>0.2.0.qualifier</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>org.msl.simple.gmf.bridge.ui</module>
+    <module>org.msl.simple.gmf.migrate.ui</module>
+    <module>org.msl.simple.gmfmap.diagram.properties</module>
+    <module>org.msl.simple.gmfmap.diagram</module>
+    <module>org.msl.simple.gmfmap.gmf</module>
+    <module>org.msl.simple.gmfmap.model</module>
+    <module>org.msl.simple.gmfmap.model.delegates</module>
+    <module>org.msl.simple.gmfmap.model.edit.properties</module>
+    <module>org.msl.simple.gmfmap.model.edit</module>
+    <module>org.msl.simple.gmfmap.model.triggers</module>
+  </modules>
+
+  <properties>
+    <tycho-version>0.13.0</tycho-version>
+  </properties>
+
+  <repositories>
+   <repository>
+     <id>github</id>
+     <layout>p2</layout>
+     <url>http://svn.codespot.com/a/eclipselabs.org/gmf-simple-map-editor/update/3.7/</url>
+   </repository>  
+   <repository>
+     <id>gmftooling</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/</url>
+   </repository>
+   <repository>
+     <id>indigo</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/releases/indigo</url>
+   </repository>
+   <repository>
+     <id>mdt</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/modeling/mdt/updates/releases</url>
+   </repository>
+   <repository>
+     <id>objectteams</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/objectteams/updates/2.0</url>
+   </repository>
+   <repository>
+     <id>gmf</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/modeling/gmp/updates/releases</url>
+   </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+	    <groupId>org.eclipse.tycho</groupId>
+	    <artifactId>tycho-compiler-plugin</artifactId>
+	    <version>${tycho-version}</version>
+	    <configuration>
+		  <source>1.6</source>
+		  <target>1.6</target>
+	    </configuration>
+      </plugin>	  
+    </plugins>
+  </build>  
+  
+</project>
