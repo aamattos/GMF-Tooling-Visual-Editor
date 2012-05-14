@@ -25,11 +25,6 @@
 
   <repositories>
    <repository>
-     <id>github</id>
-     <layout>p2</layout>
-     <url>http://svn.codespot.com/a/eclipselabs.org/gmf-simple-map-editor/update/3.7/</url>
-   </repository>  
-   <repository>
      <id>gmftooling</id>
      <layout>p2</layout>
      <url>http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/</url>
