@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.isb.simple.gmf.mapping</groupId>
+  <artifactId>parent</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>com.isb.simple.gmf.bridge.ui</module>
+    <module>com.isb.simple.gmf.migrate.ui</module>
+    <module>com.isb.simple.gmfmap.diagram.properties</module>
+    <module>com.isb.simple.gmfmap.diagram</module>
+    <module>com.isb.simple.gmfmap.gmf</module>
+    <module>com.isb.simple.gmfmap.model</module>
+    <module>com.isb.simple.gmfmap.model.delegates</module>
+    <module>com.isb.simple.gmfmap.model.edit.properties</module>
+    <module>com.isb.simple.gmfmap.model.edit</module>
+    <module>com.isb.simple.gmfmap.model.model.triggers</module>
+  </modules>
+
+  <properties>
+    <tycho-version>0.13.0</tycho-version>
+  </properties>
+
+  <repositories>
+   <repository>
+     <id>github</id>
+     <layout>p2</layout>
+     <url>http://svn.codespot.com/a/eclipselabs.org/gmf-simple-map-editor/update/3.7/</url>
+   </repository>  
+   <repository>
+     <id>indigo</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/releases/indigo</url>
+   </repository>	
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+	    <groupId>org.eclipse.tycho</groupId>
+	    <artifactId>tycho-compiler-plugin</artifactId>
+	    <version>${tycho-version}</version>
+	    <configuration>
+		  <source>1.6</source>
+		  <target>1.6</target>
+	    </configuration>
+      </plugin>	  
+    </plugins>
+  </build>  
+  
+</project>
