@@ -32,7 +32,12 @@
      <id>indigo</id>
      <layout>p2</layout>
      <url>http://download.eclipse.org/releases/indigo</url>
-   </repository>	
+   </repository>
+   <reposotory>
+     <id>gmf</id>
+     <layout>p2</layout>
+     <url>http://download.eclipse.org/modeling/gmp/updates/releases</url>
+   </repository>
   </repositories>
 
   <build>
