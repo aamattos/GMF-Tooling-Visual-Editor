@@ -19,9 +19,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -114,40 +112,12 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 				return createSimpleChildNodeAdapter();
 			}
 			@Override
-			public Adapter caseSimpleSubNodeReference(SimpleSubNodeReference object) {
-				return createSimpleSubNodeReferenceAdapter();
-			}
-			@Override
-			public Adapter caseSimpleDomainMapElement(SimpleDomainMapElement object) {
-				return createSimpleDomainMapElementAdapter();
-			}
-			@Override
 			public Adapter caseSimpleSubNode(SimpleSubNode object) {
 				return createSimpleSubNodeAdapter();
 			}
 			@Override
-			public Adapter caseSimpleRootNode(SimpleRootNode object) {
-				return createSimpleRootNodeAdapter();
-			}
-			@Override
-			public Adapter caseSimplemappings_SimpleParentNode(SimpleParentNode object) {
-				return createSimplemappings_SimpleParentNodeAdapter();
-			}
-			@Override
-			public Adapter caseSimplemappings_SimpleChildNode(SimpleChildNode object) {
-				return createSimplemappings_SimpleChildNodeAdapter();
-			}
-			@Override
-			public Adapter caseSimplemappings_SimpleDomainMapElement(SimpleDomainMapElement object) {
-				return createSimplemappings_SimpleDomainMapElementAdapter();
-			}
-			@Override
-			public Adapter caseSimplemappings_SimpleNode(SimpleNode object) {
-				return createSimplemappings_SimpleNodeAdapter();
-			}
-			@Override
-			public Adapter caseSimplemappings_SimpleRootNode(SimpleRootNode object) {
-				return createSimplemappings_SimpleRootNodeAdapter();
+			public Adapter caseSimpleDomainMapElement(SimpleDomainMapElement object) {
+				return createSimpleDomainMapElementAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -282,34 +252,6 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference <em>Simple Sub Node Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference
-	 * @generated
-	 */
-	public Adapter createSimpleSubNodeReferenceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement <em>Simple Domain Map Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement
-	 * @generated
-	 */
-	public Adapter createSimpleDomainMapElementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode <em>Simple Sub Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -324,48 +266,6 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode
-	 * @generated
-	 */
-	public Adapter createSimpleRootNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleParentNode <em>Simple Parent Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleParentNode
-	 * @generated
-	 */
-	public Adapter createSimplemappings_SimpleParentNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode
-	 * @generated
-	 */
-	public Adapter createSimplemappings_SimpleChildNodeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement <em>Simple Domain Map Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -375,35 +275,7 @@ public class SimplemappingsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement
 	 * @generated
 	 */
-	public Adapter createSimplemappings_SimpleDomainMapElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode <em>Simple Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleNode
-	 * @generated
-	 */
-	public Adapter createSimplemappings_SimpleNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode
-	 * @generated
-	 */
-	public Adapter createSimplemappings_SimpleRootNodeAdapter() {
+	public Adapter createSimpleDomainMapElementAdapter() {
 		return null;
 	}
 

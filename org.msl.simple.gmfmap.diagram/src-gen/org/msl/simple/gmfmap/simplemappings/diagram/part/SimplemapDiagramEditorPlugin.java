@@ -21,7 +21,6 @@ import org.eclipse.gmf.tooldef.provider.GMFToolItemProviderAdapterFactory;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapBaseItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.ElementInitializers;
 import org.msl.simple.gmfmap.simplemappings.provider.SimplemappingsItemProviderAdapterFactory;
 import org.osgi.framework.BundleContext;
@@ -60,11 +59,6 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	private SimplemapBaseItemSemanticEditPolicy.LinkConstraints linkConstraints;
-
-	/**
-	 * @generated
-	 */
 	private ElementInitializers initializers;
 
 	/**
@@ -90,7 +84,6 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	public void stop(BundleContext context) throws Exception {
 		adapterFactory.dispose();
 		adapterFactory = null;
-		linkConstraints = null;
 		initializers = null;
 		instance = null;
 		super.stop(context);
@@ -104,6 +97,7 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
+	 * (Modified template: Activator.xpt)
 	 * @generated
 	 */
 	protected ComposedAdapterFactory createAdapterFactory() {
@@ -122,7 +116,6 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 	 * @generated
 	 */
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
-		factories.add(new SimplemappingsItemProviderAdapterFactory());
 		factories.add(new SimplemappingsItemProviderAdapterFactory());
 		factories.add(new GMFGraphItemProviderAdapterFactory());
 		factories.add(new GMFMapItemProviderAdapterFactory());
@@ -241,21 +234,6 @@ public class SimplemapDiagramEditorPlugin extends AbstractUIPlugin {
 			documentProvider = new SimplemapDocumentProvider();
 		}
 		return documentProvider;
-	}
-
-	/**
-	 * @generated
-	 */
-	public SimplemapBaseItemSemanticEditPolicy.LinkConstraints getLinkConstraints() {
-		return linkConstraints;
-	}
-
-	/**
-	 * @generated
-	 */
-	public void setLinkConstraints(
-			SimplemapBaseItemSemanticEditPolicy.LinkConstraints lc) {
-		this.linkConstraints = lc;
 	}
 
 	/**

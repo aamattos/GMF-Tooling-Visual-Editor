@@ -238,12 +238,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String TopNode1CreationTool_title;
+	public static String Node1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String TopNode1CreationTool_desc;
+	public static String Node1CreationTool_desc;
 
 	/**
 	 * @generated
@@ -268,67 +268,17 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String SubNode4CreationTool_title;
+	public static String LinkMapping4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String SubNode4CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String ParentNode5CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String ParentNode5CreationTool_desc;
-
-	/**
-	 * @generated
-	 */
-	public static String LinkMapping6CreationTool_title;
-
-	/**
-	 * @generated
-	 */
-	public static String LinkMapping6CreationTool_desc;
+	public static String LinkMapping4CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
 	public static String CommandName_OpenDiagram;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleSubNode_2006_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleMapping_1000_links;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleSubNodeParentRootNode_4003_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleSubNodeParentRootNode_4003_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleTopNode_2003_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_SimpleSubNode_2006_outgoinglinks;
 
 	/**
 	 * @generated

@@ -14,18 +14,10 @@ import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.diagram.parsers.SimpleMapMessageFormatParserProvider;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentName2EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -40,260 +32,100 @@ public class SimplemapParserProvider extends AbstractProvider implements
 	 * (Modified template: ParserProvider.xpt)
 	 * @generated
 	 */
-	private IParser simpleTopNodeName_5004Parser;
+	private IParser simpleTopNodeName_4003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleTopNodeName_5004Parser() {
-		if (simpleTopNodeName_5004Parser == null) {
+	private IParser getSimpleTopNodeName_4003Parser() {
+		if (simpleTopNodeName_4003Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
 					.getSimpleNode_Name() };
 			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(5004, features);
-			simpleTopNodeName_5004Parser = parser;
+					.getParser(4003, features);
+			simpleTopNodeName_4003Parser = parser;
 		}
-		return simpleTopNodeName_5004Parser;
+		return simpleTopNodeName_4003Parser;
 	}
 
 	/**
 	 * (Modified template: ParserProvider.xpt)
 	 * @generated
 	 */
-	private IParser simpleSubNodeName_5009Parser;
+	private IParser simpleLinkMappingName_4004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleSubNodeName_5009Parser() {
-		if (simpleSubNodeName_5009Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleSubNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(5009, features);
-			simpleSubNodeName_5009Parser = parser;
-		}
-		return simpleSubNodeName_5009Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleLinkMappingName_5010Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleLinkMappingName_5010Parser() {
-		if (simpleLinkMappingName_5010Parser == null) {
+	private IParser getSimpleLinkMappingName_4004Parser() {
+		if (simpleLinkMappingName_4004Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
 					.getSimpleLinkMapping_Name() };
 			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(5010, features);
-			simpleLinkMappingName_5010Parser = parser;
+					.getParser(4004, features);
+			simpleLinkMappingName_4004Parser = parser;
 		}
-		return simpleLinkMappingName_5010Parser;
+		return simpleLinkMappingName_4004Parser;
 	}
 
 	/**
 	 * (Modified template: ParserProvider.xpt)
 	 * @generated
 	 */
-	private IParser simpleLabelNode_3004Parser;
+	private IParser simpleLabelNode_2001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleLabelNode_3004Parser() {
-		if (simpleLabelNode_3004Parser == null) {
+	private IParser getSimpleLabelNode_2001Parser() {
+		if (simpleLabelNode_2001Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
 					.getSimpleNode_Name() };
 			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3004, features);
-			simpleLabelNode_3004Parser = parser;
+					.getParser(2001, features);
+			simpleLabelNode_2001Parser = parser;
 		}
-		return simpleLabelNode_3004Parser;
+		return simpleLabelNode_2001Parser;
 	}
 
 	/**
 	 * (Modified template: ParserProvider.xpt)
 	 * @generated
 	 */
-	private IParser simpleCompartmentName_5003Parser;
+	private IParser simpleCompartmentName_4002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleCompartmentName_5003Parser() {
-		if (simpleCompartmentName_5003Parser == null) {
+	private IParser getSimpleCompartmentName_4002Parser() {
+		if (simpleCompartmentName_4002Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
 					.getSimpleCompartment_Name() };
 			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(5003, features);
-			simpleCompartmentName_5003Parser = parser;
+					.getParser(4002, features);
+			simpleCompartmentName_4002Parser = parser;
 		}
-		return simpleCompartmentName_5003Parser;
+		return simpleCompartmentName_4002Parser;
 	}
 
 	/**
 	 * (Modified template: ParserProvider.xpt)
 	 * @generated
 	 */
-	private IParser simpleLabelNode_3007Parser;
+	private IParser simpleSubNodeName_4001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleLabelNode_3007Parser() {
-		if (simpleLabelNode_3007Parser == null) {
+	private IParser getSimpleSubNodeName_4001Parser() {
+		if (simpleSubNodeName_4001Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
 					.getSimpleNode_Name() };
 			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3007, features);
-			simpleLabelNode_3007Parser = parser;
+					.getParser(4001, features);
+			simpleSubNodeName_4001Parser = parser;
 		}
-		return simpleLabelNode_3007Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleSubNodeReference_3011Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleSubNodeReference_3011Parser() {
-		if (simpleSubNodeReference_3011Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3011, features);
-			simpleSubNodeReference_3011Parser = parser;
-		}
-		return simpleSubNodeReference_3011Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleSubNodeReference_3012Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleSubNodeReference_3012Parser() {
-		if (simpleSubNodeReference_3012Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3012, features);
-			simpleSubNodeReference_3012Parser = parser;
-		}
-		return simpleSubNodeReference_3012Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleLabelNode_3018Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleLabelNode_3018Parser() {
-		if (simpleLabelNode_3018Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3018, features);
-			simpleLabelNode_3018Parser = parser;
-		}
-		return simpleLabelNode_3018Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleCompartmentName_5007Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleCompartmentName_5007Parser() {
-		if (simpleCompartmentName_5007Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleCompartment_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(5007, features);
-			simpleCompartmentName_5007Parser = parser;
-		}
-		return simpleCompartmentName_5007Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleLabelNode_3013Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleLabelNode_3013Parser() {
-		if (simpleLabelNode_3013Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3013, features);
-			simpleLabelNode_3013Parser = parser;
-		}
-		return simpleLabelNode_3013Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleSubNodeReference_3016Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleSubNodeReference_3016Parser() {
-		if (simpleSubNodeReference_3016Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3016, features);
-			simpleSubNodeReference_3016Parser = parser;
-		}
-		return simpleSubNodeReference_3016Parser;
-	}
-
-	/**
-	 * (Modified template: ParserProvider.xpt)
-	 * @generated
-	 */
-	private IParser simpleSubNodeReference_3020Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getSimpleSubNodeReference_3020Parser() {
-		if (simpleSubNodeReference_3020Parser == null) {
-			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
-					.getSimpleNode_Name() };
-			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
-					.getParser(3020, features);
-			simpleSubNodeReference_3020Parser = parser;
-		}
-		return simpleSubNodeReference_3020Parser;
+		return simpleSubNodeName_4001Parser;
 	}
 
 	/**
@@ -302,31 +134,15 @@ public class SimplemapParserProvider extends AbstractProvider implements
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case SimpleTopNodeNameEditPart.VISUAL_ID:
-			return getSimpleTopNodeName_5004Parser();
-		case SimpleSubNodeNameEditPart.VISUAL_ID:
-			return getSimpleSubNodeName_5009Parser();
+			return getSimpleTopNodeName_4003Parser();
 		case SimpleLinkMappingNameEditPart.VISUAL_ID:
-			return getSimpleLinkMappingName_5010Parser();
+			return getSimpleLinkMappingName_4004Parser();
 		case SimpleLabelNodeEditPart.VISUAL_ID:
-			return getSimpleLabelNode_3004Parser();
+			return getSimpleLabelNode_2001Parser();
 		case SimpleCompartmentNameEditPart.VISUAL_ID:
-			return getSimpleCompartmentName_5003Parser();
-		case SimpleLabelNode2EditPart.VISUAL_ID:
-			return getSimpleLabelNode_3007Parser();
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-			return getSimpleSubNodeReference_3011Parser();
-		case SimpleSubNodeReference2EditPart.VISUAL_ID:
-			return getSimpleSubNodeReference_3012Parser();
-		case SimpleLabelNode4EditPart.VISUAL_ID:
-			return getSimpleLabelNode_3018Parser();
-		case SimpleCompartmentName2EditPart.VISUAL_ID:
-			return getSimpleCompartmentName_5007Parser();
-		case SimpleLabelNode3EditPart.VISUAL_ID:
-			return getSimpleLabelNode_3013Parser();
-		case SimpleSubNodeReference3EditPart.VISUAL_ID:
-			return getSimpleSubNodeReference_3016Parser();
-		case SimpleSubNodeReference4EditPart.VISUAL_ID:
-			return getSimpleSubNodeReference_3020Parser();
+			return getSimpleCompartmentName_4002Parser();
+		case SimpleSubNodeNameEditPart.VISUAL_ID:
+			return getSimpleSubNodeName_4001Parser();
 		}
 		return null;
 	}

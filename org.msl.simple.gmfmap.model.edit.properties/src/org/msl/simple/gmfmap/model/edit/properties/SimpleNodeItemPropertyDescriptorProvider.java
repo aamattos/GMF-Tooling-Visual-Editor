@@ -14,9 +14,6 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 public class SimpleNodeItemPropertyDescriptorProvider extends
@@ -122,19 +119,6 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 				return choiceOfValues;
 			}
 			
-			if(feature==SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__PARENT_SUB_NODE_REFERENCE)
-			{
-				Collection<Object> choiceOfValues = new UniqueEList<Object>();
-				
-				SimpleRootNode parentNode = ((SimpleSubNode)object).getParentRootNode();
-				
-				for(Object choice:super.getChoiceOfValues(object))
-					if(choice instanceof SimpleSubNodeReference && ((SimpleSubNodeReference)choice).getParentRoot()==parentNode)
-						choiceOfValues.add(choice);
-				
-				return choiceOfValues;
-			}
-			
 			return super.getChoiceOfValues(object); 
 		}
 		
@@ -145,10 +129,7 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 			
 			switch (feature.getEContainingClass().getEAllStructuralFeatures().indexOf(feature))
 			{
-				case SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE:
-					return !(object instanceof SimpleSubNode);
-				case SimplemappingsPackage.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT:
-					return !(object instanceof SimpleSubNode);					
+
 			}
 			
 			return defaultValue;

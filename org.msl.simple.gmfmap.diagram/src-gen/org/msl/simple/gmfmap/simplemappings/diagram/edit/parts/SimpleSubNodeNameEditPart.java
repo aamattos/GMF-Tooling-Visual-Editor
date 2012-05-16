@@ -14,6 +14,8 @@ import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.tools.DirectEditManager;
+import org.eclipse.gmf.gmfgraph.Figure;
+import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserEditStatus;
@@ -38,6 +40,9 @@ import org.eclipse.swt.accessibility.AccessibleEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
@@ -52,7 +57,7 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5009;
+	public static final int VISUAL_ID = 4001;
 
 	/**
 	 * @generated
@@ -113,6 +118,22 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 			((WrappingLabel) figure).setText(text);
 		} else {
 			((Label) figure).setText(text);
+		}
+	}
+
+	protected void setForegroundColorIconHelper(IFigure figure,
+			RGBColor foreGroundColor) {
+		if (figure instanceof WrappingLabelWithColorIcon) {
+			((WrappingLabelWithColorIcon) figure)
+					.setForegroundColor(foreGroundColor);
+		}
+	}
+
+	protected void setBackgroundColorIconHelper(IFigure figure,
+			RGBColor backgroundColor) {
+		if (figure instanceof WrappingLabelWithColorIcon) {
+			((WrappingLabelWithColorIcon) figure)
+					.setBackgroundColor(backgroundColor);
 		}
 	}
 
@@ -294,7 +315,7 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = SimplemapParserProvider
 					.getParser(
-							SimplemapElementTypes.SimpleSubNode_2006,
+							SimplemapElementTypes.SimpleSubNode_2003,
 							getParserElement(),
 							SimplemapVisualIDRegistry
 									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart.VISUAL_ID));
@@ -394,11 +415,13 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void refreshLabel() {
 		setLabelTextHelper(getFigure(), getLabelText());
 		setLabelIconHelper(getFigure(), getLabelIcon());
+		setBackgroundColorIconHelper(getFigure(), getFigureBackgroundColor());
+		setForegroundColorIconHelper(getFigure(), getFigureForegroundColor());
 		Object pdEditPolicy = getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 		if (pdEditPolicy instanceof SimplemapTextSelectionEditPolicy) {
 			((SimplemapTextSelectionEditPolicy) pdEditPolicy).refreshFeedback();
@@ -407,6 +430,28 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		if (sfEditPolicy instanceof SimplemapTextSelectionEditPolicy) {
 			((SimplemapTextSelectionEditPolicy) sfEditPolicy).refreshFeedback();
 		}
+	}
+
+	private RGBColor getFigureBackgroundColor() {
+		Figure nodeFigure = ((SimpleSubNode) resolveSemanticElement())
+				.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getBackgroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getBackgroundColor();
+
+		return null;
+	}
+
+	private RGBColor getFigureForegroundColor() {
+		Figure nodeFigure = ((SimpleSubNode) resolveSemanticElement())
+				.getNodeFigure();
+
+		if (nodeFigure != null
+				&& nodeFigure.getForegroundColor() instanceof RGBColor)
+			return (RGBColor) nodeFigure.getForegroundColor();
+
+		return null;
 	}
 
 	/**
@@ -448,10 +493,10 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated not
+	 * @generated
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(new Color(null, 255, 255, 255));
+		getFigure().setForegroundColor(color);
 	}
 
 	/**

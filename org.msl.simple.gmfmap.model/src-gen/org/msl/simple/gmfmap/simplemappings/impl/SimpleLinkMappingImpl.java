@@ -7,6 +7,7 @@
 package org.msl.simple.gmfmap.simplemappings.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
@@ -22,7 +23,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
@@ -35,15 +35,12 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentRoot <em>Parent Root</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getLinkMapping <em>Link Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getDiagramLink <em>Diagram Link</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getDiagramLabel <em>Diagram Label</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getTool <em>Tool</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getOutputs <em>Outputs</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getInputs <em>Inputs</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,24 +128,6 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	 */
 	public void setParent(SimpleNode newParent) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT, newParent);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleParentNode getParentRoot() {
-		return (SimpleParentNode)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_ROOT, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetParentRoot() {
-		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_ROOT);
 	}
 
 	/**
@@ -249,26 +228,6 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	 */
 	public boolean isSetTool() {
 		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__TOOL);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleRootNode> getOutputs() {
-		return (EList<SimpleRootNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__OUTPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleRootNode> getInputs() {
-		return (EList<SimpleRootNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_LINK_MAPPING__INPUTS, true);
 	}
 
 	/**

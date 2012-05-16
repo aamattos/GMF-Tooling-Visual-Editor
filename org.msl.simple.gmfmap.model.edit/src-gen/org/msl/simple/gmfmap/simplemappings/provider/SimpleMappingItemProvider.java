@@ -109,7 +109,7 @@ public class SimpleMappingItemProvider
 				 getString("_UI_SimpleMapping_domainMetaElement_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMapping_domainMetaElement_feature", "_UI_SimpleMapping_type"),
 				 SimplemappingsPackage.Literals.SIMPLE_MAPPING__DOMAIN_META_ELEMENT,
-				 false,
+				 true,
 				 false,
 				 true,
 				 null,

@@ -148,852 +148,6 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_MAPPING__CHILDREN = SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Canvas</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING__CANVAS = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Palette</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING__PALETTE = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING__MAPPING = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING__DOMAIN_MODEL = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING__DOMAIN_META_ELEMENT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Simple Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of operations of the '<em>Simple Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_MAPPING_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__PARENT_NODE = SimplemappingsPackage.SIMPLE_NODE__PARENT_NODE;
-
-	/**
-	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_NODE__PARENT_MAPPING;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__PARENT = SimplemappingsPackage.SIMPLE_NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__PARENT_ROOT = SimplemappingsPackage.SIMPLE_NODE__PARENT_ROOT;
-
-	/**
-	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__DOMAIN_META_ELEMENT = SimplemappingsPackage.SIMPLE_NODE__DOMAIN_META_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__NODE_REFERENCE = SimplemappingsPackage.SIMPLE_NODE__NODE_REFERENCE;
-
-	/**
-	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__CONTAINMENT_FEATURE = SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__NAME = SimplemappingsPackage.SIMPLE_NODE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__PARENT_META_ELEMENT = SimplemappingsPackage.SIMPLE_NODE__PARENT_META_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Tool</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__TOOL = SimplemappingsPackage.SIMPLE_NODE__TOOL;
-
-	/**
-	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__LABEL_ATTRIBUTES = SimplemappingsPackage.SIMPLE_NODE__LABEL_ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__DIAGRAM_NODE = SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_NODE;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__DIAGRAM_LABEL = SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Sub Nodes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__SUB_NODES = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Outputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__OUTPUTS = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__INPUTS = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__CHILDREN = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE__LINKS = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Simple Top Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Get Node Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_NODE_FIGURE;
-
-	/**
-	 * The operation id for the '<em>Get Label Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_LABEL_FIGURE;
-
-	/**
-	 * The number of operations of the '<em>Simple Top Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_TOP_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__CHILDREN = SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__PARENT_NODE = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__PARENT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__PARENT_ROOT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Compartment Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__COMPARTMENT_MAPPING = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__NAME = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Compartment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__COMPARTMENT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Compartment Label</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__COMPARTMENT_LABEL = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Needs Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT__NEEDS_TITLE = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 8;
-
-	/**
-	 * The number of structural features of the '<em>Simple Compartment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_FEATURE_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Get Node Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Label Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Simple Compartment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_COMPARTMENT_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_PARENT_NODE_OPERATION_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__PARENT_NODE = SimplemappingsPackage.SIMPLE_NODE__PARENT_NODE;
-
-	/**
-	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_NODE__PARENT_MAPPING;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__PARENT = SimplemappingsPackage.SIMPLE_NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__PARENT_ROOT = SimplemappingsPackage.SIMPLE_NODE__PARENT_ROOT;
-
-	/**
-	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__DOMAIN_META_ELEMENT = SimplemappingsPackage.SIMPLE_NODE__DOMAIN_META_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__NODE_REFERENCE = SimplemappingsPackage.SIMPLE_NODE__NODE_REFERENCE;
-
-	/**
-	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__CONTAINMENT_FEATURE = SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__NAME = SimplemappingsPackage.SIMPLE_NODE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__PARENT_META_ELEMENT = SimplemappingsPackage.SIMPLE_NODE__PARENT_META_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Tool</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__TOOL = SimplemappingsPackage.SIMPLE_NODE__TOOL;
-
-	/**
-	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__LABEL_ATTRIBUTES = SimplemappingsPackage.SIMPLE_NODE__LABEL_ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__DIAGRAM_NODE = SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_NODE;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE__DIAGRAM_LABEL = SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_LABEL;
-
-	/**
-	 * The number of structural features of the '<em>Simple Label Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Node Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_NODE_FIGURE;
-
-	/**
-	 * The operation id for the '<em>Get Label Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_LABEL_FIGURE;
-
-	/**
-	 * The number of operations of the '<em>Simple Label Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LABEL_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__PARENT_NODE = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_NODE;
-
-	/**
-	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_MAPPING;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__PARENT = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__PARENT_ROOT = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_ROOT;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__CHILDREN = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__NAME = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Link Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__LINK_MAPPING = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Link</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__DIAGRAM_LINK = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__DIAGRAM_LABEL = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Tool</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__TOOL = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Outputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__OUTPUTS = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING__INPUTS = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of structural features of the '<em>Simple Link Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>Get Node Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_NODE_FIGURE;
-
-	/**
-	 * The operation id for the '<em>Get Label Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE;
-
-	/**
-	 * The number of operations of the '<em>Simple Link Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_LINK_MAPPING_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__PARENT_NODE = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_NODE;
-
-	/**
-	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_MAPPING;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__PARENT = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__PARENT_ROOT = SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_ROOT;
-
-	/**
-	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__DOMAIN_META_ELEMENT = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__NODE_REFERENCE = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__CONTAINMENT_FEATURE = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__NAME = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__PARENT_META_ELEMENT = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Tool</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__TOOL = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__LABEL_ATTRIBUTES = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__DIAGRAM_NODE = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE__DIAGRAM_LABEL = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 8;
-
-	/**
-	 * The number of structural features of the '<em>Simple Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_FEATURE_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Get Node Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_NODE_FIGURE;
-
-	/**
-	 * The operation id for the '<em>Get Label Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE;
-
-	/**
-	 * The number of operations of the '<em>Simple Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
 	int SIMPLE_PARENT_NODE__CHILDREN = 0;
 
 	/**
@@ -1013,6 +167,78 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_PARENT_NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING__CHILDREN = SIMPLE_PARENT_NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Canvas</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING__CANVAS = SIMPLE_PARENT_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Palette</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING__PALETTE = SIMPLE_PARENT_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING__MAPPING = SIMPLE_PARENT_NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Domain Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING__DOMAIN_MODEL = SIMPLE_PARENT_NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING__DOMAIN_META_ELEMENT = SIMPLE_PARENT_NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Simple Mapping</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING_FEATURE_COUNT = SIMPLE_PARENT_NODE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Simple Mapping</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MAPPING_OPERATION_COUNT = SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -1042,22 +268,13 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_CHILD_NODE__PARENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_CHILD_NODE__PARENT_ROOT = 3;
-
-	/**
 	 * The number of structural features of the '<em>Simple Child Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CHILD_NODE_FEATURE_COUNT = 4;
+	int SIMPLE_CHILD_NODE_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Node Figure</em>' operation.
@@ -1087,23 +304,13 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_CHILD_NODE_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl <em>Simple Sub Node Reference</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNodeReference()
-	 * @generated
-	 */
-	int SIMPLE_SUB_NODE_REFERENCE = 8;
-
-	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_NODE = SimplemappingsPackage.SIMPLE_NODE__PARENT_NODE;
+	int SIMPLE_NODE__PARENT_NODE = SIMPLE_CHILD_NODE__PARENT_NODE;
 
 	/**
 	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
@@ -1112,7 +319,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_NODE__PARENT_MAPPING;
+	int SIMPLE_NODE__PARENT_MAPPING = SIMPLE_CHILD_NODE__PARENT_MAPPING;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1121,16 +328,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT = SimplemappingsPackage.SIMPLE_NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_ROOT = SimplemappingsPackage.SIMPLE_NODE__PARENT_ROOT;
+	int SIMPLE_NODE__PARENT = SIMPLE_CHILD_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
@@ -1139,7 +337,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__DOMAIN_META_ELEMENT = SimplemappingsPackage.SIMPLE_NODE__DOMAIN_META_ELEMENT;
+	int SIMPLE_NODE__DOMAIN_META_ELEMENT = SIMPLE_CHILD_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
@@ -1148,7 +346,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__NODE_REFERENCE = SimplemappingsPackage.SIMPLE_NODE__NODE_REFERENCE;
+	int SIMPLE_NODE__NODE_REFERENCE = SIMPLE_CHILD_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
@@ -1157,7 +355,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__CONTAINMENT_FEATURE = SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE;
+	int SIMPLE_NODE__CONTAINMENT_FEATURE = SIMPLE_CHILD_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1166,7 +364,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__NAME = SimplemappingsPackage.SIMPLE_NODE__NAME;
+	int SIMPLE_NODE__NAME = SIMPLE_CHILD_NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
@@ -1175,7 +373,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_META_ELEMENT = SimplemappingsPackage.SIMPLE_NODE__PARENT_META_ELEMENT;
+	int SIMPLE_NODE__PARENT_META_ELEMENT = SIMPLE_CHILD_NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Tool</b></em>' reference.
@@ -1184,7 +382,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__TOOL = SimplemappingsPackage.SIMPLE_NODE__TOOL;
+	int SIMPLE_NODE__TOOL = SIMPLE_CHILD_NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
@@ -1193,7 +391,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__LABEL_ATTRIBUTES = SimplemappingsPackage.SIMPLE_NODE__LABEL_ATTRIBUTES;
+	int SIMPLE_NODE__LABEL_ATTRIBUTES = SIMPLE_CHILD_NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
@@ -1202,7 +400,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__DIAGRAM_NODE = SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_NODE;
+	int SIMPLE_NODE__DIAGRAM_NODE = SIMPLE_CHILD_NODE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
@@ -1211,34 +409,16 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__DIAGRAM_LABEL = SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_LABEL;
+	int SIMPLE_NODE__DIAGRAM_LABEL = SIMPLE_CHILD_NODE_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Simple Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__CHILDREN = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Sub Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE_REFERENCE__SUB_NODE = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Simple Sub Node Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE_REFERENCE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_NODE_FEATURE_COUNT + 2;
+	int SIMPLE_NODE_FEATURE_COUNT = SIMPLE_CHILD_NODE_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Get Node Figure</em>' operation.
@@ -1247,7 +427,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_NODE_FIGURE;
+	int SIMPLE_NODE___GET_NODE_FIGURE = SIMPLE_CHILD_NODE___GET_NODE_FIGURE;
 
 	/**
 	 * The operation id for the '<em>Get Label Figure</em>' operation.
@@ -1256,16 +436,719 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_NODE___GET_LABEL_FIGURE;
+	int SIMPLE_NODE___GET_LABEL_FIGURE = SIMPLE_CHILD_NODE___GET_LABEL_FIGURE;
 
 	/**
-	 * The number of operations of the '<em>Simple Sub Node Reference</em>' class.
+	 * The number of operations of the '<em>Simple Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_NODE_OPERATION_COUNT + 0;
+	int SIMPLE_NODE_OPERATION_COUNT = SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__PARENT_NODE = SIMPLE_NODE__PARENT_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__PARENT_MAPPING = SIMPLE_NODE__PARENT_MAPPING;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__PARENT = SIMPLE_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__DOMAIN_META_ELEMENT = SIMPLE_NODE__DOMAIN_META_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__NODE_REFERENCE = SIMPLE_NODE__NODE_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__CONTAINMENT_FEATURE = SIMPLE_NODE__CONTAINMENT_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__NAME = SIMPLE_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__PARENT_META_ELEMENT = SIMPLE_NODE__PARENT_META_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Tool</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__TOOL = SIMPLE_NODE__TOOL;
+
+	/**
+	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__LABEL_ATTRIBUTES = SIMPLE_NODE__LABEL_ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__DIAGRAM_NODE = SIMPLE_NODE__DIAGRAM_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__DIAGRAM_LABEL = SIMPLE_NODE__DIAGRAM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__CHILDREN = SIMPLE_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE__LINKS = SIMPLE_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Simple Top Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE_FEATURE_COUNT = SIMPLE_NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE___GET_NODE_FIGURE = SIMPLE_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE___GET_LABEL_FIGURE = SIMPLE_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Top Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_TOP_NODE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__CHILDREN = SIMPLE_PARENT_NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__PARENT_NODE = SIMPLE_PARENT_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__PARENT_MAPPING = SIMPLE_PARENT_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__PARENT = SIMPLE_PARENT_NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Compartment Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__COMPARTMENT_MAPPING = SIMPLE_PARENT_NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__NAME = SIMPLE_PARENT_NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Compartment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__COMPARTMENT = SIMPLE_PARENT_NODE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Compartment Label</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__COMPARTMENT_LABEL = SIMPLE_PARENT_NODE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Needs Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT__NEEDS_TITLE = SIMPLE_PARENT_NODE_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Simple Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT_FEATURE_COUNT = SIMPLE_PARENT_NODE_FEATURE_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT___GET_NODE_FIGURE = SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT___GET_LABEL_FIGURE = SIMPLE_PARENT_NODE_OPERATION_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Compartment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_COMPARTMENT_OPERATION_COUNT = SIMPLE_PARENT_NODE_OPERATION_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__PARENT_NODE = SIMPLE_NODE__PARENT_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__PARENT_MAPPING = SIMPLE_NODE__PARENT_MAPPING;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__PARENT = SIMPLE_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__DOMAIN_META_ELEMENT = SIMPLE_NODE__DOMAIN_META_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__NODE_REFERENCE = SIMPLE_NODE__NODE_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__CONTAINMENT_FEATURE = SIMPLE_NODE__CONTAINMENT_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__NAME = SIMPLE_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__PARENT_META_ELEMENT = SIMPLE_NODE__PARENT_META_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Tool</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__TOOL = SIMPLE_NODE__TOOL;
+
+	/**
+	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__LABEL_ATTRIBUTES = SIMPLE_NODE__LABEL_ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__DIAGRAM_NODE = SIMPLE_NODE__DIAGRAM_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE__DIAGRAM_LABEL = SIMPLE_NODE__DIAGRAM_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>Simple Label Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE_FEATURE_COUNT = SIMPLE_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE___GET_NODE_FIGURE = SIMPLE_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE___GET_LABEL_FIGURE = SIMPLE_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Label Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LABEL_NODE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__PARENT_NODE = SIMPLE_CHILD_NODE__PARENT_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__PARENT_MAPPING = SIMPLE_CHILD_NODE__PARENT_MAPPING;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__PARENT = SIMPLE_CHILD_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__CHILDREN = SIMPLE_CHILD_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__NAME = SIMPLE_CHILD_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Link Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__LINK_MAPPING = SIMPLE_CHILD_NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Link</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__DIAGRAM_LINK = SIMPLE_CHILD_NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__DIAGRAM_LABEL = SIMPLE_CHILD_NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Tool</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING__TOOL = SIMPLE_CHILD_NODE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Simple Link Mapping</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING_FEATURE_COUNT = SIMPLE_CHILD_NODE_FEATURE_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING___GET_NODE_FIGURE = SIMPLE_CHILD_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING___GET_LABEL_FIGURE = SIMPLE_CHILD_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Link Mapping</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_LINK_MAPPING_OPERATION_COUNT = SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl <em>Simple Sub Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNode()
+	 * @generated
+	 */
+	int SIMPLE_SUB_NODE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__PARENT_NODE = SIMPLE_NODE__PARENT_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__PARENT_MAPPING = SIMPLE_NODE__PARENT_MAPPING;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__PARENT = SIMPLE_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__DOMAIN_META_ELEMENT = SIMPLE_NODE__DOMAIN_META_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__NODE_REFERENCE = SIMPLE_NODE__NODE_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__CONTAINMENT_FEATURE = SIMPLE_NODE__CONTAINMENT_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__NAME = SIMPLE_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__PARENT_META_ELEMENT = SIMPLE_NODE__PARENT_META_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Tool</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__TOOL = SIMPLE_NODE__TOOL;
+
+	/**
+	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__LABEL_ATTRIBUTES = SIMPLE_NODE__LABEL_ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__DIAGRAM_NODE = SIMPLE_NODE__DIAGRAM_NODE;
+
+	/**
+	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__DIAGRAM_LABEL = SIMPLE_NODE__DIAGRAM_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE__CHILDREN = SIMPLE_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Simple Sub Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE_FEATURE_COUNT = SIMPLE_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Node Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE___GET_NODE_FIGURE = SIMPLE_NODE___GET_NODE_FIGURE;
+
+	/**
+	 * The operation id for the '<em>Get Label Figure</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE___GET_LABEL_FIGURE = SIMPLE_NODE___GET_LABEL_FIGURE;
+
+	/**
+	 * The number of operations of the '<em>Simple Sub Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_SUB_NODE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleDomainMapElementImpl <em>Simple Domain Map Element</em>}' class.
@@ -1303,207 +1186,6 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_DOMAIN_MAP_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleRootNode()
-	 * @generated
-	 */
-	int SIMPLE_ROOT_NODE = 11;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl <em>Simple Sub Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNode()
-	 * @generated
-	 */
-	int SIMPLE_SUB_NODE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Sub Nodes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__SUB_NODES = SimplemappingsPackage.SIMPLE_ROOT_NODE__SUB_NODES;
-
-	/**
-	 * The feature id for the '<em><b>Outputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__OUTPUTS = SimplemappingsPackage.SIMPLE_ROOT_NODE__OUTPUTS;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__INPUTS = SimplemappingsPackage.SIMPLE_ROOT_NODE__INPUTS;
-
-	/**
-	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__PARENT_NODE = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__PARENT_MAPPING = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__PARENT = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__PARENT_ROOT = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Parent Sub Node Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__PARENT_SUB_NODE_REFERENCE = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__NAME = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Parent Root Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__PARENT_ROOT_NODE = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE__CHILDREN = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of structural features of the '<em>Simple Sub Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE_FEATURE_COUNT = SimplemappingsPackage.SIMPLE_ROOT_NODE_FEATURE_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>Get Node Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE___GET_NODE_FIGURE = SimplemappingsPackage.SIMPLE_ROOT_NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Label Figure</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE___GET_LABEL_FIGURE = SimplemappingsPackage.SIMPLE_ROOT_NODE_OPERATION_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Simple Sub Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_SUB_NODE_OPERATION_COUNT = SimplemappingsPackage.SIMPLE_ROOT_NODE_OPERATION_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Sub Nodes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_ROOT_NODE__SUB_NODES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Outputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_ROOT_NODE__OUTPUTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_ROOT_NODE__INPUTS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Simple Root Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_ROOT_NODE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Simple Root Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_ROOT_NODE_OPERATION_COUNT = 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleMapping <em>Simple Mapping</em>}'.
@@ -1732,28 +1414,6 @@ public interface SimplemappingsPackage extends EPackage {
 	EReference getSimpleLinkMapping_Tool();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getOutputs <em>Outputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Outputs</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getOutputs()
-	 * @see #getSimpleLinkMapping()
-	 * @generated
-	 */
-	EReference getSimpleLinkMapping_Outputs();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getInputs <em>Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getInputs()
-	 * @see #getSimpleLinkMapping()
-	 * @generated
-	 */
-	EReference getSimpleLinkMapping_Inputs();
-
-	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode <em>Simple Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1916,17 +1576,6 @@ public interface SimplemappingsPackage extends EPackage {
 	EReference getSimpleChildNode_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParentRoot <em>Parent Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent Root</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParentRoot()
-	 * @see #getSimpleChildNode()
-	 * @generated
-	 */
-	EReference getSimpleChildNode_ParentRoot();
-
-	/**
 	 * Returns the meta object for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getNodeFigure() <em>Get Node Figure</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1947,25 +1596,14 @@ public interface SimplemappingsPackage extends EPackage {
 	EOperation getSimpleChildNode__GetLabelFigure();
 
 	/**
-	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference <em>Simple Sub Node Reference</em>}'.
+	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode <em>Simple Sub Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Simple Sub Node Reference</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference
+	 * @return the meta object for class '<em>Simple Sub Node</em>'.
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode
 	 * @generated
 	 */
-	EClass getSimpleSubNodeReference();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference#getSubNode <em>Sub Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sub Node</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference#getSubNode()
-	 * @see #getSimpleSubNodeReference()
-	 * @generated
-	 */
-	EReference getSimpleSubNodeReference_SubNode();
+	EClass getSimpleSubNode();
 
 	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement <em>Simple Domain Map Element</em>}'.
@@ -1987,103 +1625,6 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSimpleDomainMapElement_DomainMetaElement();
-
-	/**
-	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode <em>Simple Sub Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Simple Sub Node</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode
-	 * @generated
-	 */
-	EClass getSimpleSubNode();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getParentSubNodeReference <em>Parent Sub Node Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent Sub Node Reference</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getParentSubNodeReference()
-	 * @see #getSimpleSubNode()
-	 * @generated
-	 */
-	EReference getSimpleSubNode_ParentSubNodeReference();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getName()
-	 * @see #getSimpleSubNode()
-	 * @generated
-	 */
-	EAttribute getSimpleSubNode_Name();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getParentRootNode <em>Parent Root Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent Root Node</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getParentRootNode()
-	 * @see #getSimpleSubNode()
-	 * @generated
-	 */
-	EReference getSimpleSubNode_ParentRootNode();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode#getChildren()
-	 * @see #getSimpleSubNode()
-	 * @generated
-	 */
-	EReference getSimpleSubNode_Children();
-
-	/**
-	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Simple Root Node</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode
-	 * @generated
-	 */
-	EClass getSimpleRootNode();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getSubNodes <em>Sub Nodes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sub Nodes</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getSubNodes()
-	 * @see #getSimpleRootNode()
-	 * @generated
-	 */
-	EReference getSimpleRootNode_SubNodes();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getOutputs <em>Outputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Outputs</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getOutputs()
-	 * @see #getSimpleRootNode()
-	 * @generated
-	 */
-	EReference getSimpleRootNode_Outputs();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getInputs <em>Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getInputs()
-	 * @see #getSimpleRootNode()
-	 * @generated
-	 */
-	EReference getSimpleRootNode_Inputs();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2286,22 +1827,6 @@ public interface SimplemappingsPackage extends EPackage {
 		EReference SIMPLE_LINK_MAPPING__TOOL = eINSTANCE.getSimpleLinkMapping_Tool();
 
 		/**
-		 * The meta object literal for the '<em><b>Outputs</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_LINK_MAPPING__OUTPUTS = eINSTANCE.getSimpleLinkMapping_Outputs();
-
-		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_LINK_MAPPING__INPUTS = eINSTANCE.getSimpleLinkMapping_Inputs();
-
-		/**
 		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl <em>Simple Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2428,14 +1953,6 @@ public interface SimplemappingsPackage extends EPackage {
 		EReference SIMPLE_CHILD_NODE__PARENT = eINSTANCE.getSimpleChildNode_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent Root</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_CHILD_NODE__PARENT_ROOT = eINSTANCE.getSimpleChildNode_ParentRoot();
-
-		/**
 		 * The meta object literal for the '<em><b>Get Node Figure</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2452,22 +1969,14 @@ public interface SimplemappingsPackage extends EPackage {
 		EOperation SIMPLE_CHILD_NODE___GET_LABEL_FIGURE = eINSTANCE.getSimpleChildNode__GetLabelFigure();
 
 		/**
-		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl <em>Simple Sub Node Reference</em>}' class.
+		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl <em>Simple Sub Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNodeReference()
+		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl
+		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNode()
 		 * @generated
 		 */
-		EClass SIMPLE_SUB_NODE_REFERENCE = eINSTANCE.getSimpleSubNodeReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Node</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_SUB_NODE_REFERENCE__SUB_NODE = eINSTANCE.getSimpleSubNodeReference_SubNode();
+		EClass SIMPLE_SUB_NODE = eINSTANCE.getSimpleSubNode();
 
 		/**
 		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleDomainMapElementImpl <em>Simple Domain Map Element</em>}' class.
@@ -2486,82 +1995,6 @@ public interface SimplemappingsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT = eINSTANCE.getSimpleDomainMapElement_DomainMetaElement();
-
-		/**
-		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl <em>Simple Sub Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNode()
-		 * @generated
-		 */
-		EClass SIMPLE_SUB_NODE = eINSTANCE.getSimpleSubNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent Sub Node Reference</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_SUB_NODE__PARENT_SUB_NODE_REFERENCE = eINSTANCE.getSimpleSubNode_ParentSubNodeReference();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIMPLE_SUB_NODE__NAME = eINSTANCE.getSimpleSubNode_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent Root Node</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_SUB_NODE__PARENT_ROOT_NODE = eINSTANCE.getSimpleSubNode_ParentRootNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_SUB_NODE__CHILDREN = eINSTANCE.getSimpleSubNode_Children();
-
-		/**
-		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode <em>Simple Root Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleRootNode()
-		 * @generated
-		 */
-		EClass SIMPLE_ROOT_NODE = eINSTANCE.getSimpleRootNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Nodes</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_ROOT_NODE__SUB_NODES = eINSTANCE.getSimpleRootNode_SubNodes();
-
-		/**
-		 * The meta object literal for the '<em><b>Outputs</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_ROOT_NODE__OUTPUTS = eINSTANCE.getSimpleRootNode_Outputs();
-
-		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_ROOT_NODE__INPUTS = eINSTANCE.getSimpleRootNode_Inputs();
 
 	}
 

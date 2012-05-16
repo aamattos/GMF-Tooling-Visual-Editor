@@ -23,7 +23,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramUpdater;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapNodeDescriptor;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -60,7 +60,7 @@ public class SimpleTopNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleTopNode_2003SemanticChildren(viewObject);
+				.getSimpleTopNode_1001SemanticChildren(viewObject);
 		for (SimplemapNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -83,7 +83,7 @@ public class SimpleTopNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		int visualID = SimplemapVisualIDRegistry.getVisualID(view);
 		return visualID == SimpleLabelNodeEditPart.VISUAL_ID
 				|| visualID == SimpleCompartmentEditPart.VISUAL_ID
-				|| visualID == SimpleSubNodeReference2EditPart.VISUAL_ID;
+				|| visualID == SimpleSubNodeEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class SimpleTopNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleTopNode_2003SemanticChildren((View) getHost()
+				.getSimpleTopNode_1001SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

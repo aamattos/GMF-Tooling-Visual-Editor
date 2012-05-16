@@ -7,7 +7,6 @@ import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsComma
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLinkMappingCreateCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleTopNodeCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
@@ -21,20 +20,17 @@ public class SimpleMappingItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SimpleMappingItemSemanticEditPolicy() {
-		super(SimplemapElementTypes.SimpleMapping_1000);
+		super(SimplemapElementTypes.SimpleMapping_79);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (SimplemapElementTypes.SimpleTopNode_2003 == req.getElementType()) {
+		if (SimplemapElementTypes.SimpleTopNode_1001 == req.getElementType()) {
 			return getGEFWrapper(new SimpleTopNodeCreateCommand(req));
 		}
-		if (SimplemapElementTypes.SimpleSubNode_2006 == req.getElementType()) {
-			return getGEFWrapper(new SimpleSubNodeCreateCommand(req));
-		}
-		if (SimplemapElementTypes.SimpleLinkMapping_2007 == req
+		if (SimplemapElementTypes.SimpleLinkMapping_1002 == req
 				.getElementType()) {
 			return getGEFWrapper(new SimpleLinkMappingCreateCommand(req));
 		}

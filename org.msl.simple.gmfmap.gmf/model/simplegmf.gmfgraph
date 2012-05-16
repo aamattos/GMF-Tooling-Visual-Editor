@@ -5,25 +5,6 @@
     xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="simplemappings">
   <figures
       name="Default">
-    <figures
-        xsi:type="gmfgraph:PolygonDecoration"
-        name="SubNodeDecoration">
-      <foregroundColor
-          xsi:type="gmfgraph:RGBColor"
-          red="32"
-          green="104"
-          blue="160"/>
-      <template
-          x="-1"
-          y="1"/>
-      <template
-          x="-1"
-          y="-1"/>
-      <template/>
-      <template
-          x="-1"
-          y="1"/>
-    </figures>
     <descriptors
         name="SimpleTopNodeFigure">
       <actualFigure
@@ -44,17 +25,17 @@
             blue="145"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="100"
-            green="112"
-            blue="158"/>
+            red="164"
+            green="204"
+            blue="208"/>
         <minimumSize
             dx="160"
             dy="50"/>
         <insets
             top="5"
-            left="3"
+            left="5"
             bottom="3"
-            right="3"/>
+            right="5"/>
         <children
             xsi:type="gmfgraph:Label"
             name="TopNodeNameFigure"
@@ -69,7 +50,7 @@
           <font
               xsi:type="gmfgraph:BasicFont"
               faceName="Verdana"
-              height="12"
+              height="11"
               style="BOLD"/>
         </children>
       </actualFigure>
@@ -96,10 +77,10 @@
             green="249"
             blue="251"/>
         <insets
-            top="1"
-            left="1"
-            bottom="1"
-            right="10"/>
+            top="5"
+            left="5"
+            bottom="5"
+            right="5"/>
         <children
             xsi:type="gmfgraph:Label"
             name="SimpleCompartmentNameFigure"
@@ -117,7 +98,8 @@
         name="SimpleLabelNodeFigure">
       <actualFigure
           xsi:type="gmfgraph:Label"
-          name="SimpleLabelNodeLabel">
+          name="SimpleLabelNodeLabel"
+          text="&lt;..>">
         <font
             xsi:type="gmfgraph:BasicFont"
             faceName="Verdana"
@@ -140,15 +122,15 @@
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
           name="SimpleSubNodeFigure"
-          lineWidth="3"
-          lineKind="LINE_DOT"
           cornerWidth="6"
           cornerHeight="6">
         <layout
             xsi:type="gmfgraph:FlowLayout"
             vertical="true"
             matchMinorSize="true"
-            forceSingleLine="true"/>
+            forceSingleLine="true"
+            majorSpacing="0"
+            minorSpacing="0"/>
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
             red="74"
@@ -156,17 +138,17 @@
             blue="145"/>
         <backgroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="74"
-            green="100"
-            blue="145"/>
+            red="227"
+            green="234"
+            blue="249"/>
         <minimumSize
             dx="160"
             dy="50"/>
         <insets
             top="5"
-            left="3"
-            bottom="3"
-            right="3"/>
+            left="5"
+            bottom="5"
+            right="5"/>
         <children
             xsi:type="gmfgraph:Label"
             name="SubNodeNameFigure"
@@ -174,32 +156,11 @@
           <font
               xsi:type="gmfgraph:BasicFont"
               faceName="Verdana"
-              height="11"
               style="BOLD"/>
         </children>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors
-        name="RelationshipSubNodeFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="ConnectionSubNodeFigure"
-          targetDecoration="//@figures.0/@figures.0">
-        <foregroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="32"
-            green="104"
-            blue="160"/>
-      </actualFigure>
-    </descriptors>
-    <descriptors
-        name="ParentSubNodeLabelFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Label"
-          name="ParentSubNodeLabel"
-          text="&lt;&lt;parent>>"/>
     </descriptors>
     <descriptors
         name="SimpleLinkMappingFigure">
@@ -240,7 +201,7 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="OutputLabelFigure">
@@ -269,9 +230,6 @@
   <nodes
       name="SimpleLinkMapping"
       figure="SimpleLinkMappingFigure"/>
-  <connections
-      name="ParentSubNode"
-      figure="RelationshipSubNodeFigure"/>
   <labels
       name="TopNodeName"
       figure="SimpleTopNodeFigure"
@@ -304,12 +262,11 @@
   </labels>
   <labels
       name="ParentSubNodeLabel"
-      figure="ParentSubNodeLabelFigure"
       elementIcon="false"/>
   <labels
       name="LinkMappingName"
       figure="SimpleLinkMappingFigure"
-      accessor="//@figures.0/@descriptors.7/@accessors.0">
+      accessor="//@figures.0/@descriptors.5/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="CENTER"/>

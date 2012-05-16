@@ -45,6 +45,8 @@ public class CanvasFactory {
 	private static int[] DEFAULT_TOP_NODE_INSETS = {5,3,3,3}; //TOP; LEFT; RIGHT; BOTTOM
 	private static int[] DEFAULT_SUB_NODE_INSETS = {1,1,10,1}; //TOP; LEFT; RIGHT; BOTTOM
 	
+	private static int[] DEFAULT_COMPARTMENT_INSETS = {5,5,5,5}; //TOP; LEFT; RIGHT; BOTTOM
+	
 
 	public CanvasFactory(Canvas canvas)
 	{
@@ -234,8 +236,8 @@ public class CanvasFactory {
 		//Background Color
 		RGBColor backgroundColor = createRGBColor(DEFAULT_RECTANGLE_BACKGROUND);
 		
-		if(topNode)
-			defaultRectangle.setForegroundColor(foregroundColor);
+		
+		defaultRectangle.setForegroundColor(foregroundColor);
 		
 		
 		defaultRectangle.setBackgroundColor(backgroundColor);
@@ -328,6 +330,8 @@ public class CanvasFactory {
 		
 		newRectangle.setForegroundColor(foregroundColor);
 		newRectangle.setBackgroundColor(backgroundColor);
+		
+		newRectangle.setInsets(createInsets(DEFAULT_COMPARTMENT_INSETS));
 		
 		return newRectangle;
 		

@@ -15,7 +15,6 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.tools.DirectEditManager;
 import org.eclipse.gmf.gmfgraph.Figure;
-import org.eclipse.gmf.gmfgraph.FigureDescriptor;
 import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
@@ -43,10 +42,6 @@ import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
-import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
@@ -61,7 +56,7 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 4002;
 
 	/**
 	 * @generated
@@ -319,7 +314,7 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 		if (parser == null) {
 			parser = SimplemapParserProvider
 					.getParser(
-							SimplemapElementTypes.SimpleCompartment_3005,
+							SimplemapElementTypes.SimpleCompartment_2002,
 							getParserElement(),
 							SimplemapVisualIDRegistry
 									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart.VISUAL_ID));
@@ -475,10 +470,10 @@ public class SimpleCompartmentNameEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated not
+	 * @generated
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(new Color(null, 51, 51, 51));
+		getFigure().setForegroundColor(color);
 	}
 
 	/**

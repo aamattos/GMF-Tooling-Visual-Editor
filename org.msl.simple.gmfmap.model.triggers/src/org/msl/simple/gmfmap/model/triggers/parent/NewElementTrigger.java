@@ -15,8 +15,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 
 public abstract class NewElementTrigger extends AbstractTrigger {
 
@@ -72,12 +70,6 @@ public abstract class NewElementTrigger extends AbstractTrigger {
 		if(selected instanceof SimpleCompartment)
 		{
 			figure = getLabelFigure(((SimpleCompartment)selected).getParent());
-		}
-		
-		if(selected instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)selected).getParentSubNodeReference();
-			figure = getLabelFigure(referencingNode);
 		}
 		
 		if(selected instanceof SimpleLinkMapping)

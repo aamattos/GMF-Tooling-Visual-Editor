@@ -1,9 +1,5 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.edit.parts;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -23,7 +19,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
-import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -36,7 +31,6 @@ import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleTopNodeC
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleTopNodeItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
-import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
 /**
  * @generated
@@ -46,7 +40,7 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 1001;
 
 	/**
 	 * @generated
@@ -262,26 +256,6 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(SimplemapElementTypes.SimpleSubNodeParentRootNode_4003);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == SimplemapElementTypes.SimpleSubNodeParentRootNode_4003) {
-			types.add(SimplemapElementTypes.SimpleSubNode_2006);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
 	public class SimpleTopNodeFigure extends RoundedRectangle {
 
 		/**
@@ -312,8 +286,8 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 					getMapMode().DPtoLP(50)));
 
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(3), getMapMode().DPtoLP(3),
-					getMapMode().DPtoLP(3)));
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(3),
+					getMapMode().DPtoLP(5)));
 			createContents();
 		}
 
@@ -352,7 +326,7 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 100, 112, 158);
+	static final Color THIS_BACK = new Color(null, 164, 204, 208);
 
 	/**
 	 * @generated
@@ -370,6 +344,6 @@ public class SimpleTopNodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	static final Font FFIGURETOPNODENAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Verdana", 12, SWT.BOLD);
+			Display.getCurrent(), "Verdana", 11, SWT.BOLD);
 
 }

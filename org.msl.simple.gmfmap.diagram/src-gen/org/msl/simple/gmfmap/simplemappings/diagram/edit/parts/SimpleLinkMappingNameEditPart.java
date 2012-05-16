@@ -52,7 +52,7 @@ public class SimpleLinkMappingNameEditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5010;
+	public static final int VISUAL_ID = 4004;
 
 	/**
 	 * @generated
@@ -294,7 +294,7 @@ public class SimpleLinkMappingNameEditPart extends CompartmentEditPart
 		if (parser == null) {
 			parser = SimplemapParserProvider
 					.getParser(
-							SimplemapElementTypes.SimpleLinkMapping_2007,
+							SimplemapElementTypes.SimpleLinkMapping_1002,
 							getParserElement(),
 							SimplemapVisualIDRegistry
 									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart.VISUAL_ID));
@@ -448,7 +448,7 @@ public class SimpleLinkMappingNameEditPart extends CompartmentEditPart
 	}
 
 	/**
-	 * @generated not
+	 * @generatet
 	 */
 	protected void setFontColor(Color color) {
 		getFigure().setForegroundColor(new Color(null, 51, 51, 51));

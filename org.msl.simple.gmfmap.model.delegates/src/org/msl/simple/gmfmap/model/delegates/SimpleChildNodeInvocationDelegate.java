@@ -14,8 +14,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 public class SimpleChildNodeInvocationDelegate extends BasicInvocationDelegate {
@@ -64,12 +62,6 @@ public class SimpleChildNodeInvocationDelegate extends BasicInvocationDelegate {
 			figure = ((SimpleCompartment)target).getCompartment().getFigure().getActualFigure();
 		}
 		
-		if(target instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)target).getParentSubNodeReference();
-			figure = getLabelFigure(referencingNode);
-		}
-		
 		if(target instanceof SimpleLinkMapping)
 		{
 			figure = ((SimpleLinkMapping)target).getDiagramLabel().getFigure().getActualFigure();
@@ -91,12 +83,6 @@ public class SimpleChildNodeInvocationDelegate extends BasicInvocationDelegate {
 		if(target instanceof SimpleCompartment)
 		{
 			figure = ((SimpleCompartment)target).getCompartment().getAccessor().getFigure();
-		}
-		
-		if(target instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)target).getParentSubNodeReference();
-			figure = getNodeFigure(referencingNode);
 		}
 		
 		if(target instanceof SimpleLinkMapping)

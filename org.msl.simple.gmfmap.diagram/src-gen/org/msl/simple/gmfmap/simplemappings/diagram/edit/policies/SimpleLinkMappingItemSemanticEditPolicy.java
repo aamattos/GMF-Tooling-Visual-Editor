@@ -19,7 +19,7 @@ public class SimpleLinkMappingItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SimpleLinkMappingItemSemanticEditPolicy() {
-		super(SimplemapElementTypes.SimpleLinkMapping_2007);
+		super(SimplemapElementTypes.SimpleLinkMapping_1002);
 	}
 
 	/**

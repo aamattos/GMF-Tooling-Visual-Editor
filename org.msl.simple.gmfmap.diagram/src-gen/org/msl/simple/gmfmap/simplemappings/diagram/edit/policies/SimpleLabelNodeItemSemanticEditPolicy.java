@@ -19,7 +19,7 @@ public class SimpleLabelNodeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SimpleLabelNodeItemSemanticEditPolicy() {
-		super(SimplemapElementTypes.SimpleLabelNode_3004);
+		super(SimplemapElementTypes.SimpleLabelNode_2001);
 	}
 
 	/**

@@ -7,6 +7,7 @@
 package org.msl.simple.gmfmap.simplemappings.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EAttribute;
@@ -35,7 +36,6 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentRoot <em>Parent Root</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getDomainMetaElement <em>Domain Meta Element</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getNodeReference <em>Node Reference</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getContainmentFeature <em>Containment Feature</em>}</li>
@@ -132,24 +132,6 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 */
 	public void setParent(SimpleNode newParent) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT, newParent);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleParentNode getParentRoot() {
-		return (SimpleParentNode)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_ROOT, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isSetParentRoot() {
-		return eIsSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_ROOT);
 	}
 
 	/**

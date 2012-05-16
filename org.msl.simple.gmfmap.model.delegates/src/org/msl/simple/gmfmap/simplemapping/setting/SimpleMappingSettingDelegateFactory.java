@@ -26,9 +26,6 @@ public class SimpleMappingSettingDelegateFactory implements Factory {
 		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_MAPPING)
 			return new SimpleMappingSettingDelegate(eStructuralFeature);
 		
-		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_SUB_NODE)
-			return new SimpleSubNodeSettingDelegate(eStructuralFeature);
-		
 		return null;
 	}
 

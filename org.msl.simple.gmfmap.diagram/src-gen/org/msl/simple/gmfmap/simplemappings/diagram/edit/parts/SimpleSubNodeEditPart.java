@@ -1,10 +1,5 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.edit.parts;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -24,7 +19,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
-import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
@@ -32,11 +26,11 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
+import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
-import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
 /**
  * @generated
@@ -46,7 +40,7 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2006;
+	public static final int VISUAL_ID = 2003;
 
 	/**
 	 * @generated
@@ -262,62 +256,6 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(SimplemapElementTypes.SimpleSubNodeParentRootNode_4003);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnSourceAndTarget(
-			IGraphicalEditPart targetEditPart) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof SimpleTopNodeEditPart) {
-			types.add(SimplemapElementTypes.SimpleSubNodeParentRootNode_4003);
-		}
-		if (targetEditPart instanceof org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart) {
-			types.add(SimplemapElementTypes.SimpleSubNodeParentRootNode_4003);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == SimplemapElementTypes.SimpleSubNodeParentRootNode_4003) {
-			types.add(SimplemapElementTypes.SimpleTopNode_2003);
-			types.add(SimplemapElementTypes.SimpleSubNode_2006);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(SimplemapElementTypes.SimpleSubNodeParentRootNode_4003);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == SimplemapElementTypes.SimpleSubNodeParentRootNode_4003) {
-			types.add(SimplemapElementTypes.SimpleSubNode_2006);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
 	public class SimpleSubNodeFigure extends RoundedRectangle {
 
 		/**
@@ -334,32 +272,30 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 			layoutThis.setStretchMinorAxis(true);
 			layoutThis.setMinorAlignment(ToolbarLayout.ALIGN_TOPLEFT);
 
-			layoutThis.setSpacing(5);
+			layoutThis.setSpacing(0);
 			layoutThis.setVertical(true);
 
 			this.setLayoutManager(layoutThis);
 
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(6),
 					getMapMode().DPtoLP(6)));
-			this.setLineWidth(3);
-			this.setLineStyle(Graphics.LINE_DOT);
 			this.setForegroundColor(THIS_FORE);
 			this.setBackgroundColor(THIS_BACK);
 			this.setMinimumSize(new Dimension(getMapMode().DPtoLP(160),
 					getMapMode().DPtoLP(50)));
 
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(3), getMapMode().DPtoLP(3),
-					getMapMode().DPtoLP(3)));
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
 			createContents();
 		}
 
 		/**
-		 * @generated
+		 * @generated not
 		 */
 		private void createContents() {
 
-			fFigureSubNodeNameFigure = new WrappingLabel();
+			fFigureSubNodeNameFigure = new WrappingLabelWithColorIcon();
 			fFigureSubNodeNameFigure.setText("<..>");
 
 			fFigureSubNodeNameFigure.setFont(FFIGURESUBNODENAMEFIGURE_FONT);
@@ -385,12 +321,12 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 74, 100, 145);
+	static final Color THIS_BACK = new Color(null, 227, 234, 249);
 
 	/**
 	 * @generated
 	 */
 	static final Font FFIGURESUBNODENAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Verdana", 11, SWT.BOLD);
+			Display.getCurrent(), "Verdana", 9, SWT.BOLD);
 
 }

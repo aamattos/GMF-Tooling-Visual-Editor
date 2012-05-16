@@ -8,8 +8,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 
 public abstract class ElementWithFigurePropertySection extends
 		AbstractSimplemapPropertySection {
@@ -28,12 +26,6 @@ public abstract class ElementWithFigurePropertySection extends
 		if(transformSelection instanceof SimpleCompartment)
 		{
 			figure = ((SimpleCompartment)transformSelection).getCompartment().getAccessor().getFigure();
-		}
-		
-		if(transformSelection instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)transformSelection).getParentSubNodeReference();
-			figure = getFigure(referencingNode);
 		}
 		
 		if(transformSelection instanceof SimpleLinkMapping)
@@ -68,12 +60,6 @@ public abstract class ElementWithFigurePropertySection extends
 		if(transformSelection instanceof SimpleCompartment)
 		{
 			figure = ((SimpleCompartment)transformSelection).getCompartment().getFigure().getActualFigure();
-		}
-		
-		if(transformSelection instanceof SimpleSubNode)
-		{
-			SimpleSubNodeReference referencingNode = ((SimpleSubNode)transformSelection).getParentSubNodeReference();
-			figure = getLabelFigure(referencingNode);
 		}
 		
 		if(transformSelection instanceof SimpleLinkMapping)

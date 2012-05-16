@@ -8,7 +8,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 public class SimpleChildNodeSettingDelegate extends Stateless {
@@ -29,8 +28,6 @@ public class SimpleChildNodeSettingDelegate extends Stateless {
 		      		return getParentMapping((SimpleChildNode)owner);
 		      	case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT:
 		      		return getParent((SimpleChildNode)owner);
-		      	case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_ROOT:
-		      		return getParentRoot((SimpleChildNode)owner);		      		
 		      }
 	    
 	    }
@@ -39,24 +36,6 @@ public class SimpleChildNodeSettingDelegate extends Stateless {
 	}
 	
 	
-
-	private SimpleParentNode getParentRoot(SimpleChildNode owner) {
-	
-		SimpleChildNode child = owner;
-		SimpleParentNode parent = owner.getParentNode();
-		
-		while(parent instanceof SimpleChildNode)
-		{
-			child = (SimpleChildNode)parent;
-			parent = child.getParentNode();
-		}
-
-		if(child instanceof SimpleSubNode)
-			return null;
-		
-		return (SimpleParentNode)child;
-	}
-
 	private SimpleNode getParent(SimpleChildNode owner) {
 		
 		SimpleParentNode parent = owner.getParentNode();
@@ -67,12 +46,6 @@ public class SimpleChildNodeSettingDelegate extends Stateless {
 		if(parent instanceof SimpleNode)
 			return (SimpleNode)parent;
 		
-		if(parent instanceof SimpleSubNode)
-			return ((SimpleSubNode)parent).getParentSubNodeReference();
-		
-		if(owner instanceof SimpleSubNode)
-			return ((SimpleSubNode)owner).getParentSubNodeReference();
-
 		return null;
 	}
 

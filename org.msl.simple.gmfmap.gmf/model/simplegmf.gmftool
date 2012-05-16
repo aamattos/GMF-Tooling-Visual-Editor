@@ -10,8 +10,8 @@
         title="simplemappings">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Top Node"
-          description="Create new TopNode">
+          title="Node"
+          description="Create new Node">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -28,30 +28,12 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="LabelNode"
-          description="Create new LabelNode">
+          title="Label Node"
+          description="Create new Label Node">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Sub Node"
-          description="Create new Top Node Reference">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="ParentNode"
-          description="Create new Parent Node Reference">
-        <smallIcon
-            xsi:type="gmftool:BundleImage"
-            path="/icons/full/obj16/ParentNode.gif"
-            bundle="org.msl.simple.gmfmap.model.edit"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"

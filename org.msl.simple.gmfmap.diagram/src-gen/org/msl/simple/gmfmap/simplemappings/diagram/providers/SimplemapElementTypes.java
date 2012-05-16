@@ -16,20 +16,11 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment2EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeParentRootNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 
@@ -62,77 +53,27 @@ public class SimplemapElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleMapping_1000 = getElementType("org.msl.simple.gmfmap.diagram.SimpleMapping_1000"); //$NON-NLS-1$
-
+	public static final IElementType SimpleMapping_79 = getElementType("org.msl.simple.gmfmap.diagram.SimpleMapping_79"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleTopNode_2003 = getElementType("org.msl.simple.gmfmap.diagram.SimpleTopNode_2003"); //$NON-NLS-1$
-
+	public static final IElementType SimpleTopNode_1001 = getElementType("org.msl.simple.gmfmap.diagram.SimpleTopNode_1001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleSubNode_2006 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNode_2006"); //$NON-NLS-1$
-
+	public static final IElementType SimpleLinkMapping_1002 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLinkMapping_1002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleLinkMapping_2007 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLinkMapping_2007"); //$NON-NLS-1$
-
+	public static final IElementType SimpleLabelNode_2001 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLabelNode_2001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleLabelNode_3004 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLabelNode_3004"); //$NON-NLS-1$
-
+	public static final IElementType SimpleCompartment_2002 = getElementType("org.msl.simple.gmfmap.diagram.SimpleCompartment_2002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleCompartment_3005 = getElementType("org.msl.simple.gmfmap.diagram.SimpleCompartment_3005"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleLabelNode_3007 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLabelNode_3007"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleSubNodeReference_3011 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_3011"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleSubNodeReference_3012 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_3012"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleLabelNode_3018 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLabelNode_3018"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleCompartment_3019 = getElementType("org.msl.simple.gmfmap.diagram.SimpleCompartment_3019"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleLabelNode_3013 = getElementType("org.msl.simple.gmfmap.diagram.SimpleLabelNode_3013"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleSubNodeReference_3016 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_3016"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleSubNodeReference_3020 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_3020"); //$NON-NLS-1$
-
-	/**
-	 * @generated
-	 */
-	public static final IElementType SimpleSubNodeParentRootNode_4003 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNodeParentRootNode_4003"); //$NON-NLS-1$
+	public static final IElementType SimpleSubNode_2003 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -245,51 +186,23 @@ public class SimplemapElementTypes {
 		if (elements == null) {
 			elements = new IdentityHashMap<IElementType, ENamedElement>();
 
-			elements.put(SimpleMapping_1000,
+			elements.put(SimpleMapping_79,
 					SimplemappingsPackage.eINSTANCE.getSimpleMapping());
 
-			elements.put(SimpleTopNode_2003,
+			elements.put(SimpleTopNode_1001,
 					SimplemappingsPackage.eINSTANCE.getSimpleTopNode());
 
-			elements.put(SimpleSubNode_2006,
-					SimplemappingsPackage.eINSTANCE.getSimpleSubNode());
-
-			elements.put(SimpleLinkMapping_2007,
+			elements.put(SimpleLinkMapping_1002,
 					SimplemappingsPackage.eINSTANCE.getSimpleLinkMapping());
 
-			elements.put(SimpleLabelNode_3004,
+			elements.put(SimpleLabelNode_2001,
 					SimplemappingsPackage.eINSTANCE.getSimpleLabelNode());
 
-			elements.put(SimpleCompartment_3005,
+			elements.put(SimpleCompartment_2002,
 					SimplemappingsPackage.eINSTANCE.getSimpleCompartment());
 
-			elements.put(SimpleLabelNode_3007,
-					SimplemappingsPackage.eINSTANCE.getSimpleLabelNode());
-
-			elements.put(SimpleSubNodeReference_3011,
-					SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference());
-
-			elements.put(SimpleSubNodeReference_3012,
-					SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference());
-
-			elements.put(SimpleLabelNode_3018,
-					SimplemappingsPackage.eINSTANCE.getSimpleLabelNode());
-
-			elements.put(SimpleCompartment_3019,
-					SimplemappingsPackage.eINSTANCE.getSimpleCompartment());
-
-			elements.put(SimpleLabelNode_3013,
-					SimplemappingsPackage.eINSTANCE.getSimpleLabelNode());
-
-			elements.put(SimpleSubNodeReference_3016,
-					SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference());
-
-			elements.put(SimpleSubNodeReference_3020,
-					SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference());
-
-			elements.put(SimpleSubNodeParentRootNode_4003,
-					SimplemappingsPackage.eINSTANCE
-							.getSimpleSubNode_ParentRootNode());
+			elements.put(SimpleSubNode_2003,
+					SimplemappingsPackage.eINSTANCE.getSimpleSubNode());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -307,21 +220,12 @@ public class SimplemapElementTypes {
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
-			KNOWN_ELEMENT_TYPES.add(SimpleMapping_1000);
-			KNOWN_ELEMENT_TYPES.add(SimpleTopNode_2003);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNode_2006);
-			KNOWN_ELEMENT_TYPES.add(SimpleLinkMapping_2007);
-			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_3004);
-			KNOWN_ELEMENT_TYPES.add(SimpleCompartment_3005);
-			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_3007);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_3011);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_3012);
-			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_3018);
-			KNOWN_ELEMENT_TYPES.add(SimpleCompartment_3019);
-			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_3013);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_3016);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_3020);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeParentRootNode_4003);
+			KNOWN_ELEMENT_TYPES.add(SimpleMapping_79);
+			KNOWN_ELEMENT_TYPES.add(SimpleTopNode_1001);
+			KNOWN_ELEMENT_TYPES.add(SimpleLinkMapping_1002);
+			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_2001);
+			KNOWN_ELEMENT_TYPES.add(SimpleCompartment_2002);
+			KNOWN_ELEMENT_TYPES.add(SimpleSubNode_2003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -332,35 +236,17 @@ public class SimplemapElementTypes {
 	public static IElementType getElementType(int visualID) {
 		switch (visualID) {
 		case SimpleMappingEditPart.VISUAL_ID:
-			return SimpleMapping_1000;
+			return SimpleMapping_79;
 		case SimpleTopNodeEditPart.VISUAL_ID:
-			return SimpleTopNode_2003;
-		case SimpleSubNodeEditPart.VISUAL_ID:
-			return SimpleSubNode_2006;
+			return SimpleTopNode_1001;
 		case SimpleLinkMappingEditPart.VISUAL_ID:
-			return SimpleLinkMapping_2007;
+			return SimpleLinkMapping_1002;
 		case SimpleLabelNodeEditPart.VISUAL_ID:
-			return SimpleLabelNode_3004;
+			return SimpleLabelNode_2001;
 		case SimpleCompartmentEditPart.VISUAL_ID:
-			return SimpleCompartment_3005;
-		case SimpleLabelNode2EditPart.VISUAL_ID:
-			return SimpleLabelNode_3007;
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-			return SimpleSubNodeReference_3011;
-		case SimpleSubNodeReference2EditPart.VISUAL_ID:
-			return SimpleSubNodeReference_3012;
-		case SimpleLabelNode4EditPart.VISUAL_ID:
-			return SimpleLabelNode_3018;
-		case SimpleCompartment2EditPart.VISUAL_ID:
-			return SimpleCompartment_3019;
-		case SimpleLabelNode3EditPart.VISUAL_ID:
-			return SimpleLabelNode_3013;
-		case SimpleSubNodeReference3EditPart.VISUAL_ID:
-			return SimpleSubNodeReference_3016;
-		case SimpleSubNodeReference4EditPart.VISUAL_ID:
-			return SimpleSubNodeReference_3020;
-		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID:
-			return SimpleSubNodeParentRootNode_4003;
+			return SimpleCompartment_2002;
+		case SimpleSubNodeEditPart.VISUAL_ID:
+			return SimpleSubNode_2003;
 		}
 		return null;
 	}

@@ -1,17 +1,9 @@
 package org.msl.simple.gmfmap.diagram.parsers;
 
 import org.eclipse.emf.ecore.EAttribute;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentName2EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 
@@ -38,18 +30,10 @@ public class SimpleMapMessageFormatParserProvider{
 	{
 		switch(visualId)
 		{
-			case SimpleSubNodeNameEditPart.VISUAL_ID: return SubNodeFormatParser.getInstance(features, editableFeatures); 
 			case SimpleTopNodeNameEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures); 
+			case SimpleSubNodeNameEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
 			case SimpleLabelNodeEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures); 
-			case SimpleLabelNode2EditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures); 
-			case SimpleLabelNode3EditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures); 
-			case SimpleLabelNode4EditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
-			case SimpleSubNodeReferenceEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
-			case SimpleSubNodeReference2EditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
-			case SimpleSubNodeReference3EditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
-			case SimpleSubNodeReference4EditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
 			case SimpleCompartmentNameEditPart.VISUAL_ID:return SimpleCompartmentFormatParser.getInstance(features, editableFeatures);
-			case SimpleCompartmentName2EditPart.VISUAL_ID:return SimpleCompartmentFormatParser.getInstance(features, editableFeatures);
 		}
 		
 		if(editableFeatures==null)

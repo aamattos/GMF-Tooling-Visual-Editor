@@ -21,9 +21,9 @@ import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramUpdater;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapNodeDescriptor;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -49,7 +49,7 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return SimplemappingsPackage.eINSTANCE.getSimpleSubNode_Children();
+		return SimplemappingsPackage.eINSTANCE.getSimpleParentNode_Children();
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleSubNode_2006SemanticChildren(viewObject);
+				.getSimpleSubNode_2003SemanticChildren(viewObject);
 		for (SimplemapNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -81,9 +81,9 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = SimplemapVisualIDRegistry.getVisualID(view);
-		return visualID == SimpleLabelNode4EditPart.VISUAL_ID
-				|| visualID == SimpleCompartment2EditPart.VISUAL_ID
-				|| visualID == SimpleSubNodeReference4EditPart.VISUAL_ID;
+		return visualID == SimpleLabelNodeEditPart.VISUAL_ID
+				|| visualID == SimpleCompartmentEditPart.VISUAL_ID
+				|| visualID == SimpleSubNodeEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleSubNode_2006SemanticChildren((View) getHost()
+				.getSimpleSubNode_2003SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

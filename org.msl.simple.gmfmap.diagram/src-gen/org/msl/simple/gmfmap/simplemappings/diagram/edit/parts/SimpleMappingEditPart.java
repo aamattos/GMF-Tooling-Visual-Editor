@@ -10,7 +10,6 @@ import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.NonResizableLabelEditPolicy;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleMappingCanonicalEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleMappingItemSemanticEditPolicy;
@@ -28,7 +27,7 @@ public class SimpleMappingEditPart extends DiagramEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 1000;
+	public static final int VISUAL_ID = 79;
 
 	/**
 	 * @generated
@@ -77,23 +76,6 @@ public class SimpleMappingEditPart extends DiagramEditPart {
 		 */
 		public boolean understandsRequest(Request request) {
 			return false;
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	/*package-local*/static class LinkLabelDragPolicy extends
-			NonResizableLabelEditPolicy {
-
-		/**
-		 * @generated
-		 */
-		@SuppressWarnings("rawtypes")
-		protected List createSelectionHandles() {
-			MoveHandle mh = new MoveHandle((GraphicalEditPart) getHost());
-			mh.setBorder(null);
-			return Collections.singletonList(mh);
 		}
 	}
 

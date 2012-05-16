@@ -11,10 +11,6 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.workspace.util.WorkspaceSynchronizer;
@@ -36,14 +32,11 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.tooldef.Palette;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
@@ -188,63 +181,6 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 		return simpleLinkMapping;
 	}
 	
-	private void createNodeLinkRelations()
-	{
-		//Separamos los tipos de nodo:
-		for(SimpleChildNode child:simpleMapping.getChildren())
-			if(child instanceof SimpleLinkMapping)
-				setRelations((SimpleLinkMapping)child);
-	}
-	
-	private void setRelations(SimpleLinkMapping link)
-	{
-		EStructuralFeature targetFeature = link.getLinkMapping().getLinkMetaFeature();
-		EReference containmentFeature = link.getLinkMapping().getContainmentFeature();
-		
-		if(containmentFeature==null && targetFeature!=null)
-		{
-			EClass containingClass = targetFeature.getEContainingClass();
-			EClassifier featureType = targetFeature.getEType();
-			
-			link.getInputs().addAll(findCandidates(containingClass));
-			
-			if(featureType instanceof EClass)
-				link.getOutputs().addAll(findCandidates((EClass)featureType));
-		}
-		
-		if(containmentFeature!=null && targetFeature!=null)
-		{
-			EClass containingClass = containmentFeature.getEContainingClass();
-			EClassifier featureType = targetFeature.getEType();
-			
-			link.getOutputs().addAll(findCandidates(containingClass));
-			
-			if(featureType instanceof EClass)
-				link.getInputs().addAll(findCandidates((EClass)featureType));
-		}
-		
-	}
-	
-	private List<SimpleRootNode> findCandidates(EClass eClass)
-	{
-		List<SimpleRootNode> result = new ArrayList<SimpleRootNode>();
-		
-		for(SimpleChildNode child:simpleMapping.getChildren())
-		{
-			EClass childEClass = null;
-			if(child instanceof SimpleTopNode)
-				childEClass = ((SimpleDomainMapElement)child).getDomainMetaElement();
-			if(child instanceof SimpleSubNode)
-				childEClass = ((SimpleSubNode)child).getParentSubNodeReference().getDomainMetaElement();			
-			
-			if(childEClass!=null && eClass.isSuperTypeOf(childEClass))
-				result.add((SimpleRootNode)child);
-		}
-			
-		
-		return result;
-	}
-	
 	private void createChild(SimpleParentNode parentNode, ChildReference childReference)
 	{
 		SimpleParentNode parent = parentNode;
@@ -280,20 +216,11 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 			
 		}else if(nodeMapping.getDiagramNode() instanceof Node)
 		{
-			newChild = SimplemappingsFactory.eINSTANCE.createSimpleSubNodeReference();
+			newChild = SimplemappingsFactory.eINSTANCE.createSimpleSubNode();
 			parent.getChildren().add(newChild);
 			
-			SimpleSubNode subNode = SimplemappingsFactory.eINSTANCE.createSimpleSubNode();
-			
-			subNode.setParentSubNodeReference((SimpleSubNodeReference)newChild);
-			subNode.setParentRootNode((SimpleRootNode)newChild.getParentRoot());
-			
-			
 			for(ChildReference childReference2:nodeMapping.getChildren())
-				createChild((SimpleSubNodeReference)newChild, childReference2);
-			
-			simpleMapping.getChildren().add(subNode);
-			
+				createChild((SimpleSubNode)newChild, childReference2);
 		}
 			
 		

@@ -88,7 +88,7 @@ public class SimpleNodeItemProvider
 				 getString("_UI_SimpleDomainMapElement_domainMetaElement_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDomainMapElement_domainMetaElement_feature", "_UI_SimpleDomainMapElement_type"),
 				 SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT,
-				 false,
+				 true,
 				 false,
 				 true,
 				 null,

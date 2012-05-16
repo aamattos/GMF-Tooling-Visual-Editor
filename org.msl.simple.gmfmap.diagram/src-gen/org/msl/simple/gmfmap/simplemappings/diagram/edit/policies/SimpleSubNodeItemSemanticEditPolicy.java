@@ -1,31 +1,21 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.edit.policies;
 
-import java.util.Iterator;
-
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.common.core.command.ICompositeCommand;
 import org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
-import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
-import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
-import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleCompartment2CreateCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNode4CreateCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeParentRootNodeCreateCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeParentRootNodeReorientCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeReference4CreateCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeParentRootNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleCompartmentCreateCommand;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNodeCreateCommand;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeCreateCommand;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
@@ -39,23 +29,22 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public SimpleSubNodeItemSemanticEditPolicy() {
-		super(SimplemapElementTypes.SimpleSubNode_2006);
+		super(SimplemapElementTypes.SimpleSubNode_2003);
 	}
 
 	/**
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (SimplemapElementTypes.SimpleLabelNode_3018 == req.getElementType()) {
-			return getGEFWrapper(new SimpleLabelNode4CreateCommand(req));
+		if (SimplemapElementTypes.SimpleLabelNode_2001 == req.getElementType()) {
+			return getGEFWrapper(new SimpleLabelNodeCreateCommand(req));
 		}
-		if (SimplemapElementTypes.SimpleCompartment_3019 == req
+		if (SimplemapElementTypes.SimpleCompartment_2002 == req
 				.getElementType()) {
-			return getGEFWrapper(new SimpleCompartment2CreateCommand(req));
+			return getGEFWrapper(new SimpleCompartmentCreateCommand(req));
 		}
-		if (SimplemapElementTypes.SimpleSubNodeReference_3020 == req
-				.getElementType()) {
-			return getGEFWrapper(new SimpleSubNodeReference4CreateCommand(req));
+		if (SimplemapElementTypes.SimpleSubNode_2003 == req.getElementType()) {
+			return getGEFWrapper(new SimpleSubNodeCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -68,28 +57,6 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
-			Edge incomingLink = (Edge) it.next();
-			if (SimplemapVisualIDRegistry.getVisualID(incomingLink) == SimpleSubNodeParentRootNodeEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-		}
-		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
-			Edge outgoingLink = (Edge) it.next();
-			if (SimplemapVisualIDRegistry.getVisualID(outgoingLink) == SimpleSubNodeParentRootNodeEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						outgoingLink.getSource().getElement(), null,
-						outgoingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-		}
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {
 			// there are indirectly referenced children, need extra commands: false
@@ -113,19 +80,19 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 			Node node = (Node) view.getChildren().get(i);
 
 			switch (SimplemapVisualIDRegistry.getVisualID(node)) {
-			case SimpleLabelNode4EditPart.VISUAL_ID:
+			case SimpleLabelNodeEditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case SimpleCompartment2EditPart.VISUAL_ID:
+			case SimpleCompartmentEditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case SimpleSubNodeReference4EditPart.VISUAL_ID:
+			case SimpleSubNodeEditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
@@ -133,58 +100,6 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 				break;
 			}
 		}
-	}
-
-	/**
-	 * @generated
-	 */
-	protected Command getCreateRelationshipCommand(CreateRelationshipRequest req) {
-		Command command = req.getTarget() == null ? getStartCreateRelationshipCommand(req)
-				: getCompleteCreateRelationshipCommand(req);
-		return command != null ? command : super
-				.getCreateRelationshipCommand(req);
-	}
-
-	/**
-	 * @generated
-	 */
-	protected Command getStartCreateRelationshipCommand(
-			CreateRelationshipRequest req) {
-		if (SimplemapElementTypes.SimpleSubNodeParentRootNode_4003 == req
-				.getElementType()) {
-			return getGEFWrapper(new SimpleSubNodeParentRootNodeCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		return null;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected Command getCompleteCreateRelationshipCommand(
-			CreateRelationshipRequest req) {
-		if (SimplemapElementTypes.SimpleSubNodeParentRootNode_4003 == req
-				.getElementType()) {
-			return getGEFWrapper(new SimpleSubNodeParentRootNodeCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		return null;
-	}
-
-	/**
-	 * Returns command to reorient EReference based link. New link target or source
-	 * should be the domain model element associated with this node.
-	 * 
-	 * @generated
-	 */
-	protected Command getReorientReferenceRelationshipCommand(
-			ReorientReferenceRelationshipRequest req) {
-		switch (getVisualID(req)) {
-		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID:
-			return getGEFWrapper(new SimpleSubNodeParentRootNodeReorientCommand(
-					req));
-		}
-		return super.getReorientReferenceRelationshipCommand(req);
 	}
 
 }

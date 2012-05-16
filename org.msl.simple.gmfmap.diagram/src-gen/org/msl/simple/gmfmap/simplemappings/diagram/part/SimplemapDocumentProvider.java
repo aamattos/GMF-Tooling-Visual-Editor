@@ -64,7 +64,7 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	 * @generated
 	 */
 	protected ElementInfo createElementInfo(Object element)
-			throws org.eclipse.core.runtime.CoreException, CoreException {
+			throws CoreException {
 		if (false == element instanceof FileEditorInput
 				&& false == element instanceof URIEditorInput) {
 			throw new CoreException(
@@ -91,8 +91,7 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	/**
 	 * @generated
 	 */
-	protected IDocument createDocument(Object element)
-			throws org.eclipse.core.runtime.CoreException, CoreException {
+	protected IDocument createDocument(Object element) throws CoreException {
 		if (false == element instanceof FileEditorInput
 				&& false == element instanceof URIEditorInput) {
 			throw new CoreException(
@@ -156,6 +155,7 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
+	 * (Modified template: DocumentProvider.xpt)
 	 * @generated
 	 */
 	private TransactionalEditingDomain createEditingDomain() {
@@ -332,7 +332,7 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	 * @generated
 	 */
 	protected void doValidateState(Object element, Object computationContext)
-			throws org.eclipse.core.runtime.CoreException, CoreException {
+			throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
 			LinkedList<IFile> files2Validate = new LinkedList<IFile>();
@@ -407,8 +407,7 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	/**
 	 * @generated
 	 */
-	protected void updateCache(Object element)
-			throws org.eclipse.core.runtime.CoreException, CoreException {
+	protected void updateCache(Object element) throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
 			for (Iterator<Resource> it = info.getLoadedResourcesIterator(); it
@@ -430,8 +429,7 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	/**
 	 * @generated
 	 */
-	protected void doUpdateStateCache(Object element)
-			throws org.eclipse.core.runtime.CoreException, CoreException {
+	protected void doUpdateStateCache(Object element) throws CoreException {
 		ResourceSetInfo info = getResourceSetInfo(element);
 		if (info != null) {
 			info.setUpdateCache(true);
@@ -703,7 +701,6 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * (Modified template: DocumentProvider.xpt)
 	 * @generated
 	 */
 	protected void handleElementChanged(ResourceSetInfo info,

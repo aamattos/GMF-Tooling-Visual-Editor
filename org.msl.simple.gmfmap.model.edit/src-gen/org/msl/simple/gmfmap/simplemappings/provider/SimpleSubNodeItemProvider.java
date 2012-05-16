@@ -12,9 +12,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -23,11 +25,11 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
+
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
@@ -37,7 +39,7 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  * @generated
  */
 public class SimpleSubNodeItemProvider
-	extends ItemProviderAdapter
+	extends SimpleNodeItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -65,61 +67,8 @@ public class SimpleSubNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addParentSubNodeReferencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Parent Sub Node Reference feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addParentSubNodeReferencePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SimpleSubNode_parentSubNodeReference_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleSubNode_parentSubNodeReference_feature", "_UI_SimpleSubNode_type"),
-				 SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__PARENT_SUB_NODE_REFERENCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -159,11 +108,8 @@ public class SimpleSubNodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SimpleSubNode.class)) {
-			case SimplemappingsPackage.SIMPLE_SUB_NODE__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case SimplemappingsPackage.SIMPLE_SUB_NODE__CHILDREN:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -179,87 +125,6 @@ public class SimpleSubNodeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleTopNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleCompartment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleLabelNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleLinkMapping()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleSubNodeReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleSubNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleTopNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleCompartment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleLabelNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleLinkMapping()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleSubNodeReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimplemappingsPackage.Literals.SIMPLE_SUB_NODE__CHILDREN,
-				 SimplemappingsFactory.eINSTANCE.createSimpleSubNode()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return SimplemapEditPlugin.INSTANCE;
 	}
 
     /**

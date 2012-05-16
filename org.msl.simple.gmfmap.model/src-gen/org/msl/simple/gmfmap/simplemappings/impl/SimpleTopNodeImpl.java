@@ -11,8 +11,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -23,9 +21,6 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl#getSubNodes <em>Sub Nodes</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl#getOutputs <em>Outputs</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl#getLinks <em>Links</em>}</li>
  * </ul>
@@ -59,36 +54,6 @@ public class SimpleTopNodeImpl extends SimpleNodeImpl implements SimpleTopNode {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<SimpleSubNode> getSubNodes() {
-		return (EList<SimpleSubNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__SUB_NODES, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleLinkMapping> getOutputs() {
-		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__OUTPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<SimpleLinkMapping> getInputs() {
-		return (EList<SimpleLinkMapping>)eGet(SimplemappingsPackage.Literals.SIMPLE_ROOT_NODE__INPUTS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
 	public EList<SimpleChildNode> getChildren() {
 		return (EList<SimpleChildNode>)eGet(SimplemappingsPackage.Literals.SIMPLE_PARENT_NODE__CHILDREN, true);
 	}
@@ -110,14 +75,6 @@ public class SimpleTopNodeImpl extends SimpleNodeImpl implements SimpleTopNode {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == SimpleRootNode.class) {
-			switch (derivedFeatureID) {
-				case SimplemappingsPackage.SIMPLE_TOP_NODE__SUB_NODES: return SimplemappingsPackage.SIMPLE_ROOT_NODE__SUB_NODES;
-				case SimplemappingsPackage.SIMPLE_TOP_NODE__OUTPUTS: return SimplemappingsPackage.SIMPLE_ROOT_NODE__OUTPUTS;
-				case SimplemappingsPackage.SIMPLE_TOP_NODE__INPUTS: return SimplemappingsPackage.SIMPLE_ROOT_NODE__INPUTS;
-				default: return -1;
-			}
-		}
 		if (baseClass == SimpleParentNode.class) {
 			switch (derivedFeatureID) {
 				case SimplemappingsPackage.SIMPLE_TOP_NODE__CHILDREN: return SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
@@ -134,14 +91,6 @@ public class SimpleTopNodeImpl extends SimpleNodeImpl implements SimpleTopNode {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == SimpleRootNode.class) {
-			switch (baseFeatureID) {
-				case SimplemappingsPackage.SIMPLE_ROOT_NODE__SUB_NODES: return SimplemappingsPackage.SIMPLE_TOP_NODE__SUB_NODES;
-				case SimplemappingsPackage.SIMPLE_ROOT_NODE__OUTPUTS: return SimplemappingsPackage.SIMPLE_TOP_NODE__OUTPUTS;
-				case SimplemappingsPackage.SIMPLE_ROOT_NODE__INPUTS: return SimplemappingsPackage.SIMPLE_TOP_NODE__INPUTS;
-				default: return -1;
-			}
-		}
 		if (baseClass == SimpleParentNode.class) {
 			switch (baseFeatureID) {
 				case SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN: return SimplemappingsPackage.SIMPLE_TOP_NODE__CHILDREN;

@@ -2,7 +2,6 @@ package org.msl.simple.gmfmap.simplemappings.diagram.edit.policies;
 
 import java.util.Iterator;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
@@ -17,7 +16,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.SemanticEditPolicy;
 import org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
-import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
@@ -32,11 +30,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
-import org.msl.simple.gmfmap.simplemappings.SimpleRootNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.helpers.SimplemapBaseEditHelper;
-import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
@@ -284,7 +278,7 @@ public class SimplemapBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 
 	/**
 	 * Clean all shortcuts to the host element from the same diagram
-	 * @generated not
+	 * @generated
 	 */
 	protected void addDestroyShortcutsCommand(ICompositeCommand cmd, View view) {
 		assert view.getEAnnotation("Shortcut") == null; //$NON-NLS-1$
@@ -295,87 +289,6 @@ public class SimplemapBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 				continue;
 			}
 			cmd.add(new DeleteCommand(getEditingDomain(), nextView));
-		}
-
-		//TODO Buscar un lugar mejor para esta llamada.
-		addDestroyRelatedSubNodes(cmd, view);
-	}
-
-	/**
-	 * Clean all related SubNodes
-	 * @generated not
-	 */
-	protected void addDestroyRelatedSubNodes(ICompositeCommand cmd, View view) {
-
-		if (view.getElement() instanceof SimpleSubNodeReference) {
-			for (Iterator it = view.getDiagram().getChildren().iterator(); it
-					.hasNext();) {
-				View nextView = (View) it.next();
-				EObject viewElement = nextView.getElement();
-				if (viewElement instanceof SimpleSubNode
-						&& ((SimpleSubNode) viewElement)
-								.getParentSubNodeReference() == view
-								.getElement()) { //$NON-NLS-1$
-					cmd.add(new DeleteCommand(getEditingDomain(), nextView));
-					cmd.add(new DestroyElementCommand(
-							new DestroyElementRequest(getEditingDomain(),
-									nextView.getElement(), false))); // directlyOwned: true
-				}
-			}
-		}
-
-		for (Object childView : view.getChildren())
-			addDestroyRelatedSubNodes(cmd, (View) childView);
-	}
-
-	/**
-	 * @generated
-	 */
-	public static LinkConstraints getLinkConstraints() {
-		LinkConstraints cached = SimplemapDiagramEditorPlugin.getInstance()
-				.getLinkConstraints();
-		if (cached == null) {
-			SimplemapDiagramEditorPlugin.getInstance().setLinkConstraints(
-					cached = new LinkConstraints());
-		}
-		return cached;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static class LinkConstraints {
-
-		/**
-		 * @generated
-		 */
-		LinkConstraints() {
-			// use static method #getLinkConstraints() to access instance
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateSimpleSubNodeParentRootNode_4003(
-				SimpleSubNode source, SimpleRootNode target) {
-			if (source != null) {
-				if (source.getParentRootNode() != null) {
-					return false;
-				}
-			}
-			if (target != null && (target.getSubNodes().contains(target))) {
-				return false;
-			}
-
-			return canExistSimpleSubNodeParentRootNode_4003(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistSimpleSubNodeParentRootNode_4003(
-				SimpleSubNode source, SimpleRootNode target) {
-			return true;
 		}
 	}
 

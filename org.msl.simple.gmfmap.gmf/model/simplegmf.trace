@@ -37,17 +37,8 @@
       visualID="3007"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
-      visualID="3011"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
-  <childNodeTraces
-      visualID="3012"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
-  <childNodeTraces
       visualID="3013"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
-  <childNodeTraces
-      visualID="3016"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleParentNode') and _containmentMF_.name = 'children')"/>
   <childNodeTraces
       visualID="3018"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleLabelNode') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')"/>
@@ -58,9 +49,6 @@
         visualID="5007"
         queryText="true"/>
   </childNodeTraces>
-  <childNodeTraces
-      visualID="3020"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNodeReference') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _containmentMF_.name = 'children')"/>
   <linkTraces
       visualID="4003"
       queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://org.msl.simple.gmfmap/simplemappings' and _eClass_.name = 'SimpleSubNode') and _feature_.name = 'parentRootNode')">

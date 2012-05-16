@@ -7,25 +7,14 @@ import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.ParentSubNodeLabelEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment2EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentName2EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode4EditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeParentRootNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference3EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReference4EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 
@@ -141,10 +130,6 @@ public class SimplemapVisualIDRegistry {
 					.isSuperTypeOf(domainElement.eClass())) {
 				return SimpleTopNodeEditPart.VISUAL_ID;
 			}
-			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNode()
-					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleSubNodeEditPart.VISUAL_ID;
-			}
 			if (SimplemappingsPackage.eINSTANCE.getSimpleLinkMapping()
 					.isSuperTypeOf(domainElement.eClass())) {
 				return SimpleLinkMappingEditPart.VISUAL_ID;
@@ -159,43 +144,33 @@ public class SimplemapVisualIDRegistry {
 					.isSuperTypeOf(domainElement.eClass())) {
 				return SimpleCompartmentEditPart.VISUAL_ID;
 			}
-			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference()
+			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNode()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleSubNodeReference2EditPart.VISUAL_ID;
-			}
-			break;
-		case SimpleSubNodeEditPart.VISUAL_ID:
-			if (SimplemappingsPackage.eINSTANCE.getSimpleLabelNode()
-					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleLabelNode4EditPart.VISUAL_ID;
-			}
-			if (SimplemappingsPackage.eINSTANCE.getSimpleCompartment()
-					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleCompartment2EditPart.VISUAL_ID;
-			}
-			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference()
-					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleSubNodeReference4EditPart.VISUAL_ID;
+				return SimpleSubNodeEditPart.VISUAL_ID;
 			}
 			break;
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			if (SimplemappingsPackage.eINSTANCE.getSimpleLabelNode()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleLabelNode2EditPart.VISUAL_ID;
+				return SimpleLabelNodeEditPart.VISUAL_ID;
 			}
-			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference()
+			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNode()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleSubNodeReferenceEditPart.VISUAL_ID;
+				return SimpleSubNodeEditPart.VISUAL_ID;
 			}
 			break;
-		case SimpleCompartment2EditPart.VISUAL_ID:
+		case SimpleSubNodeEditPart.VISUAL_ID:
 			if (SimplemappingsPackage.eINSTANCE.getSimpleLabelNode()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleLabelNode3EditPart.VISUAL_ID;
+				return SimpleLabelNodeEditPart.VISUAL_ID;
 			}
-			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference()
+			if (SimplemappingsPackage.eINSTANCE.getSimpleCompartment()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleSubNodeReference3EditPart.VISUAL_ID;
+				return SimpleCompartmentEditPart.VISUAL_ID;
+			}
+			if (SimplemappingsPackage.eINSTANCE.getSimpleSubNode()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleSubNodeEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -227,9 +202,6 @@ public class SimplemapVisualIDRegistry {
 			if (SimpleTopNodeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SimpleSubNodeEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (SimpleLinkMappingEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -244,21 +216,7 @@ public class SimplemapVisualIDRegistry {
 			if (SimpleCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SimpleSubNodeReference2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case SimpleSubNodeEditPart.VISUAL_ID:
-			if (SimpleSubNodeNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SimpleLabelNode4EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SimpleCompartment2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SimpleSubNodeReference4EditPart.VISUAL_ID == nodeVisualID) {
+			if (SimpleSubNodeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -271,26 +229,24 @@ public class SimplemapVisualIDRegistry {
 			if (SimpleCompartmentNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SimpleLabelNode2EditPart.VISUAL_ID == nodeVisualID) {
+			if (SimpleLabelNodeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SimpleSubNodeReferenceEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case SimpleCompartment2EditPart.VISUAL_ID:
-			if (SimpleCompartmentName2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SimpleLabelNode3EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (SimpleSubNodeReference3EditPart.VISUAL_ID == nodeVisualID) {
+			if (SimpleSubNodeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID:
-			if (ParentSubNodeLabelEditPart.VISUAL_ID == nodeVisualID) {
+		case SimpleSubNodeEditPart.VISUAL_ID:
+			if (SimpleSubNodeNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleLabelNodeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleSubNodeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

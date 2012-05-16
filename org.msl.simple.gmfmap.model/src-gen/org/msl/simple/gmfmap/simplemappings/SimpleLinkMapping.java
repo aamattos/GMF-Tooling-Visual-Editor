@@ -6,7 +6,6 @@
  */
 package org.msl.simple.gmfmap.simplemappings;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.gmf.gmfgraph.Connection;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
 import org.eclipse.gmf.mappings.LinkMapping;
@@ -25,8 +24,6 @@ import org.eclipse.gmf.tooldef.AbstractTool;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getDiagramLink <em>Diagram Link</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getDiagramLabel <em>Diagram Label</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getTool <em>Tool</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getOutputs <em>Outputs</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping#getInputs <em>Inputs</em>}</li>
  * </ul>
  * </p>
  *
@@ -164,41 +161,5 @@ public interface SimpleLinkMapping extends SimpleChildNode, SimpleParentNode {
 	 * @generated
 	 */
 	boolean isSetTool();
-
-	/**
-	 * Returns the value of the '<em><b>Outputs</b></em>' reference list.
-	 * The list contents are of type {@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode}.
-	 * It is bidirectional and its opposite is '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getInputs <em>Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Outputs</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outputs</em>' reference list.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleLinkMapping_Outputs()
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getInputs
-	 * @model opposite="inputs"
-	 * @generated
-	 */
-	EList<SimpleRootNode> getOutputs();
-
-	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' reference list.
-	 * The list contents are of type {@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode}.
-	 * It is bidirectional and its opposite is '{@link org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getOutputs <em>Outputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Inputs</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' reference list.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleLinkMapping_Inputs()
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleRootNode#getOutputs
-	 * @model opposite="outputs"
-	 * @generated
-	 */
-	EList<SimpleRootNode> getInputs();
 
 } // SimpleLinkMapping

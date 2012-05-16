@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SimpleTopNode extends SimpleNode, SimpleRootNode, SimpleParentNode {
+public interface SimpleTopNode extends SimpleNode, SimpleParentNode {
 	/**
 	 * Returns the value of the '<em><b>Links</b></em>' containment reference list.
 	 * The list contents are of type {@link org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping}.

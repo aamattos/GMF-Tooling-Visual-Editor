@@ -37,12 +37,6 @@ public class SimplemapEditPartFactory implements EditPartFactory {
 			case SimpleTopNodeNameEditPart.VISUAL_ID:
 				return new SimpleTopNodeNameEditPart(view);
 
-			case SimpleSubNodeEditPart.VISUAL_ID:
-				return new SimpleSubNodeEditPart(view);
-
-			case SimpleSubNodeNameEditPart.VISUAL_ID:
-				return new SimpleSubNodeNameEditPart(view);
-
 			case SimpleLinkMappingEditPart.VISUAL_ID:
 				return new SimpleLinkMappingEditPart(view);
 
@@ -58,39 +52,11 @@ public class SimplemapEditPartFactory implements EditPartFactory {
 			case SimpleCompartmentNameEditPart.VISUAL_ID:
 				return new SimpleCompartmentNameEditPart(view);
 
-			case SimpleLabelNode2EditPart.VISUAL_ID:
-				return new SimpleLabelNode2EditPart(view);
+			case SimpleSubNodeEditPart.VISUAL_ID:
+				return new SimpleSubNodeEditPart(view);
 
-			case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-				return new SimpleSubNodeReferenceEditPart(view);
-
-			case SimpleSubNodeReference2EditPart.VISUAL_ID:
-				return new SimpleSubNodeReference2EditPart(view);
-
-			case SimpleLabelNode4EditPart.VISUAL_ID:
-				return new SimpleLabelNode4EditPart(view);
-
-			case SimpleCompartment2EditPart.VISUAL_ID:
-				return new SimpleCompartment2EditPart(view);
-
-			case SimpleCompartmentName2EditPart.VISUAL_ID:
-				return new SimpleCompartmentName2EditPart(view);
-
-			case SimpleLabelNode3EditPart.VISUAL_ID:
-				return new SimpleLabelNode3EditPart(view);
-
-			case SimpleSubNodeReference3EditPart.VISUAL_ID:
-				return new SimpleSubNodeReference3EditPart(view);
-
-			case SimpleSubNodeReference4EditPart.VISUAL_ID:
-				return new SimpleSubNodeReference4EditPart(view);
-
-			case SimpleSubNodeParentRootNodeEditPart.VISUAL_ID:
-				return new SimpleSubNodeParentRootNodeEditPart(view);
-
-			case ParentSubNodeLabelEditPart.VISUAL_ID:
-				return new ParentSubNodeLabelEditPart(view);
-
+			case SimpleSubNodeNameEditPart.VISUAL_ID:
+				return new SimpleSubNodeNameEditPart(view);
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

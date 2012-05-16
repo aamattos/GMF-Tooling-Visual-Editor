@@ -19,7 +19,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
@@ -74,9 +73,8 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 			case SimplemappingsPackage.SIMPLE_LABEL_NODE: return createSimpleLabelNode();
 			case SimplemappingsPackage.SIMPLE_LINK_MAPPING: return createSimpleLinkMapping();
 			case SimplemappingsPackage.SIMPLE_NODE: return createSimpleNode();
-			case SimplemappingsPackage.SIMPLE_SUB_NODE_REFERENCE: return createSimpleSubNodeReference();
-			case SimplemappingsPackage.SIMPLE_DOMAIN_MAP_ELEMENT: return createSimpleDomainMapElement();
 			case SimplemappingsPackage.SIMPLE_SUB_NODE: return createSimpleSubNode();
+			case SimplemappingsPackage.SIMPLE_DOMAIN_MAP_ELEMENT: return createSimpleDomainMapElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,9 +145,9 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleSubNodeReference createSimpleSubNodeReference() {
-		SimpleSubNodeReferenceImpl simpleSubNodeReference = new SimpleSubNodeReferenceImpl();
-		return simpleSubNodeReference;
+	public SimpleSubNode createSimpleSubNode() {
+		SimpleSubNodeImpl simpleSubNode = new SimpleSubNodeImpl();
+		return simpleSubNode;
 	}
 
 	/**
@@ -160,16 +158,6 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 	public SimpleDomainMapElement createSimpleDomainMapElement() {
 		SimpleDomainMapElementImpl simpleDomainMapElement = new SimpleDomainMapElementImpl();
 		return simpleDomainMapElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SimpleSubNode createSimpleSubNode() {
-		SimpleSubNodeImpl simpleSubNode = new SimpleSubNodeImpl();
-		return simpleSubNode;
 	}
 
 	/**

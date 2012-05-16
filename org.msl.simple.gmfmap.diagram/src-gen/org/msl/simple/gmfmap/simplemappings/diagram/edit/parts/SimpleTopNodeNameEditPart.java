@@ -15,7 +15,6 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.requests.DirectEditRequest;
 import org.eclipse.gef.tools.DirectEditManager;
 import org.eclipse.gmf.gmfgraph.Figure;
-import org.eclipse.gmf.gmfgraph.FigureDescriptor;
 import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
@@ -42,12 +41,6 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
-import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
-import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -63,7 +56,7 @@ public class SimpleTopNodeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 4003;
 
 	/**
 	 * @generated
@@ -321,7 +314,7 @@ public class SimpleTopNodeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = SimplemapParserProvider
 					.getParser(
-							SimplemapElementTypes.SimpleTopNode_2003,
+							SimplemapElementTypes.SimpleTopNode_1001,
 							getParserElement(),
 							SimplemapVisualIDRegistry
 									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart.VISUAL_ID));
@@ -499,10 +492,10 @@ public class SimpleTopNodeNameEditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated not
+	 * @generated
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(new Color(null, 255, 255, 255));
+		getFigure().setForegroundColor(color);
 	}
 
 	/**

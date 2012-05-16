@@ -13,7 +13,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -54,12 +53,7 @@ public class ParentNodeTriggerListener extends TriggerListener implements
 			SimpleChildNode newChild = (SimpleChildNode)notification.getNewValue();
 			Object notifier = notification.getNotifier();
 			
-			SimpleParentNode parent = null;
-			
-			if(notifier instanceof SimpleSubNode)
-				parent = ((SimpleSubNode)notifier).getParentSubNodeReference();
-			else
-				parent = (SimpleParentNode)notifier;
+			SimpleParentNode parent = (SimpleParentNode)notifier;
 			
 			if(newChild instanceof SimpleTopNode)
 				return new NewTopNodeTrigger(domain, parent, (SimpleTopNode)newChild);
@@ -70,8 +64,8 @@ public class ParentNodeTriggerListener extends TriggerListener implements
 			if(newChild instanceof SimpleCompartment)
 				return new NewCompartmentTrigger(domain, (SimpleNode)parent, (SimpleCompartment)newChild);
 
-			if(newChild instanceof SimpleSubNodeReference)
-				return new NewSubNodeReferenceTrigger(domain, parent, (SimpleSubNodeReference)newChild);
+			if(newChild instanceof SimpleSubNode)
+				return new NewSubNodeTrigger(domain, parent, (SimpleSubNode)newChild);
 
 			if(newChild instanceof SimpleLabelNode)
 				return new NewLabelNodeTrigger(domain, parent, (SimpleLabelNode)newChild);

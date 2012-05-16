@@ -45,9 +45,13 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
+import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleLabelNodeItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextNonResizableEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapParserProvider;
@@ -61,7 +65,7 @@ public class SimpleLabelNodeEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3004;
+	public static final int VISUAL_ID = 2001;
 
 	/**
 	 * @generated
@@ -316,7 +320,7 @@ public class SimpleLabelNodeEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = SimplemapParserProvider
 					.getParser(
-							SimplemapElementTypes.SimpleLabelNode_3004,
+							SimplemapElementTypes.SimpleLabelNode_2001,
 							getParserElement(),
 							SimplemapVisualIDRegistry
 									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart.VISUAL_ID));
@@ -470,10 +474,10 @@ public class SimpleLabelNodeEditPart extends CompartmentEditPart implements
 	}
 
 	/**
-	 * @generated not
+	 * @generated
 	 */
 	protected void setFontColor(Color color) {
-		getFigure().setForegroundColor(new Color(null, 255, 255, 255));
+		getFigure().setForegroundColor(color);
 	}
 
 	/**
@@ -612,7 +616,7 @@ public class SimpleLabelNodeEditPart extends CompartmentEditPart implements
 		 * @generated
 		 */
 		public SimpleLabelNodeFigure() {
-			this.setText("");
+			this.setText("<..>");
 
 			this.setFont(THIS_FONT);
 

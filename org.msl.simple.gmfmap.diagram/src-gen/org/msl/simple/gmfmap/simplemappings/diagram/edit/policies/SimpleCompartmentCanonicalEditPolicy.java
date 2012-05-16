@@ -21,8 +21,8 @@ import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNode2EditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramUpdater;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapNodeDescriptor;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -59,7 +59,7 @@ public class SimpleCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleCompartment_3005SemanticChildren(viewObject);
+				.getSimpleCompartment_2002SemanticChildren(viewObject);
 		for (SimplemapNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -80,8 +80,8 @@ public class SimpleCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = SimplemapVisualIDRegistry.getVisualID(view);
-		return visualID == SimpleLabelNode2EditPart.VISUAL_ID
-				|| visualID == SimpleSubNodeReferenceEditPart.VISUAL_ID;
+		return visualID == SimpleLabelNodeEditPart.VISUAL_ID
+				|| visualID == SimpleSubNodeEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class SimpleCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleCompartment_3005SemanticChildren((View) getHost()
+				.getSimpleCompartment_2002SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

@@ -1,6 +1,5 @@
 package org.msl.simple.gmfmap.simplemappings.diagram.edit.parts;
 
-import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -10,9 +9,7 @@ import org.eclipse.draw2d.ToolbarLayout;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
-import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
@@ -20,7 +17,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.ConstrainedToolbarLayoutE
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.CreationEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
@@ -44,7 +40,7 @@ public class SimpleCompartmentEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 3005;
+	public static final int VISUAL_ID = 2002;
 
 	/**
 	 * @generated
@@ -286,9 +282,9 @@ public class SimpleCompartmentEditPart extends ShapeNodeEditPart {
 					getMapMode().DPtoLP(6)));
 			this.setBackgroundColor(THIS_BACK);
 
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(1),
-					getMapMode().DPtoLP(1), getMapMode().DPtoLP(1),
-					getMapMode().DPtoLP(10)));
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
 			createContents();
 		}
 

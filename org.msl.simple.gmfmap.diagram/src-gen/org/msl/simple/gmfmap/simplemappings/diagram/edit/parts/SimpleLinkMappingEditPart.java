@@ -36,7 +36,7 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2007;
+	public static final int VISUAL_ID = 1002;
 
 	/**
 	 * @generated
@@ -287,6 +287,7 @@ public class SimpleLinkMappingEditPart extends ShapeNodeEditPart {
 		private void createContents() {
 
 			fFigureLinkMappingNameFigure = new WrappingLabel();
+
 			fFigureLinkMappingNameFigure.setText("<..>");
 
 			fFigureLinkMappingNameFigure
