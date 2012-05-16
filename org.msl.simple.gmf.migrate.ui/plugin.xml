@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="org.msl.simple.gmf.migrate.ui.migrateMapping"
+            nameFilter="*.gmfmap"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.msl.simple.gmf.migrate.ui.MigrateToSimpleMapAction"
+               id="org.msl.simple.gmf.migrate.ui.migrateMappingAction"
+               label="%action.label">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

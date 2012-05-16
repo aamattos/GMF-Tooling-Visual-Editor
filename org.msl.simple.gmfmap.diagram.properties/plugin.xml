@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="org.msl.simple.gmfmap.diagram">
+<!--
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.background"
+               label="%propertyTab.label.0">
+         </propertyTab>
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.foreground"
+               label="%propertyTab.label.1">
+         </propertyTab>
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.label"
+               label="%propertyTab.label.2">
+         </propertyTab>
+-->
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.connection"
+               label="%propertyTab.label.3">
+         </propertyTab>
+<!--         
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.size1"
+               label="%propertyTab.label.4">
+         </propertyTab>
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.size2"
+               label="%propertyTab.label.5">
+         </propertyTab>
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.size3"
+               label="%propertyTab.label.6">
+         </propertyTab>
+-->
+         <propertyTab
+               category="extra"
+               id="property.tab.domain.figure.properties"
+               label="%propertyTab.label.7">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="org.msl.simple.gmfmap.diagram">
+         <propertySection
+               class="org.msl.simple.gmfmap.diagram.properties.FigureConnectionPropertiesSection"
+               filter="org.msl.simple.gmfmap.diagram.properties.FigureConnectionPropertiesSection"
+               id="property.section.connection"
+               tab="property.tab.domain.figure.connection">
+         </propertySection>
+         <propertySection
+               class="org.msl.simple.gmfmap.diagram.properties.figure.FigurePropertiesSection"
+               filter="org.msl.simple.gmfmap.diagram.properties.figure.FigurePropertiesSection"
+               id="property.section.figure"
+               tab="property.tab.domain.figure.properties">
+         </propertySection>
+      </propertySections>
+   </extension>
+
+</plugin>

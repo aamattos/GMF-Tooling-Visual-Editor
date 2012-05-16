@@ -1,0 +1,47 @@
+﻿/*
+ * Copyright (c) 2007, 2010 Borland Software Corporation and others
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Dmitry Stadnik (Borland) - initial API and implementation
+ *    Artem Tikhomirov (Borland) - [235113] alternative parser access
+ *                                 [244419] custom parsers
+ *                                 [138179] expression-backed labels
+ */
+
+«IMPORT 'http://www.eclipse.org/gmf/2009/GenModel'»
+
+«EXTENSION xpt::providers::ParserUtils»
+
+«REM»
+En lugar de utilisar la clase MessageFormatParser, permmitimos registrar a través de DataModelerMessageFormatParserProvider un parser
+específico para cada editPart. De esta forma podemos provocar refresh visuales para atributos que no sean "label"
+(Por ejemplo para la representacion visual de una columna PK)
+«ENDREM»
+«DEFINE _parser(modelFacet : gmfgen::FeatureLabelModelFacet, element : gmfgen::GenCommonBase) FOR gmfgen::PredefinedParser»
+	«EXPAND xpt::Common::generatedMemberComment('', 'ParserProvider.xpt')»
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser «parserFieldName(element)»;
+
+	«EXPAND xpt::Common::generatedMemberComment»
+	«IF holder.extensibleViaService»private«ELSE»public«ENDIF» org.eclipse.gmf.runtime.common.ui.services.parser.IParser «parserAccessorName(element)»() {
+		if («parserFieldName(element)» == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				«EXPAND MetaModel::MetaFeature FOREACH modelFacet.metaFeatures SEPARATOR ', ' »
+			};
+		«IF modelFacet.editableMetaFeatures->size() > 0-»
+			org.eclipse.emf.ecore.EAttribute[] editableFeatures = new org.eclipse.emf.ecore.EAttribute[] {
+				«EXPAND MetaModel::MetaFeature FOREACH modelFacet.editableMetaFeatures SEPARATOR ', '»
+			};
+		«ENDIF-»
+		«getQualifiedClassName()» parser = org.msl.simple.gmfmap.diagram.parsers.SimpleMapMessageFormatParserProvider.getParser(«element.visualID», features«IF modelFacet.editableMetaFeatures->size() > 0», editableFeatures«ENDIF»);
+		«EXPAND _setPatterns(viewMethod, editMethod, 'parser') FOR modelFacet-»
+			«parserFieldName(element)» = parser;
+		}
+		return «parserFieldName(element)»;
+	}
+«ENDDEFINE»
+

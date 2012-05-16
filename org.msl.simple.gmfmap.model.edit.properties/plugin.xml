@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            class="org.msl.simple.gmfmap.model.edit.properties.SimpleMappingPropertiesAdapterFactory"
+            supportedTypes="org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider"
+            uri="http://org.msl.simple.gmfmap/simplemappings">
+      </factory>
+   </extension>
+
+</plugin>

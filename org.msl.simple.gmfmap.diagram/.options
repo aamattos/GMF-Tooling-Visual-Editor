@@ -1,0 +1,7 @@
+# Tracing options for the org.msl.simple.gmfmap.diagram plug-in
+
+# Common issues
+org.msl.simple.gmfmap.diagram/debug=false
+
+# Visual IDs
+org.msl.simple.gmfmap.diagram/debug/visualID=false
