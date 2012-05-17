@@ -23,7 +23,7 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramUpdater;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapNodeDescriptor;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -31,7 +31,8 @@ import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegist
 /**
  * @generated
  */
-public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
+public class SimpleSubNodeReferenceCanonicalEditPolicy extends
+		CanonicalEditPolicy {
 
 	/**
 	 * @generated
@@ -60,7 +61,7 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleSubNode_2003SemanticChildren(viewObject);
+				.getSimpleSubNodeReference_2003SemanticChildren(viewObject);
 		for (SimplemapNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -83,7 +84,7 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		int visualID = SimplemapVisualIDRegistry.getVisualID(view);
 		return visualID == SimpleLabelNodeEditPart.VISUAL_ID
 				|| visualID == SimpleCompartmentEditPart.VISUAL_ID
-				|| visualID == SimpleSubNodeEditPart.VISUAL_ID;
+				|| visualID == SimpleSubNodeReferenceEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -95,7 +96,7 @@ public class SimpleSubNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<SimplemapNodeDescriptor> childDescriptors = SimplemapDiagramUpdater
-				.getSimpleSubNode_2003SemanticChildren((View) getHost()
+				.getSimpleSubNodeReference_2003SemanticChildren((View) getHost()
 						.getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours

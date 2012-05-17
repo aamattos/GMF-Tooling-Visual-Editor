@@ -25,7 +25,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 
 public class RemoveChildNodeTrigger extends AbstractTrigger {
 	
@@ -66,8 +66,8 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 	
 	private void removeSimpleNode(SimpleNode removedNode)
 	{
-		if(removedNode instanceof SimpleSubNode)
-			for(SimpleChildNode childNode: ((SimpleSubNode)removedNode).getChildren())
+		if(removedNode instanceof SimpleSubNodeReference)
+			for(SimpleChildNode childNode: ((SimpleSubNodeReference)removedNode).getChildren())
 				removeChildNode(childNode);
 		
 		NodeReference nodeReferenceToRemove = removedNode.getNodeReference();

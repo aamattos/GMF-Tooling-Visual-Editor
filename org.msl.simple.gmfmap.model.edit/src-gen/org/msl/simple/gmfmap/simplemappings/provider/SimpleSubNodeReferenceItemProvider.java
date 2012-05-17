@@ -29,16 +29,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
 
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode} object.
+ * This is the item provider adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SimpleSubNodeItemProvider
+public class SimpleSubNodeReferenceItemProvider
 	extends SimpleNodeItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -52,7 +52,7 @@ public class SimpleSubNodeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleSubNodeItemProvider(AdapterFactory adapterFactory) {
+	public SimpleSubNodeReferenceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -72,14 +72,14 @@ public class SimpleSubNodeItemProvider
 	}
 
 	/**
-	 * This returns SimpleSubNode.gif.
+	 * This returns SimpleSubNodeReference.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleSubNode"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleSubNodeReference"));
 	}
 
 	/**
@@ -90,9 +90,9 @@ public class SimpleSubNodeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SimpleSubNode)object).getName();
+		String label = ((SimpleSubNodeReference)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SimpleSubNode_type") :
+			getString("_UI_SimpleSubNodeReference_type") :
 			label;
 	}
 
@@ -107,8 +107,8 @@ public class SimpleSubNodeItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SimpleSubNode.class)) {
-			case SimplemappingsPackage.SIMPLE_SUB_NODE__CHILDREN:
+		switch (notification.getFeatureID(SimpleSubNodeReference.class)) {
+			case SimplemappingsPackage.SIMPLE_SUB_NODE_REFERENCE__CHILDREN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

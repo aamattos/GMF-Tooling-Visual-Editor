@@ -29,6 +29,7 @@
         visualID="2001"
         editPartClassName="SimpleLabelNodeEditPart"
         itemSemanticEditPolicyClassName="SimpleLabelNodeItemSemanticEditPolicy"
+        notationViewFactoryClassName="SimpleLabelNodeViewFactory"
         canonicalEditPolicyClassName="SimpleLabelNodeCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="SimpleLabelNodeGraphicalNodeEditPolicy"
         createCommandClassName="SimpleLabelNodeCreateCommand"
@@ -68,6 +69,7 @@
         visualID="2002"
         editPartClassName="SimpleCompartmentEditPart"
         itemSemanticEditPolicyClassName="SimpleCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="SimpleCompartmentViewFactory"
         canonicalEditPolicyClassName="SimpleCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.2"
         graphicalNodeEditPolicyClassName="SimpleCompartmentGraphicalNodeEditPolicy"
@@ -99,6 +101,7 @@
           visualID="4002"
           editPartClassName="SimpleCompartmentNameEditPart"
           itemSemanticEditPolicyClassName="SimpleCompartmentNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="SimpleCompartmentNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -120,18 +123,18 @@
     </childNodes>
     <childNodes
         visualID="2003"
-        editPartClassName="SimpleSubNodeEditPart"
-        itemSemanticEditPolicyClassName="SimpleSubNodeItemSemanticEditPolicy"
-        canonicalEditPolicyClassName="SimpleSubNodeCanonicalEditPolicy"
+        editPartClassName="SimpleSubNodeReferenceEditPart"
+        itemSemanticEditPolicyClassName="SimpleSubNodeReferenceItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="SimpleSubNodeReferenceCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.2"
-        graphicalNodeEditPolicyClassName="SimpleSubNodeGraphicalNodeEditPolicy"
-        createCommandClassName="SimpleSubNodeCreateCommand"
+        graphicalNodeEditPolicyClassName="SimpleSubNodeReferenceGraphicalNodeEditPolicy"
+        createCommandClassName="SimpleSubNodeReferenceCreateCommand"
         containers="//@diagram/@childNodes.2 //@diagram/@childNodes.1 //@diagram/@topLevelNodes.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="SimpleSubNodeEditHelper"/>
+          editHelperClassName="SimpleSubNodeReferenceEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           layoutType="TOOLBAR_LAYOUT"
@@ -144,7 +147,7 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
         <containmentMetaFeature
             href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
@@ -152,8 +155,8 @@
       </modelFacet>
       <labels
           visualID="4001"
-          editPartClassName="SimpleSubNodeNameEditPart"
-          itemSemanticEditPolicyClassName="SimpleSubNodeNameItemSemanticEditPolicy"
+          editPartClassName="SimpleSubNodeReferenceNameEditPart"
+          itemSemanticEditPolicyClassName="SimpleSubNodeReferenceNameItemSemanticEditPolicy"
           readOnly="true"
           elementIcon="true">
         <diagramRunTimeClass
@@ -402,11 +405,6 @@
         xsi:type="gmfgen:PredefinedParser"
         uses="//@diagram/@childNodes.0/@labelModelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
   </labelParsers>
-  <contextMenus
-      context="//@diagram">
-    <items
-        xsi:type="gmfgen:LoadResourceAction"/>
-  </contextMenus>
   <contextMenus
       context="//@diagram">
     <items

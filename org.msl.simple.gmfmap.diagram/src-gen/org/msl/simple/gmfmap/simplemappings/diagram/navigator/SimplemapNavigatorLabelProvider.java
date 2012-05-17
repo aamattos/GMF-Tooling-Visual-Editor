@@ -21,8 +21,8 @@ import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEd
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
@@ -91,22 +91,22 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 		switch (SimplemapVisualIDRegistry.getVisualID(view)) {
 		case SimpleMappingEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Diagram?http://org.msl.simple.gmfmap/simplemappings?SimpleMapping", SimplemapElementTypes.SimpleMapping_79); //$NON-NLS-1$
+					"Navigator?Diagram?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleMapping", SimplemapElementTypes.SimpleMapping_79); //$NON-NLS-1$
 		case SimpleTopNodeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://org.msl.simple.gmfmap/simplemappings?SimpleTopNode", SimplemapElementTypes.SimpleTopNode_1001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleTopNode", SimplemapElementTypes.SimpleTopNode_1001); //$NON-NLS-1$
 		case SimpleLinkMappingEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://org.msl.simple.gmfmap/simplemappings?SimpleLinkMapping", SimplemapElementTypes.SimpleLinkMapping_1002); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleLinkMapping", SimplemapElementTypes.SimpleLinkMapping_1002); //$NON-NLS-1$
 		case SimpleLabelNodeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings?SimpleLabelNode", SimplemapElementTypes.SimpleLabelNode_2001); //$NON-NLS-1$
+					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleLabelNode", SimplemapElementTypes.SimpleLabelNode_2001); //$NON-NLS-1$
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings?SimpleCompartment", SimplemapElementTypes.SimpleCompartment_2002); //$NON-NLS-1$
-		case SimpleSubNodeEditPart.VISUAL_ID:
+					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleCompartment", SimplemapElementTypes.SimpleCompartment_2002); //$NON-NLS-1$
+		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings?SimpleSubNode", SimplemapElementTypes.SimpleSubNode_2003); //$NON-NLS-1$
+					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleSubNodeReference", SimplemapElementTypes.SimpleSubNodeReference_2003); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -169,8 +169,8 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 			return getSimpleLabelNode_2001Text(view);
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			return getSimpleCompartment_2002Text(view);
-		case SimpleSubNodeEditPart.VISUAL_ID:
-			return getSimpleSubNode_2003Text(view);
+		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
+			return getSimpleSubNodeReference_2003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -265,12 +265,12 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getSimpleSubNode_2003Text(View view) {
+	private String getSimpleSubNodeReference_2003Text(View view) {
 		IParser parser = SimplemapParserProvider.getParser(
-				SimplemapElementTypes.SimpleSubNode_2003,
-				view.getElement() != null ? view.getElement() : view,
+				SimplemapElementTypes.SimpleSubNodeReference_2003, view
+						.getElement() != null ? view.getElement() : view,
 				SimplemapVisualIDRegistry
-						.getType(SimpleSubNodeNameEditPart.VISUAL_ID));
+						.getType(SimpleSubNodeReferenceNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),

@@ -10,7 +10,6 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.msl.simple.gmfmap.simplemappings.*;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
@@ -19,7 +18,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -159,13 +158,13 @@ public class SimplemappingsSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SimplemappingsPackage.SIMPLE_SUB_NODE: {
-				SimpleSubNode simpleSubNode = (SimpleSubNode)theEObject;
-				T result = caseSimpleSubNode(simpleSubNode);
-				if (result == null) result = caseSimpleNode(simpleSubNode);
-				if (result == null) result = caseSimpleParentNode(simpleSubNode);
-				if (result == null) result = caseSimpleChildNode(simpleSubNode);
-				if (result == null) result = caseSimpleDomainMapElement(simpleSubNode);
+			case SimplemappingsPackage.SIMPLE_SUB_NODE_REFERENCE: {
+				SimpleSubNodeReference simpleSubNodeReference = (SimpleSubNodeReference)theEObject;
+				T result = caseSimpleSubNodeReference(simpleSubNodeReference);
+				if (result == null) result = caseSimpleNode(simpleSubNodeReference);
+				if (result == null) result = caseSimpleParentNode(simpleSubNodeReference);
+				if (result == null) result = caseSimpleChildNode(simpleSubNodeReference);
+				if (result == null) result = caseSimpleDomainMapElement(simpleSubNodeReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -300,17 +299,17 @@ public class SimplemappingsSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Sub Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Sub Node Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Sub Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Sub Node Reference</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSimpleSubNode(SimpleSubNode object) {
+	public T caseSimpleSubNodeReference(SimpleSubNodeReference object) {
 		return null;
 	}
 

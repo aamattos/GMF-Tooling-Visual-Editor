@@ -14,11 +14,11 @@ import org.eclipse.gmf.tooldef.CreationTool;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 
 public class NewSubNodeTrigger extends NewTopNodeTrigger {
 	
-	public NewSubNodeTrigger(TransactionalEditingDomain domain, SimpleParentNode parent, SimpleSubNode newSubNodeReference) {
+	public NewSubNodeTrigger(TransactionalEditingDomain domain, SimpleParentNode parent, SimpleSubNodeReference newSubNodeReference) {
 		super(domain, parent, newSubNodeReference);
 	}
 

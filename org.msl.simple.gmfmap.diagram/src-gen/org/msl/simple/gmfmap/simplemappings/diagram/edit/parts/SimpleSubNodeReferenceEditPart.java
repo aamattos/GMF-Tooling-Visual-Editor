@@ -27,15 +27,15 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.widgets.Display;
 import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeCanonicalEditPolicy;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeItemSemanticEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeReferenceCanonicalEditPolicy;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimpleSubNodeReferenceItemSemanticEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 
 /**
  * @generated
  */
-public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
+public class SimpleSubNodeReferenceEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
@@ -55,7 +55,7 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public SimpleSubNodeEditPart(View view) {
+	public SimpleSubNodeReferenceEditPart(View view) {
 		super(view);
 	}
 
@@ -67,11 +67,11 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 				new CreationEditPolicy());
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new SimpleSubNodeItemSemanticEditPolicy());
+				new SimpleSubNodeReferenceItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE,
 				new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new SimpleSubNodeCanonicalEditPolicy());
+				new SimpleSubNodeReferenceCanonicalEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -114,8 +114,8 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof SimpleSubNodeNameEditPart) {
-			((SimpleSubNodeNameEditPart) childEditPart)
+		if (childEditPart instanceof SimpleSubNodeReferenceNameEditPart) {
+			((SimpleSubNodeReferenceNameEditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureSubNodeNameFigure());
 			return true;
 		}
@@ -126,7 +126,7 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof SimpleSubNodeNameEditPart) {
+		if (childEditPart instanceof SimpleSubNodeReferenceNameEditPart) {
 			return true;
 		}
 		return false;
@@ -250,7 +250,7 @@ public class SimpleSubNodeEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(SimplemapVisualIDRegistry
-				.getType(SimpleSubNodeNameEditPart.VISUAL_ID));
+				.getType(SimpleSubNodeReferenceNameEditPart.VISUAL_ID));
 	}
 
 	/**

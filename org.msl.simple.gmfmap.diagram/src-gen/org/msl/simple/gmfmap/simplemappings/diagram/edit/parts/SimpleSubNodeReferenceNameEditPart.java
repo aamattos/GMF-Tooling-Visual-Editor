@@ -41,8 +41,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.msl.simple.gmfmap.diagram.figures.WrappingLabelWithColorIcon;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.policies.SimplemapTextSelectionEditPolicy;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
@@ -51,8 +50,8 @@ import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapParserPro
 /**
  * @generated
  */
-public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
-		ITextAwareEditPart {
+public class SimpleSubNodeReferenceNameEditPart extends CompartmentEditPart
+		implements ITextAwareEditPart {
 
 	/**
 	 * @generated
@@ -82,7 +81,7 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public SimpleSubNodeNameEditPart(View view) {
+	public SimpleSubNodeReferenceNameEditPart(View view) {
 		super(view);
 	}
 
@@ -121,6 +120,9 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		}
 	}
 
+	/**
+	 * @generated not
+	 */
 	protected void setForegroundColorIconHelper(IFigure figure,
 			RGBColor foreGroundColor) {
 		if (figure instanceof WrappingLabelWithColorIcon) {
@@ -129,6 +131,9 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		}
 	}
 
+	/**
+	 * @generated not
+	 */
 	protected void setBackgroundColorIconHelper(IFigure figure,
 			RGBColor backgroundColor) {
 		if (figure instanceof WrappingLabelWithColorIcon) {
@@ -315,10 +320,10 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = SimplemapParserProvider
 					.getParser(
-							SimplemapElementTypes.SimpleSubNode_2003,
+							SimplemapElementTypes.SimpleSubNodeReference_2003,
 							getParserElement(),
 							SimplemapVisualIDRegistry
-									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart.VISUAL_ID));
+									.getType(org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}
@@ -432,8 +437,11 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		}
 	}
 
+	/**
+	 * @generated not
+	 */
 	private RGBColor getFigureBackgroundColor() {
-		Figure nodeFigure = ((SimpleSubNode) resolveSemanticElement())
+		Figure nodeFigure = ((SimpleSubNodeReference) resolveSemanticElement())
 				.getNodeFigure();
 
 		if (nodeFigure != null
@@ -443,8 +451,11 @@ public class SimpleSubNodeNameEditPart extends CompartmentEditPart implements
 		return null;
 	}
 
+	/**
+	 * @generated not
+	 */
 	private RGBColor getFigureForegroundColor() {
-		Figure nodeFigure = ((SimpleSubNode) resolveSemanticElement())
+		Figure nodeFigure = ((SimpleSubNodeReference) resolveSemanticElement())
 				.getNodeFigure();
 
 		if (nodeFigure != null

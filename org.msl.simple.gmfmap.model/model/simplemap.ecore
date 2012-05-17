@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simplemappings"
-    nsURI="http://org.msl.simple.gmfmap/simplemappings" nsPrefix="simplemap">
+    nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1" nsPrefix="simplemap">
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="settingDelegates" value="org.msl.simple.gmfmap.simplemapping.setting"/>
     <details key="invocationDelegates" value="org.msl.simple.gmfmap.simplemapping.invocation"/>
@@ -103,7 +103,7 @@
       <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleSubNode" eSuperTypes="#//SimpleNode #//SimpleParentNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleSubNodeReference" eSuperTypes="#//SimpleNode #//SimpleParentNode"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleDomainMapElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainMetaElement" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
   </eClassifiers>

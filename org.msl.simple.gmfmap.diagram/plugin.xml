@@ -280,7 +280,7 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
       <?gmfgen generated="true"?>
-      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings">
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
                id="org.msl.simple.gmfmap.diagram.SimpleMapping_79"
                name="%metatype.name.SimpleMapping_79"
@@ -290,7 +290,7 @@
             <param name="semanticHint" value="79"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings">
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
                id="org.msl.simple.gmfmap.diagram.SimpleTopNode_1001"
                name="%metatype.name.SimpleTopNode_1001"
@@ -300,7 +300,7 @@
             <param name="semanticHint" value="1001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings">
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
                id="org.msl.simple.gmfmap.diagram.SimpleLinkMapping_1002"
                name="%metatype.name.SimpleLinkMapping_1002"
@@ -310,7 +310,7 @@
             <param name="semanticHint" value="1002"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings">
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
                id="org.msl.simple.gmfmap.diagram.SimpleLabelNode_2001"
                name="%metatype.name.SimpleLabelNode_2001"
@@ -320,7 +320,7 @@
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings">
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
                id="org.msl.simple.gmfmap.diagram.SimpleCompartment_2002"
                name="%metatype.name.SimpleCompartment_2002"
@@ -330,13 +330,13 @@
             <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings">
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
-               id="org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"
-               name="%metatype.name.SimpleSubNode_2003"
+               id="org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_2003"
+               name="%metatype.name.SimpleSubNodeReference_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="SimpleSubNode"
-               edithelper="org.msl.simple.gmfmap.simplemappings.diagram.edit.helpers.SimpleSubNodeEditHelper">
+               eclass="SimpleSubNodeReference"
+               edithelper="org.msl.simple.gmfmap.simplemappings.diagram.edit.helpers.SimpleSubNodeReferenceEditHelper">
             <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
@@ -357,7 +357,7 @@
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleLinkMapping_1002"/>
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleLabelNode_2001"/>
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleCompartment_2002"/>
-         <elementType ref="org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"/>
+         <elementType ref="org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_2003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -511,27 +511,11 @@
             </visibleWhen>
          </command>
       </menuContribution>
-      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
-         <command commandId="org.msl.simple.gmfmap.diagram.LoadResourceAction">
-            <visibleWhen>
-               <and>
-                  <with variable="activePartId"><equals value="org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"/></with>
-                  <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart"/>
-                  </iterate></with>
-               </and>
-            </visibleWhen>
-         </command>
-      </menuContribution>
    </extension>
 
    <extension point="org.eclipse.ui.commands" id="menu-commands">
       <?gmfgen generated="true"?>
       <category id="org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
-      <command id="org.msl.simple.gmfmap.diagram.LoadResourceAction"
-         name="Load Resource"
-         categoryId="org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"
-         defaultHandler="org.msl.simple.gmfmap.simplemappings.diagram.part.LoadResourceAction"/>
       <command id="org.msl.simple.gmfmap.diagram.LoadResourceAction"
          name="Load Resource"
          categoryId="org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"

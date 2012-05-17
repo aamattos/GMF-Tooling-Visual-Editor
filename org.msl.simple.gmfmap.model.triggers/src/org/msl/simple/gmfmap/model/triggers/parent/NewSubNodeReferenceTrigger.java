@@ -15,7 +15,6 @@ import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
-import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 
 public class NewSubNodeReferenceTrigger extends NewTopNodeTrigger {
 	

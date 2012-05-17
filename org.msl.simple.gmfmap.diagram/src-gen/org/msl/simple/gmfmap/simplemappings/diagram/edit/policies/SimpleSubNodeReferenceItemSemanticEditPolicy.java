@@ -12,24 +12,24 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleCompartmentCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNodeCreateCommand;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeCreateCommand;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeReferenceCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 import org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapElementTypes;
 
 /**
  * @generated
  */
-public class SimpleSubNodeItemSemanticEditPolicy extends
+public class SimpleSubNodeReferenceItemSemanticEditPolicy extends
 		SimplemapBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public SimpleSubNodeItemSemanticEditPolicy() {
-		super(SimplemapElementTypes.SimpleSubNode_2003);
+	public SimpleSubNodeReferenceItemSemanticEditPolicy() {
+		super(SimplemapElementTypes.SimpleSubNodeReference_2003);
 	}
 
 	/**
@@ -43,8 +43,9 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 				.getElementType()) {
 			return getGEFWrapper(new SimpleCompartmentCreateCommand(req));
 		}
-		if (SimplemapElementTypes.SimpleSubNode_2003 == req.getElementType()) {
-			return getGEFWrapper(new SimpleSubNodeCreateCommand(req));
+		if (SimplemapElementTypes.SimpleSubNodeReference_2003 == req
+				.getElementType()) {
+			return getGEFWrapper(new SimpleSubNodeReferenceCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -92,7 +93,7 @@ public class SimpleSubNodeItemSemanticEditPolicy extends
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
-			case SimpleSubNodeEditPart.VISUAL_ID:
+			case SimpleSubNodeReferenceEditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 

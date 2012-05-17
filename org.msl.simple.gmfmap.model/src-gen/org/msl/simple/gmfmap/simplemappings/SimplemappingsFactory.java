@@ -80,13 +80,13 @@ public interface SimplemappingsFactory extends EFactory {
 	SimpleNode createSimpleNode();
 
 	/**
-	 * Returns a new object of class '<em>Simple Sub Node</em>'.
+	 * Returns a new object of class '<em>Simple Sub Node Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Simple Sub Node</em>'.
+	 * @return a new object of class '<em>Simple Sub Node Reference</em>'.
 	 * @generated
 	 */
-	SimpleSubNode createSimpleSubNode();
+	SimpleSubNodeReference createSimpleSubNodeReference();
 
 	/**
 	 * Returns a new object of class '<em>Simple Domain Map Element</em>'.

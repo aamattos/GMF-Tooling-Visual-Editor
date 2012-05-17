@@ -1,8 +1,10 @@
 package org.msl.simple.gmfmap.simplemapping.setting;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.EStructuralFeature.Internal.SettingDelegate;
 import org.eclipse.emf.ecore.EStructuralFeature.Internal.SettingDelegate.Factory;
+import org.eclipse.emf.ecore.util.BasicSettingDelegate.Stateless;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 public class SimpleMappingSettingDelegateFactory implements Factory {
@@ -26,7 +28,21 @@ public class SimpleMappingSettingDelegateFactory implements Factory {
 		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_MAPPING)
 			return new SimpleMappingSettingDelegate(eStructuralFeature);
 		
-		return null;
+		return new Stateless(eStructuralFeature) {
+			
+			@Override
+			protected boolean isSet(InternalEObject owner) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+			
+			@Override
+			protected Object get(InternalEObject owner, boolean resolve,
+					boolean coreType) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
 	}
 
 }
