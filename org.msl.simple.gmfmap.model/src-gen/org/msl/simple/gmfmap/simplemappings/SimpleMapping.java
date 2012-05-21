@@ -8,8 +8,11 @@ package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.gmf.gmfgraph.Canvas;
+
 import org.eclipse.gmf.mappings.Mapping;
+
 import org.eclipse.gmf.tooldef.Palette;
 
 /**

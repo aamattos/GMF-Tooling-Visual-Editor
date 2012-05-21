@@ -332,6 +332,13 @@ public class CanvasFactory {
 		newRectangle.setBackgroundColor(backgroundColor);
 		
 		newRectangle.setInsets(createInsets(DEFAULT_COMPARTMENT_INSETS));
+
+		//Minimum size
+		Dimension minimumSize = GMFGraphFactory.eINSTANCE.createDimension();
+		minimumSize.setDx(160);
+		minimumSize.setDy(150);
+		
+		newRectangle.setMinimumSize(minimumSize);
 		
 		return newRectangle;
 		

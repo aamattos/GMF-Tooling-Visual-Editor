@@ -9,18 +9,12 @@ package org.msl.simple.gmfmap.simplemappings.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
-import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
-import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
-import org.msl.simple.gmfmap.simplemappings.SimpleNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
-import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
-import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
-import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
+
+import org.msl.simple.gmfmap.simplemappings.*;
 
 /**
  * <!-- begin-user-doc -->

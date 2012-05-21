@@ -18,5 +18,4 @@ package org.msl.simple.gmfmap.simplemappings;
  * @generated
  */
 public interface SimpleSubNodeReference extends SimpleNode, SimpleParentNode {
-
 } // SimpleSubNodeReference

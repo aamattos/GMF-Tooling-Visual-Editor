@@ -12,7 +12,7 @@
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
-            uri="http://org.msl.simple.gmfmap/simplemappings"
+            uri="http://org.msl.simple.gmfmap/simplemappings_1.1"
             class="org.msl.simple.gmfmap.simplemappings.provider.SimplemappingsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

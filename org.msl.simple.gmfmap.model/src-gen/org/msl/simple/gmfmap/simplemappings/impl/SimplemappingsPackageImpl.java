@@ -11,10 +11,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.gmf.gmfgraph.GMFGraphPackage;
+
 import org.eclipse.gmf.mappings.GMFMapPackage;
+
 import org.eclipse.gmf.tooldef.GMFToolPackage;
+
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;

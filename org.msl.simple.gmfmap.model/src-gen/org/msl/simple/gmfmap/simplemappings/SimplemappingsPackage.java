@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -72,76 +73,6 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_PARENT_NODE = 6;
 
 	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleMappingImpl <em>Simple Mapping</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleMappingImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleMapping()
-	 * @generated
-	 */
-	int SIMPLE_MAPPING = 0;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleChildNode()
-	 * @generated
-	 */
-	int SIMPLE_CHILD_NODE = 7;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl <em>Simple Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleNode()
-	 * @generated
-	 */
-	int SIMPLE_NODE = 5;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl <em>Simple Top Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleTopNode()
-	 * @generated
-	 */
-	int SIMPLE_TOP_NODE = 1;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl <em>Simple Compartment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleCompartment()
-	 * @generated
-	 */
-	int SIMPLE_COMPARTMENT = 2;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl <em>Simple Label Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLabelNode()
-	 * @generated
-	 */
-	int SIMPLE_LABEL_NODE = 3;
-
-	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl <em>Simple Link Mapping</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLinkMapping()
-	 * @generated
-	 */
-	int SIMPLE_LINK_MAPPING = 4;
-
-	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -167,6 +98,16 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_PARENT_NODE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleMappingImpl <em>Simple Mapping</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleMappingImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleMapping()
+	 * @generated
+	 */
+	int SIMPLE_MAPPING = 0;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -241,6 +182,16 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_MAPPING_OPERATION_COUNT = SIMPLE_PARENT_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode <em>Simple Child Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleChildNode
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleChildNode()
+	 * @generated
+	 */
+	int SIMPLE_CHILD_NODE = 7;
+
+	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -302,6 +253,16 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_CHILD_NODE_OPERATION_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl <em>Simple Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleNode()
+	 * @generated
+	 */
+	int SIMPLE_NODE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -446,6 +407,16 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_NODE_OPERATION_COUNT = SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl <em>Simple Top Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleTopNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleTopNode()
+	 * @generated
+	 */
+	int SIMPLE_TOP_NODE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -610,6 +581,16 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_TOP_NODE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl <em>Simple Compartment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleCompartment()
+	 * @generated
+	 */
+	int SIMPLE_COMPARTMENT = 2;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,6 +706,16 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_COMPARTMENT_OPERATION_COUNT = SIMPLE_PARENT_NODE_OPERATION_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl <em>Simple Label Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLabelNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLabelNode()
+	 * @generated
+	 */
+	int SIMPLE_LABEL_NODE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -869,6 +860,16 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_LABEL_NODE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl <em>Simple Link Mapping</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleLinkMapping()
+	 * @generated
+	 */
+	int SIMPLE_LINK_MAPPING = 4;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -1186,6 +1187,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_DOMAIN_MAP_ELEMENT_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleMapping <em>Simple Mapping</em>}'.
@@ -1641,6 +1643,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>

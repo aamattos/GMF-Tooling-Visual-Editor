@@ -8,6 +8,7 @@ package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Label;
+
 import org.eclipse.gmf.mappings.CompartmentMapping;
 
 /**

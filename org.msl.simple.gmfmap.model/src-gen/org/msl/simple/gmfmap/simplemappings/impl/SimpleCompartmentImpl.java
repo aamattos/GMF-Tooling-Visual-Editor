@@ -10,13 +10,18 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.Label;
+
 import org.eclipse.gmf.mappings.CompartmentMapping;
+
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;

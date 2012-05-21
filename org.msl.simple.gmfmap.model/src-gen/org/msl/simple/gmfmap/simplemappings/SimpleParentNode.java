@@ -7,6 +7,7 @@
 package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**

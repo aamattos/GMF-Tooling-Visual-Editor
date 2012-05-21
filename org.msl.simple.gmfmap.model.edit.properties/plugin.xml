@@ -6,7 +6,7 @@
       <factory
             class="org.msl.simple.gmfmap.model.edit.properties.SimpleMappingPropertiesAdapterFactory"
             supportedTypes="org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider"
-            uri="http://org.msl.simple.gmfmap/simplemappings">
+            uri="http://org.msl.simple.gmfmap/simplemappings_1.1">
       </factory>
    </extension>
 

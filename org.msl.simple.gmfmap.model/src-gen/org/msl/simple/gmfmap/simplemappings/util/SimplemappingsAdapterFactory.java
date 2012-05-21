@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.msl.simple.gmfmap.simplemappings.*;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;

@@ -7,7 +7,9 @@
 package org.msl.simple.gmfmap.simplemappings.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
