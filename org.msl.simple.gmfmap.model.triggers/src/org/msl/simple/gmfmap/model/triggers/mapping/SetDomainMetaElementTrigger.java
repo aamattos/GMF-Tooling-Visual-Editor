@@ -1,4 +1,4 @@
-package org.msl.simple.gmfmap.model.triggers.node;
+package org.msl.simple.gmfmap.model.triggers.mapping;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -12,17 +12,20 @@ import org.eclipse.gmf.gmfgraph.Node;
 import org.eclipse.gmf.gmfgraph.RealFigure;
 import org.eclipse.gmf.mappings.FeatureLabelMapping;
 import org.eclipse.gmf.mappings.LabelMapping;
+import org.eclipse.gmf.mappings.NodeMapping;
 import org.eclipse.gmf.tooldef.AbstractTool;
-import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.model.triggers.AbstractTrigger;
 
-class SetDomainMetaElementTrigger extends AbstractSimpleNodeTrigger {
+class SetDomainMetaElementTrigger extends AbstractTrigger {
 	
 	private EClass newElement;
+	private NodeMapping nodeMapping;
 
-	public SetDomainMetaElementTrigger(TransactionalEditingDomain domain, SimpleNode simpleNode, EClass newElement) {
-		super(domain, simpleNode);
+	public SetDomainMetaElementTrigger(TransactionalEditingDomain domain, NodeMapping nodeMapping, EClass newElement) {
+		super(domain);
 		
 		this.newElement = newElement;
+		this.nodeMapping = nodeMapping;
 	}
 
 	@Override
@@ -37,19 +40,12 @@ class SetDomainMetaElementTrigger extends AbstractSimpleNodeTrigger {
 	
 	private void updateMapping()
 	{
-		if(simpleNode.getNodeReference()!=null)
-		{
-			simpleNode.getNodeReference().getChild().setDomainMetaElement(newElement);
-			
-			EAttribute defaultLabelAttribute = getDefaultLabelAttribute();
-			FeatureLabelMapping defaultFeatureLabelMapping = getDefaultFeatureLabelMapping();
-			
-			if(defaultFeatureLabelMapping!=null && 
-					defaultLabelAttribute!=null)
-				defaultFeatureLabelMapping.getFeatures().add(defaultLabelAttribute);
-				
-		}
-			
+		EAttribute defaultLabelAttribute = getDefaultLabelAttribute();
+		FeatureLabelMapping defaultFeatureLabelMapping = getDefaultFeatureLabelMapping();
+		
+		if(defaultFeatureLabelMapping!=null && 
+				defaultLabelAttribute!=null)
+			defaultFeatureLabelMapping.getFeatures().add(defaultLabelAttribute);
 	}
 	
 	/**
@@ -74,10 +70,7 @@ class SetDomainMetaElementTrigger extends AbstractSimpleNodeTrigger {
 	
 	private FeatureLabelMapping getDefaultFeatureLabelMapping()
 	{
-		if(simpleNode.getNodeReference()==null)
-			return null;
-		
-		for(LabelMapping labelMapping:simpleNode.getNodeReference().getChild().getLabelMappings())
+		for(LabelMapping labelMapping:nodeMapping.getLabelMappings())
 			if(labelMapping instanceof FeatureLabelMapping)
 				return (FeatureLabelMapping)labelMapping;
 		
@@ -87,9 +80,14 @@ class SetDomainMetaElementTrigger extends AbstractSimpleNodeTrigger {
 	private void updateCanvas(String newElementName)
 	{
 		
-		DiagramLabel diagramLabelToRename = simpleNode.getDiagramLabel();
-		Node nodeToRename = simpleNode.getDiagramNode();
-		AbstractTool toolToRename = simpleNode.getTool();
+		DiagramLabel diagramLabelToRename = null;
+		
+		//Devolvemos el primer label definido
+		if(!nodeMapping.getLabelMappings().isEmpty())
+			diagramLabelToRename = nodeMapping.getLabelMappings().get(0).getDiagramLabel();
+		
+		Node nodeToRename = nodeMapping.getDiagramNode();
+		AbstractTool toolToRename = nodeMapping.getTool();
 		
 		//Node Name
 		if(nodeToRename!=null && canRename(nodeToRename))

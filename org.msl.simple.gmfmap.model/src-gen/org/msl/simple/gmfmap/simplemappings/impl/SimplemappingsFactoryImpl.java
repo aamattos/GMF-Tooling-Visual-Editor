@@ -9,12 +9,18 @@ package org.msl.simple.gmfmap.simplemappings.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.msl.simple.gmfmap.simplemappings.*;
+import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
+import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
+import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +73,7 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 			case SimplemappingsPackage.SIMPLE_LINK_MAPPING: return createSimpleLinkMapping();
 			case SimplemappingsPackage.SIMPLE_NODE: return createSimpleNode();
 			case SimplemappingsPackage.SIMPLE_SUB_NODE_REFERENCE: return createSimpleSubNodeReference();
-			case SimplemappingsPackage.SIMPLE_DOMAIN_MAP_ELEMENT: return createSimpleDomainMapElement();
+			case SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE: return createSimpleMappingElementWithFigure();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -148,9 +154,9 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleDomainMapElement createSimpleDomainMapElement() {
-		SimpleDomainMapElementImpl simpleDomainMapElement = new SimpleDomainMapElementImpl();
-		return simpleDomainMapElement;
+	public SimpleMappingElementWithFigure createSimpleMappingElementWithFigure() {
+		SimpleMappingElementWithFigureImpl simpleMappingElementWithFigure = new SimpleMappingElementWithFigureImpl();
+		return simpleMappingElementWithFigure;
 	}
 
 	/**

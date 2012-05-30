@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ISemanticParser;
-import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 
@@ -48,12 +48,18 @@ public class SimpleNodeFormatParser extends MessageFormatParser implements ISema
 		
 		//Deberia ser siempre EColumn pero alguna vez da un ClassCast y no sabemos por que
 		if(element instanceof SimpleNode)
-			parserElements.add((SimpleNode)element);
-		
-		if(element instanceof SimpleChildNode)
 		{
-			parserElements.add(getFigureBackgroundColor((SimpleChildNode)element));
-			parserElements.add(getFigureForegroundColor((SimpleChildNode)element));
+			parserElements.add((SimpleNode)element);
+			parserElements.add(((SimpleNode)element).getNodeReference());
+			
+			if(((SimpleNode)element).getNodeReference()!=null)
+				parserElements.add(((SimpleNode)element).getNodeReference().getChild());
+		}
+		
+		if(element instanceof SimpleMappingElementWithFigure)
+		{
+			parserElements.add(getFigureBackgroundColor((SimpleMappingElementWithFigure)element));
+			parserElements.add(getFigureForegroundColor((SimpleMappingElementWithFigure)element));
 		}
 			
 		return parserElements;
@@ -65,7 +71,7 @@ public class SimpleNodeFormatParser extends MessageFormatParser implements ISema
 		return true;
 	}
 
-	private RGBColor getFigureBackgroundColor(SimpleChildNode childNode) {
+	private RGBColor getFigureBackgroundColor(SimpleMappingElementWithFigure childNode) {
 		
 		Figure nodeFigure = childNode.getNodeFigure();
 
@@ -76,7 +82,7 @@ public class SimpleNodeFormatParser extends MessageFormatParser implements ISema
 		return null;
 	}
 
-	private RGBColor getFigureForegroundColor(SimpleChildNode childNode) {
+	private RGBColor getFigureForegroundColor(SimpleMappingElementWithFigure childNode) {
 		Figure nodeFigure = childNode.getNodeFigure();
 
 		if (nodeFigure != null

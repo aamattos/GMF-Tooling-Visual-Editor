@@ -15,8 +15,6 @@ import org.eclipse.gmf.mappings.Mapping;
 import org.eclipse.gmf.tooldef.Palette;
 import org.eclipse.jface.dialogs.ErrorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
-import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.Messages;
@@ -30,14 +28,9 @@ public class TransformToSimpleMappingWizard extends SimplemapCreationWizard {
 	private Canvas myCanvas;
 	private Palette myPalette;
 	
-	public TransformToSimpleMappingWizard() {
-	}
-
-	
 
 	@Override
-	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		super.init(workbench, selection);
+	public boolean performFinish() {
 		
 		TransformToSimpleMappingOperation myOperation = new TransformToSimpleMappingOperation(createResourceSet());
 		URI uri = URI.createPlatformResourceURI(getMapFile() .getFullPath()
@@ -52,13 +45,6 @@ public class TransformToSimpleMappingWizard extends SimplemapCreationWizard {
 		myMapping = myOperation.getMapping();
 		myCanvas = myMapping!=null?myMapping.getDiagram().getDiagramCanvas():null;
 		myPalette = myMapping!=null?myMapping.getDiagram().getPalette():null;
-		
-	}
-
-
-
-	@Override
-	public boolean performFinish() {
 		
 		IRunnableWithProgress op = new WorkspaceModifyOperation(null) {
 
@@ -107,7 +93,7 @@ public class TransformToSimpleMappingWizard extends SimplemapCreationWizard {
 		return rs;
 	}
 	
-	IFile getMapFile() {
+	protected IFile getMapFile() {
 		return (IFile) selection.getFirstElement();
 	}
 	

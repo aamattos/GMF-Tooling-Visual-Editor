@@ -7,7 +7,6 @@
 package org.msl.simple.gmfmap.simplemappings.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 

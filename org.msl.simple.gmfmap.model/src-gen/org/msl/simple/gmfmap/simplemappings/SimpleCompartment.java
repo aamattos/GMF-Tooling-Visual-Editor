@@ -8,7 +8,6 @@ package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.gmf.gmfgraph.Compartment;
 import org.eclipse.gmf.gmfgraph.Label;
-
 import org.eclipse.gmf.mappings.CompartmentMapping;
 
 /**
@@ -31,7 +30,7 @@ import org.eclipse.gmf.mappings.CompartmentMapping;
  * @model
  * @generated
  */
-public interface SimpleCompartment extends SimpleParentNode, SimpleChildNode {
+public interface SimpleCompartment extends SimpleParentNode, SimpleChildNode, SimpleMappingElementWithFigure {
 	/**
 	 * Returns the value of the '<em><b>Compartment Mapping</b></em>' reference.
 	 * <!-- begin-user-doc -->

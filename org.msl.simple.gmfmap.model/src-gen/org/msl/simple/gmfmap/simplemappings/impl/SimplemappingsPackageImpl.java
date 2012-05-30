@@ -11,21 +11,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.gmf.gmfgraph.GMFGraphPackage;
-
 import org.eclipse.gmf.mappings.GMFMapPackage;
-
 import org.eclipse.gmf.tooldef.GMFToolPackage;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
@@ -108,7 +103,7 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass simpleDomainMapElementEClass = null;
+	private EClass simpleMappingElementWithFigureEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -449,6 +444,15 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSimpleNode_DomainMetaElement() {
+		return (EReference)simpleNodeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSimpleParentNode() {
 		return simpleParentNodeEClass;
 	}
@@ -503,24 +507,6 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSimpleChildNode__GetNodeFigure() {
-		return simpleChildNodeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSimpleChildNode__GetLabelFigure() {
-		return simpleChildNodeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSimpleSubNodeReference() {
 		return simpleSubNodeReferenceEClass;
 	}
@@ -530,8 +516,8 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSimpleDomainMapElement() {
-		return simpleDomainMapElementEClass;
+	public EClass getSimpleMappingElementWithFigure() {
+		return simpleMappingElementWithFigureEClass;
 	}
 
 	/**
@@ -539,8 +525,17 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleDomainMapElement_DomainMetaElement() {
-		return (EReference)simpleDomainMapElementEClass.getEStructuralFeatures().get(0);
+	public EReference getSimpleMappingElementWithFigure_NodeFigure() {
+		return (EReference)simpleMappingElementWithFigureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSimpleMappingElementWithFigure_LabelFigure() {
+		return (EReference)simpleMappingElementWithFigureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -606,6 +601,7 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		createEReference(simpleNodeEClass, SIMPLE_NODE__LABEL_ATTRIBUTES);
 		createEReference(simpleNodeEClass, SIMPLE_NODE__DIAGRAM_NODE);
 		createEReference(simpleNodeEClass, SIMPLE_NODE__DIAGRAM_LABEL);
+		createEReference(simpleNodeEClass, SIMPLE_NODE__DOMAIN_META_ELEMENT);
 
 		simpleParentNodeEClass = createEClass(SIMPLE_PARENT_NODE);
 		createEReference(simpleParentNodeEClass, SIMPLE_PARENT_NODE__CHILDREN);
@@ -614,13 +610,12 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		createEReference(simpleChildNodeEClass, SIMPLE_CHILD_NODE__PARENT_NODE);
 		createEReference(simpleChildNodeEClass, SIMPLE_CHILD_NODE__PARENT_MAPPING);
 		createEReference(simpleChildNodeEClass, SIMPLE_CHILD_NODE__PARENT);
-		createEOperation(simpleChildNodeEClass, SIMPLE_CHILD_NODE___GET_NODE_FIGURE);
-		createEOperation(simpleChildNodeEClass, SIMPLE_CHILD_NODE___GET_LABEL_FIGURE);
 
 		simpleSubNodeReferenceEClass = createEClass(SIMPLE_SUB_NODE_REFERENCE);
 
-		simpleDomainMapElementEClass = createEClass(SIMPLE_DOMAIN_MAP_ELEMENT);
-		createEReference(simpleDomainMapElementEClass, SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT);
+		simpleMappingElementWithFigureEClass = createEClass(SIMPLE_MAPPING_ELEMENT_WITH_FIGURE);
+		createEReference(simpleMappingElementWithFigureEClass, SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE);
+		createEReference(simpleMappingElementWithFigureEClass, SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE);
 	}
 
 	/**
@@ -661,11 +656,13 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		simpleTopNodeEClass.getESuperTypes().add(this.getSimpleParentNode());
 		simpleCompartmentEClass.getESuperTypes().add(this.getSimpleParentNode());
 		simpleCompartmentEClass.getESuperTypes().add(this.getSimpleChildNode());
+		simpleCompartmentEClass.getESuperTypes().add(this.getSimpleMappingElementWithFigure());
 		simpleLabelNodeEClass.getESuperTypes().add(this.getSimpleNode());
 		simpleLinkMappingEClass.getESuperTypes().add(this.getSimpleChildNode());
 		simpleLinkMappingEClass.getESuperTypes().add(this.getSimpleParentNode());
+		simpleLinkMappingEClass.getESuperTypes().add(this.getSimpleMappingElementWithFigure());
 		simpleNodeEClass.getESuperTypes().add(this.getSimpleChildNode());
-		simpleNodeEClass.getESuperTypes().add(this.getSimpleDomainMapElement());
+		simpleNodeEClass.getESuperTypes().add(this.getSimpleMappingElementWithFigure());
 		simpleSubNodeReferenceEClass.getESuperTypes().add(this.getSimpleNode());
 		simpleSubNodeReferenceEClass.getESuperTypes().add(this.getSimpleParentNode());
 
@@ -698,13 +695,14 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 
 		initEClass(simpleNodeEClass, SimpleNode.class, "SimpleNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleNode_NodeReference(), theGMFMapPackage.getNodeReference(), null, "nodeReference", null, 0, 1, SimpleNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSimpleNode_ContainmentFeature(), ecorePackage.getEReference(), null, "containmentFeature", null, 0, 1, SimpleNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleNode_ContainmentFeature(), ecorePackage.getEReference(), null, "containmentFeature", null, 0, 1, SimpleNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSimpleNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, SimpleNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleNode_ParentMetaElement(), ecorePackage.getEClass(), null, "parentMetaElement", null, 0, 1, SimpleNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleNode_Tool(), theGMFToolPackage.getAbstractTool(), null, "tool", null, 0, 1, SimpleNode.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleNode_LabelAttributes(), ecorePackage.getEAttribute(), null, "labelAttributes", null, 0, -1, SimpleNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleNode_DiagramNode(), theGMFGraphPackage.getNode(), null, "diagramNode", null, 0, 1, SimpleNode.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleNode_DiagramLabel(), theGMFGraphPackage.getDiagramLabel(), null, "diagramLabel", null, 0, 1, SimpleNode.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleNode_DomainMetaElement(), ecorePackage.getEClass(), null, "domainMetaElement", null, 0, 1, SimpleNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleParentNodeEClass, SimpleParentNode.class, "SimpleParentNode", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleParentNode_Children(), this.getSimpleChildNode(), this.getSimpleChildNode_ParentNode(), "children", null, 0, -1, SimpleParentNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -714,14 +712,11 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		initEReference(getSimpleChildNode_ParentMapping(), this.getSimpleMapping(), null, "parentMapping", null, 0, 1, SimpleChildNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleChildNode_Parent(), this.getSimpleNode(), null, "parent", null, 0, 1, SimpleChildNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSimpleChildNode__GetNodeFigure(), theGMFGraphPackage.getFigure(), "getNodeFigure", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSimpleChildNode__GetLabelFigure(), theGMFGraphPackage.getFigure(), "getLabelFigure", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(simpleSubNodeReferenceEClass, SimpleSubNodeReference.class, "SimpleSubNodeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(simpleDomainMapElementEClass, SimpleDomainMapElement.class, "SimpleDomainMapElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSimpleDomainMapElement_DomainMetaElement(), ecorePackage.getEClass(), null, "domainMetaElement", null, 0, 1, SimpleDomainMapElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(simpleMappingElementWithFigureEClass, SimpleMappingElementWithFigure.class, "SimpleMappingElementWithFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSimpleMappingElementWithFigure_NodeFigure(), theGMFGraphPackage.getFigure(), null, "nodeFigure", null, 0, 1, SimpleMappingElementWithFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleMappingElementWithFigure_LabelFigure(), theGMFGraphPackage.getFigure(), null, "labelFigure", null, 0, 1, SimpleMappingElementWithFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -731,8 +726,6 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		createEcoreAnnotations();
 		// org.msl.simple.gmfmap.simplemapping.setting
 		createOrgAnnotations();
-		// org.msl.simple.gmfmap.simplemapping.invocation
-		createOrg_1Annotations();
 	}
 
 	/**
@@ -749,7 +742,7 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		   new String[] {
 			 "settingDelegates", "org.msl.simple.gmfmap.simplemapping.setting",
 			 "invocationDelegates", "org.msl.simple.gmfmap.simplemapping.invocation"
-		   });																	
+		   });																				
 	}
 
 	/**
@@ -767,6 +760,11 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		   });		
 		addAnnotation
 		  (getSimpleMapping_DomainMetaElement(), 
+		   source, 
+		   new String[] {
+		   });		
+		addAnnotation
+		  (getSimpleCompartment_Name(), 
 		   source, 
 		   new String[] {
 		   });		
@@ -792,6 +790,11 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		   });		
 		addAnnotation
 		  (getSimpleLinkMapping_Tool(), 
+		   source, 
+		   new String[] {
+		   });		
+		addAnnotation
+		  (getSimpleNode_ContainmentFeature(), 
 		   source, 
 		   new String[] {
 		   });		
@@ -824,7 +827,12 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		  (getSimpleNode_DiagramLabel(), 
 		   source, 
 		   new String[] {
-		   });				
+		   });		
+		addAnnotation
+		  (getSimpleNode_DomainMetaElement(), 
+		   source, 
+		   new String[] {
+		   });		
 		addAnnotation
 		  (getSimpleChildNode_ParentMapping(), 
 		   source, 
@@ -834,27 +842,17 @@ public class SimplemappingsPackageImpl extends EPackageImpl implements Simplemap
 		  (getSimpleChildNode_Parent(), 
 		   source, 
 		   new String[] {
+		   });		
+		addAnnotation
+		  (getSimpleMappingElementWithFigure_NodeFigure(), 
+		   source, 
+		   new String[] {
+		   });		
+		addAnnotation
+		  (getSimpleMappingElementWithFigure_LabelFigure(), 
+		   source, 
+		   new String[] {
 		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>org.msl.simple.gmfmap.simplemapping.invocation</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createOrg_1Annotations() {
-		String source = "org.msl.simple.gmfmap.simplemapping.invocation";																
-		addAnnotation
-		  (getSimpleChildNode__GetNodeFigure(), 
-		   source, 
-		   new String[] {
-		   });		
-		addAnnotation
-		  (getSimpleChildNode__GetLabelFigure(), 
-		   source, 
-		   new String[] {
-		   });		
 	}
 
 } //SimplemappingsPackageImpl

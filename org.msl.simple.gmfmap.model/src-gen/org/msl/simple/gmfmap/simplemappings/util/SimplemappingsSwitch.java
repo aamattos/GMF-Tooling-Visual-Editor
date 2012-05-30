@@ -6,16 +6,12 @@
  */
 package org.msl.simple.gmfmap.simplemappings.util;
 
-import java.util.List;
-
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.msl.simple.gmfmap.simplemappings.*;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
-import org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
@@ -95,7 +91,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSimpleNode(simpleTopNode);
 				if (result == null) result = caseSimpleParentNode(simpleTopNode);
 				if (result == null) result = caseSimpleChildNode(simpleTopNode);
-				if (result == null) result = caseSimpleDomainMapElement(simpleTopNode);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleTopNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -104,6 +100,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				T result = caseSimpleCompartment(simpleCompartment);
 				if (result == null) result = caseSimpleParentNode(simpleCompartment);
 				if (result == null) result = caseSimpleChildNode(simpleCompartment);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleCompartment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,7 +109,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				T result = caseSimpleLabelNode(simpleLabelNode);
 				if (result == null) result = caseSimpleNode(simpleLabelNode);
 				if (result == null) result = caseSimpleChildNode(simpleLabelNode);
-				if (result == null) result = caseSimpleDomainMapElement(simpleLabelNode);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleLabelNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,6 +118,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				T result = caseSimpleLinkMapping(simpleLinkMapping);
 				if (result == null) result = caseSimpleChildNode(simpleLinkMapping);
 				if (result == null) result = caseSimpleParentNode(simpleLinkMapping);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleLinkMapping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -128,7 +126,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				SimpleNode simpleNode = (SimpleNode)theEObject;
 				T result = caseSimpleNode(simpleNode);
 				if (result == null) result = caseSimpleChildNode(simpleNode);
-				if (result == null) result = caseSimpleDomainMapElement(simpleNode);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,13 +148,13 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSimpleNode(simpleSubNodeReference);
 				if (result == null) result = caseSimpleParentNode(simpleSubNodeReference);
 				if (result == null) result = caseSimpleChildNode(simpleSubNodeReference);
-				if (result == null) result = caseSimpleDomainMapElement(simpleSubNodeReference);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleSubNodeReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SimplemappingsPackage.SIMPLE_DOMAIN_MAP_ELEMENT: {
-				SimpleDomainMapElement simpleDomainMapElement = (SimpleDomainMapElement)theEObject;
-				T result = caseSimpleDomainMapElement(simpleDomainMapElement);
+			case SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE: {
+				SimpleMappingElementWithFigure simpleMappingElementWithFigure = (SimpleMappingElementWithFigure)theEObject;
+				T result = caseSimpleMappingElementWithFigure(simpleMappingElementWithFigure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -300,17 +298,17 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Domain Map Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Mapping Element With Figure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Domain Map Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Mapping Element With Figure</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSimpleDomainMapElement(SimpleDomainMapElement object) {
+	public T caseSimpleMappingElementWithFigure(SimpleMappingElementWithFigure object) {
 		return null;
 	}
 

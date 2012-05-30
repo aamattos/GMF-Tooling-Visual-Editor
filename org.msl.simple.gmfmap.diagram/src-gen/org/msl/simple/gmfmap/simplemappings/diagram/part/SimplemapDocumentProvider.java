@@ -53,6 +53,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
 import org.msl.simple.gmfmap.diagram.core.SimpleMapDiagramEditingDomainFactory;
+import org.msl.simple.gmfmap.diagram.util.SimpleMapMigrationUtil;
 
 /**
  * @generated
@@ -200,16 +201,16 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 	}
 
 	/**
-	 * @generated
+	 * @generated not
 	 */
 	protected void setDocumentContent(IDocument document, IEditorInput element)
 			throws CoreException {
 		IDiagramDocument diagramDocument = (IDiagramDocument) document;
 		TransactionalEditingDomain domain = diagramDocument.getEditingDomain();
+		
 		if (element instanceof FileEditorInput) {
 			IStorage storage = ((FileEditorInput) element).getStorage();
-			Diagram diagram = DiagramIOUtil.load(domain, storage, true,
-					getProgressMonitor());
+			Diagram diagram = DiagramIOUtil.load(domain, storage, true, getProgressMonitor());
 			document.setContent(diagram);
 		} else if (element instanceof URIEditorInput) {
 			URI uri = ((URIEditorInput) element).getURI();
@@ -281,6 +282,9 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 											"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
+		
+		if(document.getContent()==null)
+			SimpleMapMigrationUtil.checkMigration(element);
 	}
 
 	/**

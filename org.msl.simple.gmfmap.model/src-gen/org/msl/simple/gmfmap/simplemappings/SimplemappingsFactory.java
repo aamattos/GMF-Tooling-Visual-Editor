@@ -89,13 +89,13 @@ public interface SimplemappingsFactory extends EFactory {
 	SimpleSubNodeReference createSimpleSubNodeReference();
 
 	/**
-	 * Returns a new object of class '<em>Simple Domain Map Element</em>'.
+	 * Returns a new object of class '<em>Simple Mapping Element With Figure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Simple Domain Map Element</em>'.
+	 * @return a new object of class '<em>Simple Mapping Element With Figure</em>'.
 	 * @generated
 	 */
-	SimpleDomainMapElement createSimpleDomainMapElement();
+	SimpleMappingElementWithFigure createSimpleMappingElementWithFigure();
 
 	/**
 	 * Returns the package supported by this factory.

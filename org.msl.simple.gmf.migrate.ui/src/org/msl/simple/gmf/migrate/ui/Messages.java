@@ -4,7 +4,7 @@ import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
 
-	private static final String BUNDLE_NAME = "org.msl.simple.gmf.bridge.transform.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "org.msl.simple.gmf.migrate.ui.messages"; //$NON-NLS-1$
 
 	public static String GenModelConfigurationPage_btn_create_default;
 

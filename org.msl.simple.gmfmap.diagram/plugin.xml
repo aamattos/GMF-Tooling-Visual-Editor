@@ -252,15 +252,13 @@
       <?gmfgen generated="false"?>
       <modelingAssistantProvider class="org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapModelingAssistantProvider">
          <Priority name="Lowest"/>
-         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart" id="SimpleMapping_1000"/>
-         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart" id="SimpleTopNode_2003"/>
-         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart" id="SimpleSubNode_2006"/>
-         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart" id="SimpleLinkMapping_2007"/>
-         <object
-               class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart"
-               id="SimpleCompartment_3005">
+         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart" id="SimpleMapping_79"/>
+         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart" id="SimpleTopNode_1001"/>
+         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart" id="SimpleSubNodeReference_2003"/>
+         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart" id="SimpleLinkMapping_1002"/>
+         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart" id="SimpleCompartment_2002">
          </object>
-         <context elements="SimpleMapping_1000,SimpleTopNode_2003,SimpleSubNode_2006,SimpleLinkMapping_2007, SimpleCompartment_3005"/>
+         <context elements="SimpleMapping_79,SimpleTopNode_1001,SimpleSubNodeReference_2003,SimpleLinkMapping_1002, SimpleCompartment_2002"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -522,9 +520,6 @@
          defaultHandler="org.msl.simple.gmfmap.simplemappings.diagram.part.LoadResourceAction"/>
    </extension>
 
-   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
-      <?gmfgen generated="true"?>
-   </extension>
 
    <!-- optionally, specify keybindings -->
 </plugin>

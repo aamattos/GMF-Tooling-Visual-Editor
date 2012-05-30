@@ -64,6 +64,8 @@ public class SimpleLinkMappingItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNodeFigurePropertyDescriptor(object);
+			addLabelFigurePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addLinkMappingPropertyDescriptor(object);
 			addDiagramLinkPropertyDescriptor(object);
@@ -71,6 +73,50 @@ public class SimpleLinkMappingItemProvider
 			addToolPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Node Figure feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNodeFigurePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleMappingElementWithFigure_nodeFigure_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_nodeFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Label Figure feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelFigurePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleMappingElementWithFigure_labelFigure_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_labelFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

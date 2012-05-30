@@ -114,7 +114,7 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private SimpleMapping createInitialModel(Mapping myMapping, Canvas myCanvas, Palette myPalette) {
+	public SimpleMapping createInitialModel(Mapping myMapping, Canvas myCanvas, Palette myPalette) {
 		
 		simpleMapping = SimplemappingsFactory.eINSTANCE
 				.createSimpleMapping();
@@ -247,7 +247,7 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private void attachModelToResource(SimpleMapping model,
+	public void attachModelToResource(SimpleMapping model,
 			Resource resource) {
 		resource.getContents().add(model);
 	}

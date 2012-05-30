@@ -314,6 +314,13 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String SimplemapModelingAssistantProviderMessage;
+	
+	
+	public static String SimplemapDocumentProvider_MigrationNeeded;
+	
+	public static String SimpleModelWizardDomainModelSelectionPageTitle;
+	
+	public static String SimpleModelWizardDomainModelSelectionPageDesc;
 
 	//TODO: put accessor fields manually	
 }

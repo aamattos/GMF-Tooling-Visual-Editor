@@ -7,7 +7,6 @@
 package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.gmf.gmfgraph.Figure;
 
 /**
@@ -108,21 +107,5 @@ public interface SimpleChildNode extends EObject {
 	 * @generated
 	 */
 	void setParent(SimpleNode value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	Figure getNodeFigure();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	Figure getLabelFigure();
 
 } // SimpleChildNode

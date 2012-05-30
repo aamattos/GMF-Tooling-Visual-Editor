@@ -10,23 +10,18 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.WrappedException;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
-
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.gmf.gmfgraph.Connection;
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
 import org.eclipse.gmf.gmfgraph.Figure;
-
 import org.eclipse.gmf.mappings.LinkMapping;
-
 import org.eclipse.gmf.tooldef.AbstractTool;
-
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
+import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
@@ -42,6 +37,8 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getNodeFigure <em>Node Figure</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getLabelFigure <em>Label Figure</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getLinkMapping <em>Link Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getDiagramLink <em>Diagram Link</em>}</li>
@@ -237,38 +234,22 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #getNodeFigure() <em>Get Node Figure</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNodeFigure()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final EOperation.Internal.InvocationDelegate GET_NODE_FIGURE__EINVOCATION_DELEGATE = ((EOperation.Internal)SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE___GET_NODE_FIGURE).getInvocationDelegate();
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Figure getNodeFigure() {
-		try {
-			return (Figure)GET_NODE_FIGURE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
+		return (Figure)eGet(SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE, true);
 	}
 
 	/**
-	 * The cached invocation delegate for the '{@link #getLabelFigure() <em>Get Label Figure</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLabelFigure()
 	 * @generated
-	 * @ordered
 	 */
-	protected static final EOperation.Internal.InvocationDelegate GET_LABEL_FIGURE__EINVOCATION_DELEGATE = ((EOperation.Internal)SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE___GET_LABEL_FIGURE).getInvocationDelegate();
+	public void setNodeFigure(Figure newNodeFigure) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE, newNodeFigure);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -276,12 +257,16 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	 * @generated
 	 */
 	public Figure getLabelFigure() {
-		try {
-			return (Figure)GET_LABEL_FIGURE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
-		}
-		catch (InvocationTargetException ite) {
-			throw new WrappedException(ite);
-		}
+		return (Figure)eGet(SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabelFigure(Figure newLabelFigure) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE, newLabelFigure);
 	}
 
 	/**
@@ -294,6 +279,13 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 		if (baseClass == SimpleParentNode.class) {
 			switch (derivedFeatureID) {
 				case SimplemappingsPackage.SIMPLE_LINK_MAPPING__CHILDREN: return SimplemappingsPackage.SIMPLE_PARENT_NODE__CHILDREN;
+				default: return -1;
+			}
+		}
+		if (baseClass == SimpleMappingElementWithFigure.class) {
+			switch (derivedFeatureID) {
+				case SimplemappingsPackage.SIMPLE_LINK_MAPPING__NODE_FIGURE: return SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE;
+				case SimplemappingsPackage.SIMPLE_LINK_MAPPING__LABEL_FIGURE: return SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE;
 				default: return -1;
 			}
 		}
@@ -313,23 +305,14 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 				default: return -1;
 			}
 		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case SimplemappingsPackage.SIMPLE_LINK_MAPPING___GET_NODE_FIGURE:
-				return getNodeFigure();
-			case SimplemappingsPackage.SIMPLE_LINK_MAPPING___GET_LABEL_FIGURE:
-				return getLabelFigure();
+		if (baseClass == SimpleMappingElementWithFigure.class) {
+			switch (baseFeatureID) {
+				case SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE: return SimplemappingsPackage.SIMPLE_LINK_MAPPING__NODE_FIGURE;
+				case SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE: return SimplemappingsPackage.SIMPLE_LINK_MAPPING__LABEL_FIGURE;
+				default: return -1;
+			}
 		}
-		return super.eInvoke(operationID, arguments);
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //SimpleLinkMappingImpl

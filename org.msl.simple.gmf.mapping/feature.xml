@@ -2,7 +2,7 @@
 <feature
       id="org.msl.simple.gmf.mapping"
       label="GMF Simple Mapping Editor"
-      version="0.2.0.qualifier"
+      version="1.0.0.qualifier"
       provider-name="MSL"
       os="macosx,win32">
 

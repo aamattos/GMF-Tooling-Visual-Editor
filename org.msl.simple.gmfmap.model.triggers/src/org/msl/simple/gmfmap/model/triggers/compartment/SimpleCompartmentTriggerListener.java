@@ -12,7 +12,6 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 public class SimpleCompartmentTriggerListener extends TriggerListener implements
 		ResourceSetListener {
 	
-	public static NotificationFilter setCompartmentNameFilter;
 	public static NotificationFilter setCompartmentNeedsTitleFilter;
 	
 	public SimpleCompartmentTriggerListener() {
@@ -20,13 +19,6 @@ public class SimpleCompartmentTriggerListener extends TriggerListener implements
 	}
 
 	static{
-		
-		setCompartmentNameFilter = NotificationFilter
-		        .createNotifierTypeFilter(SimpleCompartment.class).and(
-		            NotificationFilter.createEventTypeFilter(Notification.SET)).and(
-		            NotificationFilter.createFeatureFilter(
-		            		SimpleCompartment.class,
-		            		SimplemappingsPackage.SIMPLE_COMPARTMENT__NAME));
 		
 		setCompartmentNeedsTitleFilter = NotificationFilter
 		        .createNotifierTypeFilter(SimpleCompartment.class).and(
@@ -40,14 +32,6 @@ public class SimpleCompartmentTriggerListener extends TriggerListener implements
 	@Override
 	protected Command trigger(TransactionalEditingDomain domain,
 			Notification notification) {
-		
-		if(setCompartmentNameFilter.matches(notification))
-		{
-			SimpleCompartment compartment = (SimpleCompartment)notification.getNotifier();
-			String newName = (String)notification.getNewValue();
-
-			return new SetCompartmentNameTrigger(domain, compartment, newName);
-		}
 		
 		if(setCompartmentNeedsTitleFilter.matches(notification))
 		{

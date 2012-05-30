@@ -173,7 +173,13 @@ public class SimpleNodeSettingDelegate extends Stateless {
 	}
 
 	private Object getDomainMetaElement(SimpleNode owner) {
-		return owner.getNodeReference()!=null?owner.getNodeReference().getChild().getDomainMetaElement():null;
+		
+		NodeReference nodeReference = owner.getNodeReference();
+		
+		if(nodeReference!=null && nodeReference.getChild()!=null)
+			return nodeReference.getChild().getDomainMetaElement();
+		
+		return null;
 	}
 
 	private Object getContainmentFeature(SimpleNode owner) {
@@ -199,17 +205,13 @@ public class SimpleNodeSettingDelegate extends Stateless {
 
 
 	private void setDomainMetaElement(SimpleNode owner, EClass newValue) {
-		owner.getNodeReference().getChild().setDomainMetaElement(newValue);
-		
-		//refreshNodeName(owner);
-		
+		if(owner.getNodeReference()!=null && owner.getNodeReference().getChild()!=null)
+			owner.getNodeReference().getChild().setDomainMetaElement(newValue);
 	}
 
 	private void setContainmentFeature(SimpleNode owner, EReference newValue) {
-		owner.getNodeReference().setContainmentFeature(newValue);
-		
-		//refreshNodeName(owner);
-		
+		if(owner.getNodeReference()!=null)
+			owner.getNodeReference().setContainmentFeature(newValue);
 	}
 
 	@Override

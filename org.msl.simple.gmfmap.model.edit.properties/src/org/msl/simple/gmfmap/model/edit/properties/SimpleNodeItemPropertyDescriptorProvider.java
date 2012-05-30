@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
+import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -82,7 +83,7 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 				return choiceOfValues;
 			}
 			
-			if(feature==SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT)
+			if(feature==SimplemappingsPackage.Literals.SIMPLE_NODE__DOMAIN_META_ELEMENT)
 			{
 				Collection<Object> choiceOfValues = new UniqueEList<Object>();
 				
@@ -129,7 +130,10 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 			
 			switch (feature.getEContainingClass().getEAllStructuralFeatures().indexOf(feature))
 			{
-
+				case SimplemappingsPackage.SIMPLE_MAPPING__DOMAIN_META_ELEMENT:{
+					if(object instanceof SimpleMapping)
+						return false;
+				}
 			}
 			
 			return defaultValue;

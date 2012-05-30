@@ -8,8 +8,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ISemanticParser;
-import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 
 /**
@@ -48,12 +48,16 @@ public class SimpleCompartmentFormatParser extends MessageFormatParser implement
 		
 		//Deberia ser siempre EColumn pero alguna vez da un ClassCast y no sabemos por que
 		if(element instanceof SimpleCompartment)
-			parserElements.add((SimpleCompartment)element);
-		
-		if(element instanceof SimpleChildNode)
 		{
-			parserElements.add(getFigureBackgroundColor((SimpleChildNode)element));
-			parserElements.add(getFigureForegroundColor((SimpleChildNode)element));
+			parserElements.add((SimpleCompartment)element);
+			parserElements.add(((SimpleCompartment)element).getCompartment());
+		}
+			
+		
+		if(element instanceof SimpleMappingElementWithFigure)
+		{
+			parserElements.add(getFigureBackgroundColor((SimpleMappingElementWithFigure)element));
+			parserElements.add(getFigureForegroundColor((SimpleMappingElementWithFigure)element));
 		}
 		
 		
@@ -66,7 +70,7 @@ public class SimpleCompartmentFormatParser extends MessageFormatParser implement
 		return true;
 	}
 	
-	private RGBColor getFigureBackgroundColor(SimpleChildNode childNode) {
+	private RGBColor getFigureBackgroundColor(SimpleMappingElementWithFigure childNode) {
 		
 		Figure nodeFigure = childNode.getNodeFigure();
 
@@ -77,7 +81,7 @@ public class SimpleCompartmentFormatParser extends MessageFormatParser implement
 		return null;
 	}
 
-	private RGBColor getFigureForegroundColor(SimpleChildNode childNode) {
+	private RGBColor getFigureForegroundColor(SimpleMappingElementWithFigure childNode) {
 		Figure nodeFigure = childNode.getNodeFigure();
 
 		if (nodeFigure != null

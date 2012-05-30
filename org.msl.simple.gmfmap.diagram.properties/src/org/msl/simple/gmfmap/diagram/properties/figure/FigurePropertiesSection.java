@@ -1,15 +1,31 @@
 package org.msl.simple.gmfmap.diagram.properties.figure;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EStructuralFeature.Setting;
+import org.eclipse.emf.ecore.util.EContentsEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.gmf.gmfgraph.BasicFont;
 import org.eclipse.gmf.gmfgraph.Color;
 import org.eclipse.gmf.gmfgraph.Figure;
+import org.eclipse.gmf.gmfgraph.FigureDescriptor;
 import org.eclipse.gmf.gmfgraph.FontStyle;
+import org.eclipse.gmf.gmfgraph.GMFGraphPackage;
 import org.eclipse.gmf.gmfgraph.RGBColor;
+import org.eclipse.gmf.gmfgraph.Shape;
+import org.eclipse.gmf.gmfgraph.provider.GMFGraphItemProviderAdapterFactory;
 import org.eclipse.gmf.runtime.common.core.command.ICommand;
 import org.eclipse.gmf.runtime.diagram.ui.internal.util.FontHelper;
 import org.eclipse.gmf.runtime.diagram.ui.l10n.DiagramUIMessages;
@@ -20,6 +36,7 @@ import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.resource.CompositeImageDescriptor;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.accessibility.AccessibleAdapter;
 import org.eclipse.swt.accessibility.AccessibleEvent;
@@ -42,15 +59,15 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IWorkbenchPart;
 import org.msl.simple.gmfmap.diagram.properties.AbstractExtendedPropertiesSection;
-import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
 
 public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	
 	protected static final String FONTS_LABEL = "Label Font";
 	
-	protected static final String COLORS_LABEL = "Figure Colors";
-
+	protected static final String COLORS_LABEL = "Figure";
+	
 	protected Button backgroundColorButton;
 	
 	protected Button foregroundColorButton;
@@ -64,6 +81,10 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	
 	// font family drop down
 	protected CCombo fontFamilyCombo;
+	
+	protected CCombo shapeFamilyCombo;
+	
+	protected Map<Shape, Integer> shapeFamilyMap;
 
 	// font size drop down
 	private CCombo fontSizeCombo;
@@ -76,6 +97,8 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 
 	protected Group colorsGroup;
 	
+	protected Group shapeGroup;
+	
 	private Figure nodeFigure;
 	
 	private RGB defaultBackgroundColor = DEFAULT_TOP_NODE_BACKGROUND;
@@ -83,6 +106,15 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	private RGB defaultForegroundColor = DEFAULT_TOP_NODE_FOREGROUND;
 	
 	private BasicFont labelFont;
+	
+	private GMFGraphItemProviderAdapterFactory adapterFactory = new GMFGraphItemProviderAdapterFactory();
+	
+	private static List<EClass> availableFigures = new ArrayList<EClass>();
+	
+	static{
+		availableFigures.add(GMFGraphPackage.eINSTANCE.getRoundedRectangle());
+		availableFigures.add(GMFGraphPackage.eINSTANCE.getRectangle());
+	}
 	
 	protected static class ColorOverlayImageDescriptor
 		extends CompositeImageDescriptor {
@@ -154,17 +186,18 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		fontsLabelGroup.setLayout(new GridLayout(2, false));
 		
 		GridLayout layout = new GridLayout(1, false);
-
-		fontGroup = getWidgetFactory().createGroup(fontsLabelGroup, FONTS_LABEL);
-		fontGroup.setLayout(layout);
-
-		createFontGroup(fontGroup);
-
+		
 		colorsGroup = getWidgetFactory().createGroup(fontsLabelGroup, COLORS_LABEL);
 		colorsGroup.setLayout(layout);
 
 		createColorsGroup(colorsGroup);
 
+		fontGroup = getWidgetFactory().createGroup(fontsLabelGroup, FONTS_LABEL);
+		fontGroup.setLayout(layout);
+		
+		createFontGroup(fontGroup);
+
+		
 		return fontsLabelGroup;
 
 	}
@@ -242,7 +275,6 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		return toolBar;
 	}
 
-	
 	/**
 	 * Create  font tool bar group
 	 * 
@@ -254,6 +286,18 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		Composite toolBar = new Composite(parent, SWT.SHADOW_NONE);
 		toolBar.setLayout(new GridLayout(2, false));
 		toolBar.setBackground(parent.getBackground());
+		
+		Label figureLabel = new Label(toolBar, SWT.LEFT);
+		figureLabel.setText("Shape");
+		
+		shapeFamilyCombo = getWidgetFactory().createCCombo(toolBar,
+				SWT.DROP_DOWN | SWT.READ_ONLY | SWT.BORDER);
+		shapeFamilyCombo.addSelectionListener(new SelectionAdapter() {
+
+			public void widgetSelected(SelectionEvent event) {
+				updateShapeFamily();
+			}
+		});
 		
 		Label bckLabel = new Label(toolBar, SWT.LEFT);
 		bckLabel.setText("Background");
@@ -365,6 +409,49 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		executeAsCompositeCommand("UpdateFontFamily", commands);
 
 		}
+	}
+	
+	/**
+	 * Update font family property
+	 */
+	protected void updateShapeFamily() {
+
+		// Update model in response to user
+		
+		List<ICommand> commands = new ArrayList<ICommand>();
+
+		final int newShapeID = shapeFamilyCombo.getSelectionIndex();
+		
+		commands.add(createCommand("UpdateFontFamily", nodeFigure.eResource(), new Runnable() {
+
+			public void run() {
+
+				Shape newShape = null;
+				
+				for(Map.Entry<Shape, Integer> entry:shapeFamilyMap.entrySet())
+				{
+					if(entry.getValue()==newShapeID)
+						newShape = entry.getKey();
+				}
+				
+				Figure newFigure = (Figure)EcoreUtil.copy(newShape);
+				EStructuralFeature containingFeature = nodeFigure.eContainingFeature();
+				EObject container = nodeFigure.eContainer();
+				
+				for(Setting setting: EcoreUtil.UsageCrossReferencer.find(nodeFigure, nodeFigure.eResource()))
+					if(!setting.getEStructuralFeature().isDerived())
+						EcoreUtil.replace(setting, nodeFigure, newFigure);
+				
+				if(containingFeature!=null)
+					EcoreUtil.replace(container, containingFeature, nodeFigure, newFigure);
+				
+				nodeFigure = newFigure;
+			}
+		}));
+
+		executeAsCompositeCommand("UpdateShape", commands);
+
+		
 	}
 
 	/**
@@ -616,6 +703,10 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 					fontItalicButton.setSelection(false);
 				}
 				
+				for(Shape shape: shapeFamilyMap.keySet())
+					if(nodeFigure.eClass().equals(shape.eClass()))
+						shapeFamilyCombo.setText(getFigureLabel(shape));
+				
 				RGB rgbBackgroundColor = getBackgroungRGBColor();
 				RGB rgbForegroundColor = getForegroundRGBColor();
 				
@@ -754,9 +845,29 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 	public void setInput(IWorkbenchPart part, ISelection selection) {
 		super.setInput(part, selection);
 		
-		nodeFigure = ((SimpleChildNode)getEObject()).getNodeFigure();
+		nodeFigure = ((SimpleMappingElementWithFigure)getEObject()).getNodeFigure();
 		
-		Figure labelFigure = ((SimpleChildNode)getEObject()).getLabelFigure();
+		shapeFamilyMap = new HashMap<Shape, Integer>();
+		
+		List<Object> childClasses = new ArrayList<Object>();
+		
+		shapeFamilyCombo.removeAll();
+		
+		for(Object childDescriptor:getEditingDomain().getNewChildDescriptors(null, nodeFigure))
+			if(childDescriptor instanceof CommandParameter)
+				childClasses.add(((CommandParameter)childDescriptor).getValue());
+		
+		Collection<Object> figures = EcoreUtil.getObjectsByType(childClasses, GMFGraphPackage.eINSTANCE.getShape());
+		
+		int i=0;
+		
+		for(Object figure:figures)
+		{
+			shapeFamilyMap.put(((Shape)figure), i++);
+			shapeFamilyCombo.add(getFigureLabel(figure));
+		}
+			
+		Figure labelFigure = ((SimpleMappingElementWithFigure)getEObject()).getLabelFigure();
 		
 		labelFont = (labelFigure!=null && labelFigure.getFont() instanceof BasicFont)?(BasicFont)labelFigure.getFont():null; 
 		
@@ -771,6 +882,18 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
 		}
 		
 		//updateColorCache();
+	}
+	
+	/**
+	 * @generated
+	 */
+	public String getFigureLabel(Object item) {
+		IItemLabelProvider labelProvider = (IItemLabelProvider) adapterFactory
+				.adapt(item, IItemLabelProvider.class);
+		if (labelProvider != null) {
+			return labelProvider.getText(item);
+		}
+		return null;
 	}
 	
     /**
@@ -803,6 +926,9 @@ public class FigurePropertiesSection extends AbstractExtendedPropertiesSection {
         if (foregroundColorButton != null && ! foregroundColorButton.isDisposed()) {
             disposeImage(foregroundColorButton.getImage());
         }
+        
+		if(shapeFamilyCombo!=null)
+			shapeFamilyCombo.dispose();
         
 		if(fontFamilyCombo!=null)
 			fontFamilyCombo.dispose();

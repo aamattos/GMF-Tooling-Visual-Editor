@@ -27,7 +27,9 @@ public class SimpleCompartmentSettingDelegate extends Stateless {
 		      	case SimplemappingsPackage.SIMPLE_COMPARTMENT__COMPARTMENT:
 		      		return getCompartment((SimpleCompartment)owner);
 		      	case SimplemappingsPackage.SIMPLE_COMPARTMENT__COMPARTMENT_LABEL:
-		      		return getCompartmentLabel((SimpleCompartment)owner);		      		
+		      		return getCompartmentLabel((SimpleCompartment)owner);
+		      	case SimplemappingsPackage.SIMPLE_COMPARTMENT__NAME:
+		      		return getCompartmentName((SimpleCompartment)owner);				      		
 		      }
 	    
 	    }
@@ -35,7 +37,37 @@ public class SimpleCompartmentSettingDelegate extends Stateless {
 		return null;
 	}
 	
-	
+	@Override
+	protected void set(InternalEObject owner, Object newValue) {
+		
+	    if (eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT)
+	    {
+		      switch (eStructuralFeature.getEContainingClass().getEAllStructuralFeatures().indexOf(eStructuralFeature))
+		      {	
+		      	case SimplemappingsPackage.SIMPLE_COMPARTMENT__NAME:
+		      		setCompartmentName((SimpleCompartment)owner, (String)newValue);
+		      }
+	    
+	    }
+		
+	}
+
+	private void setCompartmentName(SimpleCompartment owner, String newValue) {
+		
+		if(owner.getCompartment()==null)
+			return;
+		
+		owner.getCompartment().setName(newValue);
+		
+	}
+
+	private String getCompartmentName(SimpleCompartment owner) {
+		
+		if(owner.getCompartment()==null)
+			return "";
+		
+		return owner.getCompartment().getName();
+	}
 
 	private Label getCompartmentLabel(SimpleCompartment owner) {
 		

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Triggers
 Bundle-SymbolicName: org.msl.simple.gmfmap.model.triggers;singleton:=true
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.msl.simple.gmfmap.model.triggers.Activator
 Bundle-Vendor: ISB
 Require-Bundle: org.eclipse.ui,
@@ -13,6 +13,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.msl.simple.gmfmap.model.triggers,
  org.msl.simple.gmfmap.model.triggers.compartment,
+ org.msl.simple.gmfmap.model.triggers.graph,
  org.msl.simple.gmfmap.model.triggers.link,
- org.msl.simple.gmfmap.model.triggers.node,
+ org.msl.simple.gmfmap.model.triggers.mapping,
  org.msl.simple.gmfmap.model.triggers.parent

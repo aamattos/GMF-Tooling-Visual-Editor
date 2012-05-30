@@ -64,14 +64,60 @@ public class SimpleNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDomainMetaElementPropertyDescriptor(object);
+			addNodeFigurePropertyDescriptor(object);
+			addLabelFigurePropertyDescriptor(object);
 			addContainmentFeaturePropertyDescriptor(object);
 			addToolPropertyDescriptor(object);
 			addLabelAttributesPropertyDescriptor(object);
 			addDiagramNodePropertyDescriptor(object);
 			addDiagramLabelPropertyDescriptor(object);
+			addDomainMetaElementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Node Figure feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNodeFigurePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleMappingElementWithFigure_nodeFigure_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_nodeFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Label Figure feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelFigurePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SimpleMappingElementWithFigure_labelFigure_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_labelFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -85,9 +131,9 @@ public class SimpleNodeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SimpleDomainMapElement_domainMetaElement_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleDomainMapElement_domainMetaElement_feature", "_UI_SimpleDomainMapElement_type"),
-				 SimplemappingsPackage.Literals.SIMPLE_DOMAIN_MAP_ELEMENT__DOMAIN_META_ELEMENT,
+				 getString("_UI_SimpleNode_domainMetaElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleNode_domainMetaElement_feature", "_UI_SimpleNode_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_NODE__DOMAIN_META_ELEMENT,
 				 true,
 				 false,
 				 true,

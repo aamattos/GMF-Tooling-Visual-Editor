@@ -7,17 +7,16 @@ import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.Label;
 import org.eclipse.gmf.gmfgraph.RealFigure;
 import org.msl.simple.gmfmap.model.triggers.AbstractTrigger;
-import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 
 class SetCompartmentNameTrigger extends AbstractTrigger {
 	
-	private SimpleCompartment simpleCompartment;
+	private Compartment compartment;
 	private String newName;
 
-	public SetCompartmentNameTrigger(TransactionalEditingDomain domain, SimpleCompartment compartment, String newName) {
+	public SetCompartmentNameTrigger(TransactionalEditingDomain domain, Compartment compartment, String newName) {
 		super(domain);
 		
-		this.simpleCompartment = compartment;
+		this.compartment = compartment;
 		this.newName = newName;
 	}
 
@@ -31,14 +30,11 @@ class SetCompartmentNameTrigger extends AbstractTrigger {
 	private void updateCanvas()
 	{
 
-		Compartment canvasCompartment = simpleCompartment.getCompartment();
-		Label compartmentLabelToRename = simpleCompartment.getCompartmentLabel();
-		ChildAccess accessorToRename = canvasCompartment.getAccessor();
+		Label compartmentLabelToRename = getCompartmentLabel(compartment);
+		ChildAccess accessorToRename = compartment.getAccessor();
 		
-		String newCompartmentName = getNewCanvasElementName(newName, canvasCompartment);
+		String newCompartmentName = getNewCanvasElementName(newName, compartment);
 		
-		canvasCompartment.setName(newCompartmentName);
- 		
 		String newRectangleFigureName = newCompartmentName + "CompartmentFigure";
 		String newAccessorName = "getFigure" + newRectangleFigureName;
 		String newLabelFigureName = newCompartmentName + "CompartmentNameFigure";
@@ -61,5 +57,18 @@ class SetCompartmentNameTrigger extends AbstractTrigger {
 			
 	}
 
-
+	private Label getCompartmentLabel(Compartment compartment) {
+		
+		if(compartment.getAccessor()!=null)
+		{
+			Figure compartmentFigure = compartment.getAccessor().getFigure();
+			
+			if(compartmentFigure instanceof RealFigure)
+				for(Figure child:((RealFigure)compartmentFigure).getChildren())
+					if(child instanceof Label)
+						return (Label)child;
+		}
+		
+		return null;
+	}
 }

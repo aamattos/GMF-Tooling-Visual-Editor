@@ -7,16 +7,12 @@
 package org.msl.simple.gmfmap.simplemappings;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.gmf.gmfgraph.DiagramLabel;
 import org.eclipse.gmf.gmfgraph.Node;
-
 import org.eclipse.gmf.mappings.NodeReference;
-
 import org.eclipse.gmf.tooldef.AbstractTool;
 
 /**
@@ -35,6 +31,7 @@ import org.eclipse.gmf.tooldef.AbstractTool;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getLabelAttributes <em>Label Attributes</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getDiagramNode <em>Diagram Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getDiagramLabel <em>Diagram Label</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getDomainMetaElement <em>Domain Meta Element</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,7 +39,7 @@ import org.eclipse.gmf.tooldef.AbstractTool;
  * @model
  * @generated
  */
-public interface SimpleNode extends SimpleChildNode, SimpleDomainMapElement {
+public interface SimpleNode extends SimpleChildNode, SimpleMappingElementWithFigure {
 	/**
 	 * Returns the value of the '<em><b>Node Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -80,7 +77,7 @@ public interface SimpleNode extends SimpleChildNode, SimpleDomainMapElement {
 	 * @return the value of the '<em>Containment Feature</em>' reference.
 	 * @see #setContainmentFeature(EReference)
 	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleNode_ContainmentFeature()
-	 * @model
+	 * @model transient="true" derived="true"
 	 * @generated
 	 */
 	EReference getContainmentFeature();
@@ -240,5 +237,31 @@ public interface SimpleNode extends SimpleChildNode, SimpleDomainMapElement {
 	 * @generated
 	 */
 	boolean isSetDiagramLabel();
+
+	/**
+	 * Returns the value of the '<em><b>Domain Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Domain Meta Element</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Domain Meta Element</em>' reference.
+	 * @see #setDomainMetaElement(EClass)
+	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleNode_DomainMetaElement()
+	 * @model transient="true" derived="true"
+	 * @generated
+	 */
+	EClass getDomainMetaElement();
+
+	/**
+	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getDomainMetaElement <em>Domain Meta Element</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Domain Meta Element</em>' reference.
+	 * @see #getDomainMetaElement()
+	 * @generated
+	 */
+	void setDomainMetaElement(EClass value);
 
 } // SimpleNode

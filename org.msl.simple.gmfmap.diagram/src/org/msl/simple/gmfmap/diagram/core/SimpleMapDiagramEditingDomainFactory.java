@@ -3,10 +3,12 @@ package org.msl.simple.gmfmap.diagram.core;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.workspace.WorkspaceEditingDomainFactory;
 import org.eclipse.gmf.runtime.diagram.core.DiagramEditingDomainFactory;
-import org.msl.simple.gmfmap.model.triggers.SimpleMappingTriggerListener;
+import org.msl.simple.gmfmap.model.triggers.compartment.CompartmentTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.compartment.SimpleCompartmentTriggerListener;
+import org.msl.simple.gmfmap.model.triggers.graph.FigureDescriptorTriggerListener;
+import org.msl.simple.gmfmap.model.triggers.graph.RealFigureTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.link.SimpleLinkMappingTriggerListener;
-import org.msl.simple.gmfmap.model.triggers.node.SimpleNodeTriggerListener;
+import org.msl.simple.gmfmap.model.triggers.mapping.MappingEntryTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.parent.ParentNodeTriggerListener;
 
 public class SimpleMapDiagramEditingDomainFactory extends
@@ -32,10 +34,12 @@ public class SimpleMapDiagramEditingDomainFactory extends
 		super.configure(domain);
 		
 		domain.addResourceSetListener(new SimpleCompartmentTriggerListener());
-		domain.addResourceSetListener(new SimpleNodeTriggerListener());
 		domain.addResourceSetListener(new ParentNodeTriggerListener());
 		domain.addResourceSetListener(new SimpleLinkMappingTriggerListener());
-		domain.addResourceSetListener(new SimpleMappingTriggerListener());
+		domain.addResourceSetListener(new MappingEntryTriggerListener());
+		domain.addResourceSetListener(new CompartmentTriggerListener());
+		domain.addResourceSetListener(new FigureDescriptorTriggerListener());
+		domain.addResourceSetListener(new RealFigureTriggerListener());
 	}
 
 	

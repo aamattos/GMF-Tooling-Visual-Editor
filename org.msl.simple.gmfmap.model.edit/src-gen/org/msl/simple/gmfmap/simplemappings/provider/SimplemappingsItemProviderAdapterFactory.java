@@ -235,26 +235,26 @@ public class SimplemappingsItemProviderAdapterFactory extends SimplemappingsAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement} instances.
+	 * This keeps track of the one adapter used for all {@link org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SimpleDomainMapElementItemProvider simpleDomainMapElementItemProvider;
+	protected SimpleMappingElementWithFigureItemProvider simpleMappingElementWithFigureItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleDomainMapElement}.
+	 * This creates an adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSimpleDomainMapElementAdapter() {
-		if (simpleDomainMapElementItemProvider == null) {
-			simpleDomainMapElementItemProvider = new SimpleDomainMapElementItemProvider(this);
+	public Adapter createSimpleMappingElementWithFigureAdapter() {
+		if (simpleMappingElementWithFigureItemProvider == null) {
+			simpleMappingElementWithFigureItemProvider = new SimpleMappingElementWithFigureItemProvider(this);
 		}
 
-		return simpleDomainMapElementItemProvider;
+		return simpleMappingElementWithFigureItemProvider;
 	}
 
 	/**
@@ -363,7 +363,7 @@ public class SimplemappingsItemProviderAdapterFactory extends SimplemappingsAdap
 		if (simpleLinkMappingItemProvider != null) simpleLinkMappingItemProvider.dispose();
 		if (simpleNodeItemProvider != null) simpleNodeItemProvider.dispose();
 		if (simpleSubNodeReferenceItemProvider != null) simpleSubNodeReferenceItemProvider.dispose();
-		if (simpleDomainMapElementItemProvider != null) simpleDomainMapElementItemProvider.dispose();
+		if (simpleMappingElementWithFigureItemProvider != null) simpleMappingElementWithFigureItemProvider.dispose();
 	}
 
 }

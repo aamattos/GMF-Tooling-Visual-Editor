@@ -35,4 +35,10 @@ public class SimpleMappingPropertiesAdapterFactory extends
 		return object==IItemPropertyDescriptorProvider.class;
 	}
 
+	@Override
+	public Adapter createSimpleMappingAdapter() {
+		return simpleNodeProvider;
+	}
+
+	
 }
