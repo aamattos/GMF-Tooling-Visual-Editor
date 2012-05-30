@@ -6,7 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.msl.simple.gmfmap.model.triggers.Activator
 Bundle-Vendor: ISB
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
  org.eclipse.emf.transaction;bundle-version="1.4.0",
  org.msl.simple.gmfmap.model;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
