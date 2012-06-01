@@ -12,7 +12,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -64,8 +64,8 @@ public class ParentNodeTriggerListener extends TriggerListener implements
 			if(newChild instanceof SimpleCompartment)
 				return new NewCompartmentTrigger(domain, (SimpleNode)parent, (SimpleCompartment)newChild);
 
-			if(newChild instanceof SimpleSubNodeReference)
-				return new NewSubNodeTrigger(domain, parent, (SimpleSubNodeReference)newChild);
+			if(newChild instanceof SimpleSubNode)
+				return new NewSubNodeTrigger(domain, parent, (SimpleSubNode)newChild);
 
 			if(newChild instanceof SimpleLabelNode)
 				return new NewLabelNodeTrigger(domain, parent, (SimpleLabelNode)newChild);

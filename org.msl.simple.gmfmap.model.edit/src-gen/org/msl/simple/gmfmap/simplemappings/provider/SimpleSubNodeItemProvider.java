@@ -24,16 +24,16 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference} object.
+ * This is the item provider adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SimpleSubNodeReferenceItemProvider
+public class SimpleSubNodeItemProvider
 	extends SimpleNodeItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -47,7 +47,7 @@ public class SimpleSubNodeReferenceItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleSubNodeReferenceItemProvider(AdapterFactory adapterFactory) {
+	public SimpleSubNodeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -67,14 +67,14 @@ public class SimpleSubNodeReferenceItemProvider
 	}
 
 	/**
-	 * This returns SimpleSubNodeReference.gif.
+	 * This returns SimpleSubNode.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleSubNodeReference"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleSubNode"));
 	}
 
 	/**
@@ -85,9 +85,9 @@ public class SimpleSubNodeReferenceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SimpleSubNodeReference)object).getName();
+		String label = ((SimpleSubNode)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SimpleSubNodeReference_type") :
+			getString("_UI_SimpleSubNode_type") :
 			label;
 	}
 
@@ -102,8 +102,8 @@ public class SimpleSubNodeReferenceItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SimpleSubNodeReference.class)) {
-			case SimplemappingsPackage.SIMPLE_SUB_NODE_REFERENCE__CHILDREN:
+		switch (notification.getFeatureID(SimpleSubNode.class)) {
+			case SimplemappingsPackage.SIMPLE_SUB_NODE__CHILDREN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

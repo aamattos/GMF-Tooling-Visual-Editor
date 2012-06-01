@@ -207,10 +207,11 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 			throws CoreException {
 		IDiagramDocument diagramDocument = (IDiagramDocument) document;
 		TransactionalEditingDomain domain = diagramDocument.getEditingDomain();
-		
+
 		if (element instanceof FileEditorInput) {
 			IStorage storage = ((FileEditorInput) element).getStorage();
-			Diagram diagram = DiagramIOUtil.load(domain, storage, true, getProgressMonitor());
+			Diagram diagram = DiagramIOUtil.load(domain, storage, true,
+					getProgressMonitor());
 			document.setContent(diagram);
 		} else if (element instanceof URIEditorInput) {
 			URI uri = ((URIEditorInput) element).getURI();
@@ -282,8 +283,8 @@ public class SimplemapDocumentProvider extends AbstractDocumentProvider
 											"org.eclipse.ui.part.FileEditorInput", "org.eclipse.emf.common.ui.URIEditorInput" }), //$NON-NLS-1$ //$NON-NLS-2$ 
 							null));
 		}
-		
-		if(document.getContent()==null)
+
+		if (document.getContent() == null)
 			SimpleMapMigrationUtil.checkMigration(element);
 	}
 

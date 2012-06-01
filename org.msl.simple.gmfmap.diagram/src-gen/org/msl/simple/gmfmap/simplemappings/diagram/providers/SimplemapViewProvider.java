@@ -39,8 +39,8 @@ import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEd
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceNameEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -142,7 +142,7 @@ public class SimplemapViewProvider extends AbstractProvider implements
 				case SimpleLinkMappingEditPart.VISUAL_ID:
 				case SimpleLabelNodeEditPart.VISUAL_ID:
 				case SimpleCompartmentEditPart.VISUAL_ID:
-				case SimpleSubNodeReferenceEditPart.VISUAL_ID:
+				case SimpleSubNodeEditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != SimplemapVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -159,7 +159,7 @@ public class SimplemapViewProvider extends AbstractProvider implements
 				|| SimpleLinkMappingEditPart.VISUAL_ID == visualID
 				|| SimpleLabelNodeEditPart.VISUAL_ID == visualID
 				|| SimpleCompartmentEditPart.VISUAL_ID == visualID
-				|| SimpleSubNodeReferenceEditPart.VISUAL_ID == visualID;
+				|| SimpleSubNodeEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -228,9 +228,9 @@ public class SimplemapViewProvider extends AbstractProvider implements
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			return createSimpleCompartment_2002(domainElement, containerView,
 					index, persisted, preferencesHint);
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-			return createSimpleSubNodeReference_2003(domainElement,
-					containerView, index, persisted, preferencesHint);
+		case SimpleSubNodeEditPart.VISUAL_ID:
+			return createSimpleSubNode_2003(domainElement, containerView,
+					index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -391,7 +391,7 @@ public class SimplemapViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createSimpleSubNodeReference_2003(EObject domainElement,
+	public Node createSimpleSubNode_2003(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
@@ -400,7 +400,7 @@ public class SimplemapViewProvider extends AbstractProvider implements
 		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(SimplemapVisualIDRegistry
-				.getType(SimpleSubNodeReferenceEditPart.VISUAL_ID));
+				.getType(SimpleSubNodeEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -422,7 +422,7 @@ public class SimplemapViewProvider extends AbstractProvider implements
 		}
 		Node label4001 = createLabel(node,
 				SimplemapVisualIDRegistry
-						.getType(SimpleSubNodeReferenceNameEditPart.VISUAL_ID));
+						.getType(SimpleSubNodeNameEditPart.VISUAL_ID));
 		return node;
 	}
 

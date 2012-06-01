@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.Messages;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
@@ -49,20 +49,20 @@ public class SimplemapModelingAssistantProvider extends
 			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(SimplemapElementTypes.SimpleLabelNode_2001);
 			types.add(SimplemapElementTypes.SimpleCompartment_2002);
-			types.add(SimplemapElementTypes.SimpleSubNodeReference_2003);
+			types.add(SimplemapElementTypes.SimpleSubNode_2003);
 			return types;
 		}
 		if (editPart instanceof SimpleCompartmentEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 			types.add(SimplemapElementTypes.SimpleLabelNode_2001);
-			types.add(SimplemapElementTypes.SimpleSubNodeReference_2003);
+			types.add(SimplemapElementTypes.SimpleSubNode_2003);
 			return types;
 		}
-		if (editPart instanceof SimpleSubNodeReferenceEditPart) {
+		if (editPart instanceof SimpleSubNodeEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(SimplemapElementTypes.SimpleLabelNode_2001);
 			types.add(SimplemapElementTypes.SimpleCompartment_2002);
-			types.add(SimplemapElementTypes.SimpleSubNodeReference_2003);
+			types.add(SimplemapElementTypes.SimpleSubNode_2003);
 			return types;
 		}
 		return Collections.EMPTY_LIST;

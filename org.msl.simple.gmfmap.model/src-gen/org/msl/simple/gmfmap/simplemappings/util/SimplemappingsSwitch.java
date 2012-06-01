@@ -17,7 +17,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -142,13 +142,13 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SimplemappingsPackage.SIMPLE_SUB_NODE_REFERENCE: {
-				SimpleSubNodeReference simpleSubNodeReference = (SimpleSubNodeReference)theEObject;
-				T result = caseSimpleSubNodeReference(simpleSubNodeReference);
-				if (result == null) result = caseSimpleNode(simpleSubNodeReference);
-				if (result == null) result = caseSimpleParentNode(simpleSubNodeReference);
-				if (result == null) result = caseSimpleChildNode(simpleSubNodeReference);
-				if (result == null) result = caseSimpleMappingElementWithFigure(simpleSubNodeReference);
+			case SimplemappingsPackage.SIMPLE_SUB_NODE: {
+				SimpleSubNode simpleSubNode = (SimpleSubNode)theEObject;
+				T result = caseSimpleSubNode(simpleSubNode);
+				if (result == null) result = caseSimpleNode(simpleSubNode);
+				if (result == null) result = caseSimpleParentNode(simpleSubNode);
+				if (result == null) result = caseSimpleChildNode(simpleSubNode);
+				if (result == null) result = caseSimpleMappingElementWithFigure(simpleSubNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -283,17 +283,17 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Simple Sub Node Reference</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Sub Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Simple Sub Node Reference</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Sub Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSimpleSubNodeReference(SimpleSubNodeReference object) {
+	public T caseSimpleSubNode(SimpleSubNode object) {
 		return null;
 	}
 

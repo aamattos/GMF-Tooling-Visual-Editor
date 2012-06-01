@@ -212,26 +212,26 @@ public class SimplemappingsItemProviderAdapterFactory extends SimplemappingsAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference} instances.
+	 * This keeps track of the one adapter used for all {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SimpleSubNodeReferenceItemProvider simpleSubNodeReferenceItemProvider;
+	protected SimpleSubNodeItemProvider simpleSubNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference}.
+	 * This creates an adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSimpleSubNodeReferenceAdapter() {
-		if (simpleSubNodeReferenceItemProvider == null) {
-			simpleSubNodeReferenceItemProvider = new SimpleSubNodeReferenceItemProvider(this);
+	public Adapter createSimpleSubNodeAdapter() {
+		if (simpleSubNodeItemProvider == null) {
+			simpleSubNodeItemProvider = new SimpleSubNodeItemProvider(this);
 		}
 
-		return simpleSubNodeReferenceItemProvider;
+		return simpleSubNodeItemProvider;
 	}
 
 	/**
@@ -362,7 +362,7 @@ public class SimplemappingsItemProviderAdapterFactory extends SimplemappingsAdap
 		if (simpleLabelNodeItemProvider != null) simpleLabelNodeItemProvider.dispose();
 		if (simpleLinkMappingItemProvider != null) simpleLinkMappingItemProvider.dispose();
 		if (simpleNodeItemProvider != null) simpleNodeItemProvider.dispose();
-		if (simpleSubNodeReferenceItemProvider != null) simpleSubNodeReferenceItemProvider.dispose();
+		if (simpleSubNodeItemProvider != null) simpleSubNodeItemProvider.dispose();
 		if (simpleMappingElementWithFigureItemProvider != null) simpleMappingElementWithFigureItemProvider.dispose();
 	}
 

@@ -21,8 +21,8 @@ import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEd
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceNameEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
@@ -104,9 +104,9 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleCompartment", SimplemapElementTypes.SimpleCompartment_2002); //$NON-NLS-1$
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
+		case SimpleSubNodeEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleSubNodeReference", SimplemapElementTypes.SimpleSubNodeReference_2003); //$NON-NLS-1$
+					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleSubNode", SimplemapElementTypes.SimpleSubNode_2003); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -169,8 +169,8 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 			return getSimpleLabelNode_2001Text(view);
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			return getSimpleCompartment_2002Text(view);
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-			return getSimpleSubNodeReference_2003Text(view);
+		case SimpleSubNodeEditPart.VISUAL_ID:
+			return getSimpleSubNode_2003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -265,12 +265,12 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getSimpleSubNodeReference_2003Text(View view) {
+	private String getSimpleSubNode_2003Text(View view) {
 		IParser parser = SimplemapParserProvider.getParser(
-				SimplemapElementTypes.SimpleSubNodeReference_2003, view
-						.getElement() != null ? view.getElement() : view,
+				SimplemapElementTypes.SimpleSubNode_2003,
+				view.getElement() != null ? view.getElement() : view,
 				SimplemapVisualIDRegistry
-						.getType(SimpleSubNodeReferenceNameEditPart.VISUAL_ID));
+						.getType(SimpleSubNodeNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),

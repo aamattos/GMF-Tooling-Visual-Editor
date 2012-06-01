@@ -20,7 +20,7 @@ import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorPlugin;
 
@@ -73,7 +73,7 @@ public class SimplemapElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType SimpleSubNodeReference_2003 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_2003"); //$NON-NLS-1$
+	public static final IElementType SimpleSubNode_2003 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -201,8 +201,8 @@ public class SimplemapElementTypes {
 			elements.put(SimpleCompartment_2002,
 					SimplemappingsPackage.eINSTANCE.getSimpleCompartment());
 
-			elements.put(SimpleSubNodeReference_2003,
-					SimplemappingsPackage.eINSTANCE.getSimpleSubNodeReference());
+			elements.put(SimpleSubNode_2003,
+					SimplemappingsPackage.eINSTANCE.getSimpleSubNode());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -225,7 +225,7 @@ public class SimplemapElementTypes {
 			KNOWN_ELEMENT_TYPES.add(SimpleLinkMapping_1002);
 			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_2001);
 			KNOWN_ELEMENT_TYPES.add(SimpleCompartment_2002);
-			KNOWN_ELEMENT_TYPES.add(SimpleSubNodeReference_2003);
+			KNOWN_ELEMENT_TYPES.add(SimpleSubNode_2003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -245,8 +245,8 @@ public class SimplemapElementTypes {
 			return SimpleLabelNode_2001;
 		case SimpleCompartmentEditPart.VISUAL_ID:
 			return SimpleCompartment_2002;
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-			return SimpleSubNodeReference_2003;
+		case SimpleSubNodeEditPart.VISUAL_ID:
+			return SimpleSubNode_2003;
 		}
 		return null;
 	}

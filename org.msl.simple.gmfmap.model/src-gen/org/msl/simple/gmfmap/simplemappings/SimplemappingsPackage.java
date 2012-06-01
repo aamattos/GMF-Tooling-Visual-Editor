@@ -971,14 +971,14 @@ public interface SimplemappingsPackage extends EPackage {
 	int SIMPLE_LINK_MAPPING_OPERATION_COUNT = SIMPLE_CHILD_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl <em>Simple Sub Node Reference</em>}' class.
+	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl <em>Simple Sub Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl
-	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNodeReference()
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl
+	 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNode()
 	 * @generated
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE = 8;
+	int SIMPLE_SUB_NODE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Parent Node</b></em>' container reference.
@@ -987,7 +987,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_NODE = SIMPLE_NODE__PARENT_NODE;
+	int SIMPLE_SUB_NODE__PARENT_NODE = SIMPLE_NODE__PARENT_NODE;
 
 	/**
 	 * The feature id for the '<em><b>Parent Mapping</b></em>' reference.
@@ -996,7 +996,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_MAPPING = SIMPLE_NODE__PARENT_MAPPING;
+	int SIMPLE_SUB_NODE__PARENT_MAPPING = SIMPLE_NODE__PARENT_MAPPING;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1005,7 +1005,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT = SIMPLE_NODE__PARENT;
+	int SIMPLE_SUB_NODE__PARENT = SIMPLE_NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Node Figure</b></em>' reference.
@@ -1014,7 +1014,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__NODE_FIGURE = SIMPLE_NODE__NODE_FIGURE;
+	int SIMPLE_SUB_NODE__NODE_FIGURE = SIMPLE_NODE__NODE_FIGURE;
 
 	/**
 	 * The feature id for the '<em><b>Label Figure</b></em>' reference.
@@ -1023,7 +1023,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__LABEL_FIGURE = SIMPLE_NODE__LABEL_FIGURE;
+	int SIMPLE_SUB_NODE__LABEL_FIGURE = SIMPLE_NODE__LABEL_FIGURE;
 
 	/**
 	 * The feature id for the '<em><b>Node Reference</b></em>' reference.
@@ -1032,7 +1032,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__NODE_REFERENCE = SIMPLE_NODE__NODE_REFERENCE;
+	int SIMPLE_SUB_NODE__NODE_REFERENCE = SIMPLE_NODE__NODE_REFERENCE;
 
 	/**
 	 * The feature id for the '<em><b>Containment Feature</b></em>' reference.
@@ -1041,7 +1041,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__CONTAINMENT_FEATURE = SIMPLE_NODE__CONTAINMENT_FEATURE;
+	int SIMPLE_SUB_NODE__CONTAINMENT_FEATURE = SIMPLE_NODE__CONTAINMENT_FEATURE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1050,7 +1050,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__NAME = SIMPLE_NODE__NAME;
+	int SIMPLE_SUB_NODE__NAME = SIMPLE_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Meta Element</b></em>' reference.
@@ -1059,7 +1059,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__PARENT_META_ELEMENT = SIMPLE_NODE__PARENT_META_ELEMENT;
+	int SIMPLE_SUB_NODE__PARENT_META_ELEMENT = SIMPLE_NODE__PARENT_META_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Tool</b></em>' reference.
@@ -1068,7 +1068,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__TOOL = SIMPLE_NODE__TOOL;
+	int SIMPLE_SUB_NODE__TOOL = SIMPLE_NODE__TOOL;
 
 	/**
 	 * The feature id for the '<em><b>Label Attributes</b></em>' reference list.
@@ -1077,7 +1077,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__LABEL_ATTRIBUTES = SIMPLE_NODE__LABEL_ATTRIBUTES;
+	int SIMPLE_SUB_NODE__LABEL_ATTRIBUTES = SIMPLE_NODE__LABEL_ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Diagram Node</b></em>' reference.
@@ -1086,7 +1086,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__DIAGRAM_NODE = SIMPLE_NODE__DIAGRAM_NODE;
+	int SIMPLE_SUB_NODE__DIAGRAM_NODE = SIMPLE_NODE__DIAGRAM_NODE;
 
 	/**
 	 * The feature id for the '<em><b>Diagram Label</b></em>' reference.
@@ -1095,7 +1095,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__DIAGRAM_LABEL = SIMPLE_NODE__DIAGRAM_LABEL;
+	int SIMPLE_SUB_NODE__DIAGRAM_LABEL = SIMPLE_NODE__DIAGRAM_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Domain Meta Element</b></em>' reference.
@@ -1104,7 +1104,7 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__DOMAIN_META_ELEMENT = SIMPLE_NODE__DOMAIN_META_ELEMENT;
+	int SIMPLE_SUB_NODE__DOMAIN_META_ELEMENT = SIMPLE_NODE__DOMAIN_META_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1113,25 +1113,25 @@ public interface SimplemappingsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE__CHILDREN = SIMPLE_NODE_FEATURE_COUNT + 0;
+	int SIMPLE_SUB_NODE__CHILDREN = SIMPLE_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Simple Sub Node Reference</em>' class.
+	 * The number of structural features of the '<em>Simple Sub Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE_FEATURE_COUNT = SIMPLE_NODE_FEATURE_COUNT + 1;
+	int SIMPLE_SUB_NODE_FEATURE_COUNT = SIMPLE_NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Simple Sub Node Reference</em>' class.
+	 * The number of operations of the '<em>Simple Sub Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SUB_NODE_REFERENCE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
+	int SIMPLE_SUB_NODE_OPERATION_COUNT = SIMPLE_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleMappingElementWithFigureImpl <em>Simple Mapping Element With Figure</em>}' class.
@@ -1579,14 +1579,14 @@ public interface SimplemappingsPackage extends EPackage {
 	EReference getSimpleChildNode_Parent();
 
 	/**
-	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference <em>Simple Sub Node Reference</em>}'.
+	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleSubNode <em>Simple Sub Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Simple Sub Node Reference</em>'.
-	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference
+	 * @return the meta object for class '<em>Simple Sub Node</em>'.
+	 * @see org.msl.simple.gmfmap.simplemappings.SimpleSubNode
 	 * @generated
 	 */
-	EClass getSimpleSubNodeReference();
+	EClass getSimpleSubNode();
 
 	/**
 	 * Returns the meta object for class '{@link org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure <em>Simple Mapping Element With Figure</em>}'.
@@ -1956,14 +1956,14 @@ public interface SimplemappingsPackage extends EPackage {
 		EReference SIMPLE_CHILD_NODE__PARENT = eINSTANCE.getSimpleChildNode_Parent();
 
 		/**
-		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl <em>Simple Sub Node Reference</em>}' class.
+		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl <em>Simple Sub Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeReferenceImpl
-		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNodeReference()
+		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimpleSubNodeImpl
+		 * @see org.msl.simple.gmfmap.simplemappings.impl.SimplemappingsPackageImpl#getSimpleSubNode()
 		 * @generated
 		 */
-		EClass SIMPLE_SUB_NODE_REFERENCE = eINSTANCE.getSimpleSubNodeReference();
+		EClass SIMPLE_SUB_NODE = eINSTANCE.getSimpleSubNode();
 
 		/**
 		 * The meta object literal for the '{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleMappingElementWithFigureImpl <em>Simple Mapping Element With Figure</em>}' class.

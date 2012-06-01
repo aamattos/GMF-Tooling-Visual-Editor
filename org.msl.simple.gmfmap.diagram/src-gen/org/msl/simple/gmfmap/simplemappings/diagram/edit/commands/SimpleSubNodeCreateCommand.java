@@ -12,18 +12,18 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
 
 /**
  * @generated
  */
-public class SimpleSubNodeReferenceCreateCommand extends EditElementCommand {
+public class SimpleSubNodeCreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public SimpleSubNodeReferenceCreateCommand(CreateElementRequest req) {
+	public SimpleSubNodeCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -53,8 +53,8 @@ public class SimpleSubNodeReferenceCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		SimpleSubNodeReference newElement = SimplemappingsFactory.eINSTANCE
-				.createSimpleSubNodeReference();
+		SimpleSubNode newElement = SimplemappingsFactory.eINSTANCE
+				.createSimpleSubNode();
 
 		SimpleParentNode owner = (SimpleParentNode) getElementToEdit();
 		owner.getChildren().add(newElement);
@@ -68,7 +68,7 @@ public class SimpleSubNodeReferenceCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(SimpleSubNodeReference newElement,
+	protected void doConfigure(SimpleSubNode newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

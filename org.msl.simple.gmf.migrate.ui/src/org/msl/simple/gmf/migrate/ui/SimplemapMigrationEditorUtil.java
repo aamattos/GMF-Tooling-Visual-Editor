@@ -36,7 +36,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsFactory;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
@@ -216,11 +216,11 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 			
 		}else if(nodeMapping.getDiagramNode() instanceof Node)
 		{
-			newChild = SimplemappingsFactory.eINSTANCE.createSimpleSubNodeReference();
+			newChild = SimplemappingsFactory.eINSTANCE.createSimpleSubNode();
 			parent.getChildren().add(newChild);
 			
 			for(ChildReference childReference2:nodeMapping.getChildren())
-				createChild((SimpleSubNodeReference)newChild, childReference2);
+				createChild((SimpleSubNode)newChild, childReference2);
 		}
 			
 		

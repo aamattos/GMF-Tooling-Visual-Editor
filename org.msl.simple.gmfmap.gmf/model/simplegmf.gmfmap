@@ -80,7 +80,7 @@
             href="../../org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleParentNode/children"/>
         <ownedChild>
           <domainMetaElement
-              href="../../org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNodeReference"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.ecore#//SimpleSubNode"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping"
               readOnly="true"

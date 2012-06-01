@@ -123,18 +123,18 @@
     </childNodes>
     <childNodes
         visualID="2003"
-        editPartClassName="SimpleSubNodeReferenceEditPart"
-        itemSemanticEditPolicyClassName="SimpleSubNodeReferenceItemSemanticEditPolicy"
-        canonicalEditPolicyClassName="SimpleSubNodeReferenceCanonicalEditPolicy"
+        editPartClassName="SimpleSubNodeEditPart"
+        itemSemanticEditPolicyClassName="SimpleSubNodeItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="SimpleSubNodeCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.2"
-        graphicalNodeEditPolicyClassName="SimpleSubNodeReferenceGraphicalNodeEditPolicy"
-        createCommandClassName="SimpleSubNodeReferenceCreateCommand"
+        graphicalNodeEditPolicyClassName="SimpleSubNodeGraphicalNodeEditPolicy"
+        createCommandClassName="SimpleSubNodeCreateCommand"
         containers="//@diagram/@childNodes.2 //@diagram/@childNodes.1 //@diagram/@topLevelNodes.0">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="SimpleSubNodeReferenceEditHelper"/>
+          editHelperClassName="SimpleSubNodeEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           layoutType="TOOLBAR_LAYOUT"
@@ -147,7 +147,7 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNodeReference"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleSubNode"/>
         <containmentMetaFeature
             href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
         <childMetaFeature
@@ -155,8 +155,8 @@
       </modelFacet>
       <labels
           visualID="4001"
-          editPartClassName="SimpleSubNodeReferenceNameEditPart"
-          itemSemanticEditPolicyClassName="SimpleSubNodeReferenceNameItemSemanticEditPolicy"
+          editPartClassName="SimpleSubNodeNameEditPart"
+          itemSemanticEditPolicyClassName="SimpleSubNodeNameItemSemanticEditPolicy"
           readOnly="true"
           elementIcon="true">
         <diagramRunTimeClass

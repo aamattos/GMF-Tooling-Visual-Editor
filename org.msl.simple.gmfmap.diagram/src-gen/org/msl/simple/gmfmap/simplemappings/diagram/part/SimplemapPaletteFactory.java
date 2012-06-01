@@ -46,7 +46,7 @@ public class SimplemapPaletteFactory {
 	private ToolEntry createNode1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(SimplemapElementTypes.SimpleTopNode_1001);
-		types.add(SimplemapElementTypes.SimpleSubNodeReference_2003);
+		types.add(SimplemapElementTypes.SimpleSubNode_2003);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Node1CreationTool_title,
 				Messages.Node1CreationTool_desc, types);

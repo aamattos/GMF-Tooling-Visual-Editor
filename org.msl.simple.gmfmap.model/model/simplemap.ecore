@@ -106,7 +106,7 @@
       <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleSubNodeReference" eSuperTypes="#//SimpleNode #//SimpleParentNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleSubNode" eSuperTypes="#//SimpleNode #//SimpleParentNode"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleMappingElementWithFigure">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodeFigure" eType="ecore:EClass platform:/plugin/org.eclipse.gmf.graphdef/models/gmfgraph.ecore#//Figure">
       <eAnnotations source="org.msl.simple.gmfmap.simplemapping.setting"/>

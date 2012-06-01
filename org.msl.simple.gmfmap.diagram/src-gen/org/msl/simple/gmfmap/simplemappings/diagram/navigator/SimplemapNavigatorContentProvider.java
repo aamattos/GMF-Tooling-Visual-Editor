@@ -26,7 +26,7 @@ import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartment
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
 
@@ -251,7 +251,7 @@ public class SimplemapNavigatorContentProvider implements
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeReferenceEditPart.VISUAL_ID));
+							.getType(SimpleSubNodeEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();
@@ -268,13 +268,13 @@ public class SimplemapNavigatorContentProvider implements
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeReferenceEditPart.VISUAL_ID));
+							.getType(SimpleSubNodeEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();
 		}
 
-		case SimpleSubNodeReferenceEditPart.VISUAL_ID: {
+		case SimpleSubNodeEditPart.VISUAL_ID: {
 			LinkedList<SimplemapAbstractNavigatorItem> result = new LinkedList<SimplemapAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			Collection<View> connectedViews;
@@ -290,7 +290,7 @@ public class SimplemapNavigatorContentProvider implements
 					false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					SimplemapVisualIDRegistry
-							.getType(SimpleSubNodeReferenceEditPart.VISUAL_ID));
+							.getType(SimpleSubNodeEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			return result.toArray();

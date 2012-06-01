@@ -26,7 +26,7 @@ public class SimpleMappingPropertiesAdapterFactory extends
 	}
 	
 	@Override
-	public Adapter createSimpleSubNodeReferenceAdapter() {
+	public Adapter createSimpleSubNodeAdapter() {
 		return simpleNodeProvider;
 	}
 	

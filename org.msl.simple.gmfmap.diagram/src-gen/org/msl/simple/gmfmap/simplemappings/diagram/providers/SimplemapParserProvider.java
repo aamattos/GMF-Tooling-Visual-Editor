@@ -17,7 +17,7 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingNameEditPart;
-import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceNameEditPart;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -112,20 +112,20 @@ public class SimplemapParserProvider extends AbstractProvider implements
 	 * (Modified template: ParserProvider.xpt)
 	 * @generated
 	 */
-	private IParser simpleSubNodeReferenceName_4001Parser;
+	private IParser simpleSubNodeName_4001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getSimpleSubNodeReferenceName_4001Parser() {
-		if (simpleSubNodeReferenceName_4001Parser == null) {
+	private IParser getSimpleSubNodeName_4001Parser() {
+		if (simpleSubNodeName_4001Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimplemappingsPackage.eINSTANCE
 					.getSimpleNode_Name() };
 			MessageFormatParser parser = SimpleMapMessageFormatParserProvider
 					.getParser(4001, features);
-			simpleSubNodeReferenceName_4001Parser = parser;
+			simpleSubNodeName_4001Parser = parser;
 		}
-		return simpleSubNodeReferenceName_4001Parser;
+		return simpleSubNodeName_4001Parser;
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class SimplemapParserProvider extends AbstractProvider implements
 			return getSimpleLabelNode_2001Parser();
 		case SimpleCompartmentNameEditPart.VISUAL_ID:
 			return getSimpleCompartmentName_4002Parser();
-		case SimpleSubNodeReferenceNameEditPart.VISUAL_ID:
-			return getSimpleSubNodeReferenceName_4001Parser();
+		case SimpleSubNodeNameEditPart.VISUAL_ID:
+			return getSimpleSubNodeName_4001Parser();
 		}
 		return null;
 	}

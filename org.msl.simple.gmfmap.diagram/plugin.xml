@@ -254,11 +254,11 @@
          <Priority name="Lowest"/>
          <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleMappingEditPart" id="SimpleMapping_79"/>
          <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleTopNodeEditPart" id="SimpleTopNode_1001"/>
-         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeReferenceEditPart" id="SimpleSubNodeReference_2003"/>
+         <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart" id="SimpleSubNode_2003"/>
          <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart" id="SimpleLinkMapping_1002"/>
          <object class="org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart" id="SimpleCompartment_2002">
          </object>
-         <context elements="SimpleMapping_79,SimpleTopNode_1001,SimpleSubNodeReference_2003,SimpleLinkMapping_1002, SimpleCompartment_2002"/>
+         <context elements="SimpleMapping_79,SimpleTopNode_1001,SimpleSubNode_2003,SimpleLinkMapping_1002, SimpleCompartment_2002"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -330,11 +330,11 @@
       </metamodel>
       <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
          <metamodelType
-               id="org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_2003"
-               name="%metatype.name.SimpleSubNodeReference_2003"
+               id="org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"
+               name="%metatype.name.SimpleSubNode_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="SimpleSubNodeReference"
-               edithelper="org.msl.simple.gmfmap.simplemappings.diagram.edit.helpers.SimpleSubNodeReferenceEditHelper">
+               eclass="SimpleSubNode"
+               edithelper="org.msl.simple.gmfmap.simplemappings.diagram.edit.helpers.SimpleSubNodeEditHelper">
             <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
@@ -355,7 +355,7 @@
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleLinkMapping_1002"/>
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleLabelNode_2001"/>
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleCompartment_2002"/>
-         <elementType ref="org.msl.simple.gmfmap.diagram.SimpleSubNodeReference_2003"/>
+         <elementType ref="org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -519,6 +519,10 @@
          categoryId="org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapDiagramEditorID"
          defaultHandler="org.msl.simple.gmfmap.simplemappings.diagram.part.LoadResourceAction"/>
    </extension>
+<extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
 
 
    <!-- optionally, specify keybindings -->

@@ -53,6 +53,7 @@
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/diagramNode"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/diagramLabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/domainMetaElement"/>
     </genClasses>
     <genClasses image="false" ecoreClass="simplemap.ecore#//SimpleParentNode">
       <genFeatures property="None" createChild="false" propertyCategory="" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleParentNode/children"/>
@@ -62,12 +63,11 @@
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentMapping"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parent"/>
-      <genOperations ecoreOperation="simplemap.ecore#//SimpleChildNode/getNodeFigure"/>
-      <genOperations ecoreOperation="simplemap.ecore#//SimpleChildNode/getLabelFigure"/>
     </genClasses>
-    <genClasses ecoreClass="simplemap.ecore#//SimpleSubNodeReference"/>
-    <genClasses ecoreClass="simplemap.ecore#//SimpleDomainMapElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleDomainMapElement/domainMetaElement"/>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleSubNode"/>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleMappingElementWithFigure">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMappingElementWithFigure/nodeFigure"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMappingElementWithFigure/labelFigure"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -52,11 +52,11 @@ public class SimplemapEditPartFactory implements EditPartFactory {
 			case SimpleCompartmentNameEditPart.VISUAL_ID:
 				return new SimpleCompartmentNameEditPart(view);
 
-			case SimpleSubNodeReferenceEditPart.VISUAL_ID:
-				return new SimpleSubNodeReferenceEditPart(view);
+			case SimpleSubNodeEditPart.VISUAL_ID:
+				return new SimpleSubNodeEditPart(view);
 
-			case SimpleSubNodeReferenceNameEditPart.VISUAL_ID:
-				return new SimpleSubNodeReferenceNameEditPart(view);
+			case SimpleSubNodeNameEditPart.VISUAL_ID:
+				return new SimpleSubNodeNameEditPart(view);
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

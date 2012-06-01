@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
-import org.msl.simple.gmfmap.simplemappings.SimpleSubNodeReference;
+import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
 
 public abstract class AbstractExtendedPropertiesSection extends AbstractModelerPropertySection implements
@@ -88,7 +88,7 @@ IFilter{
 		
 		EObject unwraped = unwrap(toTest);
 		
-		if(unwraped instanceof SimpleTopNode || unwraped instanceof SimpleCompartment || unwraped instanceof SimpleSubNodeReference || unwraped instanceof SimpleLabelNode)
+		if(unwraped instanceof SimpleTopNode || unwraped instanceof SimpleCompartment || unwraped instanceof SimpleSubNode || unwraped instanceof SimpleLabelNode)
 			return true;
 		
 		return false;

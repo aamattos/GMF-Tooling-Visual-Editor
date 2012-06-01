@@ -13,9 +13,9 @@ package org.msl.simple.gmfmap.simplemappings;
  * <!-- end-user-doc -->
  *
  *
- * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleSubNodeReference()
+ * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleSubNode()
  * @model
  * @generated
  */
-public interface SimpleSubNodeReference extends SimpleNode, SimpleParentNode {
-} // SimpleSubNodeReference
+public interface SimpleSubNode extends SimpleNode, SimpleParentNode {
+} // SimpleSubNode
