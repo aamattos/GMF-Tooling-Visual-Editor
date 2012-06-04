@@ -43,7 +43,7 @@ public class CanvasFactory {
 	private static int[] DEFAULT_POLYLINE_CONNECTION_FOREGROUND = {32, 104, 160}; //RED, GREEN, BLUE
 	
 	private static int[] DEFAULT_TOP_NODE_INSETS = {5,3,3,3}; //TOP; LEFT; RIGHT; BOTTOM
-	private static int[] DEFAULT_SUB_NODE_INSETS = {1,1,10,1}; //TOP; LEFT; RIGHT; BOTTOM
+	private static int[] DEFAULT_SUB_NODE_INSETS = {5,5,5,5}; //TOP; LEFT; RIGHT; BOTTOM
 	
 	private static int[] DEFAULT_COMPARTMENT_INSETS = {5,5,5,5}; //TOP; LEFT; RIGHT; BOTTOM
 	
