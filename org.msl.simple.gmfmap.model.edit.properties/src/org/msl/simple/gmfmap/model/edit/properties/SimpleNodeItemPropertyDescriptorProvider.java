@@ -13,6 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
@@ -72,13 +74,15 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 		@Override
 		public Collection<?> getChoiceOfValues(Object object) {
 			
-			if(feature==SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE)
+			if(feature==SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE)
 			{
 				Collection<Object> choiceOfValues = new UniqueEList<Object>();
 				
-				EClass parentMetaElement = ((SimpleNode)object).getParentMetaElement();
-				
-				choiceOfValues.addAll(parentMetaElement.getEAllContainments());
+				if(object instanceof SimpleChildNode)
+				{
+					EClass parentMetaElement = ((SimpleChildNode)object).getParentMetaElement();
+					choiceOfValues.addAll(parentMetaElement.getEAllContainments());
+				}
 				
 				return choiceOfValues;
 			}
@@ -114,8 +118,19 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 							choiceOfValues.add(attribute);							
 					}
 
+				return choiceOfValues;
+			}
+			
+			if(feature==SimplemappingsPackage.Literals.SIMPLE_CHILD_REFERENCE__REFERENCED_SIMPLE_NODE)
+			{
+				Collection<Object> choiceOfValues = new UniqueEList<Object>();
 				
+				EReference containmentFeature = ((SimpleChildReference)object).getContainmentFeature();
 				
+				if(containmentFeature!=null)
+					for(Object choice:super.getChoiceOfValues(object))
+						if(choice instanceof SimpleNode && ((EClass)containmentFeature.getEType()).isSuperTypeOf(((SimpleNode)choice).getDomainMetaElement()))
+								choiceOfValues.add(choice);	
 				
 				return choiceOfValues;
 			}
@@ -133,6 +148,15 @@ public class SimpleNodeItemPropertyDescriptorProvider extends
 				case SimplemappingsPackage.SIMPLE_MAPPING__DOMAIN_META_ELEMENT:{
 					if(object instanceof SimpleMapping)
 						return false;
+				}
+				case SimplemappingsPackage.SIMPLE_NODE__DOMAIN_META_ELEMENT:{
+					if(object instanceof SimpleChildReference)
+						return false;					
+				}
+
+				case SimplemappingsPackage.SIMPLE_NODE__LABEL_ATTRIBUTES:{
+					if(object instanceof SimpleChildReference)
+						return false;					
 				}
 			}
 			

@@ -90,7 +90,7 @@ public class SimpleNodeItemProvider
 				 getString("_UI_SimpleMappingElementWithFigure_nodeFigure_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_nodeFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
 				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
@@ -112,7 +112,7 @@ public class SimpleNodeItemProvider
 				 getString("_UI_SimpleMappingElementWithFigure_labelFigure_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_labelFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
 				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
@@ -153,9 +153,9 @@ public class SimpleNodeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SimpleNode_containmentFeature_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleNode_containmentFeature_feature", "_UI_SimpleNode_type"),
-				 SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE,
+				 getString("_UI_SimpleNodeReference_containmentFeature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleNodeReference_containmentFeature_feature", "_UI_SimpleNodeReference_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE,
 				 true,
 				 false,
 				 true,
@@ -253,36 +253,6 @@ public class SimpleNodeItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(SimplemappingsPackage.Literals.SIMPLE_NODE__NODE_REFERENCE);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
 	 * This returns SimpleNode.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,9 +291,6 @@ public class SimpleNodeItemProvider
 		switch (notification.getFeatureID(SimpleNode.class)) {
 			case SimplemappingsPackage.SIMPLE_NODE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case SimplemappingsPackage.SIMPLE_NODE__NODE_REFERENCE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);

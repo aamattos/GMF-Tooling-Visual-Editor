@@ -1,6 +1,7 @@
 package org.msl.simple.gmfmap.diagram.parsers;
 
 import org.eclipse.emf.ecore.EAttribute;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeNameEditPart;
@@ -34,6 +35,8 @@ public class SimpleMapMessageFormatParserProvider{
 			case SimpleSubNodeNameEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures);
 			case SimpleLabelNodeEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures); 
 			case SimpleCompartmentNameEditPart.VISUAL_ID:return SimpleCompartmentFormatParser.getInstance(features, editableFeatures);
+			case SimpleChildReferenceEditPart.VISUAL_ID: return SimpleNodeFormatParser.getInstance(features, editableFeatures); 
+
 		}
 		
 		if(editableFeatures==null)

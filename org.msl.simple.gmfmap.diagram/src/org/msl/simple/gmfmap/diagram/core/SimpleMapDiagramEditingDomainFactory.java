@@ -10,6 +10,7 @@ import org.msl.simple.gmfmap.model.triggers.graph.RealFigureTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.link.SimpleLinkMappingTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.mapping.MappingEntryTriggerListener;
 import org.msl.simple.gmfmap.model.triggers.parent.ParentNodeTriggerListener;
+import org.msl.simple.gmfmap.model.triggers.references.SimpleChildReferenceTriggerListener;
 
 public class SimpleMapDiagramEditingDomainFactory extends
 		DiagramEditingDomainFactory {
@@ -40,6 +41,7 @@ public class SimpleMapDiagramEditingDomainFactory extends
 		domain.addResourceSetListener(new CompartmentTriggerListener());
 		domain.addResourceSetListener(new FigureDescriptorTriggerListener());
 		domain.addResourceSetListener(new RealFigureTriggerListener());
+		domain.addResourceSetListener(new SimpleChildReferenceTriggerListener());
 	}
 
 	

@@ -62,7 +62,7 @@
           parser="//@labelParsers/@implementations.0"
           editPattern="">
         <metaFeatures
-            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNodeReference/name"/>
       </labelModelFacet>
     </childNodes>
     <childNodes
@@ -71,7 +71,7 @@
         itemSemanticEditPolicyClassName="SimpleCompartmentItemSemanticEditPolicy"
         notationViewFactoryClassName="SimpleCompartmentViewFactory"
         canonicalEditPolicyClassName="SimpleCompartmentCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.2"
+        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.2 //@diagram/@childNodes.3"
         graphicalNodeEditPolicyClassName="SimpleCompartmentGraphicalNodeEditPolicy"
         createCommandClassName="SimpleCompartmentCreateCommand"
         containers="//@diagram/@childNodes.2 //@diagram/@topLevelNodes.0">
@@ -125,8 +125,9 @@
         visualID="2003"
         editPartClassName="SimpleSubNodeEditPart"
         itemSemanticEditPolicyClassName="SimpleSubNodeItemSemanticEditPolicy"
+        notationViewFactoryClassName="SimpleSubNodeViewFactory"
         canonicalEditPolicyClassName="SimpleSubNodeCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.2"
+        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.3 //@diagram/@childNodes.2"
         graphicalNodeEditPolicyClassName="SimpleSubNodeGraphicalNodeEditPolicy"
         createCommandClassName="SimpleSubNodeCreateCommand"
         containers="//@diagram/@childNodes.2 //@diagram/@childNodes.1 //@diagram/@topLevelNodes.0">
@@ -157,6 +158,7 @@
           visualID="4001"
           editPartClassName="SimpleSubNodeNameEditPart"
           itemSemanticEditPolicyClassName="SimpleSubNodeNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="SimpleSubNodeNameViewFactory"
           readOnly="true"
           elementIcon="true">
         <diagramRunTimeClass
@@ -174,16 +176,57 @@
             parser="//@labelParsers/@implementations.0"
             viewPattern="">
           <metaFeatures
-              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNodeReference/name"/>
         </modelFacet>
       </labels>
+    </childNodes>
+    <childNodes
+        xsi:type="gmfgen:GenChildLabelNode"
+        visualID="2004"
+        editPartClassName="SimpleChildReferenceEditPart"
+        itemSemanticEditPolicyClassName="SimpleChildReferenceItemSemanticEditPolicy"
+        notationViewFactoryClassName="SimpleChildReferenceViewFactory"
+        canonicalEditPolicyClassName="SimpleChildReferenceCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="SimpleChildReferenceGraphicalNodeEditPolicy"
+        createCommandClassName="SimpleChildReferenceCreateCommand"
+        containers="//@diagram/@childNodes.2 //@diagram/@childNodes.1 //@diagram/@topLevelNodes.0"
+        labelReadOnly="true"
+        labelElementIcon="true">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="SimpleChildReferenceEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="SimpleChildReferenceFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SimpleChildReferenceFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SimpleChildReferenceFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;&lt;..>&quot;);&#xA;&#xA;this.setFont(THIS_FONT);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font THIS_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 10, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedFont="true"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleChildReference"/>
+        <containmentMetaFeature
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+        <childMetaFeature
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleParentNode/children"/>
+      </modelFacet>
+      <labelModelFacet
+          xsi:type="gmfgen:FeatureLabelModelFacet"
+          parser="//@labelParsers/@implementations.0">
+        <metaFeatures
+            href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNodeReference/name"/>
+      </labelModelFacet>
     </childNodes>
     <topLevelNodes
         visualID="1001"
         editPartClassName="SimpleTopNodeEditPart"
         itemSemanticEditPolicyClassName="SimpleTopNodeItemSemanticEditPolicy"
+        notationViewFactoryClassName="SimpleTopNodeViewFactory"
         canonicalEditPolicyClassName="SimpleTopNodeCanonicalEditPolicy"
-        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.2"
+        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1 //@diagram/@childNodes.3 //@diagram/@childNodes.2"
         graphicalNodeEditPolicyClassName="SimpleTopNodeGraphicalNodeEditPolicy"
         createCommandClassName="SimpleTopNodeCreateCommand">
       <diagramRunTimeClass
@@ -213,6 +256,7 @@
           visualID="4003"
           editPartClassName="SimpleTopNodeNameEditPart"
           itemSemanticEditPolicyClassName="SimpleTopNodeNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="SimpleTopNodeNameViewFactory"
           readOnly="true"
           elementIcon="true">
         <diagramRunTimeClass
@@ -231,7 +275,7 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNode/name"/>
+              href="../../org.msl.simple.gmfmap.model/model/simplemap.genmodel#//simplemappings/SimpleNodeReference/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -239,6 +283,7 @@
         visualID="1002"
         editPartClassName="SimpleLinkMappingEditPart"
         itemSemanticEditPolicyClassName="SimpleLinkMappingItemSemanticEditPolicy"
+        notationViewFactoryClassName="SimpleLinkMappingViewFactory"
         canonicalEditPolicyClassName="SimpleLinkMappingCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="SimpleLinkMappingGraphicalNodeEditPolicy"
         createCommandClassName="SimpleLinkMappingCreateCommand">
@@ -268,6 +313,7 @@
           visualID="4004"
           editPartClassName="SimpleLinkMappingNameEditPart"
           itemSemanticEditPolicyClassName="SimpleLinkMappingNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="SimpleLinkMappingNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -310,6 +356,11 @@
             title="Link Mapping"
             description="Create new Link Mapping"
             genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Child Reference"
+            description="Create new Child Reference"
+            genNodes="//@diagram/@childNodes.3"/>
       </groups>
     </palette>
     <preferencePages
@@ -360,13 +411,22 @@
         child="//@diagram/@childNodes.1"/>
     <childReferences
         parent="//@diagram/@childNodes.2"
+        child="//@diagram/@childNodes.3"/>
+    <childReferences
+        parent="//@diagram/@childNodes.2"
         child="//@diagram/@childNodes.2"/>
     <childReferences
         parent="//@diagram/@childNodes.1"
         child="//@diagram/@childNodes.2"/>
     <childReferences
+        parent="//@diagram/@childNodes.1"
+        child="//@diagram/@childNodes.3"/>
+    <childReferences
         parent="//@diagram/@topLevelNodes.0"
         child="//@diagram/@childNodes.1"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.3"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.0"
         child="//@diagram/@childNodes.2"/>
@@ -403,7 +463,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@childNodes.0/@labelModelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
+        uses="//@diagram/@childNodes.0/@labelModelFacet //@diagram/@childNodes.3/@labelModelFacet //@diagram/@childNodes.2/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

@@ -92,6 +92,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSimpleParentNode(simpleTopNode);
 				if (result == null) result = caseSimpleChildNode(simpleTopNode);
 				if (result == null) result = caseSimpleMappingElementWithFigure(simpleTopNode);
+				if (result == null) result = caseSimpleNodeReference(simpleTopNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,6 +111,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSimpleNode(simpleLabelNode);
 				if (result == null) result = caseSimpleChildNode(simpleLabelNode);
 				if (result == null) result = caseSimpleMappingElementWithFigure(simpleLabelNode);
+				if (result == null) result = caseSimpleNodeReference(simpleLabelNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,6 +129,7 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				T result = caseSimpleNode(simpleNode);
 				if (result == null) result = caseSimpleChildNode(simpleNode);
 				if (result == null) result = caseSimpleMappingElementWithFigure(simpleNode);
+				if (result == null) result = caseSimpleNodeReference(simpleNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -149,12 +152,27 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSimpleParentNode(simpleSubNode);
 				if (result == null) result = caseSimpleChildNode(simpleSubNode);
 				if (result == null) result = caseSimpleMappingElementWithFigure(simpleSubNode);
+				if (result == null) result = caseSimpleNodeReference(simpleSubNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE: {
 				SimpleMappingElementWithFigure simpleMappingElementWithFigure = (SimpleMappingElementWithFigure)theEObject;
 				T result = caseSimpleMappingElementWithFigure(simpleMappingElementWithFigure);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplemappingsPackage.SIMPLE_CHILD_REFERENCE: {
+				SimpleChildReference simpleChildReference = (SimpleChildReference)theEObject;
+				T result = caseSimpleChildReference(simpleChildReference);
+				if (result == null) result = caseSimpleNodeReference(simpleChildReference);
+				if (result == null) result = caseSimpleChildNode(simpleChildReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplemappingsPackage.SIMPLE_NODE_REFERENCE: {
+				SimpleNodeReference simpleNodeReference = (SimpleNodeReference)theEObject;
+				T result = caseSimpleNodeReference(simpleNodeReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -309,6 +327,36 @@ public class SimplemappingsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSimpleMappingElementWithFigure(SimpleMappingElementWithFigure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Child Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Child Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleChildReference(SimpleChildReference object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Node Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Node Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleNodeReference(SimpleNodeReference object) {
 		return null;
 	}
 

@@ -28,6 +28,8 @@ public class SimpleChildNodeSettingDelegate extends Stateless {
 		      		return getParentMapping((SimpleChildNode)owner);
 		      	case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT:
 		      		return getParent((SimpleChildNode)owner);
+		      	case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT:
+		      		return getParentMetaElement((SimpleChildNode)owner);			      		
 		      }
 	    
 	    }
@@ -62,6 +64,29 @@ public class SimpleChildNodeSettingDelegate extends Stateless {
 		return null;
 	}
 
+	private Object getParentMetaElement(SimpleChildNode owner) {
+		
+		if(owner.getParent() instanceof SimpleNode)
+		{
+			SimpleNode parent = (SimpleNode)owner.getParent();
+			return parent.getDomainMetaElement();
+		}
+		
+		if(owner.getParent() instanceof SimpleCompartment)
+		{
+			SimpleNode parent = (SimpleNode)((SimpleCompartment)owner.getParent()).getParent();
+			return parent.getDomainMetaElement();
+		}
+		
+		if(owner.getParentNode()instanceof SimpleMapping)
+		{
+			SimpleMapping parent = (SimpleMapping)owner.getParentNode();
+			return parent.getMapping().getDiagram().getDomainMetaElement();
+		}
+
+		
+		return null;
+	}
 
 	@Override
 	protected boolean isSet(InternalEObject owner) {

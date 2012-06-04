@@ -10,8 +10,10 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleChildReferenceCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleLabelNodeCreateCommand;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.commands.SimpleSubNodeCreateCommand;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.part.SimplemapVisualIDRegistry;
@@ -39,6 +41,10 @@ public class SimpleCompartmentItemSemanticEditPolicy extends
 		}
 		if (SimplemapElementTypes.SimpleSubNode_2003 == req.getElementType()) {
 			return getGEFWrapper(new SimpleSubNodeCreateCommand(req));
+		}
+		if (SimplemapElementTypes.SimpleChildReference_2004 == req
+				.getElementType()) {
+			return getGEFWrapper(new SimpleChildReferenceCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
@@ -81,6 +87,12 @@ public class SimpleCompartmentItemSemanticEditPolicy extends
 				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
 				break;
 			case SimpleSubNodeEditPart.VISUAL_ID:
+				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
+						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
+				// don't need explicit deletion of node as parent's view deletion would clean child views as well 
+				// cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), node));
+				break;
+			case SimpleChildReferenceEditPart.VISUAL_ID:
 				cmd.add(new DestroyElementCommand(new DestroyElementRequest(
 						getEditingDomain(), node.getElement(), false))); // directlyOwned: true
 				// don't need explicit deletion of node as parent's view deletion would clean child views as well 

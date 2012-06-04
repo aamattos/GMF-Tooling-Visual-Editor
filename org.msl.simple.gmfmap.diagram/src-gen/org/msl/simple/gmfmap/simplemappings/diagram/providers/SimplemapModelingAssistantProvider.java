@@ -46,22 +46,25 @@ public class SimplemapModelingAssistantProvider extends
 			return types;
 		}
 		if (editPart instanceof SimpleTopNodeEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 			types.add(SimplemapElementTypes.SimpleLabelNode_2001);
 			types.add(SimplemapElementTypes.SimpleCompartment_2002);
+			types.add(SimplemapElementTypes.SimpleChildReference_2004);
 			types.add(SimplemapElementTypes.SimpleSubNode_2003);
 			return types;
 		}
 		if (editPart instanceof SimpleCompartmentEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 			types.add(SimplemapElementTypes.SimpleLabelNode_2001);
 			types.add(SimplemapElementTypes.SimpleSubNode_2003);
+			types.add(SimplemapElementTypes.SimpleChildReference_2004);
 			return types;
 		}
 		if (editPart instanceof SimpleSubNodeEditPart) {
-			ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(4);
 			types.add(SimplemapElementTypes.SimpleLabelNode_2001);
 			types.add(SimplemapElementTypes.SimpleCompartment_2002);
+			types.add(SimplemapElementTypes.SimpleChildReference_2004);
 			types.add(SimplemapElementTypes.SimpleSubNode_2003);
 			return types;
 		}

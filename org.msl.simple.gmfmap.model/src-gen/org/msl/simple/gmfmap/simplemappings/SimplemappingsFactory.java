@@ -98,6 +98,24 @@ public interface SimplemappingsFactory extends EFactory {
 	SimpleMappingElementWithFigure createSimpleMappingElementWithFigure();
 
 	/**
+	 * Returns a new object of class '<em>Simple Child Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Child Reference</em>'.
+	 * @generated
+	 */
+	SimpleChildReference createSimpleChildReference();
+
+	/**
+	 * Returns a new object of class '<em>Simple Node Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Node Reference</em>'.
+	 * @generated
+	 */
+	SimpleNodeReference createSimpleNodeReference();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

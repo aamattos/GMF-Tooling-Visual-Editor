@@ -15,4 +15,5 @@ Export-Package: org.msl.simple.gmfmap.model.triggers,
  org.msl.simple.gmfmap.model.triggers.graph,
  org.msl.simple.gmfmap.model.triggers.link,
  org.msl.simple.gmfmap.model.triggers.mapping,
- org.msl.simple.gmfmap.model.triggers.parent
+ org.msl.simple.gmfmap.model.triggers.parent,
+ org.msl.simple.gmfmap.model.triggers.references

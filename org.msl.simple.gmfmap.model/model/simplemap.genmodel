@@ -40,12 +40,6 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleLinkMapping/tool"/>
     </genClasses>
     <genClasses ecoreClass="simplemap.ecore#//SimpleNode">
-      <genFeatures property="None" children="true" createChild="false" propertySortChoices="true"
-          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/nodeReference"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/containmentFeature"/>
-      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleNode/name"/>
-      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
-          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/parentMetaElement"/>
       <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/tool"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNode/labelAttributes"/>
@@ -63,11 +57,26 @@
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentMapping"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parent"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildNode/parentMetaElement"/>
     </genClasses>
     <genClasses ecoreClass="simplemap.ecore#//SimpleSubNode"/>
     <genClasses ecoreClass="simplemap.ecore#//SimpleMappingElementWithFigure">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMappingElementWithFigure/nodeFigure"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMappingElementWithFigure/labelFigure"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMappingElementWithFigure/nodeFigure"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleMappingElementWithFigure/labelFigure"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleChildReference">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildReference/referencedChild"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleChildReference/referencedSimpleNode"/>
+    </genClasses>
+    <genClasses ecoreClass="simplemap.ecore#//SimpleNodeReference">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNodeReference/nodeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplemap.ecore#//SimpleNodeReference/containmentFeature"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute simplemap.ecore#//SimpleNodeReference/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

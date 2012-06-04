@@ -9,11 +9,11 @@ import org.eclipse.gmf.gmfgraph.Figure;
 import org.eclipse.gmf.gmfgraph.RGBColor;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ISemanticParser;
 import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
-import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleNodeReference;
 import org.msl.simple.gmfmap.simplemappings.diagram.parsers.MessageFormatParser;
 
 /**
- * MessageFormatParser para ColumnEditPart (Se asocia en DatamodelerParserProvider)
+ * MessageFormatParser para ColumnEditPart (Se asocia en SimpleMapParserProvider)
  * Lo usamos para provocar un refresco del label, ante cambios en la columna y en las propiedades del tipo de dato
  * @author xIS05655
  *
@@ -47,13 +47,13 @@ public class SimpleNodeFormatParser extends MessageFormatParser implements ISema
 		List<EObject> parserElements = new ArrayList<EObject>(1);
 		
 		//Deberia ser siempre EColumn pero alguna vez da un ClassCast y no sabemos por que
-		if(element instanceof SimpleNode)
+		if(element instanceof SimpleNodeReference)
 		{
-			parserElements.add((SimpleNode)element);
-			parserElements.add(((SimpleNode)element).getNodeReference());
+			parserElements.add((SimpleNodeReference)element);
+			parserElements.add(((SimpleNodeReference)element).getNodeReference());
 			
-			if(((SimpleNode)element).getNodeReference()!=null)
-				parserElements.add(((SimpleNode)element).getNodeReference().getChild());
+			if(((SimpleNodeReference)element).getNodeReference()!=null)
+				parserElements.add(((SimpleNodeReference)element).getNodeReference().getChild());
 		}
 		
 		if(element instanceof SimpleMappingElementWithFigure)

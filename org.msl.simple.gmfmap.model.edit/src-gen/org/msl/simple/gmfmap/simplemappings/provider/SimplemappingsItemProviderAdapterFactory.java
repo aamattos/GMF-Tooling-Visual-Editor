@@ -258,6 +258,52 @@ public class SimplemappingsItemProviderAdapterFactory extends SimplemappingsAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.msl.simple.gmfmap.simplemappings.SimpleChildReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SimpleChildReferenceItemProvider simpleChildReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleChildReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSimpleChildReferenceAdapter() {
+		if (simpleChildReferenceItemProvider == null) {
+			simpleChildReferenceItemProvider = new SimpleChildReferenceItemProvider(this);
+		}
+
+		return simpleChildReferenceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.msl.simple.gmfmap.simplemappings.SimpleNodeReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SimpleNodeReferenceItemProvider simpleNodeReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleNodeReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSimpleNodeReferenceAdapter() {
+		if (simpleNodeReferenceItemProvider == null) {
+			simpleNodeReferenceItemProvider = new SimpleNodeReferenceItemProvider(this);
+		}
+
+		return simpleNodeReferenceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -364,6 +410,8 @@ public class SimplemappingsItemProviderAdapterFactory extends SimplemappingsAdap
 		if (simpleNodeItemProvider != null) simpleNodeItemProvider.dispose();
 		if (simpleSubNodeItemProvider != null) simpleSubNodeItemProvider.dispose();
 		if (simpleMappingElementWithFigureItemProvider != null) simpleMappingElementWithFigureItemProvider.dispose();
+		if (simpleChildReferenceItemProvider != null) simpleChildReferenceItemProvider.dispose();
+		if (simpleNodeReferenceItemProvider != null) simpleNodeReferenceItemProvider.dispose();
 	}
 
 }

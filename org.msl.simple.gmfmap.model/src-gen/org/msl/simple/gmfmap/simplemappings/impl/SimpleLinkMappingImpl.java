@@ -36,6 +36,7 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getParentMetaElement <em>Parent Meta Element</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getNodeFigure <em>Node Figure</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleLinkMappingImpl#getLabelFigure <em>Label Figure</em>}</li>
@@ -131,6 +132,24 @@ public class SimpleLinkMappingImpl extends EObjectImpl implements SimpleLinkMapp
 	 */
 	public void setParent(SimpleNode newParent) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT, newParent);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParentMetaElement() {
+		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentMetaElement(EClass newParentMetaElement) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT, newParentMetaElement);
 	}
 
 	/**

@@ -16,6 +16,12 @@ public class SimpleMappingSettingDelegateFactory implements Factory {
 		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_NODE)
 			return new SimpleNodeSettingDelegate(eStructuralFeature);
 		
+		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE)
+			return new SimpleNodeReferenceSettingDelegate(eStructuralFeature);
+		
+		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_CHILD_REFERENCE)
+			return new SimpleChildReferenceSettingDelegate(eStructuralFeature);
+		
 		if(eStructuralFeature.getEContainingClass() == SimplemappingsPackage.Literals.SIMPLE_COMPARTMENT)
 			return new SimpleCompartmentSettingDelegate(eStructuralFeature);
 		

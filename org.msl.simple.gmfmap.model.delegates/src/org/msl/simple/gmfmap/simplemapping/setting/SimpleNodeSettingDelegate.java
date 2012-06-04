@@ -33,18 +33,12 @@ public class SimpleNodeSettingDelegate extends Stateless {
 	    {
 		      switch (eStructuralFeature.getEContainingClass().getEAllStructuralFeatures().indexOf(eStructuralFeature))
 		      {	
-		      	case SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE:
-		      		return getContainmentFeature((SimpleNode)owner);
 		      	case SimplemappingsPackage.SIMPLE_NODE__DOMAIN_META_ELEMENT:
-		      		return getDomainMetaElement((SimpleNode)owner);		     
-		      	case SimplemappingsPackage.SIMPLE_NODE__PARENT_META_ELEMENT:
-		      		return getParentMetaElement((SimpleNode)owner);			
+		      		return getDomainMetaElement((SimpleNode)owner);		     	
 		      	case SimplemappingsPackage.SIMPLE_NODE__TOOL:
 		      		return getTool((SimpleNode)owner);			      		
 		      	case SimplemappingsPackage.SIMPLE_NODE__LABEL_ATTRIBUTES:
 		      		return getLabelAttributes((SimpleNode)owner);		
-		      	case SimplemappingsPackage.SIMPLE_NODE__NAME:
-		      		return getName((SimpleNode)owner);			      		
 		      	case SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_NODE:
 		      		return getDiagramNode((SimpleNode)owner);	
 		      	case SimplemappingsPackage.SIMPLE_NODE__DIAGRAM_LABEL:
@@ -93,19 +87,6 @@ public class SimpleNodeSettingDelegate extends Stateless {
 		return null;
 	}
 
-	private String getName(SimpleNode owner) {
-		
-		String name = null;
-		
-		if(owner.getContainmentFeature()!=null)
-			name = owner.getContainmentFeature().getName();
-			
-		if(owner.getDomainMetaElement()!=null)
-			name += ":" +  owner.getDomainMetaElement().getName();
-		
-		return name;
-	}
-
 	private Object getLabelAttributes(SimpleNode owner) {
 		
 		FeatureLabelMapping featureLabelMapping = !owner.getNodeReference().getChild().getLabelMappings().isEmpty()?
@@ -125,51 +106,6 @@ public class SimpleNodeSettingDelegate extends Stateless {
 		}
 		
 		return null;
-	}
-
-	private Object getParentMetaElement(SimpleChildNode owner) {
-		
-		if(owner.getParent() instanceof SimpleNode)
-		{
-			SimpleNode parent = (SimpleNode)owner.getParent();
-			return parent.getDomainMetaElement();
-		}
-		
-		if(owner.getParent() instanceof SimpleCompartment)
-		{
-			SimpleNode parent = (SimpleNode)((SimpleCompartment)owner.getParent()).getParent();
-			return parent.getDomainMetaElement();
-		}
-		
-		if(owner.getParentNode()instanceof SimpleMapping)
-		{
-			SimpleMapping parent = (SimpleMapping)owner.getParentNode();
-			return parent.getMapping().getDiagram().getDomainMetaElement();
-		}
-
-		
-		return null;
-	}
-	
-
-	private void refreshNodeName(SimpleNode owner) {
-		
-		String name = null;
-		
-		if(owner.getContainmentFeature()!=null)
-		{
-			EReference feature = owner.getContainmentFeature();
-			name = feature.getName();
-		}
-			
-		if(owner.getDomainMetaElement()!=null)
-		{
-			EClass metaElement = owner.getDomainMetaElement();
-			name += ":" +  metaElement.getName();
-		}
-		
-			
-		owner.setName(name);
 	}
 
 	private Object getDomainMetaElement(SimpleNode owner) {

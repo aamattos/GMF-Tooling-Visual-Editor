@@ -23,6 +23,7 @@ import org.eclipse.gmf.tooldef.AbstractTool;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
@@ -36,12 +37,12 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentMetaElement <em>Parent Meta Element</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getNodeFigure <em>Node Figure</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getLabelFigure <em>Label Figure</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getNodeReference <em>Node Reference</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getContainmentFeature <em>Containment Feature</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getParentMetaElement <em>Parent Meta Element</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getTool <em>Tool</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getLabelAttributes <em>Label Attributes</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleNodeImpl#getDiagramNode <em>Diagram Node</em>}</li>
@@ -168,6 +169,14 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 				default: return -1;
 			}
 		}
+		if (baseClass == SimpleNodeReference.class) {
+			switch (derivedFeatureID) {
+				case SimplemappingsPackage.SIMPLE_NODE__NODE_REFERENCE: return SimplemappingsPackage.SIMPLE_NODE_REFERENCE__NODE_REFERENCE;
+				case SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE: return SimplemappingsPackage.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE;
+				case SimplemappingsPackage.SIMPLE_NODE__NAME: return SimplemappingsPackage.SIMPLE_NODE_REFERENCE__NAME;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -185,6 +194,14 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 				default: return -1;
 			}
 		}
+		if (baseClass == SimpleNodeReference.class) {
+			switch (baseFeatureID) {
+				case SimplemappingsPackage.SIMPLE_NODE_REFERENCE__NODE_REFERENCE: return SimplemappingsPackage.SIMPLE_NODE__NODE_REFERENCE;
+				case SimplemappingsPackage.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE: return SimplemappingsPackage.SIMPLE_NODE__CONTAINMENT_FEATURE;
+				case SimplemappingsPackage.SIMPLE_NODE_REFERENCE__NAME: return SimplemappingsPackage.SIMPLE_NODE__NAME;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -194,7 +211,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public NodeReference getNodeReference() {
-		return (NodeReference)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE__NODE_REFERENCE, true);
+		return (NodeReference)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__NODE_REFERENCE, true);
 	}
 
 	/**
@@ -203,7 +220,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public void setNodeReference(NodeReference newNodeReference) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE__NODE_REFERENCE, newNodeReference);
+		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__NODE_REFERENCE, newNodeReference);
 	}
 
 	/**
@@ -212,7 +229,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public EReference getContainmentFeature() {
-		return (EReference)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE, true);
+		return (EReference)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE, true);
 	}
 
 	/**
@@ -221,7 +238,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public void setContainmentFeature(EReference newContainmentFeature) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE__CONTAINMENT_FEATURE, newContainmentFeature);
+		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE, newContainmentFeature);
 	}
 
 	/**
@@ -230,7 +247,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public String getName() {
-		return (String)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE__NAME, true);
+		return (String)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__NAME, true);
 	}
 
 	/**
@@ -239,7 +256,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE__NAME, newName);
+		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__NAME, newName);
 	}
 
 	/**
@@ -248,7 +265,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public EClass getParentMetaElement() {
-		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_NODE__PARENT_META_ELEMENT, true);
+		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT, true);
 	}
 
 	/**
@@ -257,7 +274,7 @@ public class SimpleNodeImpl extends EObjectImpl implements SimpleNode {
 	 * @generated
 	 */
 	public void setParentMetaElement(EClass newParentMetaElement) {
-		eSet(SimplemappingsPackage.Literals.SIMPLE_NODE__PARENT_META_ELEMENT, newParentMetaElement);
+		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT, newParentMetaElement);
 	}
 
 	/**

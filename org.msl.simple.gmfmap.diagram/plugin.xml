@@ -221,7 +221,7 @@
       <viewProvider class="org.msl.simple.gmfmap.simplemappings.diagram.providers.SimplemapViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Simplemap"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="1001,1002,2001,2002,2003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="1001,1002,2001,2002,2003,2004"/>
       </viewProvider>
    </extension>
 
@@ -233,7 +233,7 @@
             <method name="getType()" value="Simplemap"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="1001,1002,2001,2002,2003"/>
+            <method name="getType()" value="1001,1002,2001,2002,2003,2004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value=""/>
@@ -338,6 +338,16 @@
             <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
+      <metamodel nsURI="http://org.msl.simple.gmfmap/simplemappings_1.1">
+         <metamodelType
+               id="org.msl.simple.gmfmap.diagram.SimpleChildReference_2004"
+               name="%metatype.name.SimpleChildReference_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SimpleChildReference"
+               edithelper="org.msl.simple.gmfmap.simplemappings.diagram.edit.helpers.SimpleChildReferenceEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -356,6 +366,7 @@
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleLabelNode_2001"/>
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleCompartment_2002"/>
          <elementType ref="org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"/>
+         <elementType ref="org.msl.simple.gmfmap.diagram.SimpleChildReference_2004"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

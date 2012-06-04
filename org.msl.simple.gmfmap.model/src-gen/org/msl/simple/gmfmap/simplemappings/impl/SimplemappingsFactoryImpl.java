@@ -74,6 +74,8 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 			case SimplemappingsPackage.SIMPLE_NODE: return createSimpleNode();
 			case SimplemappingsPackage.SIMPLE_SUB_NODE: return createSimpleSubNode();
 			case SimplemappingsPackage.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE: return createSimpleMappingElementWithFigure();
+			case SimplemappingsPackage.SIMPLE_CHILD_REFERENCE: return createSimpleChildReference();
+			case SimplemappingsPackage.SIMPLE_NODE_REFERENCE: return createSimpleNodeReference();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -157,6 +159,26 @@ public class SimplemappingsFactoryImpl extends EFactoryImpl implements Simplemap
 	public SimpleMappingElementWithFigure createSimpleMappingElementWithFigure() {
 		SimpleMappingElementWithFigureImpl simpleMappingElementWithFigure = new SimpleMappingElementWithFigureImpl();
 		return simpleMappingElementWithFigure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleChildReference createSimpleChildReference() {
+		SimpleChildReferenceImpl simpleChildReference = new SimpleChildReferenceImpl();
+		return simpleChildReference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleNodeReference createSimpleNodeReference() {
+		SimpleNodeReferenceImpl simpleNodeReference = new SimpleNodeReferenceImpl();
+		return simpleNodeReference;
 	}
 
 	/**

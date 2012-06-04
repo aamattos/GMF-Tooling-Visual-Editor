@@ -16,6 +16,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
@@ -74,6 +75,11 @@ public class SimplemapElementTypes {
 	 * @generated
 	 */
 	public static final IElementType SimpleSubNode_2003 = getElementType("org.msl.simple.gmfmap.diagram.SimpleSubNode_2003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType SimpleChildReference_2004 = getElementType("org.msl.simple.gmfmap.diagram.SimpleChildReference_2004"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -203,6 +209,9 @@ public class SimplemapElementTypes {
 
 			elements.put(SimpleSubNode_2003,
 					SimplemappingsPackage.eINSTANCE.getSimpleSubNode());
+
+			elements.put(SimpleChildReference_2004,
+					SimplemappingsPackage.eINSTANCE.getSimpleChildReference());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -226,6 +235,7 @@ public class SimplemapElementTypes {
 			KNOWN_ELEMENT_TYPES.add(SimpleLabelNode_2001);
 			KNOWN_ELEMENT_TYPES.add(SimpleCompartment_2002);
 			KNOWN_ELEMENT_TYPES.add(SimpleSubNode_2003);
+			KNOWN_ELEMENT_TYPES.add(SimpleChildReference_2004);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -247,6 +257,8 @@ public class SimplemapElementTypes {
 			return SimpleCompartment_2002;
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return SimpleSubNode_2003;
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return SimpleChildReference_2004;
 		}
 		return null;
 	}

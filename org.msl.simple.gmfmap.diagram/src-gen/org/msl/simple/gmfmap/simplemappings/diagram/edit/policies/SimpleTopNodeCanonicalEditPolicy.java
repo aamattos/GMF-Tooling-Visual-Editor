@@ -21,6 +21,7 @@ import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleSubNodeEditPart;
@@ -81,9 +82,14 @@ public class SimpleTopNodeCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	private boolean isMyDiagramElement(View view) {
 		int visualID = SimplemapVisualIDRegistry.getVisualID(view);
-		return visualID == SimpleLabelNodeEditPart.VISUAL_ID
-				|| visualID == SimpleCompartmentEditPart.VISUAL_ID
-				|| visualID == SimpleSubNodeEditPart.VISUAL_ID;
+		switch (visualID) {
+		case SimpleLabelNodeEditPart.VISUAL_ID:
+		case SimpleCompartmentEditPart.VISUAL_ID:
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+		case SimpleSubNodeEditPart.VISUAL_ID:
+			return true;
+		}
+		return false;
 	}
 
 	/**

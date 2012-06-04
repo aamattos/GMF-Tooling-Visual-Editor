@@ -15,6 +15,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
@@ -107,6 +108,9 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleSubNode", SimplemapElementTypes.SimpleSubNode_2003); //$NON-NLS-1$
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://org.msl.simple.gmfmap/simplemappings_1.1?SimpleChildReference", SimplemapElementTypes.SimpleChildReference_2004); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -171,6 +175,8 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 			return getSimpleCompartment_2002Text(view);
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return getSimpleSubNode_2003Text(view);
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return getSimpleChildReference_2004Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -278,6 +284,26 @@ public class SimplemapNavigatorLabelProvider extends LabelProvider implements
 		} else {
 			SimplemapDiagramEditorPlugin.getInstance().logError(
 					"Parser was not found for label " + 4001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSimpleChildReference_2004Text(View view) {
+		IParser parser = SimplemapParserProvider.getParser(
+				SimplemapElementTypes.SimpleChildReference_2004, view
+						.getElement() != null ? view.getElement() : view,
+				SimplemapVisualIDRegistry
+						.getType(SimpleChildReferenceEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimplemapDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 2004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

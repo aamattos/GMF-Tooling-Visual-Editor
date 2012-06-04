@@ -7,6 +7,7 @@ import org.eclipse.emf.transaction.ResourceSetListener;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.TriggerListener;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
@@ -70,7 +71,8 @@ public class ParentNodeTriggerListener extends TriggerListener implements
 			if(newChild instanceof SimpleLabelNode)
 				return new NewLabelNodeTrigger(domain, parent, (SimpleLabelNode)newChild);
 			
-
+			if(newChild instanceof SimpleChildReference)
+				return new NewChildReferenceTrigger(domain, parent, (SimpleChildReference)newChild);
 		}
 		
 		if(removeChildNodeFilter.matches(notification))

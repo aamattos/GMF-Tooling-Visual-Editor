@@ -33,6 +33,7 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentNameEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
@@ -143,6 +144,7 @@ public class SimplemapViewProvider extends AbstractProvider implements
 				case SimpleLabelNodeEditPart.VISUAL_ID:
 				case SimpleCompartmentEditPart.VISUAL_ID:
 				case SimpleSubNodeEditPart.VISUAL_ID:
+				case SimpleChildReferenceEditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != SimplemapVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -159,7 +161,8 @@ public class SimplemapViewProvider extends AbstractProvider implements
 				|| SimpleLinkMappingEditPart.VISUAL_ID == visualID
 				|| SimpleLabelNodeEditPart.VISUAL_ID == visualID
 				|| SimpleCompartmentEditPart.VISUAL_ID == visualID
-				|| SimpleSubNodeEditPart.VISUAL_ID == visualID;
+				|| SimpleSubNodeEditPart.VISUAL_ID == visualID
+				|| SimpleChildReferenceEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -231,6 +234,9 @@ public class SimplemapViewProvider extends AbstractProvider implements
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return createSimpleSubNode_2003(domainElement, containerView,
 					index, persisted, preferencesHint);
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return createSimpleChildReference_2004(domainElement,
+					containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -423,6 +429,21 @@ public class SimplemapViewProvider extends AbstractProvider implements
 		Node label4001 = createLabel(node,
 				SimplemapVisualIDRegistry
 						.getType(SimpleSubNodeNameEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createSimpleChildReference_2004(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		node.setType(SimplemapVisualIDRegistry
+				.getType(SimpleChildReferenceEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
 		return node;
 	}
 

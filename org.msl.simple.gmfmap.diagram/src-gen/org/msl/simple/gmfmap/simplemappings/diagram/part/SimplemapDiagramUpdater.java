@@ -11,6 +11,7 @@ import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
+import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleChildReferenceEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleCompartmentEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLabelNodeEditPart;
 import org.msl.simple.gmfmap.simplemappings.diagram.edit.parts.SimpleLinkMappingEditPart;
@@ -90,6 +91,10 @@ public class SimplemapDiagramUpdater {
 				result.add(new SimplemapNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == SimpleChildReferenceEditPart.VISUAL_ID) {
+				result.add(new SimplemapNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == SimpleSubNodeEditPart.VISUAL_ID) {
 				result.add(new SimplemapNodeDescriptor(childElement, visualID));
 				continue;
@@ -121,6 +126,10 @@ public class SimplemapDiagramUpdater {
 				result.add(new SimplemapNodeDescriptor(childElement, visualID));
 				continue;
 			}
+			if (visualID == SimpleChildReferenceEditPart.VISUAL_ID) {
+				result.add(new SimplemapNodeDescriptor(childElement, visualID));
+				continue;
+			}
 		}
 		return result;
 	}
@@ -145,6 +154,10 @@ public class SimplemapDiagramUpdater {
 				continue;
 			}
 			if (visualID == SimpleCompartmentEditPart.VISUAL_ID) {
+				result.add(new SimplemapNodeDescriptor(childElement, visualID));
+				continue;
+			}
+			if (visualID == SimpleChildReferenceEditPart.VISUAL_ID) {
 				result.add(new SimplemapNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -173,6 +186,8 @@ public class SimplemapDiagramUpdater {
 			return getSimpleCompartment_2002ContainedLinks(view);
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return getSimpleSubNode_2003ContainedLinks(view);
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return getSimpleChildReference_2004ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -192,6 +207,8 @@ public class SimplemapDiagramUpdater {
 			return getSimpleCompartment_2002IncomingLinks(view);
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return getSimpleSubNode_2003IncomingLinks(view);
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return getSimpleChildReference_2004IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -211,6 +228,8 @@ public class SimplemapDiagramUpdater {
 			return getSimpleCompartment_2002OutgoingLinks(view);
 		case SimpleSubNodeEditPart.VISUAL_ID:
 			return getSimpleSubNode_2003OutgoingLinks(view);
+		case SimpleChildReferenceEditPart.VISUAL_ID:
+			return getSimpleChildReference_2004OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -266,6 +285,14 @@ public class SimplemapDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<SimplemapLinkDescriptor> getSimpleChildReference_2004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<SimplemapLinkDescriptor> getSimpleTopNode_1001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -306,6 +333,14 @@ public class SimplemapDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<SimplemapLinkDescriptor> getSimpleChildReference_2004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<SimplemapLinkDescriptor> getSimpleTopNode_1001OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -339,6 +374,14 @@ public class SimplemapDiagramUpdater {
 	 * @generated
 	 */
 	public static List<SimplemapLinkDescriptor> getSimpleSubNode_2003OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimplemapLinkDescriptor> getSimpleChildReference_2004OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

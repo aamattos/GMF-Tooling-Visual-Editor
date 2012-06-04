@@ -278,6 +278,16 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String ChildReference5CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String ChildReference5CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**

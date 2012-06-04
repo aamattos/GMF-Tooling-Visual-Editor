@@ -31,6 +31,11 @@ public class SimpleMappingPropertiesAdapterFactory extends
 	}
 	
 	@Override
+	public Adapter createSimpleChildReferenceAdapter() {
+		return simpleNodeProvider;
+	}
+
+	@Override
 	public boolean isFactoryForType(Object object) {
 		return object==IItemPropertyDescriptorProvider.class;
 	}

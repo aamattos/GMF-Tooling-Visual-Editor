@@ -22,6 +22,7 @@ import org.eclipse.gmf.mappings.NodeReference;
 import org.eclipse.gmf.tooldef.AbstractTool;
 import org.msl.simple.gmfmap.model.triggers.AbstractTrigger;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
@@ -53,6 +54,9 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 	
 	private void removeChildNode(SimpleChildNode removedNode)
 	{
+		if(removedNode instanceof SimpleChildReference)
+			removeSimpleChildReference((SimpleChildReference)removedNode);
+		
 		if(removedNode instanceof SimpleNode)
 			removeSimpleNode((SimpleNode)removedNode);
 		
@@ -76,12 +80,14 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 			nodeReferenceToRemove = (NodeReference)EcoreUtil.resolve(nodeReferenceToRemove, getDomain().getResourceSet());
 		
 		AbstractTool toolToRemove = null;
+
+		NodeMapping nodeMappingToRemove = null;
 		
 		if(nodeReferenceToRemove!=null && nodeReferenceToRemove.getChild()!=null)
 		{
-			NodeMapping nodeMapping = nodeReferenceToRemove.getChild();
+			nodeMappingToRemove = nodeReferenceToRemove.getChild();
 			
-			toolToRemove = nodeMapping.getTool();
+			toolToRemove = nodeMappingToRemove.getTool();
 		}
 		
 		List<DiagramElement> diagramElementsToRemove = collectDiagramElementsToRemove(removedNode);
@@ -101,6 +107,20 @@ public class RemoveChildNodeTrigger extends AbstractTrigger {
 		
 		if(toolToRemove!=null && canRemove(toolToRemove))
 			EcoreUtil.delete(toolToRemove);
+		
+		if(nodeMappingToRemove!=null)
+			EcoreUtil.delete(nodeMappingToRemove);
+		
+		if(nodeReferenceToRemove!=null)
+			EcoreUtil.delete(nodeReferenceToRemove);
+	}
+	
+	private void removeSimpleChildReference(SimpleChildReference removedNode)
+	{
+		NodeReference nodeReferenceToRemove = removedNode.getNodeReference();
+		
+		if(nodeReferenceToRemove!=null && nodeReferenceToRemove.eIsProxy())
+			nodeReferenceToRemove = (NodeReference)EcoreUtil.resolve(nodeReferenceToRemove, getDomain().getResourceSet());
 		
 		if(nodeReferenceToRemove!=null)
 			EcoreUtil.delete(nodeReferenceToRemove);

@@ -217,6 +217,18 @@
           name="InputLabel"
           text="&lt;&lt;in>>"/>
     </descriptors>
+    <descriptors
+        name="SimpleChildReferenceFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Label"
+          name="SimpleChildReferenceLabel"
+          text="&lt;..>">
+        <font
+            xsi:type="gmfgraph:BasicFont"
+            faceName="Verdana"
+            height="10"/>
+      </actualFigure>
+    </descriptors>
   </figures>
   <nodes
       name="SimpleTopNode"
@@ -279,4 +291,7 @@
       name="InputLabel"
       figure="InputLabelFigure"
       elementIcon="false"/>
+  <labels
+      name="ChildReferenceName"
+      figure="SimpleChildReferenceFigure"/>
 </gmfgraph:Canvas>

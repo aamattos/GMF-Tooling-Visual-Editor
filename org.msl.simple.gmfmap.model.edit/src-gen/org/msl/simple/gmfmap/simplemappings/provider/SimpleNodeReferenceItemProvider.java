@@ -12,8 +12,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -25,17 +28,19 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.msl.simple.gmfmap.model.edit.IItemPropertyDescriptorProvider;
-import org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure;
+
+import org.msl.simple.gmfmap.simplemappings.SimpleNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleMappingElementWithFigure} object.
+ * This is the item provider adapter for a {@link org.msl.simple.gmfmap.simplemappings.SimpleNodeReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SimpleMappingElementWithFigureItemProvider
+public class SimpleNodeReferenceItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -49,7 +54,7 @@ public class SimpleMappingElementWithFigureItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SimpleMappingElementWithFigureItemProvider(AdapterFactory adapterFactory) {
+	public SimpleNodeReferenceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,27 +69,26 @@ public class SimpleMappingElementWithFigureItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNodeFigurePropertyDescriptor(object);
-			addLabelFigurePropertyDescriptor(object);
+			addContainmentFeaturePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Node Figure feature.
+	 * This adds a property descriptor for the Containment Feature feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNodeFigurePropertyDescriptor(Object object) {
+	protected void addContainmentFeaturePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SimpleMappingElementWithFigure_nodeFigure_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_nodeFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
-				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__NODE_FIGURE,
-				 false,
+				 getString("_UI_SimpleNodeReference_containmentFeature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleNodeReference_containmentFeature_feature", "_UI_SimpleNodeReference_type"),
+				 SimplemappingsPackage.Literals.SIMPLE_NODE_REFERENCE__CONTAINMENT_FEATURE,
+				 true,
 				 false,
 				 true,
 				 null,
@@ -93,36 +97,14 @@ public class SimpleMappingElementWithFigureItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Label Figure feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLabelFigurePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SimpleMappingElementWithFigure_labelFigure_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SimpleMappingElementWithFigure_labelFigure_feature", "_UI_SimpleMappingElementWithFigure_type"),
-				 SimplemappingsPackage.Literals.SIMPLE_MAPPING_ELEMENT_WITH_FIGURE__LABEL_FIGURE,
-				 false,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns SimpleMappingElementWithFigure.gif.
+	 * This returns SimpleNodeReference.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleMappingElementWithFigure"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SimpleNodeReference"));
 	}
 
 	/**
@@ -133,7 +115,10 @@ public class SimpleMappingElementWithFigureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_SimpleMappingElementWithFigure_type");
+		String label = ((SimpleNodeReference)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SimpleNodeReference_type") :
+			label;
 	}
 
 	/**
@@ -146,6 +131,12 @@ public class SimpleMappingElementWithFigureItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(SimpleNodeReference.class)) {
+			case SimplemappingsPackage.SIMPLE_NODE_REFERENCE__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

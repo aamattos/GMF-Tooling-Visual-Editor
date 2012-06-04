@@ -31,10 +31,13 @@ import org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.tooldef.Palette;
 import org.msl.simple.gmfmap.simplemappings.SimpleChildNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleChildReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleCompartment;
+import org.msl.simple.gmfmap.simplemappings.SimpleLabelNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleLinkMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleMapping;
 import org.msl.simple.gmfmap.simplemappings.SimpleNode;
+import org.msl.simple.gmfmap.simplemappings.SimpleNodeReference;
 import org.msl.simple.gmfmap.simplemappings.SimpleParentNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleSubNode;
 import org.msl.simple.gmfmap.simplemappings.SimpleTopNode;
@@ -204,21 +207,28 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 			parent = simpleCompartment;
 		}
 		
+		NodeMapping referencedChild = childReference.getReferencedChild();
+		
 		NodeMapping nodeMapping = childReference.getChild();
 		
-		SimpleNode newChild = null;
-		
-		//Es un sub label:
-		if(nodeMapping.getDiagramNode() instanceof DiagramLabel)
+		SimpleNodeReference newChild = null;
+
+		if(referencedChild!=null)
+		{
+			newChild = SimplemappingsFactory.eINSTANCE.createSimpleChildReference();
+			parent.getChildren().add((SimpleChildReference)newChild);
+
+		}//It's a sub label:
+		else if(nodeMapping!=null && nodeMapping.getDiagramNode() instanceof DiagramLabel)
 		{
 			newChild = SimplemappingsFactory.eINSTANCE.createSimpleLabelNode();
-			parent.getChildren().add(newChild);
-			
-		}else if(nodeMapping.getDiagramNode() instanceof Node)
+			parent.getChildren().add((SimpleLabelNode)newChild);
+
+		}else if(nodeMapping!=null && nodeMapping.getDiagramNode() instanceof Node)
 		{
 			newChild = SimplemappingsFactory.eINSTANCE.createSimpleSubNode();
-			parent.getChildren().add(newChild);
-			
+			parent.getChildren().add((SimpleSubNode)newChild);
+
 			for(ChildReference childReference2:nodeMapping.getChildren())
 				createChild((SimpleSubNode)newChild, childReference2);
 		}
@@ -227,9 +237,11 @@ public class SimplemapMigrationEditorUtil extends SimplemapDiagramEditorUtil{
 		if(newChild!=null)
 		{
 			newChild.setContainmentFeature(childReference.getContainmentFeature());
-			newChild.setDomainMetaElement(nodeMapping.getDomainMetaElement());	
 			newChild.setNodeReference(childReference);
 		}
+		
+		if(newChild instanceof SimpleNode && nodeMapping!=null)
+			((SimpleNode)newChild).setDomainMetaElement(nodeMapping.getDomainMetaElement());	
 
 	}
 	

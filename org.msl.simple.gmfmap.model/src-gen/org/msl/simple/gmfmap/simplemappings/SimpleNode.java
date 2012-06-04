@@ -23,10 +23,6 @@ import org.eclipse.gmf.tooldef.AbstractTool;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getNodeReference <em>Node Reference</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getContainmentFeature <em>Containment Feature</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getName <em>Name</em>}</li>
- *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getParentMetaElement <em>Parent Meta Element</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getTool <em>Tool</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getLabelAttributes <em>Label Attributes</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getDiagramNode <em>Diagram Node</em>}</li>
@@ -39,111 +35,7 @@ import org.eclipse.gmf.tooldef.AbstractTool;
  * @model
  * @generated
  */
-public interface SimpleNode extends SimpleChildNode, SimpleMappingElementWithFigure {
-	/**
-	 * Returns the value of the '<em><b>Node Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Node Reference</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Node Reference</em>' reference.
-	 * @see #setNodeReference(NodeReference)
-	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleNode_NodeReference()
-	 * @model derived="true"
-	 * @generated
-	 */
-	NodeReference getNodeReference();
-
-	/**
-	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getNodeReference <em>Node Reference</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Node Reference</em>' reference.
-	 * @see #getNodeReference()
-	 * @generated
-	 */
-	void setNodeReference(NodeReference value);
-
-	/**
-	 * Returns the value of the '<em><b>Containment Feature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Containment Feature</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Containment Feature</em>' reference.
-	 * @see #setContainmentFeature(EReference)
-	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleNode_ContainmentFeature()
-	 * @model transient="true" derived="true"
-	 * @generated
-	 */
-	EReference getContainmentFeature();
-
-	/**
-	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getContainmentFeature <em>Containment Feature</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Containment Feature</em>' reference.
-	 * @see #getContainmentFeature()
-	 * @generated
-	 */
-	void setContainmentFeature(EReference value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleNode_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Parent Meta Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parent Meta Element</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent Meta Element</em>' reference.
-	 * @see #setParentMetaElement(EClass)
-	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleNode_ParentMetaElement()
-	 * @model transient="true"
-	 * @generated
-	 */
-	EClass getParentMetaElement();
-
-	/**
-	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleNode#getParentMetaElement <em>Parent Meta Element</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent Meta Element</em>' reference.
-	 * @see #getParentMetaElement()
-	 * @generated
-	 */
-	void setParentMetaElement(EClass value);
-
+public interface SimpleNode extends SimpleChildNode, SimpleMappingElementWithFigure, SimpleNodeReference {
 	/**
 	 * Returns the value of the '<em><b>Tool</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -37,6 +37,7 @@ public class SimplemapPaletteFactory {
 		paletteContainer.add(createCompartment2CreationTool());
 		paletteContainer.add(createLabelNode3CreationTool());
 		paletteContainer.add(createLinkMapping4CreationTool());
+		paletteContainer.add(createChildReference5CreationTool());
 		return paletteContainer;
 	}
 
@@ -101,6 +102,22 @@ public class SimplemapPaletteFactory {
 		entry.setId("createLinkMapping4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimplemapElementTypes
 				.getImageDescriptor(SimplemapElementTypes.SimpleLinkMapping_1002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createChildReference5CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.ChildReference5CreationTool_title,
+				Messages.ChildReference5CreationTool_desc,
+				Collections
+						.singletonList(SimplemapElementTypes.SimpleChildReference_2004));
+		entry.setId("createChildReference5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(SimplemapElementTypes
+				.getImageDescriptor(SimplemapElementTypes.SimpleChildReference_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

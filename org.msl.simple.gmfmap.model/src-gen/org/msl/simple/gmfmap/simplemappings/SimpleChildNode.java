@@ -6,6 +6,7 @@
  */
 package org.msl.simple.gmfmap.simplemappings;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.gmfgraph.Figure;
 
@@ -20,6 +21,7 @@ import org.eclipse.gmf.gmfgraph.Figure;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParentMetaElement <em>Parent Meta Element</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,5 +109,31 @@ public interface SimpleChildNode extends EObject {
 	 * @generated
 	 */
 	void setParent(SimpleNode value);
+
+	/**
+	 * Returns the value of the '<em><b>Parent Meta Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent Meta Element</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Meta Element</em>' reference.
+	 * @see #setParentMetaElement(EClass)
+	 * @see org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage#getSimpleChildNode_ParentMetaElement()
+	 * @model transient="true"
+	 * @generated
+	 */
+	EClass getParentMetaElement();
+
+	/**
+	 * Sets the value of the '{@link org.msl.simple.gmfmap.simplemappings.SimpleChildNode#getParentMetaElement <em>Parent Meta Element</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent Meta Element</em>' reference.
+	 * @see #getParentMetaElement()
+	 * @generated
+	 */
+	void setParentMetaElement(EClass value);
 
 } // SimpleChildNode

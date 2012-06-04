@@ -36,6 +36,7 @@ import org.msl.simple.gmfmap.simplemappings.SimplemappingsPackage;
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getParentNode <em>Parent Node</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getParentMapping <em>Parent Mapping</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getParentMetaElement <em>Parent Meta Element</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getNodeFigure <em>Node Figure</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getLabelFigure <em>Label Figure</em>}</li>
  *   <li>{@link org.msl.simple.gmfmap.simplemappings.impl.SimpleCompartmentImpl#getCompartmentMapping <em>Compartment Mapping</em>}</li>
@@ -140,6 +141,24 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 	 */
 	public void setParent(SimpleNode newParent) {
 		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT, newParent);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParentMetaElement() {
+		return (EClass)eGet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentMetaElement(EClass newParentMetaElement) {
+		eSet(SimplemappingsPackage.Literals.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT, newParentMetaElement);
 	}
 
 	/**
@@ -280,6 +299,7 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 				case SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT_NODE: return SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_NODE;
 				case SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT_MAPPING: return SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_MAPPING;
 				case SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT: return SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT;
+				case SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT_META_ELEMENT: return SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT;
 				default: return -1;
 			}
 		}
@@ -305,6 +325,7 @@ public class SimpleCompartmentImpl extends EObjectImpl implements SimpleCompartm
 				case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_NODE: return SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT_NODE;
 				case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_MAPPING: return SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT_MAPPING;
 				case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT: return SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT;
+				case SimplemappingsPackage.SIMPLE_CHILD_NODE__PARENT_META_ELEMENT: return SimplemappingsPackage.SIMPLE_COMPARTMENT__PARENT_META_ELEMENT;
 				default: return -1;
 			}
 		}
