@@ -86,6 +86,22 @@ Everyone is permitted to copy and distribute copies of this Agreement, but in or
 This Agreement is governed by the laws of the State of New York and the intellectual property laws of the United States of America. No party to this Agreement will bring a legal action under this Agreement more than one year after the cause of action arose. Each party waives its rights to a jury trial in any resulting litigation.
    </license>
 
+   <requires>
+      <import feature="org.eclipse.rcp" version="3.7.2.v20120120-1424-9DB5FmnFq5JCf1UA38R-kz0S0272"/>
+      <import feature="org.eclipse.platform" version="3.7.2.v20120207-1839-9gF7UHPDFxGjd-PqDr2jX_4yKaumkoHTz04_q-q"/>
+      <import feature="org.eclipse.emf.ecore" version="2.7.1.v20120127-1122"/>
+      <import feature="org.eclipse.emf.edit.ui" version="2.7.0.v20120130-0943"/>
+      <import feature="org.eclipse.emf.databinding" version="1.2.0.v20120130-0943"/>
+      <import feature="org.eclipse.emf.common.ui" version="2.7.0.v20120130-0943"/>
+      <import feature="org.eclipse.emf.transaction" version="1.5.0.v20110502-1600-377-8s734C3E7D15D6B"/>
+      <import feature="org.eclipse.gmf.tooling" version="2.4.0.v20101217-1532-7_7MFMTFIhIewClguWLA42l"/>
+      <import feature="org.eclipse.emf.converter" version="2.7.0.v20120130-0943"/>
+      <import feature="org.eclipse.m2m.qvt.oml.runtime" version="3.1.0.v20110314-1530-7M6-DZRDKFIZMk6KlYD"/>
+      <import feature="org.eclipse.gmf" version="1.4.2.v20110201-1000-7d9A7FFYnmMD7_nYQqNhbc2tsgXc"/>
+      <import feature="org.eclipse.draw2d" version="3.7.2.v20110927-2020-4617w3122212803131"/>
+      <import feature="org.eclipse.gef" version="3.7.2.v20110927-2020-777D381B4Bz0755B465D34242"/>
+   </requires>
+
    <plugin
          id="org.msl.simple.gmf.bridge.ui"
          download-size="0"
