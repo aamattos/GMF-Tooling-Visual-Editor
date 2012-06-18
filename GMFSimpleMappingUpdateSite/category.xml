@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="https://github.com/jaloncad/GMF-Tooling-Visual-Editor.git">
+	GMF Simple Mapping Editor
+   </description>
+   <feature url="features/org.msl.simple.gmf.mapping_0.0.0.qualifier" id="org.msl.simple.gmf.mapping" version="0.0.0" patch="false">
+      <category name="Simple Mapping Editor"/>
+   </feature>
+   <category-def name="Simple Mapping Editor" label="Simple Mapping Editor">
+      <description>
+         Simple Mapping Editor
+      </description>
+   </category-def>
+</site>
