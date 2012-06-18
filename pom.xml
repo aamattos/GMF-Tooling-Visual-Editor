@@ -118,4 +118,20 @@
 				<goals> <goal>update-pom</goal> </goals> </execution> </executions> </plugin -->
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+      <!-- Publish the versioned releases here -->
+      <repository>
+        <id>releases</id>
+        <name>CloudBees Releases</name>
+        <url>https://repository-jaloncad.forge.cloudbees.com/release/</url>
+      </repository>
+       
+      <!-- Publish the versioned releases here -->
+      <snapshotRepository>
+        <id>snap</id>
+        <name>CloudBees Snapshots</name>
+        <url>https://repository-jaloncad.forge.cloudbees.com/snapshot/</url>
+      </snapshotRepository>
+    </distributionManagement>
 </project>
