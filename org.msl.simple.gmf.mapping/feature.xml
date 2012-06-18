@@ -3,8 +3,7 @@
       id="org.msl.simple.gmf.mapping"
       label="GMF Simple Mapping Editor"
       version="1.0.0.qualifier"
-      provider-name="MSL"
-      os="macosx,win32">
+      provider-name="MSL">
 
    <description url="http://code.google.com/a/eclipselabs.org/p/gmf-simple-map-editor/">
       GMF Simple Mapping Editor
