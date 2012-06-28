@@ -96,10 +96,10 @@ This Agreement is governed by the laws of the State of New York and the intellec
       <import feature="org.eclipse.emf.transaction" version="1.5.0.v20110502-1600-377-8s734C3E7D15D6B"/>
       <import feature="org.eclipse.gmf.tooling" version="2.4.0.v20101217-1532-7_7MFMTFIhIewClguWLA42l"/>
       <import feature="org.eclipse.emf.converter" version="2.7.0.v20120130-0943"/>
-      <import feature="org.eclipse.m2m.qvt.oml.runtime" version="3.1.0.v20110314-1530-7M6-DZRDKFIZMk6KlYD"/>
       <import feature="org.eclipse.gmf" version="1.4.2.v20110201-1000-7d9A7FFYnmMD7_nYQqNhbc2tsgXc"/>
       <import feature="org.eclipse.draw2d" version="3.7.2.v20110927-2020-4617w3122212803131"/>
       <import feature="org.eclipse.gef" version="3.7.2.v20110927-2020-777D381B4Bz0755B465D34242"/>
+      <import feature="org.eclipse.m2m.qvt.oml.runtime" version="2.1.1.v20100917-1530-7A20AkF7AG8TAX3BRLA"/>
    </requires>
 
    <plugin
