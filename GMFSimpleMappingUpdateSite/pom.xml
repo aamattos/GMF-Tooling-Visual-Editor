@@ -79,7 +79,7 @@
 						</goals>
 						<configuration>
 							<serverId>cloudbees-snapshot</serverId>
-							<url>dav:https://repository-jaloncad.forge.cloudbees.com/snapshot</url>
+							<url>dav:https://repository-msl.forge.cloudbees.com/snapshot/</url>
 							<fromDir>${project.basedir}/repository</fromDir>
 							<toDir>repository</toDir>
 						</configuration>
