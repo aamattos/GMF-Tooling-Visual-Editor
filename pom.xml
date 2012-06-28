@@ -13,7 +13,6 @@
 		<module>org.msl.simple.gmf.migrate.ui</module>
 		<module>org.msl.simple.gmfmap.diagram.properties</module>
 		<module>org.msl.simple.gmfmap.diagram</module>
-		<module>org.msl.simple.gmfmap.gmf</module>
 		<module>org.msl.simple.gmfmap.model</module>
 		<module>org.msl.simple.gmfmap.model.delegates</module>
 		<module>org.msl.simple.gmfmap.model.edit.properties</module>
